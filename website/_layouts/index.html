@@ -1,0 +1,206 @@
+---
+layout: default
+permalink: /
+---
+
+<div id="main-content" role="main" class="index-container">
+  <section class="index-header-section pa-blue-background border-bottom-205 border-blue border-width-105">
+    <div class="grid-container position-relative">
+      <div class="grid-row position-relative">
+        <img 
+            class="home-header-graphic position-absolute top-2 display-none desktop:display-block"
+            src="/assets/img/home-header.png" 
+            alt="home header graphic"
+          />
+        <div class="mobile:grid-col-12 desktop:grid-col-6 z-top index-header-text">
+          <h1 class="text-light-blue margin-0">A gateway into federal spending of taxpayers dollars.</h1>
+          <div class="divider width-card height-1 margin-y-2"></div>
+          <h2 class="text-white margin-0">Ensuring federal funding reaches the right recipients, preventing improper payments, and reducing fraud, waste, and abuse.</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="spending-trends-section bg-white">
+    <div class="grid-container">
+      <div class="grid-row">
+        <h3 class="spending-trends-header">Government-wide Spending Trends</h3>
+      </div>
+      <ul class="usa-card-group grid-row grid-gap-6 spending-trends-cards">
+        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+          {% assign Chart_Caption = "(Based on reported Government-wide spending in FY " | append: page.fiscal_year | append: ")" %}
+          {% include _sparklines-chart.html
+            rate_min=page.payment_accuracy_rate_min
+            rate_max=page.payment_accuracy_rate_max
+            datapoints=page.payment_accuracy_rates
+            years=page.improper_payments_years
+            min=80
+            max=100
+            cy=page.fiscal_year
+            color="rgba(0, 118, 214, 1)"
+            title="Payment accuracy rate"
+            caption=Chart_Caption %}
+        </li>
+        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+          {% include _sparklines-chart.html
+            rate_min=page.improper_payments_rate_min
+            rate_max=page.improper_payments_rate_max
+            datapoints=page.improper_payments_rates
+            years=page.improper_payments_years
+            min=0
+            max=10
+            cy=page.fiscal_year
+            color="rgba(0, 118, 214, 1)"
+            title="Improper payments rate"
+            caption=Chart_Caption %}
+        </li>
+        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+          {% include _sparklines-chart.html
+            rate_min=page.unknown_payments_rate_min
+            rate_max=page.unknown_payments_rate_max
+            datapoints=page.unknown_payments_rates
+            years=page.improper_payments_years
+            min=0
+            max=10
+            cy=page.fiscal_year
+            color="rgba(0, 118, 214, 1)"
+            title="Unknown payments rate"
+            caption=Chart_Caption %}
+        </li>
+      </ul>
+      <ul class="usa-card-group grid-row">
+        <li class="usa-card grid-col-fill">
+          <div class="usa-card__container border-0 data-driven-card">
+            <div class="grid-container">
+              <div class="grid-row grid-gap-6">
+                <div class="tablet:grid-col-5">
+                  <h4>Data-driven insights on how Federal agencies are spending taxpayers dollars.</h4>
+                </div>
+                <div class="tablet:grid-col-7">
+                  <h5>
+                    Effective Stewardship of taxpayer dollars is a critical responsibility of the Federal Government. This site is a window into Federal agencies’
+                    progress in the prevention and recovery of improper payments while ensuring the right individuals and communities benefit from federal funds.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="grid-row agency-trends-section grid-gap margin-bottom-7">
+        <div class="tablet:grid-col-12">
+          <h4 class="text-ink margin-y-1">Agency Trends</h4>
+        </div>
+        <div class="tablet:grid-col-12">
+          <p class="text-base margin-y-1">A look at if Federal agencies’ are meeting targets for the reduction and recovery of improper payments.</p>
+        </div>
+        <div class="grid-col-12 desktop:grid-col-6">
+          <table class="usa-table usa-table--borderless margin-0 top-performing-table">
+            <caption class="text-ink margin-y-1">Highest Performing Agencies</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
+                <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
+                <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for agency in page.highest_performing_agencies %}
+              <tr>
+                <th scope="row" class="agency-col">
+                  <div class="grid-container padding-0">
+                    <div class="grid-row">
+                      <div class="grid-col-auto display-flex">
+                        <img
+                          class="agency-icon flex-align-self-center padding-105"
+                          src="/assets/img/increase.svg"
+                          alt="increase icon"
+                        />
+                      </div>
+                      <div class="grid-col agency-text-cell flex-align-self-center">
+                        <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
+                        <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
+                <td class="text-middle text-center targets-met-col">
+                  <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-col-12 desktop:grid-col-6">
+          <table class="usa-table usa-table--borderless margin-0 declining-table">
+            <caption class="text-ink margin-y-1">Lowest Performing Agencies</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
+                <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
+                <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for agency in page.lowest_performing_agencies %}
+              <tr>
+                <th scope="row" class="agency-col">
+                  <div class="grid-container padding-0">
+                    <div class="grid-row">
+                      <div class="grid-col-auto display-flex">
+                        <img
+                          class="agency-icon flex-align-self-center padding-105"
+                          src="/assets/img/decrease.svg"
+                          alt="decrease icon"
+                        />
+                      </div>
+                      <div class="grid-col agency-text-cell flex-align-self-center">
+                        <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
+                        <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
+                <td class="text-middle text-center targets-met-col">
+                  <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-data-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <h4 class="margin-y-105">About the data behind federal spending</h4>
+          <h5 class="text-ink margin-y-105">Fiscal year reporting varies across agencies and programs</h3>
+          <p class="text-ink margin-y-105">Information about how agencies report and why data might differ across programs would go here. </p>
+          <p class="text-ink margin-y-105">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet velit non lorem lobortis euismod laoreet vitae tellus. 
+            Suspendisse iaculis consectetur rutrum. Curabitur non arcu orci. Fusce condimentum leo neque, ac pretium mauris aliquam molestie.
+          </p>
+          <p class="text-ink margin-y-105">
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis euismod dolor et nulla volutpat, a elementum nisi dictum. Sed 
+            auctor rutrum ligula. Praesent sed tellus maximus, malesuada lectus at, dictum metus.
+          </p>
+          <p class="margin-y-105">
+            <a href="/resources" class="resource-link text-no-underline">Learn more about PaymentAccuracy.gov</a>
+          </p>
+        </div>
+        <div class="grid-col-fill display-flex">
+          <img
+            class="home-about-graphic flex-align-self-end"
+            src="/assets/img/home-about-graphic.png"
+            alt="about graphic"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

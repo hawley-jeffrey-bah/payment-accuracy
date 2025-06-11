@@ -1,0 +1,61 @@
+faqs:
+  - id: faq-1
+    question: "What is the purpose of this website?"
+    answer: >
+      As required by <a href="https://www.govinfo.gov/content/pkg/DCPD-200900942/pdf/DCPD-200900942.pdf" target="_blank" rel="noopener noreferrer">Executive Order 13520 (codified in 31 USC 3321)</a> dated November 20, 2009, Reducing Improper Payments, the U.S. Department of the Treasury, in coordination with the U.S. Department of Justice and Office of Management and Budget, established this website to create a centralized location to publish information about improper payments made to individuals, organizations, and contractors. This website also provides a centralized place where the public can report suspected incidents of fraud, waste, and abuse. The link for reporting fraud, waste and abuse is located at the bottom of every paymentaccuracy.gov page.
+  - id: faq-2
+    question: "What information is included in this website?"
+    answer: >
+      This website includes current and historical information about improper payments made under Federal 
+      programs that have been determined to be susceptible to significant improper payments based on assessments 
+      of all government programs. Agencies with high-priority programs provide Semi-Annual or quarterly Program 
+      Scorecards displaying actions for reduction of improper payments. Please consult the Resources page for 
+      documents that explain the information provided in this website.
+  - id: faq-3
+    question: "What is the source of the information contained on the website?"
+    answer: >
+      The <a href="https://www.congress.gov/116/plaws/publ117/PLAW-116publ117.pdf" target="_blank" rel="noopener 
+      noreferrer">Payment Integrity Information Act of 2019 (PIIA) (P.L. 116-117)</a> and 
+      <a href="https://www.whitehouse.gov/wp-content/uploads/2021/03/M-21-19.pdf" target="_blank" rel="noopener 
+      noreferrer">Appendix C to Circular No. A-123, Requirements for Payment</a> Integrity Improvement require 
+      Federal agencies to report information related to improper payments. The information included on this 
+      website has been reported by agencies to the Office of Management and Budget.      
+  - id: faq-4
+    question: "What is a High Priority Program?"
+    answer: >
+      The government can achieve the greatest return on investment for the taxpayer by ensuring that improper 
+      payments are eliminated in the highest-risk programs, otherwise known as high-priority programs.
+  - id: faq-5
+    question: "Can I download data?"
+    answer: >
+      Yes. Improper payments data can be downloaded from the <a href="#top">top of this page</a>.
+  - id: faq-6
+    question: "I can't find a specific program or agency? Is their data available?"
+    answer: >
+      Each department, agency, or instrumentality in the executive branch United States Government is required 
+      to report improper payments information to the Office of Management and Budget for publication on this website. Agencies utilizing recovery audits are also required to report on actions they have taken to address any recommendations from their recovery audit contractors in their Annual Financial Statement of the Agency. 
+  - id: faq-7
+    question: "How is PaymentAccuracy.gov different from USASpending.gov?"
+    answer: >
+      While <a href="https://www.usaspending.gov/" target="_blank" rel="noopener noreferrer">USASpending.gov</a> 
+      shows the public where their money is being spent - by programs or activities - 
+      <a href="https://www.paymentaccuracy.gov" target="_blank" rel="noopener noreferrer">PaymentAccuracy.gov</a> reports how efficiently and effectively Federal payments are being made by 
+      agencies and state partners. In other words, is the government paying the right person, at the right time, 
+      for the right amount?
+  - id: faq-8
+    question: "What can the American public do to help?"
+    answer: >
+       Taxpayers are able to report suspected incidents of fraud, waste, and abuse that can lead to finding and 
+       recovering improper payments, and implementing corrective actions to prevent future improper payments. 
+       The link for reporting fraud, waste and abuse is located at the bottom of every paymentaccuracy.gov page.
+       <br/><br/>Federal agencies are committed to providing high-quality improper payments data to the public. 
+       With your help we can do better. Please contact us at (202) 395-3993 to notify us of potential issues 
+       with the website - including data, website and document links, or other information.
+  - id: faq-9
+    question: "How does someone report suspected incidents of fraud, waste and abuse related to improper 
+      payments?"
+    answer: >
+      This website also provides information on where the public can report suspected incidents of fraud, waste, 
+      and abuse by an entity receiving Federal funds that have led or may lead to improper payments by the 
+      Federal Government. <a href="https://www.gao.gov/about/what-gao-does/fraudnet/" target="_blank" rel="noopener noreferrer">
+      Click this link to report fraud</a>.

@@ -1,0 +1,16 @@
+services:
+  website:
+    build:
+      context: ./website
+    ports:
+      - "8080:8080"         
+    networks:
+      - internal
+
+volumes:
+  esdata:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge

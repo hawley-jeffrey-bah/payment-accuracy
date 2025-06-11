@@ -1,0 +1,231 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+
+.resources-page-hero {
+    background-color: #2A646D;
+    background-image: url('/assets/img/arrows.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 2rem;  
+
+    .hero-text {
+        padding: 2rem 6rem;
+        max-width: 70%;
+
+        @media (max-width: 768px) {
+            padding: 2rem 0rem;
+            max-width: 100%;
+        }
+    }
+
+    h1 {
+        color: white;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 48px;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+.resources-content {
+
+    .resources-dataset-title {
+        padding: 0px 6rem;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .breadcrumbs {
+        @include default-text-styling($color: $black, $size: 16px, $weight: 400, $height: 24px);
+
+        .home-link {
+            color: $pa-text-primary;
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+    }
+}
+
+.gray-box {
+    background-color: #f0f0f0;
+    padding: 40px 6rem;
+    width: 100%;
+    border-radius: 20px;
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+// Select and download button styles
+.select-download-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    label {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+    }
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+.select-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    
+    .usa-label {
+        margin: 0;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    
+    .usa-select {
+        min-width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #D7D7D7;
+        margin: 0;
+    }
+  }
+
+// Style for the download button
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #005EA2;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: #1a4480;
+    }
+    
+    svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+}
+
+.legislation-section {
+    padding: 0 6rem;
+
+    h2 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        padding: 40px 0 20px 0;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+    }
+
+    .legislation-cards {
+        display: grid;
+        grid-template-columns: 1fr; // 1 card per row on mobile
+        gap: 40px;
+        
+        // Tablet (2 cards per row)
+        @media (min-width: 481px) and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        // Desktop (3 cards per row)
+        @media (min-width: 769px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.faq-section {
+    padding: 0 6rem;
+
+    h2 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        padding: 40px 0 20px 0;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+    }
+}
+
+
+.links-section {
+    padding: 0 6rem 6rem 6rem;
+
+    @media (max-width: 768px) {
+        padding: 0 1rem 5rem 1rem;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        padding: 40px 0 20px 0;
+        margin: 0;
+    }
+
+    a {
+        color: #005EA2;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+    }
+    
+    .resource-links {
+        list-style: none; 
+        padding-left: 0; 
+        margin: 0; 
+        
+        li {
+            margin-bottom: 12px; 
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<!-- Secondary footer container --> 
+<footer class="usa-identifier width-full padding-0"> 
+  <!-- Navigation section -->
+
+  <!-- Masthead section -->
+  <section  
+    class="usa-identifier__section usa-identifier__section--masthead"  
+    aria-label="Agency identifier"> 
+    <div class="usa-identifier__container display-flex items-center"> 
+      <div class="usa-identifier__logos"> 
+        <a href="/" class="usa-identifier__logo"> 
+          <img 
+            class="usa-identifier__logo-img" 
+            src="/assets/img/omb-logo.png" 
+            alt="Executive Office of the President, Office of Management and Budget logo" 
+            width="49" 
+            height="49" 
+          /> 
+        </a> 
+      </div> 
+       
+      <div class="usa-identifier__identity margin-top-105 tablet:margin-top-0"> 
+        <p class="usa-identifier__identity-domain text-bold text-white font-body-md tablet:font-body-lg"> 
+          PaymentAccuracy
+        </p> 
+        <p style="font-size: 15px; margin: 0;">An official website of the Federal Government</p>
+      </div> 
+    </div> 
+  </section> 
+</footer>
+
+<script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>
+
+{% if layout.footer_include %}
+
+  {% include {{ layout.footer_include }} %}
+
+{% endif %}

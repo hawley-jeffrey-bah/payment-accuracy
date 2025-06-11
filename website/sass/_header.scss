@@ -1,0 +1,54 @@
+// Header-specific styles
+header.payment-accuracy-header.usa-header.usa-header--basic.header.homepage {
+    background-color: #112F4E;
+    
+    a {
+        color: white;
+    }
+    
+    .usa-logo span {
+        color: white;
+    }
+    
+    .usa-nav__link span {
+        color: white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+}
+
+.payment-accuracy-header {
+    .usa-logo img {
+        height: 50px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .usa-nav__link span {
+        color: black;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .site-title {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;
+    }
+
+    .usa-nav__primary .usa-nav__primary a:hover
+    {
+        color: #005EA2;
+    }
+
+    @media (max-width: 64em) {
+        .usa-nav.is-visible .usa-nav__primary-item a.usa-nav__link span {
+        color: #005EA2; 
+        }
+    }
+}

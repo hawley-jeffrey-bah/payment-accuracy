@@ -1,0 +1,116 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.about-container {
+    h1 {
+        @include default-text-styling($size: 40px, $weight: 400, $height: 48px);
+        margin-top: 0;
+        
+        @media (max-width: $tablet) {
+            @include default-text-styling($size: 32px, $height: 40px);
+        }
+    }
+
+    h2 {
+        @include default-text-styling($size: 32px, $weight: 600, $height: 40px);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        @include default-text-styling($size: 16px, $weight: 400, $height: 24px);
+        margin-bottom: 1rem;
+    }
+
+    ol {
+        margin-bottom: 1.5rem;
+        padding-left: 20px;
+
+        li {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .breadcrumbs {
+        @include default-text-styling($color: $black, $size: 16px, $weight: 400, $height: 24px);
+    
+        .home-link {
+            color: $pa-text-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+// ===================================
+// Layout Components
+// ===================================
+
+// Hero Section
+.about-page-hero {
+    background-color: #A1D3FF;
+    background-image: url('/assets/img/arrows.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 2rem; 
+    
+    @media (max-width: $tablet) {
+        padding: 2rem 2rem;
+    }
+    
+    @media (max-width: $mobile) {
+        padding: 2rem 0;
+    }
+
+    // Hero Text Container
+    .hero-text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem 6rem;
+
+        @media (max-width: $tablet) {
+            padding: 2rem 0rem;
+        }
+
+        // Text Content
+        .text {
+            width: 600px;
+            
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+        }
+    }
+
+    // Hero Image
+    .hero-image {
+        flex-shrink: 0;
+        max-width: 310px;
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+      
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}
+
+.about-content {
+    padding: 0px 6rem 6rem 6rem;
+
+    @media (max-width: $tablet) {
+        padding: 2rem 2rem;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 2rem 0;
+    }
+}

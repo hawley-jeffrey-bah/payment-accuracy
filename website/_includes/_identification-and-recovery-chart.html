@@ -1,0 +1,67 @@
+<div class="grid-container" id="identified-and-recovered-chart-container">
+    <div class="grid-row">
+        <p><strong>Please Note:  </strong>Overpayment amounts recovered are reported in the year they were recovered, not the year they were identified. Therefore it is possible in some years to have a recovery rate greater than 100%.</p>
+    </div>
+    <div class="grid-row grid-gap-2">
+        <div class="desktop:grid-col-3 tablet:grid-col-6">
+            <strong>View as:</strong>
+            <ul class="usa-button-group usa-button-group--segmented chart-table-toggle">
+                <li class="usa-button-group__item">
+                    <button type="button" class="usa-button show-chart-button">Chart</button>
+                </li>
+                <li class="usa-button-group__item">
+                    <button type="button" class="usa-button usa-button--outline show-table-button">Table</button>
+                </li>
+            </ul>
+            <br />
+            <div class="grid-container legend">
+                <div class="grid-row">
+                        <div class="grid-col-10">
+                        <strong>Chart Toggle Amounts:</strong>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col-10">
+                        <div class="legend-circle purple"></div>Overpayment Amount Identified for Recapture
+                    </div>
+                    <div class="grid-col-2">
+                        <label class="switch">
+                            <input type="checkbox" class="chart-toggle" data-series="Identified" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-col-10">
+                        <div class="legend-circle dark-green"></div>Overpayment Amount Recovered
+                    </div>
+                    <div class="grid-col-2">
+                        <label class="switch">
+                            <input type="checkbox" class="chart-toggle" data-series="Recovered" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <button id="download-identified-and-recovered-chart-csv" class="usa-button usa-button--outline" type="button">Download CSV <img src="/assets/img/usa-icons/file_download.svg" /></button>
+        </div>
+        <div class="desktop:grid-col-9 tablet:grid-col-12 identified-and-recovered-chart-parent">
+            <div class="chart-title">Recovery Rate of Overpayments</div>
+            <canvas
+                data-identified-series="{{ include.identified }}"
+                data-recovered-series="{{ include.recovered }}"
+                data-years="{{ include.years }}"
+                id="identified-and-recovered-chart" >
+            </canvas>
+        </div>
+        <div class="desktop:grid-col-9 tablet:grid-col-12 identified-and-recovered-table-parent hide">
+            <table class="usa-table" id="identified-and-recovered-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
