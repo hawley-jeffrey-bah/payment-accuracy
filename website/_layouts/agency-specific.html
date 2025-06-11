@@ -1,0 +1,695 @@
+---
+layout: default
+permalink: /
+---
+<main id="main-content" role="main" class="agency-specific-container">
+    <section class="usa-hero agency-specific-hero" aria-label="Agencies & Programs">
+        <div class="grid-container agency-specific-hero-content">
+            <div class="grid-row">
+                <div class="grid-col-7 hero-text-container">
+                    <div class="hero-text">
+                        <h1>{{ page.Agency_Name }}</h1>
+                        {% if page.detail_exs1 != nil %}
+                            <p id="executive-summary-text" class="text-truncate">
+                                {{ page.detail_exs1 | newline_to_br }}
+                            </p>
+                            <a href="javascript:void(0)" onclick="unclampExecutiveSummary()" id="show-full-executive-summary">Show Full Executive Summary</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="grid-col hero-image-container">
+                    <div class="hero-image">
+                        <img src="/assets/img/agency-specific-image.png" alt="Agency-Specific Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agency-specific-content">
+        <div class="grid-container">
+            <div class="grid-row grid-gap-3 nav-row">
+                <div class="desktop:grid-col-8 tablet:grid-col-12">
+                    <p class="breadcrumbs"><a href="/" class="home-link">Home</a> > <a href="/agencies-and-programs">Agencies & Programs</a> > {{ page.Agency_Name }}</p>
+                </div>
+                <div class="desktop:grid-col-4 tablet:grid-col-12">
+                    {% assign url_prefix = "/agency/" | append: page.Agency | append: "/" %}
+                    {% include _years-dropdown.html
+                        url_prefix = url_prefix
+                        years_available = page.Years_Available
+                        fiscal_year = page.Fiscal_Year
+                    %}
+                </div>
+            </div>
+            {% unless page.Hide_Integrity_Results == true or page.Is_Placeholder == true %}
+                <h3 class="spending-trends-header">Agency Level Payment Integrity Results</h3>
+
+                {% unless page.Hide_Sparklines == true or page.Is_Placeholder == true %}
+                    <ul class="usa-card-group grid-row grid-gap-6 spending-trends-cards">
+                        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+                            {% assign Chart_Caption = "(Based on federal funding spent by the agency in FY " | append: page.Fiscal_Year | append: ")" %}
+                            {% include _sparklines-chart.html
+                                rate_min=page.Payment_Accuracy_Rate_Min
+                                rate_max=page.Payment_Accuracy_Rate_Max
+                                datapoints=page.Payment_Accuracy_Rates
+                                years=page.Improper_Payments_Data_Years
+                                min=80
+                                max=100
+                                cy=page.Fiscal_Year
+                                color="rgba(84, 39, 143, 1)"
+                                title="Payment accuracy rate"
+                                caption=Chart_Caption %}
+                        </li>
+                        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+                            {% include _sparklines-chart.html
+                                rate_min=page.Improper_Payments_Rate_Min
+                                rate_max=page.Improper_Payments_Rate_Max
+                                datapoints=page.Improper_Payments_Rates
+                                years=page.Improper_Payments_Data_Years
+                                min=0
+                                max=10
+                                cy=page.Fiscal_Year
+                                color="rgba(84, 39, 143, 1)"
+                                title="Improper payments rate"
+                                caption=Chart_Caption %}
+                        </li>
+                        <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
+                            {% include _sparklines-chart.html
+                                rate_min=page.Unknown_Payments_Rate_Min
+                                rate_max=page.Unknown_Payments_Rate_Max
+                                datapoints=page.Unknown_Payments_Rates
+                                years=page.Improper_Payments_Data_Years
+                                min=0
+                                max=10
+                                cy=page.Fiscal_Year
+                                color="rgba(84, 39, 143, 1)"
+                                title="Unknown payments rate"
+                                caption=Chart_Caption %}
+                        </li>
+                    </ul>
+                {% endunless %}
+
+                <ul class="usa-card-group grid-row grid-gap-6 chart-cards">
+                    <li class="usa-card grid-col-12">
+                        {% include _improper-payment-estimates-chart.html
+                            title_prefix=page.Agency_Name
+                            payment_accuracy=page.Payment_Accuracy_Amounts
+                            overpayment=page.Overpayment_Amounts
+                            underpayment=page.Underpayment_Amounts
+                            technically_improper=page.Technically_Improper_Amounts
+                            unknown=page.Unknown_Amounts
+                            years=page.Improper_Payments_Data_Years
+                            cy=page.Fiscal_Year %}
+                    </li>
+                </ul>
+            {% endunless %}
+        </div>
+
+        {% unless page.Hide_Recovery_Info == true or page.Is_Placeholder == true %}
+            <div class="grid-container recovery-information-section">
+                <h3>Recovery Information</h3>
+                <div class="usa-accordion agency-specific-accordion">
+                    {% unless (page.Overpayment_Years == nil) or (page.Overpayment_Years == '[]') %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-1">
+                                    Identification and Recovery of Overpayments
+                                </button>
+                            </h4>
+                            <div id="accordion-1" class="usa-accordion__content usa-prose">
+                                {% include _identification-and-recovery-chart.html
+                                    identified=page.Overpayment_Amounts_Identified
+                                    recovered=page.Overpayment_Amounts_Recovered
+                                    years=page.Overpayment_Years
+                                    cy=page.Fiscal_Year %}
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Recovery_Details == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-2">
+                                    Recovery Audits and Activities Program
+                                </button>
+                            </h4>
+                            <div id="accordion-2" class="usa-accordion__content usa-prose">
+                                {% if page.detail_arp18 != nil and page.detail_arp18 != "" %}
+                                    {{ page.detail_arp18 | newline_to_br }}
+                                    <br />
+                                {% endif %}
+
+                                <table class="usa-table usa-table--borderless recovery-audits-and-activites">
+                                    <tbody>
+                                        {% if page.recovery_OP_Amt_Identified_outside_of_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Overpayment amount identified through recovery activities</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_OP_Amt_Identified_outside_of_Payment_Recapture_Audits | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Amt_Recapture_outside_of_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Overpayment amount recovered through recovery activities</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_OP_Amt_Recapture_outside_of_Payment_Recapture_Audits | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Amt_Recapture_outside_of_Payment_Recapture_Audits != nil and page.recovery_OP_Amt_Identified_outside_of_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Recovery activities recovery rate</td>
+                                                <td class="amount-col">
+                                                    {% if page.recovery_OP_Amt_Identified_outside_of_Payment_Recapture_Audits == 0 %}
+                                                        0 %
+                                                    {% else %}
+                                                        {{ page.recovery_OP_Amt_Recapture_outside_of_Payment_Recapture_Audits | times: 100 | divided_by: page.recovery_OP_Amt_Identified_outside_of_Payment_Recapture_Audits | round: 2 | thousands_separator }} %
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Overpayment amount identified through recovery audits</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Amt_Recaptured_through_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Overpayment amount recovered through recovery audits</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_OP_Amt_Recaptured_through_Payment_Recapture_Audits | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Amt_Recaptured_through_Payment_Recapture_Audits != nil and page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td>Recovery audit recovery rate</td>
+                                                <td class="amount-col">
+                                                    {% if page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits == 0 %}
+                                                        0 %
+                                                    {% else %}
+                                                        {{ page.recovery_OP_Amt_Recaptured_through_Payment_Recapture_Audits | times: 100 | divided_by: page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits | round: 2 | thousands_separator }} %
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_OP_Next_FY_Recapture_Rate_Target_through_Payment_Recapture_Audit != nil %}
+                                            <tr>
+                                                <td>Recovery audit target recovery rate</td>
+                                                <td class="amount-col">
+                                                    {{ page.recovery_OP_Next_FY_Recapture_Rate_Target_through_Payment_Recapture_Audit | times: 100 | round: 2 | thousands_separator }} %
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Total_Overpayment_Amount_Identified != nil %}
+                                            <tr>
+                                                <td>Overpayment amount identified for recapture</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_Total_Overpayment_Amount_Identified | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Total_Overpayment_Amount_Recovered != nil %}
+                                            <tr>
+                                                <td>Overpayment amount recovered</td>
+                                                <td class="amount-col">
+                                                    ${{ page.recovery_Total_Overpayment_Amount_Recovered | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Total_Overpayment_Amount_Recovered != nil and page.recovery_Total_Overpayment_Amount_Identified != nil %}
+                                            <tr>
+                                                <td>Overpayment recovery rate</td>
+                                                <td class="amount-col">
+                                                    {% if page.recovery_Total_Overpayment_Amount_Identified == 0 %}
+                                                        0 %
+                                                    {% else %}
+                                                        {{ page.recovery_Total_Overpayment_Amount_Recovered | times: 100 | divided_by: page.recovery_Total_Overpayment_Amount_Identified | round: 2 | thousands_separator }} %
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Recovery_Audits == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-3">
+                                    Recovery Audits
+                                </button>
+                            </h4>
+                            <div id="accordion-3" class="usa-accordion__content usa-prose">
+                                {% if page.detail_arp17 != nil and page.detail_arp17 != "" %}
+                                    {{ page.detail_arp17 | newline_to_br }}
+                                    <br />
+                                {% endif %}
+
+                                {% if page.detail_ara2_1 != nil and page.detail_ara2_1 != "" %}
+                                    <h5>Methods Currently Used to Recover Overpayments Identified in Recovery Audits</h5>
+                                    <br />
+                                    {{ page.detail_ara2_1 | newline_to_br }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endunless %}
+                </div>
+            </div>
+        {% endunless %}
+
+        {% if page.Confirmed_Fraud != nil and page.Confirmed_Fraud != 0 %}
+            <div class="grid-container confirmed-fraud">
+                <div class="usa-alert usa-alert--warning">
+                    <div class="usa-alert__body">
+                        <h4 class="usa-alert__heading">Confirmed Fraud</h4>
+                        <p class="usa-alert__text">
+                            Intentional monetary loss improper payments are more commonly referred to as financial fraud and are overpayments that occur
+                            on purpose.  This agency reported ${{ page.Confirmed_Fraud | round: 2 | thousands_separator }}M of confirmed fraud in this reporting cycle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% unless page.Hide_Supplemental_Info == true or page.Is_Placeholder == true %}
+            <div class="grid-container supplemental-information-section">
+                <h3>Supplemental Information</h3>
+                <div class="usa-accordion agency-specific-accordion">
+                    {% unless page.Hide_Do_Not_Pay == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-1b">
+                                    Do Not Pay Working System
+                                </button>
+                            </h4>
+                            <div id="accordion-1b" class="usa-accordion__content usa-prose">
+                                <p>{{ page.detail_dpa5 | newline_to_br }}</p>
+                                <p><strong>The initiative has {% if page.detail_dpa2 != 'Yes' %}not {% endif %}reduced/prevented improper payments:</strong></p>
+                                <p>
+                                    {% assign detail_dpa3_downcase = (page.detail_dpa3 | downcase) %}
+                                    {% if detail_dpa3_downcase == 'my agency did not identify any incorrect information' %}
+                                        {{page.Agency}} has not identitied incorrect information in the Initiative.
+                                    {% else %}
+                                        The initiative strives to maintain accurate data.  However, the past year, {{page.Agency}} has identified incorrect information in the Initiative {{ page.detail_dpa3 }}.
+                                        {% if page.detail_dpa4 != nil %}
+                                            Corrections were made to incorrect information that {{ page.Agency }} identified in the Initiative {{ page.detail_dpa4 }}.
+                                        {% endif %}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Disposition_of_Funds == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-2b">
+                                    Disposition of Funds Recovered Through Recovery Audit
+                                </button>
+                            </h4>
+                            <div id="accordion-2b" class="usa-accordion__content usa-prose">
+                                <table class="usa-table--borderless" id="disposition-table">
+                                    <thead>
+                                        <tr>
+                                            {% if page.recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Agency Expenses to Administer the Recovery Audits & Activity Program</th>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_through_FM_Improvement_Activities != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Financial Management Improvement Program</th>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Original_Purpose != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Original Purpose</th>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Office_of_Inspector_General != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Inspector General Activities</th>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Returned_to_Treasury != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Returned to Treasury</th>
+                                            {% endif %}
+
+                                            {% if page.recovery_Returned_to_Original_Account != nil %}
+                                                <th scope="col" role="columnheader" class="padding-2">Returned to Original Account</th>
+                                            {% endif %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            {% if page.recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor != nil %}
+                                                <td class="amount-col">${{ page.recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_through_FM_Improvement_Activities != nil %}
+                                                <td class="amount-col">${{ page.recovery_Disposition_of_Funds_through_FM_Improvement_Activities | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Original_Purpose != nil %}
+                                                <td class="amount-col">${{ page.recovery_Disposition_of_Funds_Through_Original_Purpose | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Office_of_Inspector_General != nil %}
+                                                <td class="amount-col">${{ page.recovery_Disposition_of_Funds_Through_Office_of_Inspector_General | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+
+                                            {% if page.recovery_Disposition_of_Funds_Through_Returned_to_Treasury != nil %}
+                                                <td class="amount-col">${{ page.recovery_Disposition_of_Funds_Through_Returned_to_Treasury | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+
+                                            {% if page.recovery_Returned_to_Original_Account != nil %}
+                                                <td class="amount-col">${{ page.recovery_Returned_to_Original_Account | round: 2 | thousands_separator }} M</td>
+                                            {% endif %}
+                                        </tr>
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_Remaining_Unrecovered != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Identified This Reporting Period That Remains Outstanding</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Aging_of_Outstanding_OP_Identified_Remaining_Unrecovered | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_Remaining_Unrecovered != nil and page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Rate Outstanding</td>
+                                                <td class="amount-col text-left">
+                                                    {% if page.recovery_Aging_of_Outstanding_OP_Identified_Remaining_Unrecovered > 0 %}
+                                                        {{ page.recovery_Aging_of_Outstanding_OP_Identified_Remaining_Unrecovered | times: 100 | divided_by: page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits | round: 2 | thousands_separator }} %
+                                                    {% else %}
+                                                        0 %
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_Amt_0_-_6_months != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount This Reporting Period That Remains Outstanding for 0-6 Months</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Aging_of_Outstanding_OP_Identified_Amt_0_-_6_months | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_Amt_6_months_to_1_year != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Identified This Reporting Period That Remains Outstanding for 6 Months to 1 Year</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Aging_of_Outstanding_OP_Identified_Amt_6_months_to_1_year | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_Amt_over_1_year != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Identified in Prior Reporting Periods That Remains Outstanding Over a Year</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Aging_of_Outstanding_OP_Identified_Amt_over_1_year | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Identified in This Reporting Period Determined Not Collectible During This Reporting Period</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable != nil and page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Rate Identified in This Reporting Period Determined Not Collectible During This Reporting Period</td>
+                                                <td class="amount-col text-left">
+                                                    {% if page.recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable > 0 %}
+                                                        {{ page.recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable | times: 100 | divided_by: page.recovery_OP_Amt_Identified_through_Payment_Recapture_Audits | round: 2 | thousands_separator }} %
+                                                    {% else %}
+                                                        0 %
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+
+                                        {% if page.recovery_Recovery_Audit_Amount_Identified_In_Prior_Reporting_Periods_Determined_Not_Collectable_During_This_Reporting_Period != nil %}
+                                            <tr>
+                                                <td class="text-left" colspan="5">Recovery Audit Amount Identified in in Prior Reporting Periods Determined Not Collectible During This Reporting Period</td>
+                                                <td class="amount-col text-left">
+                                                    ${{ page.recovery_Recovery_Audit_Amount_Identified_In_Prior_Reporting_Periods_Determined_Not_Collectable_During_This_Reporting_Period | round: 2 | thousands_separator }} M
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                                {% if page.detail_ara2_2 != nil and page.detail_ara2_2 != "" %}
+                                    <br />
+                                    {{ page.detail_ara2_2 | newline_to_br }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_PIIA2019 == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-3b">
+                                    Compliance with the Payment Integrity Information Act of 2019
+                                </button>
+                            </h4>
+                            <div id="accordion-3b" class="usa-accordion__content usa-prose">
+                                {% assign detail_com1_downcase = (page.detail_com1 | downcase) %}
+                                {% if page.detail_com1 != nil and (detail_com1_downcase == "compliant" or detail_com1_downcase == "non-compliant") %}
+                                    <p>{{ page.Agency }} was found {% if detail_com1_downcase == "non-compliant" %}non-{% endif %}compliant during the most recent PIIA compliance review.</p>
+                                    {% if detail_com1_downcase == "non-compliant" and page.detail_pcp12_1 != nil %}
+                                        <p><strong>Number of consecutive years {{ page.Agency }} has been non-compliant:  {{ page.detail_pcp12_1 | round: 0 }}</strong></p>
+                                    {% endif %}
+                                {% endif %}
+
+                                {% if page.PIIA2019_NonCompliant_Programs.size > 0 %}
+                                    <p>Non-compliant programs:</p>
+                                    <ul id="non-compliant-programs-list">
+                                        {% for program in page.PIIA2019_NonCompliant_Programs %}
+                                            <li>
+                                                <a href="/programs/EXAMPLE">{{ program.Name }}</a>
+                                                <p>
+                                                    <strong>Non-compliance criteria:  </strong>
+                                                    {% if program.Compliant_1A == false %}
+                                                        Published Payment Integrity Information with the annual financial statement in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_1B == false %}
+                                                        Posted the annual financial statement and accompanying materials on the agency website in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_2A == false %}
+                                                        Conducted Improper Payment risk assessments for each program with annual outlays greater than $10,000,000 at least once in the last three years in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_2B == false %}
+                                                        Adequately concluded whether it is likely to make Improper Payments and Unknown Payments above or below the statutory threshold in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_3 == false %}
+                                                        Published Improper Payment and Unknown Payment estimates for programs susceptible to significant Improper Payments and Unknown Payments in the accompanying materials to the annual financial statement in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_4 == false %}
+                                                        Published corrective action plans for which an estimate above the statutory threshold was published in the accompanying materials to the annual financial statement in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_5A == false %}
+                                                        Published an Improper Payment and Unknown Payment reduction target for which an estimate above the statutory threshold was published in the accompanying materials to the annual financial statement in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_5B == false %}
+                                                        Demonstrated improvements to payment integrity or reached a tolerable Improper Payment and Unknown Payment rate in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_5C == false %}
+                                                        Developed a plan to meet the Improper Payment and Unknown Payment reduction target in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                    {% if program.Compliant_6 == false %}
+                                                        Reported an Improper Payment estimate of less than 10% for which an estimate was published in the accompanying materials to the annual financial statement in the most recent OIG PIIA Compliance report.  
+                                                    {% endif %}
+                                                </p>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                {% if page.PIIA2019_Compliant_Programs.size > 0 %}
+                                    <p><a href="javascript:void(0)" onclick="showCompliantPrograms()" class="toggle-visibility-compliant-programs">Show full list of compliant programs <img src="/assets/img/expand-blue.svg" alt="Expand" class="toggle-icon"></a></p>
+                                    <div class="hide toggled-visibility-compliant-programs">
+                                        <p>Compliant programs:</p>
+                                        <ul>
+                                            {% for program in page.PIIA2019_Compliant_Programs %}
+                                                <li>
+                                                    <a href="/programs/EXAMPLE">{{ program.Name }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+
+                                {% if page.detail_pcp14 != nil %}
+                                    <p><strong>OIG recommendations for actions to further improve prevention and reduction of improper payments and unknown payments</strong></p>
+                                    <p>{{ page.detail_pcp14 | newline_to_br }}</p>
+                                    <br />
+                                {% endif %}
+
+                                {% if page.detail_CAP5 != nil %}
+                                    <p><strong>Actions recommended and planned to achieve compliance</strong></p>
+                                    <p>{{ page.detail_CAP5 | newline_to_br }}</p>
+                                    <br />
+                                {% endif %}
+
+                                {% if page.detail_cap3 != nil %}
+                                    <p><strong>Official(s) accountable for the progress of the agency coming into compliance for the non-compliant criterion</strong></p>
+                                    <p>{{ page.detail_cap3 | newline_to_br }}</p>
+                                    <br />
+                                {% endif %}
+
+                                {% if page.detail_cap4 != nil %}
+                                    <p><strong>Accountability mechanism tied to the success of the official designated in leading the efforts to come into compliance for the non-compliant criterion</strong></p>
+                                    <p>{{ page.detail_cap4 | newline_to_br }}</p>
+                                    <br />
+                                {% endif %}                        
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Risk_Assessment_Results == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-4b">
+                                    Risk Assessment Results
+                                </button>
+                            </h4>
+                            <div id="accordion-4b" class="usa-accordion__content usa-prose">
+                                {% if page.detail_raa9 != nil %}
+                                    <p>{{ page.detail_raa9 | newline_to_br }}</p>
+                                {% endif %}
+
+                                {% if page.detail_raa8 == 'Yes' %}
+                                    <p><strong>The Agency made substantial changes to the methodology of the review conducted for risk for improper payments for the reporting cycle.</strong></p>
+                                {% endif %}
+
+                                {% if page.Risks != nil and page.Risks.size > 0 %}
+                                    <table class="usa-table--borderless usa-table" id="risk-assessments-table">
+                                        <thead>
+                                            <tr>
+                                                <th data-sortable scope="col" role="columnheader" class="padding-2 cursor-pointer">Program Name</th>
+                                                <th data-sortable scope="col" role="columnheader" class="padding-2 cursor-pointer">When was the last improper payment Risk Assessment conducted?</th>
+                                                <th data-sortable scope="col" role="columnheader" class="padding-2 cursor-pointer">Likely to be susceptible to significant improper payments?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% assign rowHeaderRendered = false %}
+                                            {% for risk in page.Risks %}
+                                                {% assign firstAssessment = risk.Assessments | first %}
+                                                {% assign minAssessmentYear = firstAssessment.Fiscal_Year %}
+                                                {% for assessment in risk.Assessments %}
+                                                <tr>
+                                                    {% if rowHeaderRendered == false %}
+                                                        <!-- rowspan would be preferable, but it breaks uswds sorting -->
+                                                        <td class="text-left" data-sort-value="{{ risk.Program_Name }}" style="border-bottom: none;">
+                                                            <a href="/programs/EXAMPLE">{{ risk.Program_Name }}</a>
+                                                        </td>
+                                                    {% else %}
+                                                        <td data-sort-value="{{ risk.Program_Name }}" style="border-top: none; border-bottom: none;"></td>
+                                                    {% endif %}
+                                                    {% assign rowHeaderRendered = true %}
+                                                    {% assign yearSortValue = assessment.Fiscal_Year %}
+                                                    {% if risk.Assessments.size > 1 %}
+                                                        <!-- this ensures that multi-row programs are sorted together -->
+                                                        {% assign yearSortValue = minAssessmentYear | append: risk.Program_Name %}
+                                                    {% endif %}
+                                                    <td data-sort-value="{{ yearSortValue }}">
+                                                        {{ assessment.Fiscal_Year }}
+                                                    </td>
+                                                    {% assign susceptibleSortValue = assessment.Susceptible %}
+                                                    {% if risk.Assessments.size > 1 %}
+                                                        <!-- this ensures that multi-row programs are sorted together -->
+                                                        {% assign susceptibleSortValue = 'Yes' | append: risk.Program_Name %}
+                                                    {% endif %}
+                                                    <td data-sort-value="{{ susceptibleSortValue }}">
+                                                        {% if assessment.Susceptible == 'Yes' %}
+                                                            <img src="/assets/img/orange-check.svg" alt="No"> Yes
+                                                        {% else %}
+                                                            <img src="/assets/img/green-x.svg" alt="No"> No
+                                                        {% endif %}
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                                {% assign rowHeaderRendered = false %}
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Eligibility_Criteria == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-5b">
+                                    Eligibility Criteria and Barriers to Preventing Improper Payments
+                                </button>
+                            </h4>
+                            <div id="accordion-5b" class="usa-accordion__content usa-prose">
+                                {% for elibility_theme in page.Eligibility_Themes %}
+                                    <table class="usa-table--borderless usa-table eligibility-theme-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" role="columnheader" class="padding-2" colspan="3">{{ elibility_theme.Program_Name }}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" role="columnheader" class="padding-2">Eligibility Element/Information Needed</th>
+                                                <th scope="col" role="columnheader" class="padding-2">Description of the Eligibility Element/Information</th>
+                                                <th scope="col" role="columnheader" class="padding-2">Description of the Barriers Prohibiting Improving Prevention of Improper Payments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for theme in elibility_theme.Themes %}
+                                                <tr>
+                                                    <td>{{ theme.Theme }}</td>
+                                                    <td>{{ theme.Info }}</td>
+                                                    <td>{{ theme.Barriers }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% unless page.Hide_Supplemental_Payment_Integrity == true or page.Is_Placeholder == true %}
+                        <div class="usa-accordion__item">
+                            <h4 class="usa-accordion__heading">
+                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-6b">
+                                    Supplemental Payment Integrity Information
+                                </button>
+                            </h4>
+                            <div id="accordion-6b" class="usa-accordion__content usa-prose">
+                                <p>{{ page.detail_agy1 | newline_to_br }}</p>
+                            </div>
+                        </div>
+                    {% endunless %}
+                </div>
+            </div>
+        {% endunless %}
+    </section>
+</main>
+<script src="{{ '/assets/js/agency-specific-scripts.js' | relative_url }}"></script>

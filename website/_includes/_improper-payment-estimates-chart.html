@@ -1,0 +1,106 @@
+<div class="usa-card__container" id="improper-payment-estimates-chart-container">
+    <div class="usa-card__body">
+        <div class="grid-container">
+            <div class="grid-row">
+                <h5>{{ include.title_prefix }} Improper Payment Estimates Over Time</h5>
+            </div>
+            <div class="grid-row grid-gap-2">
+                <div class="desktop:grid-col-3 tablet:grid-col-6">
+                    <strong>View as:</strong>
+                    <ul class="usa-button-group usa-button-group--segmented chart-table-toggle">
+                        <li class="usa-button-group__item">
+                            <button type="button" class="usa-button show-chart-button">Chart</button>
+                        </li>
+                        <li class="usa-button-group__item">
+                            <button type="button" class="usa-button usa-button--outline show-table-button">Table</button>
+                        </li>
+                    </ul>
+                    <br />
+                    <div class="grid-container legend">
+                        <div class="grid-row">
+                             <div class="grid-col-10">
+                                <strong>Chart Toggle Amounts:</strong>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col-10">
+                                <div class="legend-circle dark-green"></div>Payment Accuracy
+                            </div>
+                            <div class="grid-col-2">
+                                <label class="switch">
+                                    <input type="checkbox" class="chart-toggle" data-series="Payment Accuracy" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col-10">
+                                <div class="legend-circle purple"></div>Overpayment
+                            </div>
+                            <div class="grid-col-2">
+                                <label class="switch">
+                                    <input type="checkbox" class="chart-toggle" data-series="Overpayment" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col-10">
+                                <div class="legend-circle yellow"></div>Underpayment
+                            </div>
+                            <div class="grid-col-2">
+                                <label class="switch">
+                                    <input type="checkbox" class="chart-toggle" data-series="Underpayment" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col-10">
+                                <div class="legend-circle red"></div>Technically Improper
+                            </div>
+                            <div class="grid-col-2">
+                                <label class="switch">
+                                    <input type="checkbox" class="chart-toggle" data-series="Technically Improper" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-col-10">
+                                <div class="legend-circle light-blue"></div>Unknown
+                            </div>
+                            <div class="grid-col-2">
+                                <label class="switch">
+                                    <input type="checkbox" class="chart-toggle" data-series="Unknown" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <button id="download-improper-payment-estimates-chart-csv" class="usa-button usa-button--outline" type="button">Download CSV <img src="/assets/img/usa-icons/file_download.svg" /></button>
+                </div>
+                <div class="desktop:grid-col-9 tablet:grid-col-12 improper-payment-estimates-chart-parent">
+                    <canvas
+                        data-payment-accuracy-series="{{ include.payment_accuracy }}"
+                        data-overpayment-series="{{ include.overpayment }}"
+                        data-underpayment-series="{{ include.underpayment }}"
+                        data-technically-improper-series="{{ include.technically_improper }}"
+                        data-unknown-series="{{ include.unknown }}"
+                        data-years="{{ include.years }}"
+                        id="improper-payment-estimates-chart" >
+                    </canvas>
+                </div>
+                <div class="desktop:grid-col-9 tablet:grid-col-12 improper-payment-estimates-table-parent hide">
+                    <table class="usa-table" id="improper-payment-estimates-table">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

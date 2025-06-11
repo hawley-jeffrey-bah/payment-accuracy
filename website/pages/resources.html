@@ -1,0 +1,114 @@
+---
+layout: default
+permalink: /resources
+---
+
+<main id="main-content">
+    <section class="resources-page-hero" aria-label="Introduction">
+        <div class="grid-container">
+            <div class="hero-text">
+                <div class="text">
+                    <h1>Resources</h1>
+                    <p>Data resources for improper payments datasets, Federal financial reports, payment integrity legislation, presidential actions, and more.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section>
+        <div class="grid-container resources-content">
+            <div class="grid-row">
+                <p class="breadcrumbs"><a href="/" class="home-link">Home</a> > Resources</p>
+            </div>  
+          
+            <div class="resources-dataset-title" id="top">
+                <div>
+                    <h2>Annual Improper Payment Datasets</h2>
+                </div>   
+            </div>
+
+            <!-- gray box -->
+            <div class="grid-row">
+                <div class="gray-box">
+                    <p>Search by fiscal year (FY) to download annual improper payments datasets</p>
+                    <div class="select-download-container">
+                        <form class="usa-form select-form">
+                            <label class="usa-label" for="fiscal-year">Select FY:</label>
+                            <select class="usa-select" name="fiscal-year" id="fiscal-year">
+                                <option value="2024">FY 2024</option>
+                                <option value="2023">FY 2023</option>
+                                <option value="2022">FY 2022</option>
+                                <option value="2021">FY 2021</option>
+                                <option value="2020">FY 2020</option>
+                                <option value="2019">FY 2019</option>
+                                <option value="2018">FY 2018</option>
+                                <option value="2017">FY 2017</option>
+                                <option value="2016">FY 2016</option>
+                                <option value="2015">FY 2015</option>
+                            </select>
+                        </form>
+                        <button class="download-button" onclick="downloadDataset()">
+                            Download Dataset
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legislation Section -->
+            <div class="legislation-section">
+                <h2>Data Resources & Legislation</h2>
+                <div class="legislation-cards">
+                    {% include legislation-card.html 
+                        headline="Congressional Reports" 
+                        text="Generate reports based on information found on PaymentAccuracy.gov" 
+                        link="/congressional-reports" %}
+                    
+                    {% include legislation-card.html 
+                        headline="Payment Integrity Legislation" 
+                        text="Payment Integrity Information Act of 2019 (PIIA) (P.L. 116-117)"
+                        link="https://www.congress.gov/116/plaws/publ117/PLAW-116publ117.pdf" %}
+                    
+                    {% include legislation-card.html 
+                        headline="United States Code (USC)" 
+                        text="31 USC 3321: Disbursing authority in the executive branch"
+                        link="http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section3321&num=0&edition=prelim" %}
+
+                    {% include legislation-card.html 
+                        headline="Presidential Actions" 
+                        text="Executive Order 13520, Reducing Improper Payments (November 20, 2009)"
+                        link="https://www.gpo.gov/fdsys/pkg/DCPD-200900942/pdf/DCPD-200900942.pdf" %}
+                    
+                    {% include legislation-card.html 
+                        headline="OMB Memoranda" 
+                        text="M-21-19, Appendix C to Circular No. A-123, Requirements for Payment Integrity Improvement (March 5, 2021)"
+                        link="https://www.whitehouse.gov/wp-content/uploads/2021/03/M-21-19.pdf" %}    
+                </div>
+            </div>
+
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                {% include _faq-item.html %}
+            </div>
+
+            <!-- Other Links Section -->
+            <div class="links-section">
+                <h2>Other Helpful Links</h2>
+                <ul class="resource-links">
+                    <li><a href="https://www.cfo.gov/" target="_blank" rel="noopener noreferrer">Chief Financial Officers Council</a></li>
+                    <li><a href="https://www.ignet.gov/" target="_blank" rel="noopener noreferrer">Council of Inspectors General on Integrity and Efficiency</a></li>
+                    <li><a href="https://fasab.gov/" target="_blank" rel="noopener noreferrer">The Federal Accounting Standards Advisory Board (FASAB)</a></li>
+                    <li><a href="https://www.oversight.gov/" target="_blank" rel="noopener noreferrer">Oversite.gov</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>    
+</main>
+
+

@@ -1,0 +1,236 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+h3 {
+    @include default-text-styling($color: $black, $size: 40px, $weight: 600, $height: 48px)
+}
+
+.agency-specific-container {
+    .agency-specific-content {
+        margin-bottom: 6rem;
+
+        .breadcrumbs {
+            @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+
+            a, a:visited {
+                color: $pa-text-primary;
+                text-decoration: none;
+            }
+        }
+
+        .spending-trends-header {
+            padding: 0vh 5vw;
+        }
+    
+        .spending-trends-cards .usa-card .usa-card__container {
+            border-radius: 20px;
+        }
+    
+        .spending-trends-cards, .chart-cards {
+            padding: 0 2vw;
+    
+            h4 {
+                @include default-text-styling($color: $pa-purple-text, $size: 28px, $weight: 600, $height: 40px)
+            }
+            h5 {
+                @include default-text-styling($color: $pa-darker-blue, $size: 18px, $weight: 400, $height: 36px)
+            }
+            p {
+                @include default-text-styling($size: 14px, $weight: 400, $height: 20px)
+            }
+        }
+
+        .amount-col, .no-wrap {
+            white-space: nowrap;
+        }
+    }
+}
+
+.agency-specific-hero {
+    background-color: $pa-purple;
+    background-image: url('/assets/img/arrows.png');
+
+    // size "cover" is blurry when large executive summary is expanded
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position: bottom;
+
+    position: relative;
+    padding: 2rem 2rem 0 2rem; 
+
+    .agency-specific-hero-content {
+        padding: 0 6rem;
+
+        .hero-text {
+            padding: 0 0 4rem;
+        }
+
+        .hero-image {
+            margin-left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        #show-full-executive-summary {
+            text-decoration: unset;
+            @include default-text-styling($color: $white, $size: 16px, $weight: bold, $height: 24px);
+        }
+
+        @media (max-width: $tablet) {
+            padding: 2rem 0 0 0;
+        }
+
+        @media (max-width: $mobile) {
+            .hero-text-container {
+                width: 100%;
+            }
+            .hero-image-container {
+                display: none;
+            }
+        }
+    }
+
+    .text-truncate {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .text-truncate.expanded {
+        -webkit-line-clamp: unset;
+    }
+}
+
+@media (max-width: $mobile) {
+    .recovery-information-section, .confirmed-fraud, .supplemental-information-section {
+        padding: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 481px) {
+    .recovery-information-section, .confirmed-fraud, .supplemental-information-section {
+        padding: 0 6rem 20px 6rem;
+    }
+}
+
+.usa-accordion__item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.recovery-audits-and-activites {
+    width: 100%;
+    td:nth-of-type(2) {
+        text-align: right;
+    }
+
+    tr > td {
+        border-color: $pa-bg-lightest;
+        color: $pa-darker-blue;
+    }
+}
+
+#disposition-table, #risk-assessments-table {
+    border-collapse: collapse;
+    min-width: 800px;
+
+    tr > td {
+        border-color: $pa-bg-lightest;
+        color: $pa-darker-blue;
+    }
+
+    th {
+        background-color: $pa-dark-blue;
+        @include default-text-styling($color: $white, $size: 14px, $weight: 600, $height: 24px);
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    td:not(.text-left) {
+        text-align: center;
+    }
+}
+
+#disposition-table {
+    tbody tr:first-child td {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+#risk-assessments-table {
+    thead tr th:first-child {
+        width: 80%;
+    }
+
+    .usa-table__header__button svg {
+        filter: invert(1);
+    }
+
+    // fix "row merge" styling effect in risk assessment table
+    tr:last-child {
+        border-bottom: 1px solid $pa-bg-lightest;
+    }
+}
+
+.eligibility-theme-table {
+    border-collapse: collapse;
+    min-width: 800px;
+
+    tr > td, tr > th {
+        border-color: $pa-bg-lightest;
+        color: $pa-darker-blue;
+    }
+
+    thead tr:first-child th {
+        background-color: $pa-dark-blue;
+        @include default-text-styling($color: $white, $size: 16px, $weight: 600, $height: 24px);
+        text-align: center;
+        vertical-align: bottom;
+    }
+
+    thead tr:nth-child(2) th {
+        background-color: $pa-lighter-grey;
+        @include default-text-styling($color: $black, $size: 16px, $weight: 600, $height: 24px);
+    }
+
+    thead tr:nth-child(2) th:nth-child(1) {
+        width: 20%
+    }
+
+    thead tr:nth-child(2) th:nth-child(2) {
+        width: 40%
+    }
+
+    thead tr:nth-child(2) th:nth-child(3) {
+        width: 40%
+    }
+
+    th, td {
+        text-align: left;
+    }
+}
+
+.toggle-icon {
+    vertical-align: middle;
+}
+
+#non-compliant-programs-list li {
+    max-width: unset
+}
+
+.hide {
+    display: none !important;
+}
+
+#accordion-1 .grid-container, #improper-payment-estimates-chart-container .grid-container {
+    padding: 0;
+}
+
+.nav-row {
+    margin-top: 16px;
+}

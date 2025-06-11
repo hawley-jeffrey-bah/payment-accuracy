@@ -1,0 +1,240 @@
+@forward "uswds-theme";
+@forward "uswds";
+@forward "uswds-theme-custom-styles";
+@forward "header";
+@forward "index";
+@forward "mixins";
+@forward "variables";
+@forward "about";
+@forward "resources";
+@forward "legislation-card";
+@forward "accordion-item";
+@forward "agency-wide";
+@forward "agency-specific";
+@forward "programs";
+@forward "agency-wide-card";
+@forward "improper-payment-estimates-chart";
+@forward "identification-and-recovery-chart";
+@forward "years-dropdown";
+
+// US government banner
+.usa-banner__button {
+  &:hover {
+    color: #B8BAE8;
+  }
+
+  &::after {
+    background: white !important;
+  }
+}
+
+
+.usa-logo img {
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.usa-logo .usa-logo__text a span {
+    vertical-align: middle;
+}
+
+.margin-top-neg-10px {
+  margin-top: 10px; 
+}
+
+// .usa-header--basic .usa-nav-container {
+//   align-items: center;
+// }
+
+.gridjs-wrapper, .gridjs-footer {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #f0f0f0;
+}
+.gridjs-pagination .gridjs-pages button:first-child,
+.gridjs-pagination .gridjs-pages button:last-child {
+    border-radius: 0;
+}
+th.gridjs-th {
+    background: #f0f0f0;
+}
+
+#search-filters label::before {
+    height: 1rem;
+    width: 1rem;
+}
+#search-filters .usa-checkbox {
+    position: relative;
+}
+#search-filters input:disabled+label {
+    color: #a9aeb1;
+}
+
+  .banner-section {
+    background-image: url('../assets/img/banner.png');
+  }
+
+.usa-sidenav__sublist a:not(.usa-button) {
+    padding-left: 5px;
+  }
+
+  .usa-sidenav a:not(.usa-button) {
+    padding-left: 5px;
+}
+
+.usa-sidenav__sublist .usa-sidenav__sublist a:not(.usa-button) {
+    padding-left: 5px;
+}
+
+.usa-sidenav .expandable-button.toggle {
+    padding-right: 10px;
+}
+
+.usa-sidenav__sublist .usa-checkbox {
+    display: block;
+    width: 100%;
+}
+
+.usa-sidenav__sublist .usa-checkbox__label {
+    display: block;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.objectives-container {
+    position: relative;
+  }
+
+  .text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .text-truncate.expanded {
+    -webkit-line-clamp: unset;
+  }
+
+  .read-more-btn {
+    color: #4D53C5;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    display: none; /* Hidden by default, shown via JS if needed */
+  }
+
+  .read-more-btn:hover {
+    color: #272A63;
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:disabled + label {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .count {
+    color: #71767a;
+    font-weight: normal;
+  }
+
+  .usa-checkbox.visually-inactive {
+    opacity: 0.5;
+  }
+
+  /* Disabled expand button styles */
+  .usa-checkbox input:disabled ~ .toggle.expandable-button {
+    opacity: 0.5;
+  }
+
+  /* Disabled checkbox container styles */
+  .usa-checkbox.disabled {
+    opacity: 0.5;
+  }
+
+  .usa-checkbox input:disabled {
+    cursor: pointer;
+  }
+
+  .usa-button--disabled {
+    background-color: #e6e6e6;
+    color: #757575;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .home-background {
+    background-image: url('/assets/img/home-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.width-full.bg-white {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-secondary {
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 64em) {
+  .usa-logo {
+    margin-top: 1rem;
+  }
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.45rem; /* Different value for bottom */
+    padding-left: 1rem;
+  }
+
+  .usa-nav__primary button {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.45rem; /* Different value for bottom */
+    padding-left: 1rem;
+  }
+}
+
+.usa-table thead td, .usa-table thead th {
+  background-color: #D3F1FA;
+}
+
+#myChart {
+  word-wrap: break-word;
+}
+
+.no-numbers {
+  list-style-type: none;
+  counter-reset: none;
+}
+
+.no-numbers .usa-process-list__item::before {
+  content: "";
+}
+
+.bars-container {
+  overflow: visible;
+}
+
+@media screen and (max-width: 640px) {
+  .bars-container {
+    overflow: hidden;
+  }
+}
+
+#improper-payments-table.usa-table thead th,
+#improper-payments-table.usa-table thead td {
+  background-color: #ffffff !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

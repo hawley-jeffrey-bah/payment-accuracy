@@ -1,0 +1,20 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.years-dropdown {
+    background-color: #F0F0F0;
+    display: inline-block;
+    padding: 9px 22px 9px 22px;
+
+    label {
+        display: inline-block;
+        @include default-text-styling($color: $black, $size: 14px, $weight: 600, $height: 16px);
+        margin-top: 0;
+    }
+
+    select {
+        display: inline-block;
+        width: 120px;
+        margin-top: 0;
+    }
+}

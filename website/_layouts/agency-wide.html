@@ -1,0 +1,233 @@
+---
+layout: default
+permalink: /
+---
+<div id="main-content" role="main" class="agencies-programs-container">
+    <section class="usa-hero agencies-programs-hero" aria-label="Agencies & Programs">
+        <div class="grid-container agencies-programs-hero-content">
+            <div class="grid-row">
+                <div class="grid-col-7 hero-text-container">
+                    <div class="hero-text">
+                        <h1>Agencies & Programs</h1>
+                        <p>
+                            The Payment Integrity Information Act of 2019 requires an annual publication to fulfill multiple statutory
+                            reporting requirements for both agency and OMB. The agency and program profiles below lets you explore and
+                            compare payment integrity data trends over time through interactive visualizations.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-col hero-image-container">
+                    <div class="hero-image">
+                        <img src="/assets/img/agencies-programs-image.png" alt="Agencies Programs Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agency-wide-content">
+        <div class="grid-container">
+            <div class="grid-row">
+                <p class="breadcrumbs"><a href="/" class="home-link">Home</a> > Agencies & Programs</p>
+            </div>
+            <div class="grid-row content-description-section margin-top-4">
+                <h4 class="content-header margin-y-2">Agency-wide Payment Integrity Overview</h4>
+                <h5 class="content-subtitle margin-y-1">
+                    Take a closer look at the data and how federal agencies are managing susceptible programs and reducing and 
+                    recovering improper payments.
+                </h5>
+                <p class="content-description margin-top-1">
+                    Data shown on this page outlines the total dollar amount an agency spends in federal funding, with a breakdown 
+                    by program. Not all programs an Agency administers are susceptible to improper payments. To understand the 
+                    breakdown in the table, refer to the list below:
+                </p>
+            </div>
+            <div class="content-cards">
+                <div class="grid-row grid-gap">
+                    <div class="tablet:grid-col-4 margin-bottom-4">
+                        {% include _agency-wide-card.html
+                            icon="$"
+                            headline="Susceptible Program Outlays"
+                            text="Amount an agency has spend in federal funding across all programs" %}
+                    </div>
+                    <div class="tablet:grid-col-4 margin-bottom-4">
+                        {% include _agency-wide-card.html 
+                            icon="#"
+                            headline="Total Programs" 
+                            text="Total number of programs administered by the agency" %}
+                    </div>
+                    <div class="tablet:grid-col-4 margin-bottom-4">
+                        {% include _agency-wide-card.html 
+                            icon="#"
+                            headline="Susceptible Programs" 
+                            text="Number of programs reported to be susceptible to improper payments" %}
+                    </div>
+                </div>
+                <div class="grid-row grid-gap">
+                    <div class="tablet:grid-col-4">
+                        {% include _agency-wide-card.html 
+                            icon="#"
+                            headline="High-priority Programs" 
+                            text="Number of programs an agency has reported to be a higher risk" %}
+                    </div>
+                    <div class="tablet:grid-col-4">
+                        {% include _agency-wide-card.html 
+                            icon="#"
+                            headline="Improper Payment Rate" 
+                            text="Percentage of funding reported to have been improperly spent" %}
+                    </div>
+                    <div class="tablet:grid-col-4">
+                        {% include _agency-wide-card.html 
+                            icon="%"
+                            headline="Relative Change" 
+                            text="Percentage change based on the previous fiscal year reporting" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agencies-programs-filter margin-y-4" aria-label="Search and Filter">
+        <div class="grid-container bg-base-lightest">
+            <div class="grid-row">
+                <div class="grid-col">
+                    <h4 class="filter-header margin-y-105">Search and Filter by Agency or Program</h4>
+                </div>
+            </div>
+            <div class="grid-row search-and-filter">
+                <div class="grid-col">
+                    <label class="usa-label margin-y-1 maxw-none" for="agencies-programs-combobox">Search Federal agencies and their programs below and view their agency/program profiles.</label>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-col">
+                    <div class="usa-combo-box maxw-none">
+                        <select class="usa-select" name="agencies-programs-combobox" id="agencies-programs-combobox">
+                            <option value="">Filter by Agency or Program</option>
+                            {% for agency in page.agencies %}
+                                <option value="{{ agency.agency_name }}">{{ agency.agency_name }}</option>
+                                {% for program in agency.programs %}
+                                    <option value="{{ program.program_name }}">PROGRAM: {{ program.program_name }}</option>
+                                {% endfor %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agencies-programs-table" aria-label="Agencies & Programs Table">
+        <div class="grid-container agencies-programs-table-container">
+            <table class="usa-table--borderless" id="agency-programs-table">
+                <thead class="agencies-programs-table-header">
+                    <tr class="height-10">
+                        <th scope="col" role="columnheader" class="name-col text-bottom text-left padding-2 cursor-pointer">Agency Name</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">Susceptible Program Outlays</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">Total Programs</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">Susceptible Programs</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">High-priority Programs</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">Improper Payment Rate</th>
+                        <th scope="col" role="columnheader" class="text-bottom text-right padding-2 cursor-pointer">Relative Change</th>
+                        <th class="expand-col text-bottom text-right padding-2"></th>
+                    </tr>
+                </thead>
+                <tbody class="agencies-programs-table-data">
+                    {% for agency in page.agencies %}
+                        <tr class="agency-row {{ row_class }}" data-agency-name="{{ agency.agency_name }}">
+                            <td data-sort-value="{{ agency.agency_name }}" class="name-col text-middle text-left padding-2"><a href="/agency/{{ agency.agency }}"`>{{ agency.agency_name }}</a></td>
+                            <td data-sort-value="{{ agency.total_spent_federal_funding }}" class="total-spent-col text-middle text-right padding-2">${{ agency.total_spent_federal_funding | thousands_separator }} M</td>
+                            <td data-sort-value="{{ agency.num_programs }}" class="num-programs-col text-middle text-right padding-2">{{ agency.num_programs }}</td>
+                            <td data-sort-value="{{ agency.susceptible_programs }}" class="susceptible-col text-middle text-right padding-2">{{ agency.susceptible_programs }}</td>
+                            <td data-sort-value="{{ agency.high_priority_programs }}" class="high-priority-col text-middle text-right padding-2">{{ agency.high_priority_programs }}</td>
+                            <td data-sort-value="{{ agency.improper_payments_rate }}" class="ip-rate-col text-middle text-right padding-2">{{ agency.improper_payments_rate }}%</td>
+                            <td data-sort-value="{{ agency.relative_change }}" class="relative-change-col text-middle text-center padding-2">
+                                {% assign change = agency.relative_change | default: 0 %}
+                                {% if agency.relative_change != null %}
+                                    {% if change > 0 %}
+                                        {% assign bg_color = "bg-positive-change" %}
+                                    {% elsif change < 0 %}
+                                        {% assign bg_color = "bg-negative-change" %}
+                                    {% else %}
+                                        {% assign bg_color = "bg-no-change" %}
+                                    {% endif %}
+                                {% else %}
+                                    {% assign bg_color = "bg-no-change" %}
+                                {% endif %}
+                                <div class="percentage {{ bg_color }}">
+                                    {% if agency.relative_change != null %}
+                                        {% if agency.relative_change > 0 %}
+                                            +{{ agency.relative_change }}%
+                                        {% else %}
+                                            {{ agency.relative_change }}%
+                                        {% endif %}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td class="expand-col text-middle text-right padding-2">
+                                <button class="usa-button expand-btn square-3 padding-0 {% if agency.susceptible_programs == 0 %}hide{% endif %}" aria-label="Expand Agency">
+                                    <div class="carrot-icon">
+                                        <img src="/assets/img/expand.svg" alt="Expand" class="toggle-icon">
+                                    </div>
+                                </button>
+                            </td>
+                        </tr>
+                        {% for program in agency.programs %}
+                        {% unless program.program_name == nil %}
+                        <tr class="collapsed program-row {{ row-class }}" data-program-name="{{ program.program_name }}" data-agency-name="{{ agency.agency_name }}">
+                            <td class="name-col text-middle text-left padding-x-2 padding-y-1"><a href="/programs/EXAMPLE">{{ program.program_name }}</a></td>
+                            <td class="total-spent-col text-middle text-right padding-x-2 padding-y-1">${{ program.total_spent_federal_funding | thousands_separator }} M</td>
+                            <td class="num-programs-col text-middle text-right padding-x-2 padding-y-1">-</td>
+                            <td class="susceptible-programs-col text-middle text-right padding-x-2 padding-y-1">-</td>
+                            <td class="high-priority-col text-middle text-right padding-x-2 padding-y-1">
+                                {% if program.high_priority_program %}
+                                    <img src="/assets/img/star.svg" alt="High Priority" class="star-icon">
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td class="ip-rate-col text-middle text-right padding-x-2 padding-y-1">{{ program.ip_rate }}%</td>
+                            <td class="relative-change-col text-middle text-center padding-x-2 padding-y-1">
+                                {% assign change = program.relative_change | default: 0 %}
+                                {% if program.relative_change != null %}
+                                    {% if change > 0 %}
+                                        {% assign bg_color = "bg-positive-change" %}
+                                    {% elsif change < 0 %}
+                                        {% assign bg_color = "bg-negative-change" %}
+                                    {% else %}
+                                        {% assign bg_color = "bg-no-change" %}
+                                    {% endif %}
+                                {% else %}
+                                    {% assign bg_color = "bg-no-change" %}
+                                {% endif %}
+                                <div class="percentage {{ bg_color }}">
+                                    {% if program.relative_change != null %}
+                                        {% if program.relative_change > 0 %}
+                                            +{{ program.relative_change }}%
+                                        {% else %}
+                                            {{ program.relative_change }}%
+                                        {% endif %}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td class="expand-col text-middle text-right padding-x-2 padding-y-1"></td>
+                        </tr>
+                        {% endunless %}
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="agencies-programs-table-pagination margin-bottom-15" aria-label="Agencies & Programs Pagination">
+        <div class="grid-container padding-x-0">
+            <nav class="usa-pagination" aria-label="Pagination">
+                <ul id="pagination-container" class="usa-pagination__list">
+                    <!-- Buttons are dynamically inserted in scripts.js -->
+                </ul>
+            </nav>
+        </div>
+    </section>
+</div>
+<script src="{{ '/assets/js/agency-wide-scripts.js' | relative_url }}"></script>

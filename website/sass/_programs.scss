@@ -1,0 +1,59 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.programs-container
+    .programs-hero {
+        background-color: $pa-text-primary;
+        background-image: url('/assets/img/arrows.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 2rem 2rem 0 2rem;
+
+    .programs-hero-content {
+        padding: 2rem 6rem 0 6rem;
+        h1 {
+            @include default-text-styling($color: $white, $size: 40px, $weight: 400, $height: 48px);
+            @media (max-width: $tablet) {
+                @include default-text-styling($color: $white, $size: 32px, $height: 40px);
+            }
+        }
+
+        p {
+            @include default-text-styling($color: $white, $size: 16px, $weight: 400, $height: 24px);
+        }
+
+        .hero-text {
+            padding: 0 0 4rem;
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        @media (max-width: $tablet) {
+            padding: 2rem 0;
+        }
+        @media (max-width: $mobile) {
+            .hero-text-container {
+                width: 100%;
+            }
+            .hero-image-container {
+                display: none;
+            }
+        }
+    }
+}
+
+.programs-content {
+    .breadcrumbs {
+        @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+
+        a, a:visited {
+            color: $pa-text-primary;
+            text-decoration: none;
+        }
+    }
+}

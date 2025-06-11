@@ -1,0 +1,239 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.agencies-programs-container
+    .agencies-programs-hero {
+        background-color: $pa-text-primary;
+        background-image: url('/assets/img/arrows.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 2rem 2rem 0 2rem; 
+
+    .agencies-programs-hero-content {
+        padding: 2rem 6rem 0 6rem;
+        h1 {
+            @include default-text-styling($color: $white, $size: 40px, $weight: 400, $height: 48px);
+            @media (max-width: $tablet) {
+                @include default-text-styling($color: $white, $size: 32px, $height: 40px);
+            }
+        }
+    
+        p {
+            @include default-text-styling($color: $white, $size: 16px, $weight: 400, $height: 24px);
+        }
+
+        .hero-text {
+            padding: 0 0 4rem;
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        @media (max-width: $tablet) {
+            padding: 2rem 0;
+        }
+        @media (max-width: $mobile) {
+            .hero-text-container {
+                width: 100%;
+            }
+            .hero-image-container {
+                display: none;
+            }
+        }
+    }
+}
+
+.agencies-programs-container .agency-wide-content {
+    .breadcrumbs {
+        @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+
+        .home-link {
+            color: $pa-text-primary;
+            text-decoration: none;
+        }
+    }
+    .content-description-section, .content-cards {
+        padding: 0 6rem;
+        @media (max-width: $tablet) {
+            padding: 0 2rem;
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+    .content-header {
+        @include default-text-styling($color: $black, $size: 32px, $weight: 600, $height: 40px);
+    }
+    .content-subtitle {
+        @include default-text-styling($color: $pa-base-grey, $size: 22px, $weight: 400, $height: 28px);
+    }
+    .content-description {
+        @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+    }
+
+    
+
+    // cards are overflowing a little bigger than a tablet
+    @media (max-width: $desktop) {
+        .tablet\:grid-col-4 {
+            flex: 0 1 auto;
+            width: 100%;
+        }
+    }
+}
+
+.agencies-programs-table-container {
+    overflow-x: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+#agency-programs-table {
+    border-collapse: collapse;
+    width: 100%;
+    .hidden {
+        display: none;
+    }
+    
+    th {
+        background-color: $pa-dark-blue;
+        @include default-text-styling($color: $white, $size: 16px, $weight: 600, $height: 24px);
+    }
+
+    .agencies-programs-table-data .name-col {
+        width: 400px;
+    }
+
+    .agencies-programs-table-header .name-col {
+        padding-left: 6rem;
+    }
+
+    .expand-col {
+        padding-right: 3rem;
+    }
+
+    .bg-positive-change {
+        background-color: $error-lighter;
+        color: $error-primary;
+    }
+    .bg-negative-change {
+        background-color: $accent-cool-lighter;
+        color: $accent-cool;
+    }
+    .bg-no-change {
+        background-color: $pa-bg-lightest;
+        color: $pa-base-dark;
+    }
+
+    .row-color-1 {
+        background-color: $white;
+    }
+
+    .row-color-2 {
+        background-color: $pa-bg-lightest;
+    }
+
+    .relative-change-col {
+        @include default-text-styling($size: 14px, $weight: 600, $height: 16px);
+        .percentage {
+            border-radius: 13px;
+            padding: 4px 8px;
+        }
+    }
+
+    .agency-row {
+        .name-col {
+            padding-left: 6rem;
+            a {
+                @include default-text-styling($color: $pa-text-primary, $size: 16px, $weight: 600, $height: 24px);
+                text-decoration: underline;
+            }
+        }
+        .total-spent-col {
+            white-space: nowrap;
+        }
+        .total-spent-col, .num-programs-col, .susceptible-col, .high-priority-col, .ip-rate-col {
+            @include default-text-styling($color: $pa-darker-blue, $size: 16px, $weight: 600, $height: 24px);
+        }
+    }
+
+    .program-row {
+        .name-col {
+            padding-left: 8rem;
+            a, a:visited {
+                @include default-text-styling($color: $pa-text-primary, $size: 14px, $weight: 400, $height: 20px);
+                text-decoration: underline;
+            }
+        }
+        .total-spent-col {
+            white-space: nowrap;
+        }
+        .total-spent-col, .num-programs-col, .susceptible-col, .high-priority-col, .ip-rate-col {
+            @include default-text-styling($color: $pa-darker-grey, $size: 14px, $weight: 400, $height: 20px);
+        }
+        .star-icon {
+            margin-right: -0.3rem;
+        }
+    }
+
+    .expand-btn {
+        background-color: transparent;
+    }
+
+    .pagination-hidden {
+        display: none;
+    }
+
+    .filter-hidden {
+        display: none;
+    }
+
+    .collapsed {
+        display: none;
+    }
+}
+
+.agencies-programs-table-pagination {
+    nav {
+        justify-content: right;
+    }
+
+    #pagination-prev, #pagination-next, .usa-not-current {
+        @include default-text-styling($color: $pa-text-primary, $size: 16px, $weight: 400, $height: 16px);
+    }
+
+    .usa-not-current {
+        border: 1px solid $pa-base-light;
+    }
+
+    .pagination-hidden {
+        display: none;
+    }
+}
+
+.agencies-programs-filter .grid-container {
+    border-radius: 20px;
+    padding: 3rem 8rem;
+    h4.filter-header {
+        @include default-text-styling($color: $pa-darker-blue, $size: 32px, $weight: 600, $height: 40px);
+    }
+    .search-and-filter label {
+        @include default-text-styling($color: $pa-darker-blue, $size: 16px, $weight: 400, $height: 24px);
+    }
+    input#agencies-programs-combobox {
+        border-radius: 5px;
+        border: 1px solid #D7D7D7;
+    }
+    .usa-combo-box__list li .usa-tag {
+        display: inline-block;
+        margin-right: 0.25rem;
+        font-size: 0.75rem;
+        vertical-align: middle;
+        border-radius: 5px;
+      }
+}
