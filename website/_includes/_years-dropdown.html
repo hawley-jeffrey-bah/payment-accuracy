@@ -1,0 +1,18 @@
+<div class="years-dropdown">
+    <label class="usa-label" for="options">
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+            <use href="/assets/img/sprite.svg#calendar_today"></use>
+        </svg>
+        Select Fiscal Year (FY):
+    </label>
+    <select class="usa-select" name="options" id="options" onchange="selectYear('{{ include.url_prefix }}', this.value)">
+        {% unless include.years_available contains include.fiscal_year %}
+            <!-- this can occur on a placeholder page-->
+            <option value>- Select -</option>
+        {% endunless %}
+
+        {% for year in include.years_available %}
+            <option value="{{ year }}" {% if year == include.fiscal_year %}selected{% endif %}>{{ year }}</option>
+        {% endfor %}
+    </select>
+</div>

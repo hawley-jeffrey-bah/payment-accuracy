@@ -1,0 +1,16 @@
+{% assign faqs = site.data._faq.faqs %}
+
+<div class="usa-accordion faq-accordion">
+    {% for faq in faqs %}
+        <div class="usa-accordion__item">
+            <h4 class="usa-accordion__heading">
+                <button class="usa-accordion__button" aria-expanded="false" aria-controls="{{ faq.id }}">
+                    {{ faq.question }}
+                </button>
+            </h4>
+            <div id="{{ faq.id }}" class="usa-accordion__content usa-prose">
+                {{ faq.answer | markdownify }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

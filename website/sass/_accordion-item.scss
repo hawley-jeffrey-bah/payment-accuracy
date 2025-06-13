@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+// Individual accordion item
+.faq-accordion {
+    .usa-accordion__item {
+        margin-bottom: 0.5rem;
+        border: none;
+        margin: 20px 0;
+    
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+      
+    // Accordion heading
+    .usa-accordion__heading {
+        margin: 0;
+    }
+      
+    // Accordion button (the clickable question)
+    .usa-accordion__button {
+        background-color: #E7F6F8;
+        padding: 12px 1rem;
+        padding-right: 40px; // prevent covering +/- sign in mobile
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;  
+    
+        &:focus {
+            background-color: #E7F6F8;
+        }
+        
+        // When the accordion is expanded
+        &[aria-expanded="true"] {
+            background-color: #E7F6F8;
+            }
+    }
+      
+    // Accordion content (the answer)
+    .usa-accordion__content {
+        padding: 16px 20px;
+        border: 2px solid #F0F0F0; 
+    
+        p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            min-width: 100%;
+        }
+    
+        a {
+            color: #005EA2;
+        }
+    }
+}
+
+.agency-specific-accordion {
+    .usa-accordion__item {
+        margin-bottom: 0.5rem;
+        border: none;
+        margin: 20px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Accordion heading
+    .usa-accordion__heading {
+        margin: 0;
+    }
+
+    // Accordion button (the clickable question)
+    .usa-accordion__button {
+        background-color: #F7F2FF;
+        padding: 12px 1rem;
+        padding-right: 40px; // prevent covering +/- sign in mobile
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+
+        &:focus {
+            background-color: #F7F2FF;
+        }
+
+        // When the accordion is expanded
+        &[aria-expanded="true"] {
+            background-color: #F7F2FF;
+            }
+    }
+
+    // Accordion content (the answer)
+    .usa-accordion__content {
+        padding: 16px 20px;
+        border: 2px solid $pa-bg-lightest;
+
+        p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            min-width: 100%;
+        }
+
+        a {
+            color: #005EA2;
+        }
+    }
+}

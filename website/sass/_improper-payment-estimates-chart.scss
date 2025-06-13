@@ -1,0 +1,178 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+#improper-payment-estimates-chart-container {
+    border-radius: 20px;
+    border: 1px solid $pa-lighter-grey;
+    background: $white;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+    @include default-text-styling($size: 14px, $weight: 400, $height: 25px);
+
+    .improper-payment-estimates-chart-parent, .improper-payment-estimates-table-parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .improper-payment-estimates-table-parent {
+        overflow: auto;
+    }
+
+    #improper-payment-estimates-table {
+        @include default-text-styling($size: 14px, $weight: 400, $height: 25px);
+
+        td, th {
+            padding-left: 8px;
+            padding-right: 8px;
+            border: 1px solid $pa-lighter-grey;
+        }
+
+        tbody > tr:first-child > td {
+            background-color: $pa-bg-lightest;
+        }
+
+        th {
+            background-color: $pa-light-blue;
+        }
+    }
+
+    .chart-table-toggle {
+        width: 100%;
+        li {
+            width: 50%;
+        }
+
+        button {
+            width: 100%;
+            color: white;
+            border-color: $pa-text-primary;
+            background-color: $pa-text-primary;
+            &.usa-button--outline {
+                color: $pa-text-primary;
+                border-color: $pa-text-primary;
+                background-color: white;
+                box-shadow: inset 0 0 0 2px $pa-text-primary;
+            }
+        }
+    }
+
+    #download-improper-payment-estimates-chart-csv {
+        color: $pa-text-primary;
+        border-color: $pa-text-primary;
+        background-color: white;
+        box-shadow: inset 0 0 0 2px $pa-text-primary;
+
+        img {
+            filter: invert(18%) sepia(93%) saturate(7361%) hue-rotate(195deg) brightness(92%) contrast(101%);
+        }
+
+        margin-bottom: 24px;
+    }
+
+    h5 {
+        @include default-text-styling($color: $pa-darker-blue, $size: 18px, $weight: 400, $height: 36px);
+    }
+
+    a.chart-toggle {
+        @include default-text-styling($color: $pa-darker-blue, $size: 14px, $weight: 400, $height: 25px);
+        text-decoration: none;
+    }
+
+    .legend-circle {
+        display: inline-block;
+        height:12px;
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        width:12px;
+        margin-right: 10px;
+
+        &.purple {
+            background-color: #54278F;
+            border:1px solid #54278F;
+        }
+
+        &.dark-green {
+            background-color: #146947;
+            border:1px solid #146947;
+        }
+
+        &.yellow {
+            background-color: #FFBE2E;
+            border:1px solid #FFBE2E;
+        }
+
+        &.red {
+            background-color: #D72D79;
+            border:1px solid #D72D79;
+        }
+
+        &.light-blue {
+            background-color: #00BDE3;
+            border:1px solid #00BDE3;
+        }
+    }
+
+    .legend {
+        padding: 0;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 17px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #00A871;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #00A871;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(13px);
+            -ms-transform: translateX(13px);
+            transform: translateX(13px);
+        }
+
+        .slider.round {
+            border-radius: 17px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    }
+}

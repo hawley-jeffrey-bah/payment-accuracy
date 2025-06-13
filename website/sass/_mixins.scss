@@ -1,0 +1,8 @@
+@mixin default-text-styling($color: null, $size: null, $weight: null, $height: null) {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-style: normal;
+    @if $color { color: $color; }
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+    @if $height { line-height: $height; }
+}
