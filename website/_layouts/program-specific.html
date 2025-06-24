@@ -1,0 +1,1110 @@
+---
+layout: default
+permalink: /
+---
+<div id="main-content" role="main" class="programs-container {% if page.High_Priority_Program == 1 %} high-priority {% else %} not-high-priority {% endif %}">
+    <section class="usa-hero programs-hero" aria-label="Agencies & Programs">
+        <div class="grid-container programs-hero-content">
+            <div class="grid-row">
+                <div class="grid-col-12 hero-text-container">
+                    <div class="hero-text">
+                        <h1>{{ page.Program_Name }}</h1>
+                        <p>
+                            {% if page.High_Priority_Program == 1 %}
+                                <span class="usa-tag">High-priority Program</span>
+                            {% elsif page.Phase_2_Program == 1 %}
+                                <span class="usa-tag">Phase 2 Program</span>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="programs-content margin-bottom-15">
+        <div class="grid-container">
+            <div class="grid-row nav-row">
+                <div class="grid-col-12">
+                    <p class="breadcrumbs"><a href="/" class="home-link">Home</a> > <a href="/agencies-and-programs">Agencies & Programs</a> > {{ page.Program_Name }}</p>
+                </div>
+            </div>
+            <div class="grid-row grid-gap-3">
+                <div class="desktop:grid-col-8 mobile:grid-col-12 integrity-results">
+                    <h1>Program Level Payment Integrity Results</h1>
+                    <h3>Sponsoring Agency:  {{ page.Agency_Name }}</h3>
+                    <p>{{ page.Description }}</p>
+                    <a class="usa-button usa-button--accent-warm" href="https://fpi.omb.gov" target="_blank" type="button">
+                        View on Federal Program Inventory
+                        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+                            <use href="/assets/img/sprite.svg#launch"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="desktop:grid-col-4 mobile:grid-col-12 metrics-summary">
+                    <p>PROGRAM METRICS</p>
+                    <h2>${{page.Outlays | round: 0 | thousands_separator}} M</h2>
+                    <p>in <strong>total outlays</strong>, with a</p>
+                    <h2>{{ page.Payment_Accuracy_Rate | round: 0 }}%</h2>
+                    <p><strong>payment accuracy</strong> rate</p>
+                </div>
+            </div>
+        </div>
+        {% unless page.Hide_Integrity_Results == true %}
+            <div class="grid-container">
+                <ul class="usa-card-group grid-row chart-cards">
+                    <li class="usa-card grid-col-12">
+                        {% include _improper-payment-estimates-chart.html
+                            payment_accuracy=page.Payment_Accuracy_Amounts
+                            overpayment=page.Overpayment_Amounts
+                            underpayment=page.Underpayment_Amounts
+                            technically_improper=page.Technically_Improper_Amounts
+                            unknown=page.Unknown_Amounts
+                            years=page.Improper_Payments_Data_Years
+                            cy=page.Fiscal_Year
+                            show_percentages=true %}
+                    </li>
+                </ul>
+            </div>
+        {% endunless %}
+
+        {% if page.Hide_Scorecard_Links == false and page.Hide_Program_Results == false %}
+            <div class="grid-container" id="program-scorecards-tabs">
+                <div class="grid-row ">
+                    <ul class="usa-button-group usa-button-group--segmented chart-table-toggle grid-col-12" id="program-button-group">
+                        <li class="usa-button-group__item">
+                            <button type="button" class="usa-button tabbed-button" data-group-id="1" data-show-id="program-results">Program Results</button>
+                        </li>
+                        <li class="usa-button-group__item">
+                            <button type="button" class="usa-button tabbed-button usa-button--outline" data-group-id="1" data-show-id="program-scorecards">Program Scorecards</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if page.Hide_Scorecard_Links == false %}
+            <div id="program-scorecards" class="grid-container">
+                <div class="grid-row">
+                    <table class="usa-table usa-table--borderless recovery-audits-and-activites">
+                        <tbody>
+                            {% for link in page.Scorecard_Links %}
+                                <tr><td><a href="/{{ link.Link }}" target="_blank">{{ link.QuarterYear }}</a></td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if page.Hide_Program_Results == false %}
+            <div id="program-results" class="grid-container">
+                <div class="grid-row" id="years-row">
+                    <div class="desktop:grid-col-7 mobile:grid-col-12">
+                        <h3>Payment Integrity Results</h3>
+                    </div>
+                    <div class="desktop:grid-col-5 mobile:grid-col-12">
+                        {% assign years_available = page.Data_By_Year | map: "Year" | reverse %}
+                        {% include _years-dropdown.html
+                            url_prefix = ""
+                            years_available = years_available
+                            fiscal_year = page.Fiscal_Year
+                            on_change = "selectYearNoReload"
+                        %}
+                    </div>
+                </div>
+                {% for year_data in page.Data_By_Year %}
+                    <div class="grid-row {% if year_data.Year == page.Fiscal_Year %}{% else %}hide{% endif %}" data-year="{{ year_data.Year }}">
+                        {% if year_data and year_data.Hide_Improper_Payment_Estimates_Doughnut_Chart != true %}
+                            <div class="grid-col-12">
+                                <div class="grid-container improper-payment-estimates-doughnut-section">
+                                    <ul class="usa-card-group grid-row chart-cards">
+                                        <li class="usa-card grid-col-12">
+                                            <div class="usa-card__container">
+                                                <div class="usa-card__body display-block overflow-y-hidden">
+                                                    <h2 class="margin-y-0 text-middle">FY {{ year_data.Year }} Improper Payment Estimates</h2>
+                                                    <div class="grid-container">
+                                                        <div class="grid-row">
+                                                            {% if year_data.Hide_Improper_Payment_Estimates_Doughnut_Stats != true %}
+                                                                <div class="desktop:grid-col-6 mobile:grid-col-12 legend">
+                                                                    <h5>Chart Legend and Breakdown</h5>
+                                                                    <p class="legend-entry"><span class="legend-circle dark-green"></span>Payment Accuracy Rate</p>
+                                                                    <p class="legend-entry"><span class="legend-circle orange"></span>Improper Payment Rate</p>
+                                                                    <p class="legend-entry"><span class="legend-circle light-blue"></span>Unknown Payment Rate</p>
+                                                                    <br />
+                                                                    <h5>Sampling & Estimation Methodology Details</h5>
+                                                                    <br />
+                                                                    {% if year_data.Start_Date != nil and year_data.End_Date != nil %}
+                                                                        <h5>Sampling Timeframe:</h5>
+                                                                        <p>{{ year_data.Start_Date }} - {{ year_data.End_Date }}</p>
+                                                                        <br />
+                                                                    {% endif %}
+                                                                    {% if year_data.Confidence_Level != nil %}
+                                                                        <h5>Confidence Interval:</h5>
+                                                                        <p>{{ year_data.Confidence_Level }}</p>
+                                                                        <br />
+                                                                    {% endif %}
+                                                                    {% if year_data.Margin_of_Error != nil %}
+                                                                        <h5>Margin of Error:</h5>
+                                                                        <p>+/-{{ year_data.Margin_of_Error }}</p>
+                                                                    {% endif %}
+                                                                </div>
+                                                            {% endif %}
+
+                                                            <div class="desktop:grid-col-6 mobile:grid-col-12">
+                                                                <canvas
+                                                                    data-accuracy="{{ year_data.Payment_Accuracy_Rate | default: 0 }}"
+                                                                    data-improper="{{ year_data.Improper_Payments_Rate | default: 0 }}"
+                                                                    data-unknown="{{ year_data.Unknown_Payments_Rate | default: 0 }}"
+                                                                    class="improper-payment-estimates-doughnut-chart" >
+                                                                </canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <div class="grid-col-12">
+                            {% if year_data and year_data.Actions_Taken %}
+                                <div class="grid-container actions-section">
+                                    <ul class="usa-card-group grid-row chart-cards">
+                                        <li class="usa-card grid-col-12">
+                                            <div class="usa-card__container">
+                                                <div class="usa-card__body display-block overflow-y-hidden">
+                                                    <h2 class="margin-y-0 text-middle">Actions Taken & Planned to Mitigate Improper Payments</h2>
+                                                    <table class="usa-table usa-table--borderless actions-table margin-y-0 margin-x-3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="width-card-lg">Mitigation strategy</th>
+                                                                <th scope="col">Description of corrective actions taken</th>
+                                                                <th scope="col">Completion Date</th>
+                                                                <th scope="col" class="status">Status</th>
+                                                                <th scope="col" class="expand-col"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% for action_taken in year_data.Actions_Taken %}
+                                                                <tr>
+                                                                    <td scope="row" class="mitigation-strategy-col text-top">
+                                                                    {% assign strategy = action_taken.Mitigation_Strategy | strip %}
+                                                                    {% if strategy == "atp1_1" or strategy == "app1_1" %}
+                                                                        Automation
+                                                                    {% elsif strategy == "atp2_1" or strategy == "app2_1" %}
+                                                                        Behavioral/Psych Influence
+                                                                    {% elsif strategy == "atp3_1" or strategy == "app3_1" %}
+                                                                        Training
+                                                                    {% elsif strategy == "atp4_1" or strategy == "app4_1" %}
+                                                                        Change Process
+                                                                    {% elsif strategy == "atp5_1" or strategy == "app5_1" %}
+                                                                        Cross Enterprise Sharing
+                                                                    {% elsif strategy == "atp6_1" or strategy == "app6_1" %}
+                                                                        Audit
+                                                                    {% elsif strategy == "atp7_1" or strategy == "app7_1" %}
+                                                                        Predictive Analytics
+                                                                    {% elsif strategy == "atp8_1" or strategy == "app8_1" %}
+                                                                        Statutory Change
+                                                                    {% else %}
+                                                                        {{ strategy }}
+                                                                    {% endif %}
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="truncated-cell-content" id="desc-{{ forloop.index }}-{{ year_data.Year }}">
+                                                                            {{ action_taken.Description_Action_Taken }}
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="truncated-cell-content" id="date-{{ forloop.index }}-{{ year_data.Year }}">
+                                                                            {{ action_taken.Completion_Date }}
+                                                                        </div>
+                                                                    </td>
+                                                                    {% assign status_class = '' %}
+                                                                    {% case action_taken.Action_Taken %}
+                                                                        {% when 'Planned' %} {% assign status_class = 'planned' %}
+                                                                        {% when 'Completed' %} {% assign status_class = 'completed' %}
+                                                                        {% when 'Not Completed' %} {% assign status_class = 'not-completed' %}
+                                                                        {% else %} {% assign status_class = 'unknown' %}
+                                                                    {% endcase %}
+                                                                    <td class="status text-top">
+                                                                        <div class="{{ status_class }}">
+                                                                            {{ action_taken.Action_Taken }}
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="expand-col text-top">
+                                                                        <button
+                                                                            onclick="toggleClamp('{{ forloop.index }}-{{ year_data.Year }}')"
+                                                                            class="square-3 padding-0 expand-btn"
+                                                                            style="width:30px;"
+                                                                        >
+                                                                            <img src="/assets/img/expand.svg" />
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+
+                            {% assign overpayments_eligibility_none_reported = false %}
+                            {% if year_data.overpayments.Address_Location == nil and year_data.overpayments.Contractor_Provider_Status == nil and year_data.overpayments.Financial == nil %}
+                                {% assign overpayments_eligibility_none_reported = true %}
+                            {% endif %}
+                            {% assign overpayments_eligibility_info_sum = year_data.overpayments.Address_Location | plus: year_data.overpayments.Contractor_Provider_Status | plus: year_data.overpayments.Financial %}
+
+                            {% assign overpayment_mitigations_planned_count = year_data.cyp2_app1_8 | size %}
+                            {% assign overpayment_mitigations_taken_count = year_data.cyp2_atp1_8 | size %}
+
+                            {% assign hide_overpayments_within_control_accordion = false %}
+                            {% if year_data.overpayments.cyp2_1 == nil and year_data.overpayments.cyp2 == nil and year_data.Hide_cyp2_cop1 == true and year_data.Hide_cyp2_cop2 == true and year_data.Hide_cyp2_cop3 == true %}
+                                {% assign hide_overpayments_within_control_accordion = true %}
+                            {% endif %}
+
+                            {% assign hide_overpayments_outside_control_accordion = false %}
+                            {% if year_data.overpayments_outside.cyp4_1 == nil and year_data.overpayments_outside.cyp3 == nil and year_data.Hide_cyp3_cop1 == true and year_data.Hide_cyp3_cop2 == true and year_data.Hide_cyp3_cop3 == true and year_data.Hide_cyp3_cop4 == true and year_data.Hide_cyp3_cop5 == true and year_data.Hide_cyp3_cop6 == true %}
+                                {% assign hide_overpayments_outside_control_accordion = true %}
+                            {% endif %}
+
+                            {% assign hide_overpayments_eligibility_accordion = false %}
+                            {% if overpayments_eligibility_none_reported == true or overpayments_eligibility_info_sum == 0 %}
+                                {% assign hide_overpayments_eligibility_accordion = true %}
+                            {% endif %}
+
+                            {% assign hide_overpayments_section = false %}
+                            {% if overpayment_mitigations_planned_count == 0 and overpayment_mitigations_taken_count == 0 and hide_overpayments_eligibility_accordion == true and hide_overpayments_outside_control_accordion == true and hide_overpayments_within_control_accordion == true %}
+                                {% assign hide_overpayments_section = true %}
+                            {% endif %}
+
+                            {% assign hide_underpayments_accordion = false %}
+                            {% if year_data.underpayments.cyp5 == nil and year_data.Hide_cyp5_cup1 == true and year_data.Hide_cyp5_cup2 == true and year_data.Hide_cyp5_cup3 == true %}
+                                {% assign hide_underpayments_accordion = true %}
+                            {% endif %}
+
+                            {% assign underpayments_eligibility_none_reported = false %}
+                            {% if year_data.underpayments.Address_Location == nil and year_data.underpayments.Contractor_Provider_Status == nil %}
+                                {% assign underpayments_eligibility_none_reported = true %}
+                            {% endif %}
+                            {% assign underpayments_eligibility_info_sum = year_data.underpayments.Address_Location | plus: year_data.underpayments.Contractor_Provider_Status %}
+
+                            {% assign underpayment_mitigations_planned_count = year_data.cyp5_app1_8 | size %}
+                            {% assign underpayment_mitigations_taken_count = year_data.cyp5_atp1_8 | size %}
+
+                            {% assign hide_underpayments_eligibility_accordion = false %}
+                            {% if underpayments_eligibility_none_reported == true or underpayments_eligibility_info_sum == 0 %}
+                                {% assign hide_underpayments_eligibility_accordion = true %}
+                            {% endif %}
+
+                            {% assign hide_underpayments_section = false %}
+                            {% if underpayment_mitigations_planned_count == 0 and underpayment_mitigations_taken_count == 0 and hide_underpayments_accordion == true and hide_underpayments_eligibility_accordion == true %}
+                                {% assign hide_underpayments_section = true %}
+                            {% endif %}
+
+                            {% assign hide_tip_accordion = false %}
+                            {% if year_data.cyp6_1 == nil and year_data.cyp6 == nil %}
+                                {% assign hide_tip_accordion = true %}
+                            {% endif %}
+
+                            {% assign tip_mitigations_planned_count = year_data.cyp6_app1_8 | size %}
+                            {% assign tip_mitigations_taken_count = year_data.cyp6_atp1_8 | size %}
+
+                            {% assign hide_tip_section = false %}
+                            {% if tip_mitigations_planned_count == 0 and tip_mitigations_taken_count == 0 and hide_tip_accordion == true %}
+                                {% assign hide_tip_section = true %}
+                            {% endif %}
+
+                            {% assign hide_aiip_section = false %}
+                            {% if year_data.rac3 == nil and year_data.cyp26 == nil %}
+                                {% assign hide_aiip_section = true %}
+                            {% endif %}
+
+                            {% assign hide_ip_tab = false %}
+                            {% if hide_aiip_section == true and hide_tip_section == true and hide_underpayments_section == true and hide_overpayments_section == true %}
+                                {% assign hide_ip_tab = true %}
+                            {% endif %}
+
+                            {% assign hide_unknown_payments_accordion = false %}
+                            {% if year_data.cyp8 == nil and year_data.cyp7_ucp4_1 == nil %}
+                                {% assign hide_unknown_payments_accordion = true %}
+                            {% endif %}
+
+                            {% assign unknown_mitigations_planned_count = year_data.cyp7_app1_8 | size %}
+                            {% assign unknown_mitigations_taken_count = year_data.cyp7_atp1_8 | size %}
+
+                            {% assign hide_unknown_tab = false %}
+                            {% if hide_unknown_payments_accordion == true and unknown_mitigations_planned_count == 0 and unknown_mitigations_taken_count == 0 %}
+                                {% assign hide_unknown_tab = true %}
+                            {% endif %}
+
+                            {% assign hide_all_tabs = false %}
+                            {% if hide_unknown_tab == true and hide_ip_tab == true and year_data.Hide_Program_Results_Corrective_Actions == true and year_data.Hide_Program_Results_Future_Outlook == true and year_data.Hide_Program_Results_Additional_Information == true %}
+                                {% assign hide_all_tabs = true %}
+                            {% endif %}
+
+                            {% if year_data.Hide_Program_Results_Tabs == false and hide_all_tabs == false %}
+                                <div id="program-results-tab-container-{{ year_data.Year }}" class="grid-container">
+                                    <div class="grid-row program-results-tabs">
+                                        <ul class="usa-button-group usa-button-group--segmented chart-table-toggle grid-col-12" id="program-results-button-group-{{ year_data.Year }}">
+                                            <li class="usa-button-group__item">
+                                                <button
+                                                    type="button"
+                                                    class="usa-button tabbed-button"
+                                                    data-group-id="2-{{ year_data.Year }}"
+                                                    data-show-id="program-results-improper-payments-{{ year_data.Year }}">
+                                                        Improper Payments
+                                                </button>
+                                            </li>
+                                            <li class="usa-button-group__item">
+                                                <button
+                                                    type="button"
+                                                    {% if hide_unknown_tab == true or year_data.Hide_Program_Results_Unknown_Payments == true %}disabled{% endif %}
+                                                    class="usa-button tabbed-button usa-button--outline"
+                                                    data-group-id="2-{{ year_data.Year }}"
+                                                    data-show-id="program-scorecards-unknown-payments-{{ year_data.Year }}">
+                                                        Unknown Payments
+                                                </button>
+                                            </li>
+                                            <li class="usa-button-group__item">
+                                                <button
+                                                    type="button"
+                                                    {% if year_data.Hide_Program_Results_Corrective_Actions == true %}disabled{% endif %}
+                                                    class="usa-button tabbed-button usa-button--outline"
+                                                    data-group-id="2-{{ year_data.Year }}"
+                                                    data-show-id="program-scorecards-corrective-actions-{{ year_data.Year }}">
+                                                        Corrective Actions
+                                                </button>
+                                            </li>
+                                            <li class="usa-button-group__item">
+                                                <button
+                                                    type="button"
+                                                    {% if year_data.Hide_Program_Results_Future_Outlook == true %}disabled{% endif %}
+                                                    class="usa-button tabbed-button usa-button--outline"
+                                                    data-group-id="2-{{ year_data.Year }}"
+                                                    data-show-id="program-scorecards-future-outlook-{{ year_data.Year }}">
+                                                        Future Outlook
+                                                </button>
+                                            </li>
+                                            <li class="usa-button-group__item">
+                                                <button
+                                                    type="button"
+                                                    {% if year_data.Hide_Program_Results_Additional_Information == true %}disabled{% endif %}
+                                                    class="usa-button tabbed-button usa-button--outline"
+                                                    data-group-id="2-{{ year_data.Year }}"
+                                                    data-show-id="program-scorecards-additional-information-{{ year_data.Year }}">
+                                                        Additional Information
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid-row">
+                                        <div class="grid-col-12 program-results-improper-payments-container" id="program-results-improper-payments-{{ year_data.Year }}">
+                                            {% unless hide_overpayments_section == true %}
+                                                <div class="grid-container overpayments-information-section">
+                                                    <h3>Overpayments</h3>
+                                                    <div class="usa-accordion program-specific-accordion">
+                                                        {% unless hide_overpayments_within_control_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-1-{{ year_data.Year }}">
+                                                                        Overpayment causes within the Agency's control
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-1-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    {% if year_data.overpayments.cyp2_1 != nil and year_data.overpayments.cyp2_1 != "" %}
+                                                                        {{ year_data.overpayments.cyp2_1 }}
+                                                                        <br />
+                                                                    {% endif %}
+
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <tbody>
+                                                                            {% if year_data.overpayments.cyp2 != nil %}
+                                                                                <tr>
+                                                                                    <td>Amount of overpayments within the agency's control</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.cyp2 | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp2_cop1 != true %}
+                                                                                <tr>
+                                                                                    <td>Amount of overpayments that occurred because the data/information needed to validate payment accuracy prior to making a payment does not exist</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Data_Needed_Does_Not_Exist | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp2_cop2 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of overpayments that occurred because of an inability to access the data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Inability_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp2_cop3 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of overpayments that occurred because of a failure to access data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Failure_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless hide_overpayments_outside_control_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-1a-{{ year_data.Year }}">
+                                                                        Overpayment causes outside the Agency's control
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-1a-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    {% if year_data.overpayments_outside.cyp4_1 != nil and year_data.overpayments_outside.cyp4_1 != "" %}
+                                                                        {{ year_data.overpayments_outside.cyp4_1 }}
+                                                                        <br />
+                                                                    {% endif %}
+
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <tbody>
+                                                                            {% if year_data.overpayments_outside.cyp3 != nil %}
+                                                                                <tr>
+                                                                                    <td>Amount of overpayments outside the agency's control</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments_outside.cyp3 | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp3_cop1 != true and year_data.Hide_cyp3_cop4 != true %}
+                                                                                <tr>
+                                                                                    <td>Amount of overpayments that occurred because the data/information needed to validate payment accuracy prior to making a payment does not exist</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments_outside.Data_Needed_Does_Not_Exist | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp3_cop2 != true and year_data.Hide_cyp3_cop5 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of overpayments that occurred because of an inability to access the data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments_outside.Inability_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp3_cop3 != true and year_data.Hide_cyp3_cop6 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of overpayments that occurred because of a failure to access data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments_outside.Failure_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless hide_overpayments_eligibility_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-2-{{ year_data.Year }}">
+                                                                        Eligibility information needed to prevent the overpayment from occurring in the future
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-2-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless eligibility-table">
+                                                                        <thead>
+                                                                            <th>Overpayment type</th>
+                                                                            <th>Eligibility element/information needed</th>
+                                                                            <th>Eligibility amount</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            {% if year_data.overpayments.Address_Location != nil %}
+                                                                                <tr>
+                                                                                    <td>Overpayments within the agency’s control</td>
+                                                                                    <td>Address/location: information regarding where the applicant/recipient lived, owned property, or was physically present in a specific location</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Address_Location | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.overpayments.Contractor_Provider_Status != nil %}
+                                                                                <tr>
+                                                                                    <td>Overpayments within the agency’s control</td>
+                                                                                    <td>Contractor or provider status: status or standing of contractor or provider, including recipient eligibility to provide medical services</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Contractor_Provider_Status | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.overpayments.Financial != nil %}
+                                                                                <tr>
+                                                                                    <td>Overpayments within the agency’s control</td>
+                                                                                    <td>Financial: the financial position or status of a beneficiary, recipient, applicant, or their family</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.overpayments.Financial | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless overpayment_mitigations_planned_count == 0 and overpayment_mitigations_taken_count == 0 %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-3-{{ year_data.Year }}">
+                                                                        Types of mitigation strategies taken and planned to address overpayments
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-3-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless eligibility-table">
+                                                                        <thead>
+                                                                            <th>Overpayment type</th>
+                                                                            <th>Mitigation strategies taken</th>
+                                                                            <th>Mitigation strategies planned</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Overpayments within the agency’s control</td>
+                                                                                <td>
+                                                                                    {{ year_data.cyp2_atp1_8 }}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {{ year_data.cyp2_app1_8 }}
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                    </div>
+                                                </div>
+                                            {% endunless %}
+
+                                            {% unless hide_underpayments_section == true %}
+                                                <div class="grid-container underpayments-information-section">
+                                                    <h3>Underpayments</h3>
+                                                    <div class="usa-accordion program-specific-accordion">
+                                                        {% unless hide_underpayments_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-4-{{ year_data.Year }}">
+                                                                        Underpayment causes
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-4-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <thead>
+                                                                            <th>Underpayment root cause</th>
+                                                                            <th>Underpayment amount</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            {% if year_data.underpayments.cyp5 != nil %}
+                                                                                <tr>
+                                                                                    <td>Amount of underpayments</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.cyp5 | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp5_cup1 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of underpayments that occurred because the data/information needed to validate payment accuracy prior to making a payment does not exist</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.Data_Needed_Does_Not_Exist | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp5_cup2 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of undeerpayments that occurred because of an inability to access the data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.Inability_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Hide_cyp5_cup3 != true %}
+                                                                                <tr>
+                                                                                    <td>The amount of underpayments that occurred because of a failure to access data/information needed to validate payment accuracy prior to making a payment</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.Failure_to_Access_Data | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless hide_underpayments_eligibility_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-5-{{ year_data.Year }}">
+                                                                        Eligibility information needed to prevent the underpayment from occurring in the future
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-5-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <thead>
+                                                                            <th>Eligibility element/information needed</th>
+                                                                            <th>Eligibility amount</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            {% if year_data.underpayments.Address_Location != nil %}
+                                                                                <tr>
+                                                                                    <td>Address/location: information regarding where the applicant/recipient lived, owned property, or was physically present in a specific location</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.Address_Location | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.underpayments.Contractor_Provider_Status != nil %}
+                                                                                <tr>
+                                                                                    <td>Contractor or provider status: status or standing of contractor or provider, including recipient eligibility to provide medical services</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.underpayments.Contractor_Provider_Status | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless underpayment_mitigations_planned_count == 0 and underpayment_mitigations_taken_count == 0 %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-6-{{ year_data.Year }}">
+                                                                        Types of mitigation strategies taken and planned to address underpayments
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-6-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <thead>
+                                                                            <th>Mitigation strategies taken</th>
+                                                                            <th>Mitigation strategies planned</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    {{ year_data.cyp5_atp1_8 }}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {{ year_data.cyp5_app1_8 }}
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+                                                    </div>
+                                                </div>
+                                            {% endunless %}
+
+                                            {% unless hide_tip_section == true %}
+                                                <div class="grid-container technically-ip-information-section">
+                                                    <h3>Technically Improper Payments</h3>
+                                                    <div class="usa-accordion program-specific-accordion">
+                                                        {% unless hide_tip_accordion == true %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-7-{{ year_data.Year }}">
+                                                                        Description of the cause(s) of technically improper payments
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-7-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    {% if year_data.cyp6_1 != nil and year_data.cyp6_1 != "" %}
+                                                                        {{ year_data.cyp6_1 }}
+                                                                        <br />
+                                                                    {% endif %}
+
+                                                                    <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <tbody>
+                                                                            {% if year_data.cyp6 != nil %}
+                                                                                <tr>
+                                                                                    <td>Amount of technically improper payments</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.cyp6 | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                            {% if year_data.Program_Design_or_Structural_Issue != nil %}
+                                                                                <tr>
+                                                                                    <td>The amount improper payments that were paid to the right recipient for the correct amount but were considered technically improper because of failure to follow statute or regulation</td>
+                                                                                    <td class="amount-col">
+                                                                                        ${{ year_data.Program_Design_or_Structural_Issue | round: 2 | thousands_separator }} M
+                                                                                    </td>
+                                                                                </tr>
+                                                                            {% endif %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+
+                                                        {% unless tip_mitigations_planned_count == 0 and tip_mitigations_taken_count == 0 %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-8-{{ year_data.Year }}">
+                                                                        Types of mitigation strategies taken and planned to address technically improper payments
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-8-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    <table class="usa-table usa-table--borderless eligibility-table">
+                                                                        <thead>
+                                                                            <th>Mitigation strategies taken</th>
+                                                                            <th>Mitigation strategies planned</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    {{ year_data.cyp6_atp1_8 }}
+                                                                                </td>
+                                                                                <td>
+                                                                                    {{ year_data.cyp6_app1_8 }}
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        {% endunless %}
+                                                    </div>
+                                                </div>
+                                            {% endunless %}
+
+                                            {% unless hide_aiip_section == true %}
+                                                <div class="grid-container ip-additional-information-section">
+                                                    <h3>Additional Information</h3>
+                                                    <div class="usa-accordion program-specific-accordion">
+                                                        {% if year_data.rac3 != nil and year_data.rac3 != "" %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-9-{{ year_data.Year }}">
+                                                                        Reason for phase 2 program not reporting an IP estimate
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-9-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    {{ year_data.rac3 }}
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if year_data.cyp26 != nil and year_data.cyp26 != "" %}
+                                                            <div class="usa-accordion__item">
+                                                                <h4 class="usa-accordion__heading">
+                                                                    <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-10-{{ year_data.Year }}">
+                                                                        Total non-monetary loss
+                                                                    </button>
+                                                                </h4>
+                                                                <div id="accordion-10-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                    ${{ year_data.cyp26 | round: 2 | thousands_separator }} M
+                                                                    <br />
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            {% endunless %}
+                                        </div>
+                                        <div class="grid-col-12" id="program-scorecards-unknown-payments-{{ year_data.Year }}">
+                                            <h4 class="tab-heading">Unknown Payment Details</h4>
+                                            <div class="usa-accordion program-specific-accordion">
+                                                <div id="accordion-1-{{ year_data.Year }}" class="usa-prose">
+                                                    {% if hide_unknown_payments_accordion != true %}
+                                                        <div class="usa-accordion__item">
+                                                            <h4 class="usa-accordion__heading">
+                                                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="unknown-payments-description-{{ year_data.Year }}">
+                                                                    Why the payments are unknown
+                                                                </button>
+                                                            </h4>
+                                                            <div id="unknown-payments-description-{{ year_data.Year }}" class="usa-accordion__content overflow-visible">
+                                                                <p>{{ year_data.cyp8 | newline_to_br }}</p>
+                                                                <p><strong>The amount of payments that could either be proper or improper but the agency is unable to determine whether they were proper or improper as a result of insufficient or lack of documentation is ${{ year_data.Insufficient_Documentation_to_Determine | round: 2 | thousands_separator }} M</strong></p>
+                                                                <br />
+                                                                <table class="usa-table--borderless usa-table unknown-payments-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" role="columnheader" class="padding-2" colspan="3">
+                                                                            Cause of insufficient or lack of documentation & why the documentation is needed for determination of payment type
+                                                                        </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="col" role="columnheader" class="padding-2">Payment cause</th>
+                                                                        <th scope="col" role="columnheader" class="padding-2">Amount</th>
+                                                                        <th scope="col" role="columnheader" class="padding-2">
+                                                                            Description of the documentation that was not provided and explanation of why the program is unable to conclude whether the payment is proper or improper without that documentation
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            Other
+                                                                            <button
+                                                                                type="button"
+                                                                                class="usa-tooltip"
+                                                                                data-position="top"
+                                                                                title="Unknown Payment caused by insufficient or lack of documentation from a scenario not previously specified"
+                                                                                aria-label="More info about unknown payment"
+                                                                                style="
+                                                                                    padding: 0 0 3px 0;
+                                                                                    margin: 0;
+                                                                                    width: 1.5rem;
+                                                                                    height: 1.5rem;
+                                                                                    background: none;
+                                                                                    border: none;
+                                                                                    vertical-align: middle;
+                                                                                "
+                                                                                >
+                                                                                <svg
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    width="16"
+                                                                                    height="16"
+                                                                                    viewBox="0 0 24 24"
+                                                                                    role="img"
+                                                                                    aria-hidden="true"
+                                                                                >
+                                                                                    <circle cx="12" cy="12" r="10" fill="#005ea2" />
+                                                                                    <rect x="11" y="10" width="2" height="6" fill="white" />
+                                                                                    <circle cx="12" cy="7" r="1" fill="white" />
+                                                                                </svg>
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>${{ year_data.Insufficient_Documentation_to_Determine | round: 2 | thousands_separator }} M</td>
+                                                                        <td>{{ year_data.cyp7_ucp4_1 }}</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            </div>
+                                                        </div>
+                                                    {% endif %}
+
+                                                    {% unless unknown_mitigations_planned_count == 0 and unknown_mitigations_taken_count == 0 %}
+                                                        <div class="usa-accordion__item">
+                                                            <h4 class="usa-accordion__heading">
+                                                                <button class="usa-accordion__button" aria-expanded="false" aria-controls="unknown-payments-cause-{{ year_data.Year }}">
+                                                                    Types of mitigation strategies taken and planned to address unknown payments
+                                                                </button>
+                                                            </h4>
+                                                            <div id="unknown-payments-cause-{{ year_data.Year }}" class="usa-accordion__content usa-prose">
+                                                                <table class="usa-table usa-table--borderless eligibility-table">
+                                                                    <thead>
+                                                                        <th>Mitigation strategies taken</th>
+                                                                        <th>Mitigation strategies planned</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                {{ year_data.cyp7_atp1_8 }}
+                                                                            </td>
+                                                                            <td>
+                                                                                {{ year_data.cyp7_app1_8 }}
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    {% endunless %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-col-12" id="program-scorecards-corrective-actions-{{ year_data.Year }}">
+                                            <h4 class="tab-heading">Evaluation of Corrective Actions</h4>
+                                            <div class="usa-accordion program-specific-accordion">
+                                                {% if year_data.rnp3 != nil and year_data.rnp3 != '' %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="corrective-actions-description-{{ year_data.Year }}">
+                                                                Description of the appropriateness and effectiveness of the actions to address the causes of improper and unknown payments
+                                                            </button>
+                                                        </h4>
+                                                        <div id="corrective-actions-description-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            <p>{{ year_data.rnp3 | newline_to_br }}</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                                {% if year_data.act17_2 != nil and year_data.act17_2 != '' %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="corrective-actions-how-1-{{ year_data.Year }}">
+                                                                How corrective actions are adequate
+                                                            </button>
+                                                        </h4>
+                                                        <div id="corrective-actions-how-1-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            <p>{{ year_data.act17_2 | newline_to_br }}</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                                {% if year_data.act17_1 != nil and year_data.act17_1 != '' %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="corrective-actions-how-2-{{ year_data.Year }}">
+                                                                How corrective actions are focused on the cause(s)
+                                                            </button>
+                                                        </h4>
+                                                        <div id="corrective-actions-how-2-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            <p>{{ year_data.act17_1 | newline_to_br }}</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                                {% if year_data.act17_3 != nil and year_data.act17_3 != '' %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="corrective-actions-how-3-{{ year_data.Year }}">
+                                                                How corrective actions are efficiently implemented & prioritized within the agency
+                                                            </button>
+                                                        </h4>
+                                                        <div id="corrective-actions-how-3-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            <p>{{ year_data.act17_3 | newline_to_br }}</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="grid-col-12" id="program-scorecards-future-outlook-{{ year_data.Year }}">
+                                            <h4 class="tab-heading">Future Payment Integrity Outlook</h4>
+                                            <div class="usa-accordion program-specific-accordion">
+                                                {% if year_data.Hide_Program_Results_Future_Outlook_Baseline == false %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="future-outlook-baseline-{{ year_data.Year }}">
+                                                                Baseline
+                                                            </button>
+                                                        </h4>
+                                                        <div id="future-outlook-baseline-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            {% if year_data.cyp15 != nil and year_data.cyp15 != '' %}
+                                                                {% assign cyp15_downcase = year_data.cyp15 | downcase %}
+                                                                <p><strong>{{ page.Program_Name }} has {% if cyp15_downcase == 'no' %}NOT {% endif %}established a baseline.</strong></p>
+                                                            {% endif %}
+                                                            {% if year_data.cyp20_2 != nil and year_data.cyp20_2 != '' %}
+                                                                <p>{{ year_data.cyp20_2 | newline_to_br }}</p>
+                                                            {% endif %}
+                                                            {% if year_data.Hide_Program_Results_Future_Outlook_Baseline_Table == false %}
+                                                                <table class="usa-table usa-table--borderless future-outlook-projections">
+                                                                    <thead>
+                                                                        <th colspan="2">Out-year improper payment and unknown payment projections</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {% if year_data.Outlays_Current_Year_Plus_1_Amount != nil %}
+                                                                            <tr>
+                                                                                <td>Current year +1 estimated future outlays</td>
+                                                                                <td class="amount-col">${{ year_data.Outlays_Current_Year_Plus_1_Amount | round: 2 | thousands_separator }} M</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% if year_data.IP_Current_Year_Plus_1_Amount != nil %}
+                                                                            <tr>
+                                                                                <td>Current year +1 estimated future improper payments</td>
+                                                                                <td class="amount-col">${{ year_data.IP_Current_Year_Plus_1_Amount | round: 2 | thousands_separator }} M</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% if year_data.Unknown_Curent_Year_Plus_1_Amount != nil %}
+                                                                            <tr>
+                                                                                <td>Current year +1 estimated future unknown payments</td>
+                                                                                <td class="amount-col">${{ year_data.Unknown_Curent_Year_Plus_1_Amount | round: 2 | thousands_separator }} M</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% if year_data.IP_Unknown_Current_Year_Plus_1_Rate != nil %}
+                                                                            <tr>
+                                                                                <td>Current year +1 estimated future improper payment and unknown payment rate</td>
+                                                                                <td class="amount-col">{{ year_data.IP_Unknown_Current_Year_Plus_1_Rate | times: 100 | round: 2 | thousands_separator }} %</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                        {% if year_data.IP_Unknown_Target_Rate != nil %}
+                                                                            <tr>
+                                                                                <td>Current year +1 estimated future improper payment and unknown payment reduction target</td>
+                                                                                <td class="amount-col">{{ year_data.IP_Unknown_Target_Rate | times: 100 | round: 2 | thousands_separator }} %</td>
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                    </tbody>
+                                                                </table>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+
+                                                {% if year_data.Hide_Program_Results_Future_Outlook_Explanation == false %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="future-outlook-explanation-{{ year_data.Year }}">
+                                                                Explanation of tolerable improper payment and unknown payment rate status
+                                                            </button>
+                                                        </h4>
+                                                        <div id="future-outlook-explanation-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            {% if year_data.Payment_Accuracy_Rate != nil %}
+                                                                {% assign ip_unknown_rate = 100 | minus: year_data.Payment_Accuracy_Rate %}
+                                                                <p><strong>The program's current year improper and unknown payment rate is {{ ip_unknown_rate | round: 2 }} %.</strong></p>
+                                                            {% endif %}
+                                                            {% if year_data.rtp1 != nil and year_data.rtp1 != '' %}
+                                                                <p><strong>
+                                                                    The programs current year Improper Payment and Unknown Payment rate has been achieved with a balance of payment integrity risk
+                                                                    and controls and represents the lowest rate that can be achieved without disproportionally increasing another risk,
+                                                                    as such the programs current year Improper Payment and Unknown Payment rate is the tolerable rate:
+                                                                    {{ year_data.rtp1 }}.
+                                                                </strong></p>
+                                                            {% endif %}
+                                                            {% if year_data.rtp4_2 != nil and year_data.rtp4_2 != '' %}
+                                                                <p>{{ year_data.rtp4_2 | newline_to_br }}</p>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+
+                                                {% if year_data.Hide_Program_Results_Future_Outlook_Needs == false %}
+                                                    <div class="usa-accordion__item">
+                                                        <h4 class="usa-accordion__heading">
+                                                            <button class="usa-accordion__button" aria-expanded="false" aria-controls="future-outlook-needs-{{ year_data.Year }}">
+                                                                Program Needs
+                                                            </button>
+                                                        </h4>
+                                                        <div id="future-outlook-needs-{{ year_data.Year }}" class="usa-accordion__content">
+                                                            {% if year_data.rap5 != nil and year_data.rap5 != '' %}
+                                                                <p>{{ year_data.rap5 | newline_to_br }}</p>
+                                                            {% endif %}
+                                                            {% if year_data.rap6 != nil and year_data.rap6 != '' %}
+                                                                <p>{{ year_data.rap6 | newline_to_br }}</p>
+                                                            {% endif %}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="grid-col-12" id="program-scorecards-additional-information-{{ year_data.Year }}">
+                                            <h4 class="tab-heading">Additional Programmatic Information</h4>
+                                            {% if year_data.rnp4 != nil and year_data.rnp4 != '' %}
+                                                <p>{{ year_data.rnp4 | newline_to_br }}</p>
+                                            {% endif %}
+                                            {% if year_data.pro1 != nil and year_data.pro1 != '' %}
+                                                <p>{{ year_data.pro1 | newline_to_br }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+</div>
+<script src="{{ '/assets/js/program-specific-scripts.js' | relative_url }}"></script>

@@ -96,34 +96,42 @@ Risks:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: 614(g) of the Millennium Challenge Act of 2003
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Administrative Expenses - Millennium Challenge Corporation
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Audit
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Compact Assistance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Compact Development Funding
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Due Diligence
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Global Health
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Threshold Programs
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

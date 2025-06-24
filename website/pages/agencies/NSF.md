@@ -84,22 +84,27 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Contracts and Individual Payments
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Grants and Cooperative Agreements
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Payments to Employees
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Purchase Cards
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Purchase Cards - National Science Foundation
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

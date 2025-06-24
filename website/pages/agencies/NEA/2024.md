@@ -480,14 +480,17 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Grants for Arts Projects
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Leadership
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Partnership Agreements (State and Regional)
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

@@ -96,24 +96,29 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Administrative, Technology, and Other
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Law Enforcement
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Litigation
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Prisons and Detention
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: State, Local, Tribal, and Other Assistance
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

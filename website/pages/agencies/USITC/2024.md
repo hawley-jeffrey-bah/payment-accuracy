@@ -48,6 +48,7 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Salaries and expenses - US International Trade Commission
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

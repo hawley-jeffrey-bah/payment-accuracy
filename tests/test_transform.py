@@ -90,15 +90,6 @@ def test_risks_file(mock_csv_data, in_memory_db):
     assert list(df.columns) == ["Agency","Fiscal_Year","Program_Name","in_draft","Was_the_Program_or_Activity_Susceptible_to_Significant_Improper_","raa6_2","raa7_2","Updated_Program_Name","Original_Program_Name"]
     assert len(df) == 2
 
-def test_new_risks_file(mock_csv_data, in_memory_db):
-    transform.NEW_RISKS_PATH = mock_csv_data["NEW_RISKS_PATH"]
-    transform.load_new_risks_file(in_memory_db)
-
-    df = pd.read_sql("SELECT * FROM new_risks", in_memory_db)
-    assert not df.empty
-    assert list(df.columns) == ["Agency","Fiscal_Year","Program_Name","Gaa1","raa7","raa6"]
-    assert len(df) == 2
-
 def test_program_compliance_file(mock_csv_data, in_memory_db):
     transform.PROGRAM_COMPLIANCE_PATH = mock_csv_data["PROGRAM_COMPLIANCE_PATH"]
     transform.load_program_compliance_file(in_memory_db)

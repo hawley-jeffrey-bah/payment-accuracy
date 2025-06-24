@@ -72,6 +72,7 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Election Security Grants
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

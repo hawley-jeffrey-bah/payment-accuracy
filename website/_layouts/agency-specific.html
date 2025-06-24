@@ -37,6 +37,7 @@ permalink: /
                         url_prefix = url_prefix
                         years_available = page.Years_Available
                         fiscal_year = page.Fiscal_Year
+                        on_change = "selectYear"
                     %}
                 </div>
             </div>
@@ -108,7 +109,7 @@ permalink: /
             <div class="grid-container recovery-information-section">
                 <h3>Recovery Information</h3>
                 <div class="usa-accordion agency-specific-accordion">
-                    {% unless (page.Overpayment_Years == nil) or (page.Overpayment_Years == '[]') %}
+                    {% unless page.Overpayment_Years == nil or page.Overpayment_Years == '[]' %}
                         <div class="usa-accordion__item">
                             <h4 class="usa-accordion__heading">
                                 <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-1">
@@ -301,7 +302,7 @@ permalink: /
                                 <p>{{ page.detail_dpa5 | newline_to_br }}</p>
                                 <p><strong>The initiative has {% if page.detail_dpa2 != 'Yes' %}not {% endif %}reduced/prevented improper payments:</strong></p>
                                 <p>
-                                    {% assign detail_dpa3_downcase = (page.detail_dpa3 | downcase) %}
+                                    {% assign detail_dpa3_downcase = page.detail_dpa3 | downcase %}
                                     {% if detail_dpa3_downcase == 'my agency did not identify any incorrect information' %}
                                         {{page.Agency}} has not identitied incorrect information in the Initiative.
                                     {% else %}
@@ -475,8 +476,8 @@ permalink: /
                                 </button>
                             </h4>
                             <div id="accordion-3b" class="usa-accordion__content usa-prose">
-                                {% assign detail_com1_downcase = (page.detail_com1 | downcase) %}
-                                {% if page.detail_com1 != nil and (detail_com1_downcase == "compliant" or detail_com1_downcase == "non-compliant") %}
+                                {% assign detail_com1_downcase = page.detail_com1 | downcase %}
+                                {% if detail_com1_downcase == "compliant" or detail_com1_downcase == "non-compliant" %}
                                     <p>{{ page.Agency }} was found {% if detail_com1_downcase == "non-compliant" %}non-{% endif %}compliant during the most recent PIIA compliance review.</p>
                                     {% if detail_com1_downcase == "non-compliant" and page.detail_pcp12_1 != nil %}
                                         <p><strong>Number of consecutive years {{ page.Agency }} has been non-compliant:  {{ page.detail_pcp12_1 | round: 0 }}</strong></p>
@@ -488,7 +489,11 @@ permalink: /
                                     <ul id="non-compliant-programs-list">
                                         {% for program in page.PIIA2019_NonCompliant_Programs %}
                                             <li>
-                                                <a href="/programs/EXAMPLE">{{ program.Name }}</a>
+                                                {% if program.Slug == nil or program.Slug == '' %}
+                                                    {{ program.Name }}
+                                                {% else %}
+                                                    <a href="/program/{{ program.Slug }}">{{ program.Name }}</a>
+                                                {% endif %}
                                                 <p>
                                                     <strong>Non-compliance criteria:  </strong>
                                                     {% if program.Compliant_1A == false %}
@@ -534,7 +539,11 @@ permalink: /
                                         <ul>
                                             {% for program in page.PIIA2019_Compliant_Programs %}
                                                 <li>
-                                                    <a href="/programs/EXAMPLE">{{ program.Name }}</a>
+                                                    {% if program.Slug == nil or program.Slug == '' %}
+                                                        {{ program.Name }}
+                                                    {% else %}
+                                                        <a href="/program/{{ program.Slug }}">{{ program.Name }}</a>
+                                                    {% endif %}
                                                 </li>
                                             {% endfor %}
                                         </ul>
@@ -603,7 +612,11 @@ permalink: /
                                                     {% if rowHeaderRendered == false %}
                                                         <!-- rowspan would be preferable, but it breaks uswds sorting -->
                                                         <td class="text-left" data-sort-value="{{ risk.Program_Name }}" style="border-bottom: none;">
-                                                            <a href="/programs/EXAMPLE">{{ risk.Program_Name }}</a>
+                                                            {% if risk.Slug == nil or risk.Slug == '' %}
+                                                                {{ risk.Program_Name }}
+                                                            {% else %}
+                                                                <a href="/program/{{ risk.Slug }}">{{ risk.Program_Name }}</a>
+                                                            {% endif %}
                                                         </td>
                                                     {% else %}
                                                         <td data-sort-value="{{ risk.Program_Name }}" style="border-top: none; border-bottom: none;"></td>
