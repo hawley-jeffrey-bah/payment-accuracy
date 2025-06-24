@@ -36,10 +36,12 @@ Risks:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Office of Inspector General
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Operations and Administration
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

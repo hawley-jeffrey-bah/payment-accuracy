@@ -84,18 +84,22 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Cash-control Disbursements
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Long-term Authorizations
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Medium-term Authorizations
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Short-term Authorizations
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

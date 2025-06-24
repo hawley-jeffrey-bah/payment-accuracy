@@ -42,7 +42,7 @@ function downloadCsvFromString(csvString, filename = 'data.csv') {
     document.body.removeChild(link);
 }
 
-function renderTable(tableId, columnHeaders, rowHeaders, dataSeries) {
+function renderTable(tableId, columnHeaders, rowHeaders, dataSeries, showPercentages) {
     const table = document.getElementById(tableId);
     const thead = table.querySelector('thead');
     const tbody = table.querySelector('tbody');
@@ -57,6 +57,13 @@ function renderTable(tableId, columnHeaders, rowHeaders, dataSeries) {
     }
     thead.appendChild(headerRow);
 
+    let totals = new Array(dataSeries.length).fill(0);;
+    for (let i = 0; i < dataSeries.length; i++) {
+        for (let j = 0; j < dataSeries[i].length; j++) {
+            totals[j] += dataSeries[i][j];
+        }
+    }
+
     for (let i = 0; i < dataSeries.length; i++) {
         const row = document.createElement('tr');
         const rowHeader = document.createElement('th');
@@ -65,7 +72,12 @@ function renderTable(tableId, columnHeaders, rowHeaders, dataSeries) {
         row.appendChild(rowHeader);
         for (let j = 0; j < dataSeries[i].length; j++) {
             const cell = document.createElement('td');
-            cell.textContent = displaySignificance(dataSeries[i][j]);
+            const rate = totals[j] == 0 ? 0 : dataSeries[i][j] / totals[j];
+            let textContent = displaySignificance(dataSeries[i][j]);
+            if (showPercentages === true) {
+                textContent += ' (' + Math.round(rate * 100) + '%)'
+            }
+            cell.textContent = textContent;
             cell.classList.add('amount-col');
             row.appendChild(cell);
         }
@@ -151,6 +163,38 @@ function renderStackedLineChart(chartElement, years, datasets, toggleSwitches, d
 
     downloadCsv.addEventListener('click', function() {
         downloadCsvFromString(csvString, filename = 'improper-payment-estimates.csv')
+    });
+
+    return chart;
+}
+
+function renderDoughnutChart(
+    chartElement,
+    paymentAccuracyRate,
+    improperPaymentRate,
+    unknownPaymentRate
+) {
+    const ctx = chartElement.getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Payment Accuracy Rate", "Improper Payment Rate", "Unknown Payment Rate"],
+            datasets: [{
+                data: [paymentAccuracyRate, improperPaymentRate, unknownPaymentRate],
+                backgroundColor: [
+                    '#146947',
+                    '#EF5E25',
+                    '#00BDE3'
+                ]
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
     });
 
     return chart;
@@ -303,6 +347,7 @@ function initImproperPayments() {
     const technicallyImproperSeries = JSON.parse(chartElement.getAttribute('data-technically-improper-series')).map(roundTwoPlaces);
     const unknownSeries = JSON.parse(chartElement.getAttribute('data-unknown-series')).map(roundTwoPlaces);
     const years = JSON.parse(chartElement.getAttribute('data-years'));
+    const showPercentages = chartElement.getAttribute('data-show-percentages') === "true";
 
     const datasets = [
         // light blue
@@ -337,7 +382,8 @@ function initImproperPayments() {
             underpaymentSeries,
             technicallyImproperSeries,
             unknownSeries
-        ]
+        ],
+        showPercentages
     );
 
     renderChartTableButtons(
@@ -352,6 +398,23 @@ function initImproperPayments() {
     // chart is not useful with one datapoint
     if (years.length === 1) {
         containerElement.querySelector('.show-table-button').click();
+    }
+}
+
+function initImproperPaymentsDoughnut() {
+    const doughnutCharts = document.getElementsByClassName("improper-payment-estimates-doughnut-chart");
+    for (let i = 0; i < doughnutCharts.length; i++) {
+        let chartElement = doughnutCharts[i];
+
+        if (chartElement === null) {
+            return;
+        }
+
+        const paymentAccuracyRate = roundTwoPlaces(JSON.parse(chartElement.getAttribute('data-accuracy')));
+        const improperPaymentRate = roundTwoPlaces(JSON.parse(chartElement.getAttribute('data-improper')));
+        const unknownPaymentRate = roundTwoPlaces(JSON.parse(chartElement.getAttribute('data-unknown')));
+
+        renderDoughnutChart(chartElement, paymentAccuracyRate, improperPaymentRate, unknownPaymentRate);
     }
 }
 
@@ -388,7 +451,8 @@ function initIdentificationAndRecovery() {
         [
             identifiedSeries,
             recoveredSeries
-        ]
+        ],
+        false
     );
 
     renderChartTableButtons(
@@ -409,5 +473,6 @@ function initIdentificationAndRecovery() {
 document.addEventListener('DOMContentLoaded', () => {
     initSparklines();
     initImproperPayments();
+    initImproperPaymentsDoughnut();
     initIdentificationAndRecovery();
 });

@@ -48,6 +48,7 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: OSC - Investigation and Prosecution of Reprisals for Whistle Blowing
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

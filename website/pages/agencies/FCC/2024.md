@@ -141,6 +141,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Telecommunications Relay Service
+  Slug: fcc-telecommunications-relay-service
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -165,6 +166,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Universal Service Fund - High Cost Legacy
+  Slug: fcc-universal-service-fund-high-cost-legacy
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -201,6 +203,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Universal Service Fund - Schools and Libraries
+  Slug: fcc-universal-service-fund-schools-and-libraries
 PIIA2019_NonCompliant_Programs:
 - Compliant_1A: false
   Compliant_1B: true
@@ -226,6 +229,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: Universal Service Fund - Lifeline
+  Slug: fcc-universal-service-fund-lifeline
 Payment_Accuracy_Amounts: '[3043.8599999999997, 2646.308, 5492.345950000001, 4916.500000000001]'
 Payment_Accuracy_Rate_Max: 98.3
 Payment_Accuracy_Rate_Min: 93.7
@@ -236,48 +240,59 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Affordable Connectivity Program (ACP)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: COVID-19 Telehealth
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Emergency Connectivity Fund (ECF)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Federal Communications Commission Operating Expenses
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: North American Numbering Plan
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Secured & Trusted Communications Network Reimbursement Program (STCNRP)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: TV Broadcasting Relocation Fund
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   - Fiscal_Year: 2022
     Susceptible: 'Yes'
   Program_Name: Telecommunications Relay Service
+  Slug: fcc-telecommunications-relay-service
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Universal Service Administrative Company (USAC) - Administrative Costs
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'Yes'
   Program_Name: Universal Service Fund - High Cost Legacy
+  Slug: fcc-universal-service-fund-high-cost-legacy
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Universal Service Fund - Rural Health Care
+  Slug: null
 Technically_Improper_Amounts: '[0, 0, 0, 0]'
 Underpayment_Amounts: '[0, 0, 11.040049999999999, 26.57]'
 Unknown_Amounts: '[18.33, 0, 0, 0]'

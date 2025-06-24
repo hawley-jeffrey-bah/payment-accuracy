@@ -215,6 +215,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Beneficiary Travel
+  Slug: va-beneficiary-travel
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -359,6 +360,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Communications, Utilities, and Other Rent
+  Slug: va-communications-utilities-and-other-rent
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -719,6 +721,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Medical Care Contracts and Agreements
+  Slug: va-medical-care-contracts-and-agreements
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1055,6 +1058,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Supplies and Materials
+  Slug: va-supplies-and-materials
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1115,6 +1119,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: VA Community Care
+  Slug: va-va-community-care
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1308,6 +1313,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Pension
+  Slug: va-pension
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1320,6 +1326,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Purchased Long Term Services and Supports
+  Slug: va-purchased-long-term-services-and-supports
 Payment_Accuracy_Amounts: '[23398.46, 28216.71799897, 32866.39000000001, 38296.979999999996]'
 Payment_Accuracy_Rate_Max: 94.6
 Payment_Accuracy_Rate_Min: 82.1
@@ -1330,300 +1337,373 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Alcohol and Drug Treatment Rehabilitation
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Automobile Adaptive Equipment
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: COVID-19 Office of Information & Technology
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: COVID-19 VA Wide Payroll
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: COVID-19 Veterans Benefits Administration (VBA) General Operating
     Expense
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: COVID-19 Veterans Health Administration (VHA) Supplemental Disbursements
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Caregiver Support
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Civilian Health and Medical Program of the VA (CHAMPVA)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Clothing Allowance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Compensated Work Therapy
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   - Fiscal_Year: 2024
     Susceptible: 'Yes'
   Program_Name: Compensation
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Dependency and Indemnity Compensation
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   Program_Name: Education (Reporting Fees)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Education Service (Chapter 1606)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Education Service (Chapter 33)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Education Service (State Approving Agencies)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Education Service Survivor and Dependents Education Assistance (Chapter
     35)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Equal Access to Justice Act
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Equipment
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Facility Maintenance and Operations
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Foreign Medical Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Franchise Fund
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: General Post Fund
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Grants (Adaptive Sports Programs)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Grants (Construction of State Extended Care Facilities)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Grants (Homeless Per Diem)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Grants (Support Services for Veteran Families)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Healthcare for Homeless Veterans
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Indian Health Services/Tribal Health Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Land and Structures
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Loan Guaranty (Direct Loans)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Loan Guaranty (Loan Administration)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Loan Guaranty (Loan Production)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Loan Guaranty (Property Management)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Medical and Prosthetic Research
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Montgomery GI Bill (Chapter 30)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: National Cemetery Administration (NCA) Burial
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: National Service Life Insurance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Non-Medical Contracts and Agreements
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Off-Station Provider Services
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Office of Acquisition, Logistics and Construction (Major/Minor Construction)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Office of Information & Technology
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2019
     Susceptible: 'No'
   Program_Name: Office of Inspector General
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Office of Inspector General - Department of Veteran's Affairs
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Other Contracts, Services, Agreements, and Miscellaneous
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Pharmacy (Consolidated Mail Outpatient Pharmacies)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Pharmacy (Medical Facilities)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Professional Services Contracts
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Prosthetics
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Service-Disabled Veterans Insurance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Servicemembers' Group Life Insurance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Shared Services
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Specially Adaptive Housing
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Spina Bifida Health Care
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: State Home Per Diem
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Station 101 Accounting
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Supply Fund
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Transportation of Things
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: VA Wide Payroll
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: VA Wide Travel
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Veteran Readiness and Employment
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Veterans Benefits Administration (VBA) Automobile Grants
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Veterans Benefits Administration (VBA) Burial
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Veterans Benefits Administration (VBA) General Operating Expense
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Veterans Benefits Administration (VBA) Spina Bifida (Chapter 18)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Veterans Health Administration (VHA) Disaster Relief Funding
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   Program_Name: Veterans Health Administration (VHA) Disaster Relief Funding (Hurricane
     Sandy)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Veterans Health Administration (VHA) Information Technology Services
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Veterans Health Administration (VHA) Insurance Claims and Interest
     Expense
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Veterans Insurance and Indemnities
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   Program_Name: Veterans Reopened Insurance
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2019
     Susceptible: 'No'
   Program_Name: Veterans Retraining and Assistance Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Veterans Special Life Insurance
+  Slug: null
 Technically_Improper_Amounts: '[2032.03, 1555.25, 1176.5, 698.9399999999999]'
 Underpayment_Amounts: '[203.38, 1.73200103, 9.030000000000001, 32.65]'
 Unknown_Amounts: '[908.75, 545.74, 191.31, 328.03]'

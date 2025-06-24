@@ -174,7 +174,13 @@ permalink: /
                         {% for program in agency.programs %}
                         {% unless program.program_name == nil %}
                         <tr class="collapsed program-row {{ row-class }}" data-program-name="{{ program.program_name }}" data-agency-name="{{ agency.agency_name }}">
-                            <td class="name-col text-middle text-left padding-x-2 padding-y-1"><a href="/programs/EXAMPLE">{{ program.program_name }}</a></td>
+                            <td class="name-col text-middle text-left padding-x-2 padding-y-1">
+                                {% if program.slug == nil or program.slug == '' %}
+                                    {{ program.program_name }}
+                                {% else %}
+                                    <a href="/program/{{ program.slug }}">{{ program.program_name }}</a>
+                                {% endif %}
+                            </td>
                             <td class="total-spent-col text-middle text-right padding-x-2 padding-y-1">${{ program.total_spent_federal_funding | thousands_separator }} M</td>
                             <td class="num-programs-col text-middle text-right padding-x-2 padding-y-1">-</td>
                             <td class="susceptible-programs-col text-middle text-right padding-x-2 padding-y-1">-</td>

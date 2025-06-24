@@ -36,6 +36,7 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Merit System Protection Board - Salaries and Expenses
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

@@ -84,20 +84,24 @@ Risks:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Employee Payments - Railroad Retirement Board
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Railroad Retirement Act
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Railroad Unemployment Insurance Act
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Vendor Payments - Railroad Retirement Board
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

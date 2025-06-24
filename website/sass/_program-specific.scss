@@ -1,0 +1,488 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.programs-container {
+    --primary-color: #{$accent-cool};
+    --secondary-color: #{$accent-cool-lighter};
+}
+
+.high-priority {
+    --primary-color: #EF5E25;
+    --secondary-color: #FFF5EE;
+}
+
+.programs-container
+    .improper-payment-estimates-chart-container {
+        h5 {
+            @include default-text-styling($color: $black, $size: 22px, $weight: 600, $height: 36px)
+        }
+
+        .grid-row {
+            padding: 0;
+        }
+    }
+
+    .programs-hero {
+        background-color: var(--primary-color);
+        background-image: url('/assets/img/arrows.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 2rem 2rem 0 2rem;
+
+    .programs-hero-content {
+        .grid-row {
+            padding: 0vh 5vw;
+        }
+
+        h1 {
+            @include default-text-styling($color: $white, $size: 40px, $weight: 400, $height: 48px);
+            @media (max-width: $tablet) {
+                @include default-text-styling($color: $white, $size: 32px, $height: 40px);
+            }
+        }
+
+        p {
+            @include default-text-styling($color: $white, $size: 16px, $weight: 400, $height: 24px);
+        }
+
+        .hero-text {
+            padding: 0 0 4rem;
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        @media (max-width: $tablet) {
+            padding: 2rem 0;
+        }
+        @media (max-width: $mobile) {
+            .hero-text-container {
+                width: 100%;
+            }
+            .hero-image-container {
+                display: none;
+            }
+        }
+
+        .usa-tag {
+            display: inline-block;
+            text-transform: unset;
+            padding: 4px 8px 4px 8px;
+            @include default-text-styling($color: var(--primary-color), $size: 14px, $weight: 600, $height: 16px);
+            vertical-align: middle;
+            border-radius: 5px;
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+#program-scorecards-tabs {
+    margin-bottom: 32px;
+}
+
+#years-row {
+    h3 {
+        margin-top: 0;
+        line-height: 58px;
+    }
+
+    .years-dropdown {
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+}
+
+.program-results-tabs {
+    li, .tabbed-button {
+        margin-top: 0px !important;
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: $tablet) {
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.programs-content > .grid-container {
+    margin-bottom: 32px;
+}
+
+.programs-content > .grid-container > .grid-row:not(.nav-row) {
+    padding: 0vh 5vw;
+}
+
+.programs-content {
+    h3 {
+        @include default-text-styling($color: black, $size: 32px, $weight: 600, $height: 40px);
+    }
+
+    .usa-button {
+        @include default-text-styling($color: var(--secondary-color), $size: 16px, $weight: 600, $height: 16px);
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        font-weight: 600px;
+    }
+
+    .usa-button--outline {
+        @include default-text-styling($color: black, $size: 16px, $weight: 600, $height: 16px);
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: black;
+        box-shadow: inset 0 0 0 2px $pa-lighter-grey;
+        background-color: white;
+        font-weight: 600px;
+    }
+
+    #program-button-group, #program-results-button-group {
+        grid-column: 1 / -1;
+        width: 100%;
+        display: flex;
+        @media (max-width: $tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: 50%;
+            margin-top: 0px;
+
+            button {
+                margin-top: 0px;
+                grid-column: 1 / -1;
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+
+    #program-results-tab-container {
+        padding-left: 0;
+        padding-right: 0;
+
+        .grid-row {
+            margin-top: 32px;
+        }
+    }
+
+    .program-results-improper-payments-container {
+        .grid-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .breadcrumbs {
+        @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+        padding: 0;
+
+        a, a:visited {
+            color: $pa-text-primary;
+            text-decoration: none;
+        }
+    }
+
+    .metrics-summary {
+        @include default-text-styling($color: $pa-black, $size: 22px, $weight: 400, $height: 36px);
+
+        strong {
+            font-weight: 600;
+        }
+
+        p {
+            margin-top: 8px;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            margin-top: 8px;
+            margin-bottom: 0px;
+            @include default-text-styling($color: var(--primary-color), $size: 40px, $weight: 600, $height: 48px);
+        }
+    }
+
+    .integrity-results {
+        h1 {
+            margin-top: 8px;
+            margin-bottom: 0px;
+            @include default-text-styling($color: $pa-black, $size: 32px, $weight: 600, $height: 40px);
+        }
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            @include default-text-styling($color: $pa-black, $size: 16px, $weight: 600, $height: 24px);
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            @include default-text-styling($color: $pa-black, $size: 16px, $weight: 400, $height: 24px);
+        }
+    }
+
+    .actions-section, .improper-payment-estimates-doughnut-section {
+        padding: 0;
+
+        .legend {
+            margin-top: 20px;
+
+            .legend-circle {
+                display: inline-block;
+                height:12px;
+                border-radius:50%;
+                -moz-border-radius:50%;
+                -webkit-border-radius:50%;
+                width:12px;
+                margin-right: 10px;
+
+                &.dark-green {
+                    background-color: #146947;
+                    border:1px solid #146947;
+                }
+
+                &.orange {
+                    background-color: #EF5E25;
+                    border:1px solid #EF5E25;
+                }
+
+                &.light-blue {
+                    background-color: #00BDE3;
+                    border:1px solid #00BDE3;
+                }
+            }
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+
+        h5 {
+            @include default-text-styling($size: 14px, $weight: 600, $height: 20px);
+            margin: 0;
+        }
+
+        p {
+            @include default-text-styling($size: 14px, $weight: 400, $height: 20px);
+            &:not(.legend-entry) {
+                margin: 0;
+            }
+        }
+
+        .usa-card__container {
+            border-radius: 20px;
+            border: 1px solid $pa-card-border-grey;
+        }
+        h2 {
+            background-color: $pa-light-blue;
+            padding: 1.2rem;
+            border-top: 1px solid $pa-bg-lightest;
+            border-bottom: 1px solid $pa-bg-lightest;
+        }
+        button.expand-btn {
+            border: 0;
+            background-color: inherit;
+        }
+        .truncated-cell-content {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .expanded {
+            -webkit-line-clamp: unset;
+            line-clamp: unset;
+            max-height: none;
+        }
+        .usa-card__body>:last-child {
+            margin-bottom: 1.5rem;
+        }
+        .actions-table {
+            margin: 0;
+
+            @media (min-width: $desktop) {
+                table-layout: fixed;
+                width: 100%;
+                max-width: 100%;
+
+                tr th:nth-child(1),
+                tr td:nth-child(1) {
+                    width: 15%;
+                    max-width: 15%;
+                }
+
+                tr th:nth-child(2),
+                tr td:nth-child(2) {
+                    width: 50%;
+                    max-width: 50%;
+                }
+
+                tr th:nth-child(3),
+                tr td:nth-child(3) {
+                    width: 15%;
+                    max-width: 15%;
+                }
+
+                tr th:nth-child(4),
+                tr td:nth-child(4) {
+                    width: 15%;
+                    max-width: 15%;
+                }
+
+                tr th:nth-child(5),
+                tr td:nth-child(5) {
+                    width: 5%;
+                    max-width: 5%;
+                }
+            }
+
+            th, td {
+                background-color: inherit;
+                border: 1px solid $pa-bg-lightest;
+                border-left: 0;
+                border-right: 0;
+                padding: 1rem;
+            }
+            td.status .planned {
+                color: $pa-text-primary;
+                background-color: $pa-light-blue;
+                border: 1px solid $pa-text-primary;
+            }
+            td.status .completed {
+                color: $accent-cool;
+                background-color: $accent-cool-lighter;
+                border: 1px solid $accent-cool;
+            }
+            td.status .not-completed {
+                color: $error-primary;
+                background-color: $error-lighter;
+                border: 1px solid $error-primary;
+            }
+            td.status .planned,
+            td.status .completed,
+            td.status .not-completed {
+                border-radius: 13px;
+                display: inline-flex;
+                padding: 4px 8px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                @include default-text-styling($size: 14px, $weight: 600, $height: 16px);
+            }
+            td.status, th.status {
+                text-align: center;
+            }
+            td.mitigation-strategy-col {
+                @include default-text-styling($color: $pa-darker-blue, $size: 16px, $weight: 600, $height: 16px);
+            }
+            td.truncated-cell-content {
+                @include default-text-styling($color: $pa-darker-blue, $size: 16px, $weight: 400, $height: 16px);
+            }
+            th {
+                @include default-text-styling($color: $pa-darker-blue, $size: 16px, $weight: 600, $height: 24px);
+            }
+            td.status {
+                padding: 2.6rem 1rem;
+            }
+            .expand-col {
+                padding: 2.6rem 0;
+            }
+        }
+    }
+
+    #program-results {
+        td.amount-col {
+            white-space: nowrap;
+        }
+        h3 {
+            @include default-text-styling($color: $black,  $size: 22px, $weight: 600, $height: 36px);
+        }
+    }
+
+    .overpayments-table, .eligibility-table {
+        width: 100%;
+
+        tr > td, th {
+            border-color: $pa-bg-lightest;
+            color: $pa-darker-blue;
+        }
+    }
+
+    .usa-accordion__button {
+        background-color: var(--secondary-color);
+        padding: 12px 1rem;
+        padding-right: 40px; // prevent covering +/- sign in mobile
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+
+        &:focus {
+            background-color: var(--secondary-color);
+        }
+
+        // When the accordion is expanded
+        &[aria-expanded="true"] {
+            background-color: var(--secondary-color);
+        }
+    }
+
+    h4.tab-heading {
+        @include default-text-styling($size: 22px, $weight: 600, $height: 36px);
+    }
+
+    .future-outlook-projections {
+        thead > tr > th {
+            background-color: $pa-dark-blue;
+            @include default-text-styling($color: white, $size: 16px, $weight: 600, $height: 24px);
+        }
+    }
+}
+
+.unknown-payments-table {
+    border-collapse: collapse;
+    min-width: 800px;
+
+    tr > td, tr > th {
+        border-color: $pa-bg-lightest;
+        color: $pa-darker-blue;
+    }
+
+    thead tr:first-child th {
+        background-color: $pa-dark-blue;
+        @include default-text-styling($color: $white, $size: 16px, $weight: 600, $height: 24px);
+        text-align: left;
+        vertical-align: bottom;
+    }
+
+    thead tr:nth-child(2) th {
+        background-color: $pa-lighter-grey;
+        @include default-text-styling($color: $pa-black, $size: 14px, $weight: 400, $height: 20px);
+    }
+
+    thead tr:nth-child(2) th:nth-child(1) {
+        width: 20%
+    }
+
+    thead tr:nth-child(2) th:nth-child(2) {
+        width: 20%
+    }
+
+    thead tr:nth-child(2) th:nth-child(3) {
+        width: 60%
+    }
+
+    th, td {
+        text-align: left;
+    }
+}

@@ -59,8 +59,8 @@ def all_agencies_mapped(df, columnIndex, codes):
             return False
     return True
 
-def assert_no_agency_raw_duplicates(df):
-    grouped = df.groupby(['agency','Key','Fiscal_Year']).size().reset_index(name='counts')
+def assert_no_duplicates(df, keysList):
+    grouped = df.groupby(keysList).size().reset_index(name='counts')
     condition = grouped['counts'] == 1
     assert condition.all()
 
@@ -161,10 +161,11 @@ def test_MY_OMB_ImproperPayment_Payment_Accuracy_All_Program_vw(get_agency_codes
 
     df = csv_to_dataframe(path)
     assert_has_rows(df)
-    assert_column_count(df, 25)
+    assert_column_count(df, 26)
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 2)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_no_duplicates(df, ["Agency","Fiscal_Year","Program_Name"])
 
 def test_MY_OMB_ImproperPayment_Payment_Accuracy_Principal_Table_Columns_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Accuracy_Principal_Table_Columns_vw.csv")
@@ -176,6 +177,8 @@ def test_MY_OMB_ImproperPayment_Payment_Accuracy_Principal_Table_Columns_vw(get_
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 0)
     assert_all_agencies_mapped(df, 1, get_agency_codes)
+    # if multiselect data is ever needed, ETL using a new query, file, and sqllite table
+    assert_no_duplicates(df, ['Agency','Program_Name', 'Column_names','Fiscal_Year'])
 
 def test_MY_OMB_ImproperPayment_Payment_Accuracy_Rate_and_Amt_of_Recovery_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Accuracy_Rate_and_Amt_of_Recovery_vw.csv")
@@ -187,6 +190,7 @@ def test_MY_OMB_ImproperPayment_Payment_Accuracy_Rate_and_Amt_of_Recovery_vw(get
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 1)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_no_duplicates(df, ["Agency", "Fiscal_Year"])
 
 def test_MY_OMB_ImproperPayment_Payment_Confirmed_Fraud_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Confirmed_Fraud_vw.csv")
@@ -198,6 +202,7 @@ def test_MY_OMB_ImproperPayment_Payment_Confirmed_Fraud_vw(get_agency_codes):
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 3)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    # duplicates handled by summing
 
 def test_MY_OMB_ImproperPayment_Payment_IP_Root_Causes_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_IP_Root_Causes_vw.csv")
@@ -208,6 +213,7 @@ def test_MY_OMB_ImproperPayment_Payment_IP_Root_Causes_vw(get_agency_codes):
     assert_column_count(df, 13)
     assert_column_count_is_consistent(path)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    # duplicates handled by summing
 
 def test_MY_OMB_ImproperPayment_Payment_Risk_Assessments_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Risk_Assessments_vw.csv")
@@ -215,21 +221,11 @@ def test_MY_OMB_ImproperPayment_Payment_Risk_Assessments_vw(get_agency_codes):
 
     df = csv_to_dataframe(path)
     assert_has_rows(df)
-    assert_column_count(df, 9)
+    assert_column_count(df, 7)
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 1)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
-
-def test_MY_OMB_ImproperPayment_Payment_New_Risk_Assessments_vw(get_agency_codes):
-    path = get_csv_path("MY_OMB_ImproperPayment_Payment_New_Risk_Assessments_vw.csv")
-    assert_file_exists(path)
-
-    df = csv_to_dataframe(path)
-    assert_has_rows(df)
-    assert_column_count(df, 6)
-    assert_column_count_is_consistent(path)
-    assert_fiscal_year_found(df, 1)
-    assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_no_duplicates(df, ["Agency", "Program_Name", "Fiscal_Year"])
 
 def test_MY_OMB_ImproperPayment_Payment_Program_Compliance_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Program_Compliance_vw.csv")
@@ -241,6 +237,7 @@ def test_MY_OMB_ImproperPayment_Payment_Program_Compliance_vw(get_agency_codes):
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 1)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_no_duplicates(df, ["Agency", "Program_Name", "Fiscal_Year"])
 
 def test_MY_OMB_ImproperPayment_Payment_Recovery_Details_unpivotted_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_Payment_Recovery_Details_unpivotted_vw.csv")
@@ -252,6 +249,7 @@ def test_MY_OMB_ImproperPayment_Payment_Recovery_Details_unpivotted_vw(get_agenc
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 2)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    # duplicates handled by summing
 
 def test_MY_OMB_ImproperPayment_PaymentAccuracy_AgencyData_raw_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_PaymentAccuracy_AgencyData_raw_vw.csv")
@@ -264,7 +262,7 @@ def test_MY_OMB_ImproperPayment_PaymentAccuracy_AgencyData_raw_vw(get_agency_cod
     assert_fiscal_year_found(df, 4)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
     # if multiselect data is ever needed, ETL using a new query, file, and sqllite table
-    assert_no_agency_raw_duplicates(df)
+    assert_no_duplicates(df, ['agency','Key','Fiscal_Year'])
 
 def test_MY_OMB_ImproperPayment_PaymentAccuracy_ProgramData_raw_vw(get_agency_codes):
     path = get_csv_path("MY_OMB_ImproperPayment_PaymentAccuracy_ProgramData_raw_vw.csv")
@@ -276,3 +274,16 @@ def test_MY_OMB_ImproperPayment_PaymentAccuracy_ProgramData_raw_vw(get_agency_co
     assert_column_count_is_consistent(path)
     assert_fiscal_year_found(df, 5)
     assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_no_duplicates(df, ['agency','Program Name', 'key','Fiscal_Year'])
+
+def test_ActionsDateMapping():
+    path = get_csv_path("ActionsDateMapping.csv")
+    assert_file_exists(path)
+
+    df = csv_to_dataframe(path)
+    assert_has_rows(df)
+    assert_column_count(df, 4)
+    assert_column_count_is_consistent(path)
+    assert_no_duplicates(df, ['Action'])
+    assert_no_duplicates(df, ['Date'])
+    assert_no_duplicates(df, ['Planned', 'Type'])

@@ -3,12 +3,14 @@ Transform extracted program information and store the transformed
 information in a SQLite database for generation of mardown files.
 """
 
+import config
 import os
 import pandas as pd
 import sqlite3
 from io import StringIO
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROGRAM_SPECIFIC_FISCAL_YEARS = list(range(config.FISCAL_YEAR - config.COUNT_PROGRAM_SPECIFIC_YEARS_DISPLAYED + 1, config.FISCAL_YEAR + 1))
 
 # transformed database, for use in the load / generate stage
 TRANSFORMED_FILES_DIRECTORY = "transformed"
@@ -26,11 +28,12 @@ EXTRACTED_PAYMENT_RECOVERY_DETAILS_CSV_NAME = "MY_OMB_ImproperPayment_Payment_Re
 EXTRACTED_PAYMENT_CONFIRMED_FRAUD_CSV_NAME = "MY_OMB_ImproperPayment_Payment_Confirmed_Fraud_vw.csv"
 EXTRACTED_PROGRAM_COMPLIANCE_CSV_NAME = "MY_OMB_ImproperPayment_Payment_Program_Compliance_vw.csv"
 EXTRACTED_RISKS_CSV_NAME = "MY_OMB_ImproperPayment_Payment_Risk_Assessments_vw.csv"
-EXTRACTED_NEW_RISKS_CSV_NAME = "MY_OMB_ImproperPayment_Payment_New_Risk_Assessments_vw.csv"
 ELIGIBILITY_THEMES_CSV_NAME = "Eligibility_Themes.csv"
 EXTRACTED_RECOVERY_AMOUNTS_CSV_NAME = "MY_OMB_ImproperPayment_Payment_Accuracy_Rate_and_Amt_of_Recovery_vw.csv"
 EXTRACTED_SURVEY_ROOT_CAUSE = "KPI_ImproperPaymentSurveyRootCause_vw_IP.csv"
 EXTRACTED_IP_ROOT_CAUSES = "MY_OMB_ImproperPayment_Payment_IP_Root_Causes_vw.csv"
+ACTIONS_DATE_MAPPING = "ActionsDateMapping.csv"
+EXTRACTED_MITIGATION_STRATEGIES_CSV_NAME = "MY_OMB_ImproperPayment_Mitigation_Strategies_vw.csv"
 
 ALL_PROGRAMS_DATA_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_ALL_PROGRAMS_CSV_NAME)
 PROGRAM_DATA_RAW_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_PROGRAM_DATA_RAW_CSV_NAME)
@@ -41,11 +44,12 @@ PAYMENT_RECOVERY_DETAILS_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY
 PAYMENT_CONFIRMED_FRAUD_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_PAYMENT_CONFIRMED_FRAUD_CSV_NAME)
 PROGRAM_COMPLIANCE_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_PROGRAM_COMPLIANCE_CSV_NAME)
 RISKS_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_RISKS_CSV_NAME)
-NEW_RISKS_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_NEW_RISKS_CSV_NAME)
 ELIGIBILITY_THEMES_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, ELIGIBILITY_THEMES_CSV_NAME)
 RECOVERY_AMOUNTS_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_RECOVERY_AMOUNTS_CSV_NAME)
 SURVEY_ROOT_CAUSE_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_SURVEY_ROOT_CAUSE)
 IP_ROOT_CAUSES_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_IP_ROOT_CAUSES)
+ACTION_DATE_MAPPING_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, ACTIONS_DATE_MAPPING)
+MITIGATION_STRATEGIES_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_MITIGATION_STRATEGIES_CSV_NAME)
 
 ALL_PROGRAMS_DATA_AGGREGATION_DROP_TABLE_SQL = """
     DROP TABLE IF EXISTS all_programs_data_aggregation;
@@ -170,7 +174,9 @@ ALL_PROGRAMS_DATA_AGGREGATION_SELECT_AND_INSERT_SQL = """
             AND a.[Program_Name] = c.[Program Name]
             AND a.[Fiscal_Year] = c.[Fiscal_Year]
         LEFT JOIN (
-            SELECT * FROM payment_confirmed_fraud
+            SELECT [Agency], [Program_or_Activity], [Fiscal_Year], SUM([Confirmed_Fraud]) AS [Confirmed_Fraud]
+            FROM payment_confirmed_fraud
+            GROUP BY [Agency], [Program_or_Activity], [Fiscal_Year]
         ) d ON a.[Agency] = d.[Agency] AND a.[Fiscal_Year] = d.[Fiscal_Year] AND upper(a.[Program_Name]) = upper(d.[Program_or_Activity])
         LEFT JOIN (
             SELECT
@@ -183,7 +189,7 @@ ALL_PROGRAMS_DATA_AGGREGATION_SELECT_AND_INSERT_SQL = """
         ON a.[Agency] = e.[Agency]
             AND a.[Program_Name] = e.[Program_Name]
             AND a.[Fiscal_Year] = e.[Fiscal_Year]
-    WHERE CAST(COALESCE([Outlays_($M)], '0') AS DECIMAL(15,5)) != 0
+    WHERE a.[Program_Name] IS NOT NULL
 
     """
 
@@ -299,6 +305,33 @@ GOVERNMENT_WIDE_DATA_AGGREGATION_CREATE_VIEW_SQL = """
     GROUP BY Fiscal_Year;
     """
 
+SIGNIFICANT_OR_HIGH_PRIORITY_PROGRAMS_DROP_VIEW_SQL = """
+    DROP VIEW IF EXISTS significant_or_high_priority_programs;
+    """
+
+SIGNIFICANT_OR_HIGH_PRIORITY_PROGRAMS_CREATE_VIEW_SQL = f"""
+    CREATE VIEW significant_or_high_priority_programs AS
+    SELECT DISTINCT
+            [Agency],
+			[Program_Name]
+		FROM [all_programs_data_aggregation]
+		WHERE [Fiscal_Year] IN ({",".join(map(str, PROGRAM_SPECIFIC_FISCAL_YEARS))}) AND ([High_Priority_Program] = 1 OR [Phase_2_Program] = 1)
+    UNION
+    SELECT DISTINCT
+            [agency],
+            [Program Name]
+        FROM [program_data_raw]
+        WHERE LOWER([key]) = 'cyp19' AND LOWER([value]) = 'yes' AND [Fiscal_Year] IN ({",".join(map(str, PROGRAM_SPECIFIC_FISCAL_YEARS))})
+    UNION
+    SELECT DISTINCT
+            Agency,
+            Program_Name
+        FROM principal_table_columns
+        WHERE Column_names = 'app3_1'
+            AND Reporting_Phases_Current_FY = 'Phase 2'
+            AND Fiscal_Year IN ({",".join(map(str, PROGRAM_SPECIFIC_FISCAL_YEARS))})
+    """
+
 ALL_AGENCIES_YEARS_DROP_VIEW_SQL = """
     DROP VIEW IF EXISTS all_agencies_years;
     """
@@ -329,6 +362,20 @@ ALL_AGENCIES_YEARS_CREATE_VIEW_SQL = """
     LEFT JOIN [ip_agency_pocs] b
     ON a.[Agency] = b.[Agency_Acronym];
     """
+
+QUARTERLY_SCORECARD_LINKS_DROP_VIEW_SQL = """
+    DROP TABLE IF EXISTS program_scorecard_links;
+"""
+
+QUARTERLY_SCORECARD_LINKS_CREATE_VIEW_SQL = """
+    CREATE TABLE IF NOT EXISTS program_scorecard_links (
+        QuarterYear VAR(7),
+        Quarter INT,
+        Year INT,
+        Program_Name VARCHAR(100),
+        Link VARCHAR(118)
+    );
+"""
 
 # establish a database connection to store transformed data that is used
 # in the load / generate stage
@@ -378,9 +425,6 @@ def load_program_compliance_file(conn):
 def load_risks_file(conn):
     load_csv_to_sqlite(RISKS_PATH, "risks", conn)
 
-def load_new_risks_file(conn):
-    load_csv_to_sqlite(NEW_RISKS_PATH, "new_risks", conn)
-
 def load_eligibility_themes_file(conn):
     load_csv_to_sqlite(ELIGIBILITY_THEMES_PATH, "eligibility_themes", conn)
 
@@ -392,6 +436,12 @@ def load_survey_root_cause_file(conn):
 
 def load_ip_root_causes_file(conn):
     load_csv_to_sqlite(IP_ROOT_CAUSES_PATH, "ip_root_causes", conn)
+
+def load_actions_date_mapping_file(conn):
+    load_csv_to_sqlite(ACTION_DATE_MAPPING_PATH, "actions_date_mapping", conn)
+
+def load_mitigation_strategies_file(conn):
+    load_csv_to_sqlite(MITIGATION_STRATEGIES_PATH, "mitigation_strategies", conn)
 
 def transform_and_insert_all_programs_data_aggregation_data():
     """
@@ -419,12 +469,52 @@ def transform_and_insert_government_wide_data_aggregation_data():
     cur.execute(GOVERNMENT_WIDE_DATA_AGGREGATION_CREATE_VIEW_SQL)
     conn.commit()
 
+def transform_and_insert_significant_or_high_priority_programs_data():
+    """
+    Query government-wide level data into transformed database.
+    """
+    cur.execute(SIGNIFICANT_OR_HIGH_PRIORITY_PROGRAMS_DROP_VIEW_SQL)
+    cur.execute(SIGNIFICANT_OR_HIGH_PRIORITY_PROGRAMS_CREATE_VIEW_SQL)
+    conn.commit()
+
 def transform_and_insert_all_agencies_years_data():
     """
     Query list of all agency-year combinations that have data.
     """
     cur.execute(ALL_AGENCIES_YEARS_DROP_VIEW_SQL)
     cur.execute(ALL_AGENCIES_YEARS_CREATE_VIEW_SQL)
+    conn.commit()
+
+def transform_and_insert_quarterly_scorecards():
+    """
+    Generate scorecard links.
+    """
+    cur.execute(QUARTERLY_SCORECARD_LINKS_DROP_VIEW_SQL)
+    cur.execute(QUARTERLY_SCORECARD_LINKS_CREATE_VIEW_SQL)
+
+    scorecardsDirectory = os.path.join(BASE_DIR, "..", "website", "assets", "scorecards")
+    for dirname in os.listdir(scorecardsDirectory):
+        if not os.path.isfile(os.path.join(scorecardsDirectory, dirname)):
+            for filename in os.listdir(os.path.join(scorecardsDirectory, dirname)):
+                sanitizedFilename = filename.replace("'","''")
+                quarter = dirname[1:2]
+                year = dirname[3:7]
+                insertQuery = f"""
+                    INSERT INTO program_scorecard_links (
+                        QuarterYear,
+                        Quarter,
+                        Year,
+                        Program_Name,
+                        Link
+                    ) VALUES (
+                        '{dirname}',
+                        {quarter},
+                        {year},
+                        '{sanitizedFilename.rstrip(".pdf")}',
+                        'assets/scorecards/{dirname}/{sanitizedFilename}'
+                    );
+                """
+                cur.execute(insertQuery)
     conn.commit()
 
 load_all_programs_file(conn)
@@ -436,14 +526,17 @@ load_payment_recovery_details_file(conn)
 load_payment_confirmed_fraud_file(conn)
 load_program_compliance_file(conn)
 load_risks_file(conn)
-load_new_risks_file(conn)
 load_eligibility_themes_file(conn)
 load_recovery_amounts_file(conn)
 load_survey_root_cause_file(conn)
 load_ip_root_causes_file(conn)
+load_actions_date_mapping_file(conn)
+load_mitigation_strategies_file(conn)
 transform_and_insert_all_programs_data_aggregation_data()
 transform_and_insert_all_agencies_data_aggregation_data()
 transform_and_insert_government_wide_data_aggregation_data()
+transform_and_insert_significant_or_high_priority_programs_data()
 transform_and_insert_all_agencies_years_data()
+transform_and_insert_quarterly_scorecards()
 
 conn.close()

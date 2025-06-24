@@ -295,14 +295,16 @@ def program_specific_sample_data():
                 "Overpayment_Amount": 100,
                 "Underpayment_Amount": 29,
                 "Technically_Improper_Amount": 38,
-                "Unknown_Amount": 8
+                "Unknown_Amount": 8,
+                "Fiscal_Year": 2024
             },
             {
                 "Payment_Accuracy_Amount": 1483,
                 "Overpayment_Amount": 456,
                 "Underpayment_Amount": 32,
                 "Technically_Improper_Amount": 12,
-                "Unknown_Amount": 6
+                "Unknown_Amount": 6,
+                "Fiscal_Year": 2023
             }
         ],
         "program_improper_payment_estimates_data_points": [
@@ -334,7 +336,8 @@ def program_specific_sample_data():
                 "Program_Name": "Program 1",
                 "Mitigation_Strategy": "Mitigation Strategy 1",
                 "Description_Action_Taken": "Description Action Taken 1",
-                "Action_Taken": "Action Taken 1"
+                "Action_Taken": "Action Taken 1",
+                "Completion_Date": "FY2028+"
             },
             {
                 "Fiscal_Year": 2024,
@@ -342,14 +345,22 @@ def program_specific_sample_data():
                 "Program_Name": "Program 1",
                 "Mitigation_Strategy": "Mitigation Strategy 2",
                 "Description_Action_Taken": "Description Action Taken 2",
-                "Action_Taken": "Action Taken 2"
+                "Action_Taken": "Action Taken 2",
+                "Completion_Date": "FY2028+"
             }
         ],
+        "visibility_data_points": [{
+            "Fiscal_Year": 2024,
+            "Program_Name": "Program 1",
+            "Column_values" : "cyp6 value1",
+            "Column_names" : "cyp6"
+        }],
         "program_overpayments_data_points": [
             {
                 "Fiscal_Year": 2023,
                 "Program_Name": "Program 1",
                 "cyp2_1" : "cyp2_1 value1",
+                "cyp2" : "cyp2 value1",
                 "Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis": "Value11",
                 "Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data": "Value12",
                 "Failure_to_Access_Data": "Value13",
@@ -363,6 +374,7 @@ def program_specific_sample_data():
                 "Fiscal_Year": 2024,
                 "Program_Name": "Program 1",
                 "cyp2_1" : "cyp2_1 value2",
+                "cyp2" : "cyp2 value1",
                 "Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis": "Value21",
                 "Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data": "Value22",
                 "Failure_to_Access_Data": "Value23",
@@ -371,6 +383,32 @@ def program_specific_sample_data():
                 "Financial": "Value26",
                 "cyp2_atp1_8": "Value27",
                 "cyp2_app1_8": "Value28"
+            }
+        ],
+        "program_overpayments_outside_data_points": [
+            {
+                "Fiscal_Year": 2023,
+                "Program_Name": "Program 1",
+                "cyp3" : "cyp3 value1",
+                "cyp4_1" : "cyp4_1 value1",
+                "Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis": "Value11",
+                "Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data": "Value12",
+                "Failure_to_Access_Data": "Value13",
+                "Address_Location": "Value14",
+                "Contractor_or_Provider_Status": "Value15",
+                "Financial": "Value16"
+            },
+            {
+                "Fiscal_Year": 2024,
+                "Program_Name": "Program 1",
+                "cyp3" : "cyp3 value1",
+                "cyp4_1" : "cyp4_1 value1",
+                "Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis": "Value21",
+                "Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data": "Value22",
+                "Failure_to_Access_Data": "Value23",
+                "Address_Location": "Value24",
+                "Contractor_or_Provider_Status": "Value25",
+                "Financial": "Value26"
             }
         ],
         "program_underpayments_data_points": [
@@ -384,7 +422,8 @@ def program_specific_sample_data():
                 "Contractor_or_Provider_Status": "Value15",
                 "Financial": "Value16",
                 "cyp5_atp1_8" : "Value17",
-                "cyp5_app1_8": "Value18"
+                "cyp5_app1_8": "Value18",
+                "cyp5": "Value18a"
             },
             {
                 "Fiscal_Year": 2024,
@@ -396,25 +435,46 @@ def program_specific_sample_data():
                 "Contractor_or_Provider_Status": "Value25",
                 "Financial": "Value26",
                 "cyp5_atp1_8" : "Value27",
-                "cyp5_app1_8": "Value28"
+                "cyp5_app1_8": "Value28",
+                "cyp5": "Value18a"
             }
         ],
         "program_technically_ip_data_points": [
             {
                 "Fiscal_Year": 2023,
                 "Program_Name": "Program 1",
+                "cyp6": "Value1",
                 "cyp6_1": "Value11",
                 "Program_Design_or_Structural_Issue": "Value12",
-                "cyp7_atp1_8": "Value13",
-                "cyp7_app1_8": "Value14"
+                "cyp6_atp1_8": "Value13",
+                "cyp6_app1_8": "Value14"
+            },
+            {
+                "Fiscal_Year": 2023,
+                "Program_Name": "Program 1",
+                "cyp6": "Value1",
+                "cyp6_1": "Value11",
+                "Program_Design_or_Structural_Issue": "Value12",
+                "cyp6_atp1_8": "Value15",
+                "cyp6_app1_8": "Value16"
             },
             {
                 "Fiscal_Year": 2024,
                 "Program_Name": "Program 1",
+                "cyp6": "Value1",
                 "cyp6_1": "Value21",
                 "Program_Design_or_Structural_Issue": "Value22",
-                "cyp7_atp1_8": "Value23",
-                "cyp7_app1_8": "Value24"
+                "cyp6_atp1_8": "Value23",
+                "cyp6_app1_8": "Value24"
+            },
+            {
+                "Fiscal_Year": 2024,
+                "Program_Name": "Program 1",
+                "cyp6": "Value1",
+                "cyp6_1": "Value21",
+                "Program_Design_or_Structural_Issue": "Value22",
+                "cyp6_atp1_8": "Value25",
+                "cyp6_app1_8": "Value26"
             }
         ],
         "program_unknown_payments_data_points": [
@@ -425,7 +485,9 @@ def program_specific_sample_data():
                 "Insufficient_Documentation_to_Determine": "Value12",
                 "cyp7_ucp4_1": "Value13",
                 "cyp7_atp1_8": "Value14",
-                "cyp7_app1_8": "Value15"
+                "cyp7_app1_8": "Value15",
+                "rac3": "rac3",
+                "cyp26": "cyp26"
             },
             {
                 "Fiscal_Year": 2024,
@@ -434,7 +496,20 @@ def program_specific_sample_data():
                 "Insufficient_Documentation_to_Determine": "Value12",
                 "cyp7_ucp4_1": "Value23",
                 "cyp7_atp1_8": "Value24",
-                "cyp7_app1_8": "Value25"
+                "cyp7_app1_8": "Value25",
+                "rac3": "rac3",
+                "cyp26": "cyp26"
+            },
+            {
+                "Fiscal_Year": 2024,
+                "Program_Name": "Program 1",
+                "cyp8": "Value21",
+                "Insufficient_Documentation_to_Determine": "Value12",
+                "cyp7_ucp4_1": "Value23",
+                "cyp7_atp1_8": "Value26",
+                "cyp7_app1_8": "Value27",
+                "rac3": "rac3",
+                "cyp26": "cyp26"
             }
         ],
         "program_corrective_actions_data_points": [
@@ -462,6 +537,7 @@ def program_specific_sample_data():
                 "cyp15" : "Value11",
                 "cyp20_2": "Value12",
                 "rtp4_2": "Value13",
+                "rtp1": "Value13a",
                 "rap5": "Value14",
                 "rap6": "Value15",
                 "Outlays_Current_Year+1_Amount": "Value16",
@@ -476,6 +552,7 @@ def program_specific_sample_data():
                 "cyp15" : "Value21",
                 "cyp20_2": "Value22",
                 "rtp4_2": "Value23",
+                "rtp1": "Value23a",
                 "rap5": "Value24",
                 "rap6": "Value25",
                 "Outlays_Current_Year+1_Amount": "Value26",
@@ -493,10 +570,22 @@ def program_specific_sample_data():
                 "rnp4": "Value12"
             },
             {
+                "Fiscal_Year": 2023,
+                "Program_Name": "Program 1",
+                "pro1": "Value13",
+                "rnp4": "Value12"
+            },
+            {
                 "Fiscal_Year": 2024,
                 "Program_Name": "Program 1",
                 "pro1": "Value21",
                 "rnp4": "Value22"
+            }
+        ],
+        "scorecard_links": [
+            {
+                "QuarterYear": "Q1 2024",
+                "Link": "example_link",
             }
         ]
     }
@@ -586,13 +675,16 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
         program_specific_sample_data["program_chart_data_points_A1"],
         program_specific_sample_data["program_improper_payment_estimates_data_points"],
         program_specific_sample_data["program_actions_data_points"],
+        program_specific_sample_data["visibility_data_points"],
         program_specific_sample_data["program_overpayments_data_points"],
+        program_specific_sample_data["program_overpayments_outside_data_points"],
         program_specific_sample_data["program_underpayments_data_points"],
         program_specific_sample_data["program_technically_ip_data_points"],
         program_specific_sample_data["program_unknown_payments_data_points"],
         program_specific_sample_data["program_corrective_actions_data_points"],
         program_specific_sample_data["program_future_outlook_data_points"],
-        program_specific_sample_data["program_additional_information_data_points"]
+        program_specific_sample_data["program_additional_information_data_points"],
+        program_specific_sample_data["scorecard_links"]
     ]
 
     with patch("builtins.open", mock_open()) as mocked_file:
@@ -600,9 +692,11 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
             load.slugifyProgramNames(mock_cursor)
             load.generate_program_specific_pages(mock_cursor)
 
-            mocked_file.assert_called_once_with(os.path.join(load.PROGRAM_SPECIFIC_DIR, "program-1.md"), 'w', encoding='utf-8')
+            mocked_file.assert_called_once_with(os.path.join(load.PROGRAM_SPECIFIC_DIR, "a1-program-1.md"), 'w', encoding='utf-8')
             handle = mocked_file()
             written_content = ''.join(call.args[0] for call in handle.write.call_args_list)
+
+            yaml_data = yaml.safe_load(written_content.strip("---\n"))
 
             yaml_data = yaml.safe_load(written_content.strip("---\n"))
 
@@ -618,43 +712,39 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
             assert yaml_data["Underpayment_Amounts"] == "[29, 32]"
             assert yaml_data["Technically_Improper_Amounts"] == "[38, 12]"
             assert yaml_data["Unknown_Amounts"] == "[8, 6]"
-            assert yaml_data["Rates_By_Year"][2023]["Improper_Payments_Rate"] == 3
-            assert yaml_data["Rates_By_Year"][2023]["Payment_Accuracy_Rate"] == 97
-            assert yaml_data["Rates_By_Year"][2024]["Improper_Payments_Rate"] == 5
-            assert yaml_data["Rates_By_Year"][2024]["Payment_Accuracy_Rate"] == 86
-            assert yaml_data["Actions_By_Year"][2023][0]["Action_Taken"] == "Action Taken 1"
-            assert yaml_data["Actions_By_Year"][2023][0]["Description_Action_Taken"] == "Description Action Taken 1"
-            assert yaml_data["Actions_By_Year"][2024][0]["Action_Taken"] == "Action Taken 2"
-            assert yaml_data["Actions_By_Year"][2024][0]["Description_Action_Taken"] == "Description Action Taken 2"
-            assert yaml_data["Overpayments_By_Year"][2023]["Address_Location"] == "Value14"
-            assert yaml_data["Overpayments_By_Year"][2023]["Contractor_Provider_Status"] == "Value15"
-            assert yaml_data["Overpayments_By_Year"][2024]["Data_Needed_Does_Not_Exist"] == "Value21"
-            assert yaml_data["Overpayments_By_Year"][2024]["Failure_to_Access_Data"] == "Value23"
-            assert yaml_data["Underpayments_By_Year"][2023]["Address_Location"] == "Value14"
-            assert yaml_data["Underpayments_By_Year"][2023]["Contractor_Provider_Status"] == "Value15"
-            assert yaml_data["Underpayments_By_Year"][2024]["Data_Needed_Does_Not_Exist"] == "Value21"
-            assert yaml_data["Underpayments_By_Year"][2024]["Failure_to_Access_Data"] == "Value23"
-            assert yaml_data["Technically_IP_By_Year"][2023]["Program_Design_or_Structural_Issue"] == "Value12"
-            assert yaml_data["Technically_IP_By_Year"][2023]["cyp7_app1_8"] == "Value14"
-            assert yaml_data["Technically_IP_By_Year"][2024]["cyp7_atp1_8"] == "Value23"
-            assert yaml_data["Technically_IP_By_Year"][2024]["cyp6_1"] == "Value21"
-            assert yaml_data["Technically_IP_By_Year"][2023]["Program_Design_or_Structural_Issue"] == "Value12"
-            assert yaml_data["Technically_IP_By_Year"][2023]["cyp7_app1_8"] == "Value14"
-            assert yaml_data["Technically_IP_By_Year"][2024]["cyp7_atp1_8"] == "Value23"
-            assert yaml_data["Technically_IP_By_Year"][2024]["cyp6_1"] == "Value21"
-            assert yaml_data["Unknown_Payments_By_Year"][2023]["Insufficient_Documentation_to_Determine"] == "Value12"
-            assert yaml_data["Unknown_Payments_By_Year"][2023]["cyp8"] == "Value11"
-            assert yaml_data["Unknown_Payments_By_Year"][2024]["cyp7_app1_8"] == "Value25"
-            assert yaml_data["Unknown_Payments_By_Year"][2024]["cyp7_atp1_8"] == "Value24"
-            assert yaml_data["Corrective_Actions_By_Year"][2023]["rnp3"] == "Value11"
-            assert yaml_data["Corrective_Actions_By_Year"][2023]["act17_2"] == "Value12"
-            assert yaml_data["Corrective_Actions_By_Year"][2024]["act17_1"] == "Value23"
-            assert yaml_data["Corrective_Actions_By_Year"][2024]["act17_3"] == "Value24"
-            assert yaml_data["Future_Outlook_By_Year"][2023]["Outlays_Current_Year_Plus_1_Amount"] == "Value16"
-            assert yaml_data["Future_Outlook_By_Year"][2023]["IP_Current_Year_Plus_1_Amount"] == "Value17"
-            assert yaml_data["Future_Outlook_By_Year"][2024]["IP_Unknown_Current_Year_Plus_1_Rate"] == "Value29"
-            assert yaml_data["Future_Outlook_By_Year"][2024]["Unknown_Curent_Year_Plus_1_Amount"] == "Value28"
-            assert yaml_data["Additional_Information_By_Year"][2023]["pro1"] == "Value11"
-            assert yaml_data["Additional_Information_By_Year"][2023]["rnp4"] == "Value12"
-            assert yaml_data["Additional_Information_By_Year"][2024]["pro1"] == "Value21"
-            assert yaml_data["Additional_Information_By_Year"][2024]["rnp4"] == "Value22"
+            assert len(yaml_data["Scorecard_Links"]) == 1
+            for year_data in yaml_data["Data_By_Year"]:
+                if year_data.get("Year") == 2023:
+                    assert year_data["Improper_Payments_Rate"] == 3
+                    assert year_data["Payment_Accuracy_Rate"] == 97
+                    assert year_data["Actions_Taken"][0]["Action_Taken"] == "Action Taken 1"
+                    assert year_data["Actions_Taken"][0]["Description_Action_Taken"] == "Description Action Taken 1"
+                    assert year_data["overpayments"]["Address_Location"] == "Value14"
+                    assert year_data["underpayments"]["Contractor_Provider_Status"] == "Value15"
+                    assert year_data["Program_Design_or_Structural_Issue"] == "Value12"
+                    assert year_data["cyp6_app1_8"] == "Value14, Value16"
+                    assert year_data["Insufficient_Documentation_to_Determine"] == "Value12"
+                    assert year_data["cyp8"] == "Value11"
+                    assert year_data["rnp3"] == "Value11"
+                    assert year_data["act17_2"] == "Value12"
+                    assert year_data["Outlays_Current_Year_Plus_1_Amount"] == "Value16"
+                    assert year_data["IP_Current_Year_Plus_1_Amount"] == "Value17"
+                    assert "pro1" not in year_data
+                    assert year_data["rnp4"] == "Value12"
+                elif year_data.get("Year") == 2024:
+                    assert year_data["Improper_Payments_Rate"] == 5
+                    assert year_data["Payment_Accuracy_Rate"] == 86
+                    assert year_data["Actions_Taken"][0]["Action_Taken"] == "Action Taken 2"
+                    assert year_data["Actions_Taken"][0]["Description_Action_Taken"] == "Description Action Taken 2"
+                    assert year_data["overpayments"]["Failure_to_Access_Data"] == "Value23"
+                    assert year_data["cyp6_atp1_8"] == "Value23, Value25"
+                    assert year_data["cyp6_app1_8"] == "Value24, Value26"
+                    assert year_data["cyp6_1"] == "Value21"
+                    assert year_data["cyp7_app1_8"] == "Value25, Value27"
+                    assert year_data["cyp7_atp1_8"] == "Value24, Value26"
+                    assert year_data["act17_1"] == "Value23"
+                    assert year_data["act17_3"] == "Value24"
+                    assert year_data["IP_Unknown_Current_Year_Plus_1_Rate"] == "Value29"
+                    assert year_data["Unknown_Curent_Year_Plus_1_Amount"] == "Value28"
+                    assert year_data["pro1"] == "Value21"
+                    assert year_data["rnp4"] == "Value22"
