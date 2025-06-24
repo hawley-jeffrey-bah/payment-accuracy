@@ -72,14 +72,17 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Charge Card Program - Tennessee Valley Authority
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Payroll Program - Tennessee Valley Authority
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Supply Chain
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

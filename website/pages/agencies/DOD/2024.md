@@ -597,6 +597,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Travel Pay Army – Defense Travel System (DTS)
+  Slug: dod-travel-pay-army-defense-travel-system-dts
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -633,6 +634,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)
+  Slug: dod-travel-pay-department-of-air-force-daf-defense-travel-sy-00cfe2ec
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -731,6 +733,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: Civilian Pay – Army
+  Slug: dod-civilian-pay-army
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -743,6 +746,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: Civilian Pay – Other Defense Organization (ODO)
+  Slug: dod-civilian-pay-other-defense-organization-odo
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -755,6 +759,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: Commercial Pay – Mechanization of Contract Administration Services (MOCAS)
+  Slug: dod-commercial-pay-mechanization-of-contract-administration--57e2db4b
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -767,6 +772,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: Military Pay Army – National Guard
+  Slug: dod-military-pay-army-national-guard
 Payment_Accuracy_Amounts: '[664584.16, 614851.42, 619706.2593, 254917.63]'
 Payment_Accuracy_Rate_Max: 99.8
 Payment_Accuracy_Rate_Min: 99.6
@@ -779,132 +785,164 @@ Risks:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Civilian Pay
+  Slug: dod-civilian-pay
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Civilian Pay – Department of Air Force (DAF)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Civilian Pay – Navy
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2019
     Susceptible: 'No'
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Commercial Pay
+  Slug: dod-commercial-pay
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Commercial Pay - U.S. Army Corps of Engineers (USACE)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: DoD Travel Pay
+  Slug: dod-dod-travel-pay
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Military Health Benefits - Administrative
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Military Health Benefits - Healthcare
+  Slug: dod-military-health-benefits-healthcare
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Health Benefits – TRICARE East Region Program (East)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Health Benefits – TRICARE Medicare Eligible Program (TMEP)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Health Benefits – TRICARE Overseas Program (TOP)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Health Benefits – TRICARE Pharmacy Program (TPharm)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Health Benefits – TRICARE West Region Program (West)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Military Pay - Army
+  Slug: dod-military-pay-army
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Military Pay - Department of Air Force
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Military Pay - Marine Corps
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Military Pay - Navy
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Department of Air Force (DAF) – Active Duty
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Department of Air Force (DAF) – Air National Guard
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Department of Air Force (DAF) – Reserve
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Marine Corps – Active Duty
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Marine Corps – Reserve
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Navy – Active Duty
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Military Pay Navy – Reserve
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'Yes'
   Program_Name: Military Retirement
+  Slug: dod-military-retirement
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Travel Pay - U.S. Army Corps of Engineers (USACE)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Department of Air Force (DAF) - Reserve Travel System (RTS)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Marine Corps - MARINE CORPS TOTAL FORCE SYSTEM (MCTFS)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Marine Corps – Defense Travel System (DTS)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Marine Corps – Integrated Automated Travel System (IATS)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Navy – Defense Travel System (DTS)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Travel Pay Navy – Integrated Automated Travel System (IATS)
+  Slug: null
 Technically_Improper_Amounts: '[246.60999999999999, 455.27, 765.32023, 405.33]'
 Underpayment_Amounts: '[113.6, 70.46000000000001, 71.53999999999999, 49.42]'
 Unknown_Amounts: '[1854.53, 821.65, 432.61, 451.43]'

@@ -5,7 +5,7 @@
         </svg>
         Select Fiscal Year (FY):
     </label>
-    <select class="usa-select" name="options" id="options" onchange="selectYear('{{ include.url_prefix }}', this.value)">
+    <select class="usa-select" name="options" id="options" onchange="{{ include.on_change }}('{{ include.url_prefix }}', this.value)">
         {% unless include.years_available contains include.fiscal_year %}
             <!-- this can occur on a placeholder page-->
             <option value>- Select -</option>

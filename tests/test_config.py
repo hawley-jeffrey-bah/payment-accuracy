@@ -2,11 +2,15 @@
 This is a simple set of tests to make sure constants are properly defined
 """
 
+import os
 import pytest
 import re
 
 # Import the module
 from data_processing import config
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SCORECARDS_DIR = os.path.join(BASE_DIR, "..", "website", "assets", "scorecards")
 
 class TestConstants:
     """Tests for our config module"""
@@ -39,3 +43,5 @@ class TestConstants:
         assert isinstance(config.LAST_QUARTERLY_SURVEY, str)
         match = re.search(r"^Q[1-4] [0-9]{4}$", config.LAST_QUARTERLY_SURVEY)
         assert bool(match)
+    def test_last_quarter_scorecards_exist(self):
+        assert os.path.isdir(os.path.join(SCORECARDS_DIR, config.LAST_QUARTERLY_SURVEY))

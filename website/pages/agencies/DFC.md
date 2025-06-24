@@ -84,10 +84,12 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Debt Financing Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Technical Assistance Program
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

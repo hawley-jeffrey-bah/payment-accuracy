@@ -224,6 +224,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Paycheck Protection Program (PPP) Loan Approvals
+  Slug: sba-paycheck-protection-program-ppp-loan-approvals
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -236,6 +237,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Paycheck Protection Program (PPP) Loan Forgiveness
+  Slug: sba-paycheck-protection-program-ppp-loan-forgiveness
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -248,6 +250,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Paycheck Protection Program (PPP) Loan Guaranty Purchases
+  Slug: sba-paycheck-protection-program-ppp-loan-guaranty-purchases
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -429,6 +432,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: 504 Certified Development Loans Approvals
+  Slug: sba-504-certified-development-loans-approvals
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -441,6 +445,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: 7(a) Loan Guarantees Approvals
+  Slug: sba-7-a-loan-guarantees-approvals
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -453,6 +458,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: true
   Compliant_Overall: false
   Name: 7(a) Loan Guarantees Purchases
+  Slug: sba-7-a-loan-guarantees-purchases
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -465,6 +471,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Disaster Assistance Loans
+  Slug: sba-disaster-assistance-loans
 - Compliant_1A: false
   Compliant_1B: false
   Compliant_2A: true
@@ -477,6 +484,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Restaurant Revitalization Fund
+  Slug: sba-restaurant-revitalization-fund
 - Compliant_1A: false
   Compliant_1B: false
   Compliant_2A: true
@@ -489,6 +497,7 @@ PIIA2019_NonCompliant_Programs:
   Compliant_6: false
   Compliant_Overall: false
   Name: Shuttered Venue Operators Grant Program
+  Slug: sba-shuttered-venue-operators-grant-program
 Payment_Accuracy_Amounts: '[24141.671456731296, 851145.4146426601, 95935.33226948998,
   53856.33937038999]'
 Payment_Accuracy_Rate_Max: 97.3
@@ -500,78 +509,97 @@ Risks:
   - Fiscal_Year: 2021
     Susceptible: 'Yes'
   Program_Name: COVID-Economic Injury Disaster Loan (EIDL)
+  Slug: sba-covid-economic-injury-disaster-loan-eidl
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Community Navigator Pilot Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Congressional Grants
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Growth Accelerator Fund Competition
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Microloan Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: OED Resource Partners Training Portal (RPTP)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Office of Women's Business Ownership (OWBO)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Restaurant Revitalization Fund
+  Slug: sba-restaurant-revitalization-fund
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: SBA Administrative Contracts
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: SBA Administrative Payroll
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: SBA Administrative Travel
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'Yes'
   Program_Name: Section 1112 Payments
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Shuttered Venue Operators Grant Program
+  Slug: sba-shuttered-venue-operators-grant-program
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Small Business Development Center (SBDC)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Small Business Investment Companies Advances
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: State Trade Expansion Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2020
     Susceptible: 'No'
   Program_Name: Surety Bond Guarantees (SBG)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Veterans Outreach Program
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Women's Business Ownership Assistance
+  Slug: null
 Technically_Improper_Amounts: '[547.7049686987, 3867.86, 459.443964, 1340.078154]'
 Underpayment_Amounts: '[43.652565089999996, 470.5253482, 668.71343461, 53.255629840000005]'
 Unknown_Amounts: '[31.47027, 16500.454117, 21810.652554, 8799.107861280001]'

@@ -60,10 +60,12 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Payroll - Federal Energy Regulatory Commission
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Vendor/Contract - Federal Energy Regulatory Commission
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

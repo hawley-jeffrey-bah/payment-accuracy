@@ -60,7 +60,7 @@
     }
 }
 
-.agency-specific-accordion {
+.agency-specific-accordion, .program-specific-accordion {
     .usa-accordion__item {
         margin-bottom: 0.5rem;
         border: none;
@@ -82,22 +82,12 @@
 
     // Accordion button (the clickable question)
     .usa-accordion__button {
-        background-color: #F7F2FF;
         padding: 12px 1rem;
         padding-right: 40px; // prevent covering +/- sign in mobile
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
         line-height: 16px;
-
-        &:focus {
-            background-color: #F7F2FF;
-        }
-
-        // When the accordion is expanded
-        &[aria-expanded="true"] {
-            background-color: #F7F2FF;
-            }
     }
 
     // Accordion content (the answer)
@@ -116,5 +106,56 @@
         a {
             color: #005EA2;
         }
+    }
+}
+
+.agency-specific-accordion {
+    .usa-accordion__button {
+        background-color: #F7F2FF;
+
+        &:focus {
+            background-color: #F7F2FF;
+        }
+
+        // When the accordion is expanded
+        &[aria-expanded="true"] {
+            background-color: #F7F2FF;
+            }
+    }
+    
+}
+
+.high-priority {
+    .program-specific-accordion {
+        .usa-accordion__button {
+            background-color: #FCE1D4;
+
+            &:focus {
+                background-color: #FCE1D4;
+            }
+
+            // When the accordion is expanded
+            &[aria-expanded="true"] {
+                background-color: #FCE1D4;
+                }
+        }
+        
+    }
+}
+
+.not-high-priority {
+    .program-specific-accordion {
+        .usa-accordion__button {
+            background-color: $accent-cool-lighter;
+
+            &:focus {
+                background-color: $accent-cool-lighter;
+            }
+
+            // When the accordion is expanded
+            &[aria-expanded="true"] {
+                background-color: $accent-cool-lighter;
+                }
+        }   
     }
 }

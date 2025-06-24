@@ -60,10 +60,12 @@ Risks:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Operations and Administration
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2022
     Susceptible: 'No'
   Program_Name: Whistleblower Payments - Commodity Futures Trading Commission
+  Slug: null
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

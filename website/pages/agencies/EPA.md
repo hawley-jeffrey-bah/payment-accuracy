@@ -132,6 +132,7 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Grants - Environmental Protection Agency
+  Slug: epa-grants-environmental-protection-agency
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -214,56 +215,69 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Clean School Bus
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Clean Water State Revolving Fund (CWSRF)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Commodities - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Contracts - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   Program_Name: Disaster Relief - Hurricane Sandy Fund (Sandy)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2019
     Susceptible: 'No'
   Program_Name: Disaster Relief Funds (2018)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Drinking Water State Revolving Fund (DWSRF)
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
   - Fiscal_Year: 2023
     Susceptible: 'Yes'
   Program_Name: Grants - Environmental Protection Agency
+  Slug: epa-grants-environmental-protection-agency
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Payroll - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Purchase Cards - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Settlements - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: Travel - Environmental Protection Agency
+  Slug: null
 - Assessments:
   - Fiscal_Year: 2023
     Susceptible: 'No'
   Program_Name: '[Water Infrastructure Finance and Innovation Act Program (WIFIA)]'
+  Slug: null
 Technically_Improper_Amounts: '[0]'
 Underpayment_Amounts: '[0]'
 Unknown_Amounts: '[0]'
