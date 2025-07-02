@@ -1,30 +1,8 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'The Department''s Commercial Pay MOCAS program in FY
-      2024 did not have a formal corrective action plan based on current year findings.
-      Specifically, corrective action plans are required under the Payment Integrity
-      Information Act of 2019 (PIIA) when a program''s total annual improper payments
-      plus unknown payments exceed the statutory threshold. In the current reporting
-      year, the Department''s Commercial Pay MOCAS program reported an estimated total
-      of $96.29 million of improper plus unknown payments, which is only 0.04 percent
-      of the total outlays. Hence, no specific corrective actions were taken for this
-      program. The Department pursues continuous training actions for current and
-      new employees throughout the Commercial Pay MOCAS program. Additionally, through
-      trend and root cause analysis, specific training is provided to prevent improper
-      payments from technician error. For root causes other than technician error,
-      the issue is addressed with the applicable party at fault (i.e., contracting
-      personal, receiving entities and systemic controls to name a few. The Advana
-      detection tool is continually monitored and evaluated to rank and rate proposed
-      integrity checks to identify and prevent improper payments in the pre-payment
-      environment.
-
-      '
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'The Department''s Commercial Pay MOCAS program does
@@ -47,6 +25,28 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'The Department''s Commercial Pay MOCAS program in FY
+      2024 did not have a formal corrective action plan based on current year findings.
+      Specifically, corrective action plans are required under the Payment Integrity
+      Information Act of 2019 (PIIA) when a program''s total annual improper payments
+      plus unknown payments exceed the statutory threshold. In the current reporting
+      year, the Department''s Commercial Pay MOCAS program reported an estimated total
+      of $96.29 million of improper plus unknown payments, which is only 0.04 percent
+      of the total outlays. Hence, no specific corrective actions were taken for this
+      program. The Department pursues continuous training actions for current and
+      new employees throughout the Commercial Pay MOCAS program. Additionally, through
+      trend and root cause analysis, specific training is provided to prevent improper
+      payments from technician error. For root causes other than technician error,
+      the issue is addressed with the applicable party at fault (i.e., contracting
+      personal, receiving entities and systemic controls to name a few. The Advana
+      detection tool is continually monitored and evaluated to rank and rate proposed
+      integrity checks to identify and prevent improper payments in the pre-payment
+      environment.
+
+      '
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 90% to <95%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -148,6 +148,13 @@ Data_By_Year:
       input into the system.  The above controls that failed are being reviewed to
       determine how they can be strengthened and to determine if additional training
       or controls are needed.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '73.280000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -256,6 +263,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '23.01'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '23.010000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

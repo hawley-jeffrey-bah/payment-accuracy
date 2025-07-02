@@ -155,6 +155,25 @@ Data_By_Year:
     cyp5: '0.00'
 - Actions_Taken:
   - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: "The National Emergency Management Information System\
+      \ (NEMIS) is a database system used to track disaster data for FEMA and recipient\
+      \ emergency management offices. NEMIS supports emergency management at a disaster\
+      \ site and enables FEMA to integrate mitigation and planning operations with\
+      \ FEMA programs and disaster assistance. NEMIS enables data to be coordinated\
+      \ throughout a disaster, from monitoring an incident to providing assistance\
+      \ to communities affected by a disaster. \n\nThe NEMIS HMGP System is the Mitigation\
+      \ module of NEMIS. This module provides a way to administer HMGP information\
+      \ and grant applications. It interacts with some of the other NEMIS modules\
+      \ such as Declaration, Preliminary Damage Assessment, and Emergency Support.\
+      \ The NEMIS HMGP System can track project applications through workflow processes\
+      \ and work packets. For each task in a workflow process, the system generates\
+      \ a work packet. Users access the work packet to accomplish the steps in the\
+      \ process. The NEMIS HMGP System executes work packets and workflow to assist\
+      \ in automating the Eligibility Determination, Project Review and Approval,\
+      \ Application Review and Approval, etc."
+    Mitigation_Strategy: atp1_1
+  - Action_Taken: Completed
     Completion_Date: FY2023 Q2
     Description_Action_Taken: Effective March 2023, FEMA released the updated Hazard
       Mitigation Assistance Program and Policy Guide (HMA Guide).  The purpose of
@@ -164,6 +183,18 @@ Data_By_Year:
       since 2015, simplifies and clarifies guidance, and incorporates strategic mitigation
       priorities.
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: FEMA will continue to provide regular training opportunities
+      for regional partners and state, local, tribal, and territorial governments.
+      Training is specifically tailored to each audience and will continue to range
+      from webinar recordings to on-demand workshops. Training offered through the
+      Emergency Management Institute will also continue to offer self-paced courses,
+      with a certificate of completion provided at the end. By continuing to train
+      relevant parties and stakeholders, FEMA can continue to sustain and enhance
+      program performance going forward, including the assurance that sufficient documentation
+      is readily available.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'The Payment Integrity Information Act of 2019 (PIIA)
@@ -187,37 +218,6 @@ Data_By_Year:
       over Grants Management with no significant or material internal control issues
       arising related to HMGP.'
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: FEMA will continue to provide regular training opportunities
-      for regional partners and state, local, tribal, and territorial governments.
-      Training is specifically tailored to each audience and will continue to range
-      from webinar recordings to on-demand workshops. Training offered through the
-      Emergency Management Institute will also continue to offer self-paced courses,
-      with a certificate of completion provided at the end. By continuing to train
-      relevant parties and stakeholders, FEMA can continue to sustain and enhance
-      program performance going forward, including the assurance that sufficient documentation
-      is readily available.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: "The National Emergency Management Information System\
-      \ (NEMIS) is a database system used to track disaster data for FEMA and recipient\
-      \ emergency management offices. NEMIS supports emergency management at a disaster\
-      \ site and enables FEMA to integrate mitigation and planning operations with\
-      \ FEMA programs and disaster assistance. NEMIS enables data to be coordinated\
-      \ throughout a disaster, from monitoring an incident to providing assistance\
-      \ to communities affected by a disaster. \n\nThe NEMIS HMGP System is the Mitigation\
-      \ module of NEMIS. This module provides a way to administer HMGP information\
-      \ and grant applications. It interacts with some of the other NEMIS modules\
-      \ such as Declaration, Preliminary Damage Assessment, and Emergency Support.\
-      \ The NEMIS HMGP System can track project applications through workflow processes\
-      \ and work packets. For each task in a workflow process, the system generates\
-      \ a work packet. Users access the work packet to accomplish the steps in the\
-      \ process. The NEMIS HMGP System executes work packets and workflow to assist\
-      \ in automating the Eligibility Determination, Project Review and Approval,\
-      \ Application Review and Approval, etc."
-    Mitigation_Strategy: atp1_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'Trainings are available and are designed to help FEMA
@@ -293,6 +293,19 @@ Data_By_Year:
   cyp6: '0.00'
   cyp7_app1_8: Training
   cyp7_atp1_8: Audit, Automation, Change Process, Training
+  cyp7_ucp1: '0.52881584'
+  cyp7_ucp1_1: 'Based on the review of the FEMA Hazard Mitigation Grant Program -
+    Disaster Supplemental Funds program''s FY 2021 disbursement activity, the following
+    list is an example of documentation that was not provided or was not sufficient
+    to finalize the assessment determination for a total of three (3) samples:
+
+    • Documentation to support that this payment is the only payment made to the specified
+    vendor, for the specified work, within the specified time period
+
+    • Authorized Federal and Non-Federal cost shares were applied for eligible activities
+    based on specific guidance
+
+    • All funds supported allowable costs per the applicable FEMA HMGP guidance'
   cyp8: 'Payments are considered unknown payments when the associated recipient, and
     if applicable sub-recipient(s), fail to provide adequate supporting documentation
     in accordance with the grant agreement, such as amendments or price tables, or

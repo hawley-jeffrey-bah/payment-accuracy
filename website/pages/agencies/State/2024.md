@@ -739,6 +739,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: 'The Bureau of the Comptroller and Global Financial Services (CGFS)
   has a two-tiered improper payment monitoring and review program that consists of
   activities performed by the payment issuing office and secondly by the Office of
@@ -892,6 +894,8 @@ detail_exs1: 'For more than a decade, laws and regulations governing the identif
 
   '
 detail_pcp12_1: null
+detail_pcp14: State was found Compliant during the most recent PIIA compliance review.
+  State did not have any recommendations.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

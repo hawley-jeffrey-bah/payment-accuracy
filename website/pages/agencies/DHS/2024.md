@@ -78,8 +78,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -2038,6 +2038,8 @@ detail_CAP5: "The DHS Office of the Inspector General (OIG) determined that DHS 
   \ for actions to come into compliance, the majority of the associated activities\
   \ are expected to be fully completed in 2024."
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: "DHS performs regular monitoring and conducts recovery activities throughout\
@@ -2347,6 +2349,24 @@ detail_exs1: "In the wake of the September 11, 2001, terrorist attacks, Congress
   \ into compliance, the majority of the associated activities are expected to be\
   \ fully completed in the FY 2024 PIIA reporting cycle."
 detail_pcp12_1: '4.0'
+detail_pcp14: "The DHS Office of the Inspector General (OIG) determined that DHS complied\
+  \ with 9 out of 10 Payment Integrity Information Act of 2019 (PIIA) requirements.\
+  \ The OIG noted a non-compliance related to the requirement to publish Improper\
+  \ Payment (IP) and Unknown Payment (UP) estimates for programs susceptible to significant\
+  \ improper payments. Specifically, DHS did not comply with the requirement to publish\
+  \ IP and UP estimates for the Federal Emergency Management Agency (FEMA) Public\
+  \ Assistance – Validate as You Go (VAYGo) program in FY 2023. \n\nThe DHS OIG made\
+  \ two recommendations to improve DHS’s compliance with the PIIA related to 1) ensuring\
+  \ the testing and reporting of improper payments and unknown payments of the FEMA\
+  \ Public Assistance – VAYGo program and 2) ensuring that DHS follows the Office\
+  \ of Management and Budget (OMB) reporting requirements for programs determined\
+  \ to be noncompliant with PIIA as stated in Appendix C of OMB Circular No. A-123.\
+  \ The DHS OIG did not provide any recommendations to further improve prevention\
+  \ and reduction of IPs and UPs for the DHS programs subject to the compliance review\
+  \ in the most recent PIIA Compliance report. In addition, the OIG determined that\
+  \ all DHS programs subject to the compliance review were not applicable to be assessed\
+  \ as to whether the program had demonstrated improvement to payment integrity or\
+  \ reached a tolerable IP and UP rate."
 detail_raa8: 'No'
 detail_raa9: "The Department performs risk assessments to determine susceptibility\
   \ to improper payments, testing to estimate the rates and amounts of improper payment,\

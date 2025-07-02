@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
@@ -11,7 +11,7 @@ Data_By_Year:
       improper payments is that the employee’s current three to five year tour includes
       prior year SF1190s that are not being properly signed.
     Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'The majority of the technically improper and unknown
@@ -130,6 +130,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '9.22'
   cyp7_ucp4_1: The Army’s civilian unknown payments are very similar in nature to
     the technically improper payment errors for Army and were caused by payments received
     from an improperly signed Standard Form (SF) 1190, “Foreign Allowances Application,
@@ -187,6 +188,13 @@ Data_By_Year:
       actions.  The Army prevents the majority of these similar errors by double checking
       the personnel actions and ensuring the appropriate signatures are on the required
       forms prior to sending to the payroll system.
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '0.500000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

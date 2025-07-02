@@ -4,13 +4,13 @@ Agency_Name: Railroad Retirement Board
 Confirmed_Fraud: null
 Eligibility_Themes: []
 Fiscal_Year: 2024
-Hide_Disposition_of_Funds: false
+Hide_Disposition_of_Funds: true
 Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -115,6 +115,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: We have a robust, multi-faceted review process in place that is an
@@ -192,6 +194,16 @@ detail_exs1: "The RRB has benefit paying and non-benefit paying programs with ou
   \ program is now in a three-year Risk Assessment cycle with the next one scheduled\
   \ for FY 2025."
 detail_pcp12_1: null
+detail_pcp14: "The Railroad Retirement Board (RRB) is responsible for reporting on\
+  \ our two benefit payment programs (RRA and RUIA) as well as two non-benefit programs\
+  \ (vendor and employee payments). \n\nIn FY 2024, the RRB’s OIG contracted with\
+  \ Harper, Rains, Knight, and Company, P.A. (HRK) to conduct the audit of the RRB’s\
+  \ compliance with the Payment Integrity Information Act (PIIA) of 2019 for FY 2023.\
+  \  In HRK’s audit report (24-07), they determined that the RRB complied with the\
+  \ PIIA since all of the 10 payment integrity reporting requirements were satisfied,\
+  \ and they also determined that the RRB’s payment integrity reporting was complete\
+  \ and accurate.  HRK did not make any new recommendations for the RRB in their PIIA\
+  \ audit report (24-07)."
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

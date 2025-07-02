@@ -160,13 +160,13 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: 'HHS offers training, technical assistance, and support
-      to state Medicaid program integrity officials through the Medicaid Integrity
-      Institute (MII).
-
-      '
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
+    Description_Action_Taken: "HHS will share Medicare data to assist states and territories\
+      \ with meeting Medicaid screening and enrollment requirements. To help alleviate\
+      \ state concerns with the cost of completing the Social Security Administration\
+      \ Death Master File (SSA DMF) check as part of provider screening, HHS will\
+      \ work with the SSA to provide states the DMF.  \n"
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'Under the Medicaid Eligibility Quality Control (MEQC)
@@ -188,18 +188,30 @@ Data_By_Year:
     Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
+    Description_Action_Taken: 'HHS offers training, technical assistance, and support
+      to state Medicaid program integrity officials through the Medicaid Integrity
+      Institute (MII).
+
+      '
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: "HHS shares Medicare data to assist states and territories\
+      \ with meeting Medicaid screening and enrollment requirements. To help alleviate\
+      \ state concerns with the cost of completing the Social Security Administration\
+      \ Death Master File (SSA DMF) check as part of provider screening, HHS worked\
+      \ with the SSA to provide states the DMF.  HHS also developed the Transformed\
+      \ Medicaid Statistical Information System (T-MSIS) to facilitate state submission\
+      \ of timely claims data to HHS, expand the MSIS dataset, and allow HHS to review\
+      \ the completeness and quality of state MSIS submissions in real-time. \n"
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
     Description_Action_Taken: "HHS will continue working with states to implement\
       \ a robust state-specific Corrective Action Plan process that provides enhanced\
       \ technical assistance and guidance to states. \n"
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "HHS will share Medicare data to assist states and territories\
-      \ with meeting Medicaid screening and enrollment requirements. To help alleviate\
-      \ state concerns with the cost of completing the Social Security Administration\
-      \ Death Master File (SSA DMF) check as part of provider screening, HHS will\
-      \ work with the SSA to provide states the DMF.  \n"
-    Mitigation_Strategy: app5_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'HHS offers training, technical assistance, and support
@@ -246,18 +258,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "HHS shares Medicare data to assist states and territories\
-      \ with meeting Medicaid screening and enrollment requirements. To help alleviate\
-      \ state concerns with the cost of completing the Social Security Administration\
-      \ Death Master File (SSA DMF) check as part of provider screening, HHS worked\
-      \ with the SSA to provide states the DMF.  HHS also developed the Transformed\
-      \ Medicaid Statistical Information System (T-MSIS) to facilitate state submission\
-      \ of timely claims data to HHS, expand the MSIS dataset, and allow HHS to review\
-      \ the completeness and quality of state MSIS submissions in real-time. \n"
-    Mitigation_Strategy: atp5_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -311,6 +311,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit5_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '48331.809900'
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '488.200100'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 48331.8099
@@ -380,7 +392,52 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '336.21'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '231.984900'
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '104.225100'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: HHS will continue to share Medicare data to assist states
+      and territories with meeting Medicaid screening and enrollment requirements.
+      To help alleviate state concerns with the cost of completing the Social Security
+      Administration Death Master File (SSA DMF) check as part of provider screening,
+      HHS will work with the SSA to provide states the DMF.
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Under the Medicaid Eligibility Quality Control program,
+      states design and conduct pilots to evaluate the processes that determine an
+      individual’s eligibility for Medicaid and CHIP benefits.  The Medicaid Eligibility
+      Quality Control program also reviews eligibility determinations that are not
+      reviewed under Payment Error Rate Measurement, such as denials and terminations.  States
+      have flexibility in designing pilots to focus on vulnerable or error-prone areas
+      identified. HHS will also continue conducting audits of beneficiary eligibility
+      determinations in high-risk states based on a risk assessment that reviewed
+      states with higher eligibility improper payment rates, eligibility errors based
+      on GAO or OIG reports, issues identified by states through the Medicaid Eligibility
+      Quality Control program, and issues identified through HHS’s various corrective
+      action plan oversight processes. Unified Program Integrity Coordinators (UPICs)
+      will also  perform numerous functions to detect and prevent fraud, and identify
+      broader vulnerabilities to the integrity of Medicaid.
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS offers training, technical assistance, and support
+      to state Medicaid program integrity officials through the Medicaid Integrity
+      Institute.  In FY 2024, HHS continued a robust training program, which included
+      virtual and in-person training opportunities.  FY 2024 offerings included provider
+      auditing, certified coding, fraud prevention, and Do Not Pay.
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: In FY 2024, HHS continued working with states to implement
@@ -395,31 +452,6 @@ Data_By_Year:
       cause identification during PERM CAP development.  In July 2024 HHS conducted
       a quarterly training on requirements of corrective action regulations.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: HHS offers training, technical assistance, and support
-      to state Medicaid program integrity officials through the Medicaid Integrity
-      Institute. HHS will continue these activities in FY 2025.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS shares Medicare data to assist states and territories
-      with meeting Medicaid screening and enrollment requirements. To help alleviate
-      state concerns with the cost of completing the Social Security Administration
-      Death Master File (SSA DMF) check as part of provider screening, HHS worked
-      with the SSA to provide states the DMF.  HHS also developed the Transformed
-      Medicaid Statistical Information System (T-MSIS) to facilitate state submission
-      of timely claims data to HHS, expand the MSIS dataset, and allow HHS to review
-      the completeness and quality of state MSIS submissions in real-time.
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS offers training, technical assistance, and support
-      to state Medicaid program integrity officials through the Medicaid Integrity
-      Institute.  In FY 2024, HHS continued a robust training program, which included
-      virtual and in-person training opportunities.  FY 2024 offerings included provider
-      auditing, certified coding, fraud prevention, and Do Not Pay.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Under the Medicaid Eligibility Quality Control program,
@@ -439,35 +471,27 @@ Data_By_Year:
     Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2025
+    Description_Action_Taken: HHS offers training, technical assistance, and support
+      to state Medicaid program integrity officials through the Medicaid Integrity
+      Institute. HHS will continue these activities in FY 2025.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS shares Medicare data to assist states and territories
+      with meeting Medicaid screening and enrollment requirements. To help alleviate
+      state concerns with the cost of completing the Social Security Administration
+      Death Master File (SSA DMF) check as part of provider screening, HHS worked
+      with the SSA to provide states the DMF.  HHS also developed the Transformed
+      Medicaid Statistical Information System (T-MSIS) to facilitate state submission
+      of timely claims data to HHS, expand the MSIS dataset, and allow HHS to review
+      the completeness and quality of state MSIS submissions in real-time.
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
     Description_Action_Taken: HHS will continue working with states to implement a
       robust state-specific Corrective Action Plan process that provides enhanced
       technical assistance and guidance to states.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Under the Medicaid Eligibility Quality Control program,
-      states design and conduct pilots to evaluate the processes that determine an
-      individual’s eligibility for Medicaid and CHIP benefits.  The Medicaid Eligibility
-      Quality Control program also reviews eligibility determinations that are not
-      reviewed under Payment Error Rate Measurement, such as denials and terminations.  States
-      have flexibility in designing pilots to focus on vulnerable or error-prone areas
-      identified. HHS will also continue conducting audits of beneficiary eligibility
-      determinations in high-risk states based on a risk assessment that reviewed
-      states with higher eligibility improper payment rates, eligibility errors based
-      on GAO or OIG reports, issues identified by states through the Medicaid Eligibility
-      Quality Control program, and issues identified through HHS’s various corrective
-      action plan oversight processes. Unified Program Integrity Coordinators (UPICs)
-      will also  perform numerous functions to detect and prevent fraud, and identify
-      broader vulnerabilities to the integrity of Medicaid.
-    Mitigation_Strategy: app6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: HHS will continue to share Medicare data to assist states
-      and territories with meeting Medicaid screening and enrollment requirements.
-      To help alleviate state concerns with the cost of completing the Social Security
-      Administration Death Master File (SSA DMF) check as part of provider screening,
-      HHS will work with the SSA to provide states the DMF.
-    Mitigation_Strategy: app5_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -555,6 +579,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit5_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '28783.021400'
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '587.408600'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 28783.0214
@@ -660,6 +696,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '123.91'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '24.782000'
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '99.128000'
 Description: 'Medicaid is a joint federal/state program, administered by HHS, that
   provides health insurance to eligible low-income individuals and long-term care
   services to seniors and disabled individuals. Overpayments occur because: providers

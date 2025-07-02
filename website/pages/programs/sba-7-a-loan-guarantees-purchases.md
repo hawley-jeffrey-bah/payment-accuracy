@@ -159,6 +159,16 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '2.66534820'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: SBA plans to continue its staff training in order to
+      provide staff an understanding of the most common root causes of the improper
+      payments.  SBA will also provide training to staff and lenders on the new requirements
+      in its Standard Operating Procedures. SBA will continue to provide regular feedback
+      to Loan Center management and staff regarding Improper Payments, Root Causes,
+      and Corrective Actions. SBA will also continue to have Quality Control and Quality
+      Assurance staff meet regularly to discuss issues common to all.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: SBA provided training at lender conferences in order
@@ -170,16 +180,6 @@ Data_By_Year:
       programs meet regularly to discuss improper payment related issues that may
       be common to all teams.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: SBA plans to continue its staff training in order to
-      provide staff an understanding of the most common root causes of the improper
-      payments.  SBA will also provide training to staff and lenders on the new requirements
-      in its Standard Operating Procedures. SBA will continue to provide regular feedback
-      to Loan Center management and staff regarding Improper Payments, Root Causes,
-      and Corrective Actions. SBA will also continue to have Quality Control and Quality
-      Assurance staff meet regularly to discuss issues common to all.
-    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -243,6 +243,13 @@ Data_By_Year:
       \ processors failed to identify lenders’ deficiencies during the evaluating,\
       \ processing, closing, disbursing, servicing, liquidating, or litigating of\
       \ an SBA guaranteed loan."
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '37.751603'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -278,23 +285,14 @@ Data_By_Year:
     Financial: 11.057346
     Inability_to_Access_Data: 0.0
     cyp5: '11.05734561'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '11.057346'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: 'Internal training for purchase processors, reviewers,
-      and approvers includes information to determine proper recommendation of guaranty
-      purchase or denial: ensuring that borrower and loan eligibility requirements
-      are met; ensuring that liquidation expenses are appropriate and/or approved,
-      verifying the documentation and accuracy of calculations, ensuring that documentation
-      for account reconciliation is complete, and verifying the proper use of proceeds
-      and reviewing expenses for eligibility of reimbursement.
-
-
-      Training is an ongoing process.
-
-      '
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'At this writing, SBA is in the process of issuing additional
@@ -310,6 +308,22 @@ Data_By_Year:
       is complete, and verifying the proper use of proceeds and reviewing expenses
       for eligibility of reimbursement.'
     Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: 'Internal training for purchase processors, reviewers,
+      and approvers includes information to determine proper recommendation of guaranty
+      purchase or denial: ensuring that borrower and loan eligibility requirements
+      are met; ensuring that liquidation expenses are appropriate and/or approved,
+      verifying the documentation and accuracy of calculations, ensuring that documentation
+      for account reconciliation is complete, and verifying the proper use of proceeds
+      and reviewing expenses for eligibility of reimbursement.
+
+
+      Training is an ongoing process.
+
+      '
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -389,6 +403,13 @@ Data_By_Year:
       a material fact to the SBA, and/or (3) put the SBA’s financial interest at risk.  Loans
       in the 7(a) Loan Guaranty Purchase Program are reviewed at the time of guaranty
       purchase, after SBA has honored its guaranty.
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '64.786177'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -441,6 +462,13 @@ Data_By_Year:
     Financial: 9.737249
     Inability_to_Access_Data: 0.0
     cyp5: '9.73724852'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '9.737249'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

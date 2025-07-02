@@ -331,7 +331,60 @@ Data_By_Year:
       in fiscal year 2024 and will continue to expand the types of documents that
       can be uploaded and signed electronically.'
     Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2027+
+    Description_Action_Taken: To address improper payments caused by failure to access
+      data or information needed, we issue reminders and policy clarifications to
+      employees, as needed.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: To address improper payments caused by failure to access
+      data or information needed, we issue reminders and policy clarifications to
+      employees, as needed.
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2027+
+    Description_Action_Taken: To address improper payments caused by failure to access
+      data or information needed, we look for Old-Age, Survivors, and Disability Insurance
+      (OASDI) beneficiaries who are working and it may affect their eligibility to
+      receive OASDI benefits.  WorkSmart is a tool that identifies Disability Insurance
+      beneficiaries whose earnings put them at risk for being overpaid.  We created
+      the WorkSmart project to reduce and prevent Improper Payments and complete work
+      Continuing Disability Reviews more efficiently by identifying earnings earlier,
+      identifying cases that have earnings above substantial gainful activity (SGA)
+      and are still receiving benefits, and prioritizing cases that are most likely
+      to end in an SGA cessation.  This helps prevent beneficiaries from building
+      overpayment debts.
+    Mitigation_Strategy: app7_1
+  - Action_Taken: Planned
+    Completion_Date: FY2027+
+    Description_Action_Taken: 'To address improper payments caused by inability to
+      access the data or information needed, we inform Old-Age, Survivors, and Disability
+      Insurance beneficiaries about their reporting responsibilities.  Section 826
+      of the Bipartisan Budget Act of 2015 required the Commissioner to establish
+      and implement a system permitting DI beneficiaries to report their earnings
+      electronically.  Our myWageReport (myWR) online application, allows DI beneficiaries,
+      Supplemental Security Income (SSI) recipients, concurrent beneficiaries, and
+      representative payees to report wages and view, print, or save a receipt.  DI
+      self-reporters and their representative payees can report wages that occurred
+      within a two-year timeframe from the reporting date.  We promote use of our
+      online wage reporting application, myWageReport (myWR), on social media with
+      training videos depicting three reporting options:  my Social Security, SSA
+      Mobile Wage Reporting, and SSI Telephone Wage Reporting.
+
+
+      To address improper payments caused by inability to access the data or information
+      needed, we are working to simplifying our notices.  Although we made efforts
+      to simplify notices, some of our notices and communications can be complex,
+      lengthy, and difficult to comprehend.  The difficulty can sometimes result from
+      the complexity of our programs and legal requirements to communicate certain
+      information.  We will sample notices and other communications and assess the
+      quality and understandability of our communications.  We will inform and remind
+      beneficiaries about reporting responsibilities.'
+    Mitigation_Strategy: app2_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'To address improper payments caused by failure to access
@@ -406,14 +459,9 @@ Data_By_Year:
       in fiscal year 2024 and will continue to expand the types of documents that
       can be uploaded and signed electronically.'
     Mitigation_Strategy: atp1_1
-  - Action_Taken: Planned
-    Completion_Date: FY2027+
-    Description_Action_Taken: To address improper payments caused by failure to access
-      data or information needed, we issue reminders and policy clarifications to
-      employees, as needed.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2027+
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
     Description_Action_Taken: 'To address improper payments caused by inability to
       access the data or information needed, we inform Old-Age, Survivors, and Disability
       Insurance beneficiaries about their reporting responsibilities.  Section 826
@@ -437,14 +485,7 @@ Data_By_Year:
       information.  We will sample notices and other communications and assess the
       quality and understandability of our communications.  We will inform and remind
       beneficiaries about reporting responsibilities.'
-    Mitigation_Strategy: app2_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: To address improper payments caused by failure to access
-      data or information needed, we issue reminders and policy clarifications to
-      employees, as needed.
-    Mitigation_Strategy: atp3_1
+    Mitigation_Strategy: atp2_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: To address improper payments caused by failure to access
@@ -465,20 +506,6 @@ Data_By_Year:
       we continue to assert that the complexity of our program makes it extremely
       challenging to isolate the effects of a particular corrective action.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2027+
-    Description_Action_Taken: To address improper payments caused by failure to access
-      data or information needed, we look for Old-Age, Survivors, and Disability Insurance
-      (OASDI) beneficiaries who are working and it may affect their eligibility to
-      receive OASDI benefits.  WorkSmart is a tool that identifies Disability Insurance
-      beneficiaries whose earnings put them at risk for being overpaid.  We created
-      the WorkSmart project to reduce and prevent Improper Payments and complete work
-      Continuing Disability Reviews more efficiently by identifying earnings earlier,
-      identifying cases that have earnings above substantial gainful activity (SGA)
-      and are still receiving benefits, and prioritizing cases that are most likely
-      to end in an SGA cessation.  This helps prevent beneficiaries from building
-      overpayment debts.
-    Mitigation_Strategy: app7_1
   - Action_Taken: Planned
     Completion_Date: FY2027+
     Description_Action_Taken: 'To address improper payments caused by data or information
@@ -527,34 +554,7 @@ Data_By_Year:
       the final rule (regulation) is established.  We will perform ongoing assessments
       while working towards full implementation.'
     Mitigation_Strategy: app5_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: 'To address improper payments caused by inability to
-      access the data or information needed, we inform Old-Age, Survivors, and Disability
-      Insurance beneficiaries about their reporting responsibilities.  Section 826
-      of the Bipartisan Budget Act of 2015 required the Commissioner to establish
-      and implement a system permitting DI beneficiaries to report their earnings
-      electronically.  Our myWageReport (myWR) online application, allows DI beneficiaries,
-      Supplemental Security Income (SSI) recipients, concurrent beneficiaries, and
-      representative payees to report wages and view, print, or save a receipt.  DI
-      self-reporters and their representative payees can report wages that occurred
-      within a two-year timeframe from the reporting date.  We promote use of our
-      online wage reporting application, myWageReport (myWR), on social media with
-      training videos depicting three reporting options:  my Social Security, SSA
-      Mobile Wage Reporting, and SSI Telephone Wage Reporting.
-
-
-      To address improper payments caused by inability to access the data or information
-      needed, we are working to simplifying our notices.  Although we made efforts
-      to simplify notices, some of our notices and communications can be complex,
-      lengthy, and difficult to comprehend.  The difficulty can sometimes result from
-      the complexity of our programs and legal requirements to communicate certain
-      information.  We will sample notices and other communications and assess the
-      quality and understandability of our communications.  We will inform and remind
-      beneficiaries about reporting responsibilities.'
-    Mitigation_Strategy: atp2_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'To address improper payments caused by data or information
@@ -603,7 +603,7 @@ Data_By_Year:
       the final rule (regulation) is established.  We will perform ongoing assessments
       while working towards full implementation.'
     Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'To address improper payments caused by inability to
@@ -708,6 +708,56 @@ Data_By_Year:
       prevent these overpayments from occurring, we provide training and reminders
       for technicians when applicable and automation solutions to improve accuracy
       when possible.
+  overpayments_eligibility:
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '735.281580'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '4117.576847'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '49.018772'
+  - Key: cyp2_dit7_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '48.593403'
+  - Key: cyp2_dit15_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '939.472458'
+  - Key: cyp2_dit11_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '48.593403'
+  - Key: cyp2_dit12_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Prisoner Status
+    Theme_Description: Eligibility for benefits or payment based on prisoner status
+    Value: '48.593403'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '502.131831'
+  - Key: cyp2_dit14_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '32.395602'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -832,219 +882,37 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 85.26956696
     cyp5: '1822.96083857'
+  underpayments_eligibility:
+  - Key: cyp5_dit3_1
+    Payment_Type: Underpayments
+    Theme: Age
+    Theme_Description: The biological age of the recipient/beneficiary
+    Value: '72.918434'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '309.903343'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '91.148042'
+  - Key: cyp5_dit11_1
+    Payment_Type: Underpayments
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '18.229608'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '1330.761412'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
-    Description_Action_Taken: "To address improper payments caused by inability to\
-      \ access the data or information needed, we inform Old-Age, Survivors, and Disability\
-      \ Insurance beneficiaries about their reporting responsibilities.  To determine\
-      \ whether a beneficiary meets the Marital Status eligibility criteria, we must\
-      \ evaluate a beneficiary’s state of being unmarried, married, divorced, or widowed.\
-      \  Entitlement to some categories of benefits is impacted by the beneficiary’s\
-      \ marital status, so we rely on beneficiaries to report changes in their marital\
-      \ status.  Section 826 of the Bipartisan Budget Act of 2015 required the Commissioner\
-      \ to establish and implement a system permitting Disability Insurance (DI) beneficiaries\
-      \ to report their earnings electronically.  Our myWageReport (myWR) online application,\
-      \ allows DI beneficiaries, Supplemental Security Income (SSI) recipients, concurrent\
-      \ beneficiaries, and representative payees to report wages and view, print,\
-      \ or save a receipt.  DI self-reporters and their representative payees can\
-      \ report wages that occurred within a two-year timeframe from the reporting\
-      \ date.  We promote use of our online wage reporting application, myWR, on social\
-      \ media with training videos.  From October 2023 through February 2024, we released\
-      \ social media posts on Facebook and X sharing a link to our YouTube video to\
-      \ help beneficiaries learn why it is important to report wages and the automated\
-      \ electronic options for wage reporting.  In February 2024, we issued reminders\
-      \ on Social Security TV in field office reception areas to report relationship\
-      \ changes as it may affect their Social Security payments.  In August 2024,\
-      \ we published a blog about the importance of reporting changes.  The article\
-      \ provided examples of life changes that need to be reported to Social Security\
-      \ to avoid overpayments.  In July and August 2024, we used our social media\
-      \ channels to post reminders for our beneficiaries about the importance of promptly\
-      \ reporting changes to their income, resources, and living arrangements to ensure\
-      \ accurate benefits and avoid overpayments.  We plan to use our social media\
-      \ channels to post reminders for our beneficiaries about the importance of promptly\
-      \ reporting changes to their income, resources, and living arrangements to ensure\
-      \ accurate benefits and avoid overpayments.  These posts also inform beneficiaries\
-      \ how we are required by law to adjust benefits or recover debts when people\
-      \ receive payments they are not entitled to.  \n\nTo address improper payments\
-      \ caused by inability to access the data or information needed, we are working\
-      \ to simplify our notices and communications.  Some of our notices and communications\
-      \ can be complex, lengthy, and difficult to comprehend.  The difficulty can\
-      \ sometimes result from the complexity of our programs and legal requirements\
-      \ to communicate certain information.  We published several blogs and Social\
-      \ Security TV slides in field office waiting areas on the importance of reporting\
-      \ relationship changes to us for Old-Age, Survivors, and Disability Insurance\
-      \ beneficiaries to improve the responsiveness of beneficiaries and recipients\
-      \ in self-reporting information that impacts benefit payments.  We are currently\
-      \ updating the Work Activity Report (SSA-821), to make it more understandable\
-      \ and more likely to be completed by applicants and beneficiaries.  We use form\
-      \ SSA-821 to collect information about applicant and beneficiary’s work, applicable\
-      \ work incentives, and non-work-related pay.  It allows us to make accurate\
-      \ decisions as to whether beneficiaries are performing Substantial Gainful Activity.\
-      \  In addition, we developed a Work Incentive Notice pilot for increasing completion\
-      \ of the Work Activity Report by sending beneficiaries pre-notices that incorporate\
-      \ behaviorally informed language to encourage completion of these reports. \
-      \ In addition, throughout 2024 we reviewed new and revised agency notices for\
-      \ both clear messaging and plain language.  We will need to obtain Office of\
-      \ Management and Budget clearance for Form SSA-821 prior to implementation.\
-      \  We will sample notices and other communications and assess the quality and\
-      \ understandability of our communications.  We will continue to inform and remind\
-      \ beneficiaries about reporting responsibilities.  We will also continue to\
-      \ review overpayment-related notice review requests (both new and revised language)\
-      \ to make sure it is in plain language that people can read and understand."
-    Mitigation_Strategy: atp2_1
-  - Action_Taken: Planned
-    Completion_Date: FY2028+
-    Description_Action_Taken: "To address improper payments caused by failure to access\
-      \ data or information needed, we are developing a Consolidated Claims Experience\
-      \ (CCE) application.  CCE will be a single-entry point for employees to process\
-      \ all agency benefits.  CCE includes eligibility screening, initial claims intake\
-      \ processing, and post-entitlement activities.  CCE will automate more computations,\
-      \ reduce manual actions, assist in the identification of potential or missed\
-      \ entitlements, and include dynamic pathing and policy references within the\
-      \ application.  Currently, only Supplemental Security Income (SSI) is available\
-      \ in CCE with additional claim types (i.e., Old-Age, Survivors, and Disability\
-      \ Insurance and Title 18) to be added in future releases.  In fiscal year (FY)\
-      \ 2023, there were several CCE updates in the SSI program to improve CCE software\
-      \ performance, correct software problems, and respond to employee feedback.\
-      \  In December 2023, CCE Announcements became available.  Now, when updates\
-      \ are made within CCE, the technicians receive a brief message the first time\
-      \ they access the application describing the changes.  Hyperlinks will be provided\
-      \ for the user to access more in-depth information, if desired.  This enhancement\
-      \ is designed to assist our busy technicians by providing just-in-time information\
-      \ within CCE, so they do not have to pause and locate references related to\
-      \ CCE.  In June 2024, we released enhancements to several CCE pages including\
-      \ the Special Enrollment Period page and Alien Deportation page to upgrade the\
-      \ User Experience Framework.  We also released an enhancement to the Printing\
-      \ and Signature page that replaces the existing Printing and Signatures page\
-      \ with redesigned Print, Sign, and Document Summary pages.  For upcoming enhancements,\
-      \ we are working on a multi-phased implementation for SSI payment continuation,\
-      \ which will automate the current legacy process to a modernized input mechanism\
-      \ to initiate and remove payment continuation.  This will reduce user error\
-      \ and reliance on the regionally developed appeals application.  We are incorporating\
-      \ the start date functionality within CCE, which is housed within a regional\
-      \ application.  We also plan to release our first retirement benefit application\
-      \ within CCE.  We will test it in a few field offices before a national release.\
-      \  \n\nTo address improper payments caused by failure to access data or information\
-      \ needed, we are developing the Continuing Disability Review (CDR) Product.\
-      \  The CDR Product is a project to streamline the continuing disability review\
-      \ process, increase efficiencies, and reduce improper payments for work CDRs.\
-      \  The multifaceted product is comprised of four separate workstreams:  Work\
-      \ CDR, Medical CDR, Electronic Disability Collect System (EDCS), and CDRs Modernization,\
-      \ across several component business and systems sponsors.  In FY 2023, CDR product\
-      \ released the i454 which allows adult beneficiaries with an online option to\
-      \ file the SSA-454 or a Medical CDR Report.  When the customer uses this online\
-      \ version, the technician's process is streamlined and allows for quicker processing.\
-      \  In FY 2024, we released Multiple Pending Claim functionality to the EDCS\
-      \ that will reduce the reliance on paper processing.  We made the eWork system\
-      \ Multi-Factor Authentication compliant.  We are currently developing a modernized\
-      \ replacement of eWork which will be integrated into the existing EDCS application.\
-      \  The eWork replacement will reinforce policy and intuitively drive best practices\
-      \ to reduce improper payments.  In FY 2024 we made technical releases for the\
-      \ eWork replacement.  We will release the minimum viable product to technicians\
-      \ in tandem with retiring eWork by the end of FY 2025.  Subsequent releases\
-      \ will be scheduled for FY 2026 if funding permits.  \n\nTo address improper\
-      \ payments caused by failure to access data or information needed, we developed\
-      \ the Technician Experience Dashboard (TED).  TED is our enterprise customer\
-      \ relationship management solution that will provide a single location for information\
-      \ about our customers’ interactions with the agency to make it easier for our\
-      \ employees to help the public and increases efficiency and accuracy, improving\
-      \ the overall customer experience.  In FY 2023, TED added Registration and Customer\
-      \ Support, Upload Document workflows, and made general improvements to the application.\
-      \  In June 2023, TED became available for use in the Boston region.  In February\
-      \ 2024, TED was rolled out nationally to all field offices and workload support\
-      \ units.  In March 2024, an additional task called External Tasks became available.\
-      \  External Tasks provides technicians the ability to open commonly used applications\
-      \ directly from TED.  As of June 2024, there are a total of 24 external applications\
-      \ available via TED.  We plan to continue to enhance the customer composite\
-      \ by bringing in and displaying more customer information from other systems.\
-      \  Releases to enhance existing functionality occur on a quarterly basis.  We\
-      \ are also working on plans to expand to other user groups, such as the field\
-      \ and regional offices including Appellate Operations.  Integration of the technician\
-      \ facing portion of Visitor Intake Process Rewrite is planned for late FY 2025.\
-      \  \n\nTo address improper payments caused by failure to access data or information\
-      \ needed, we developed processes using UIPath software.  In FY 2021, we pursued\
-      \ a contract with UIPath software, to create automated “robotic” programs that\
-      \ will perform routine or repetitive tasks.  Robotic Processing Automation (RPA),\
-      \ or “BOTs,” are available to Processing Center technicians to assist with processing\
-      \ manual awards or post-entitlement actions.  Since January 2021, several BOTs\
-      \ have been created and placed into production.  In FY 2024, we added a BOT\
-      \ utilized by headquarters analysts, that helped reduce stale Registration,\
-      \ Appointment and Services for Representatives (RASR) appointments.  Technicians\
-      \ are able to use the BOT to review and terminate stale appointments in the\
-      \ RASR database.  Use of BOTs reduces keystrokes and manual coding and detects\
-      \ exceptions and alerts before they occur.  In FY 2025, we plan to enhance the\
-      \ existing RPA scripts and identify opportunities to automate computations and\
-      \ inputs to reduce input errors.  We are making a long-term investment in robotics\
-      \ technology using the software to improve business processes and eliminate\
-      \ manual actions.  \n\nTo address improper payments caused by inability to access\
-      \ data or information needed, we developed a tool to submit and sign documents\
-      \ electronically.  In July 2023, we released the Upload Documents service into\
-      \ production.  In September 2023 we added the electronic signature feature,\
-      \ which addresses the Executive Order on Transforming Federal Customer Experience\
-      \ and Service Delivery to Rebuild Trust in Government.  In March 2024, we expanded\
-      \ the eSignature/Upload Documents service to all field offices and workload\
-      \ support units nationwide.  This release allows customers to access the service\
-      \ with fewer customer authentication requirements.  Also, in March 2024, eSignature/Upload\
-      \ Documents became available to all Field Offices and Workload Support Units\
-      \ Nationwide.  In April 2024 and subsequent months, we began releasing mobile\
-      \ friendly web fillable forms in place of PDF forms for customer completion.\
-      \  Additionally, in June 2024, we added an automated 10-day follow up reminder\
-      \ and confirmation of successful submission emails to enhance communication\
-      \ with our customers.  In September 2024, we integrated the service with my\
-      \ Social Security and also provide a new option for SMS/text communications.\
-      \  We plan to complete the following:  continue to webify forms for a mobile\
-      \ friendly experience; continue increasing the number of forms and evidence\
-      \ types available; develop a self-service option accessible from my Social Security\
-      \ and SSA.gov; continue enhanced customer communications by including Upload\
-      \ Document service option in all paper request notices; and expand to 3rd party\
-      \ forms, allowing advocates and organizations to provide additional support\
-      \ to our mutual customers."
-    Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "To address improper payments caused by inability to\
-      \ access data or information needed, we look for Old-Age, Survivors, and Disability\
-      \ Insurance beneficiaries who are potentially entitled for higher benefits.\
-      \  In October 2023, we mailed out more than 15,000 notices to beneficiaries\
-      \ receiving spousal benefits and more than 28,000 to surviving spouses who may\
-      \ potentially be eligible for higher retirement benefits on their own records.\
-      \  In April 2024, we issued a policy reminder to technicians to review cases\
-      \ carefully to determine whether retroactivity is applicable for surviving spouse\
-      \ benefits.  We also developed a “Potential Entitlements” Tactical Plan to educate\
-      \ people who may be eligible for Social Security benefits, particularly Survivors’\
-      \ benefits and Supplemental Security Income.  It also includes targeted outreach\
-      \ by providing materials to third parties and our regional communications staffs.\
-      \  We also conducted a longitudinal study on mailers in fiscal year (FY) 2024.\
-      \  The draft is currently in the review/clearance process.  Communications tactics\
-      \ from our Tactical Plan will continue through calendar year 2024.  \n\nTo address\
-      \ improper payments caused by failure to access data or information needed,\
-      \ we look for Old-Age, Survivors, and Disability Insurance (OASDI) beneficiaries\
-      \ who are working and it may affect their eligibility to receive OASDI benefits.\
-      \  WorkSmart is a tool that identifies Disability Insurance beneficiaries whose\
-      \ earnings put them at risk for being overpaid.  We created the WorkSmart project\
-      \ to reduce Improper Payments by alerting cases quickly after the beneficiary\
-      \ starts to work.  In FY 2024, WorkSmart continued to alert cases for work Continuing\
-      \ Disability Reviews (CDR) based on available earnings data.  WorkSmart will\
-      \ use Payroll Information Exchange data when available to alert cases for a\
-      \ work CDR.  We will continue to use WorkSmart to reduce overpayments."
-    Mitigation_Strategy: atp7_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: To address improper payments caused by failure to access
-      data or information needed, we issue reminders and policy clarifications to
-      employees, as needed.  In November 2023, we issued a reminder to technicians
-      about the importance of inputting Family Max when manually calculating benefits.  In
-      March 2024, we updated policy providing detailed information to technicians
-      regarding the importance of securing non-covered Government Pension data timely,
-      when applicable, in order to calculate the correct benefit amount.  We will
-      continue to issue reminders and policy clarifications to employees, as needed.
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2028+
     Description_Action_Taken: "To address improper payments caused by inability to\
       \ access the data or information needed, we will pursue new data exchange partners\
       \ from government and private sectors in collaboration with our agency business\
@@ -1114,8 +982,19 @@ Data_By_Year:
       \ and action.  We plan to implement PIE in the Spring of 2025 through a phased\
       \ approach.  This timeline will ensure compliance with rulemaking requirements\
       \ and allow us to respond to public concerns from the NPRM public comment period."
-    Mitigation_Strategy: app5_1
-  - Action_Taken: Completed
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2028+
+    Description_Action_Taken: To address improper payments caused by failure to access
+      data or information needed, we issue reminders and policy clarifications to
+      employees, as needed.  In November 2023, we issued a reminder to technicians
+      about the importance of inputting Family Max when manually calculating benefits.  In
+      March 2024, we updated policy providing detailed information to technicians
+      regarding the importance of securing non-covered Government Pension data timely,
+      when applicable, in order to calculate the correct benefit amount.  We will
+      continue to issue reminders and policy clarifications to employees, as needed.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: To address improper payments caused by failure to access
@@ -1201,108 +1080,7 @@ Data_By_Year:
       \ review overpayment-related notice review requests (both new and revised language)\
       \ to make sure it is in plain language that people can read and understand."
     Mitigation_Strategy: app2_1
-  - Action_Taken: Planned
-    Completion_Date: FY2028+
-    Description_Action_Taken: "To address improper payments caused by inability to\
-      \ access data or information needed, we look for Old-Age, Survivors, and Disability\
-      \ Insurance beneficiaries who are potentially entitled for higher benefits.\
-      \  In October 2023, we mailed out more than 15,000 notices to beneficiaries\
-      \ receiving spousal benefits and more than 28,000 to surviving spouses who may\
-      \ potentially be eligible for higher retirement benefits on their own records.\
-      \  In April 2024, we issued a policy reminder to technicians to review cases\
-      \ carefully to determine whether retroactivity is applicable for surviving spouse\
-      \ benefits.  We also developed a “Potential Entitlements” Tactical Plan to educate\
-      \ people who may be eligible for Social Security benefits, particularly Survivors’\
-      \ benefits and Supplemental Security Income.  It also includes targeted outreach\
-      \ by providing materials to third parties and our regional communications staffs.\
-      \  We also conducted a longitudinal study on mailers in fiscal year (FY) 2024.\
-      \  The draft is currently in the review/clearance process.  Communications tactics\
-      \ from our Tactical Plan will continue through calendar year 2024.  \n\nTo address\
-      \ improper payments caused by failure to access data or information needed,\
-      \ we look for Old-Age, Survivors, and Disability Insurance (OASDI) beneficiaries\
-      \ who are working and it may affect their eligibility to receive OASDI benefits.\
-      \  WorkSmart is a tool that identifies Disability Insurance beneficiaries whose\
-      \ earnings put them at risk for being overpaid.  We created the WorkSmart project\
-      \ to reduce Improper Payments by alerting cases quickly after the beneficiary\
-      \ starts to work.  In FY 2024, WorkSmart continued to alert cases for work Continuing\
-      \ Disability Reviews (CDR) based on available earnings data.  WorkSmart will\
-      \ use Payroll Information Exchange data when available to alert cases for a\
-      \ work CDR.  We will continue to use WorkSmart to reduce overpayments."
-    Mitigation_Strategy: app7_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "To address improper payments caused by inability to\
-      \ access the data or information needed, we will pursue new data exchange partners\
-      \ from government and private sectors in collaboration with our agency business\
-      \ sponsors.  We plan to expand our outreach efforts with the Data Exchange Community\
-      \ of Practice (DXCOP) and the States Data Exchange Community of Interest, to\
-      \ engage more agencies and broaden the expansion of best practices toward streamlining\
-      \ the exchange of data.  In fiscal year (FY) 2023, we implemented two new incoming\
-      \ data exchanges with State foster care agencies.  These data exchanges assist\
-      \ in avoiding improper payments when a child's foster placement has changed.\
-      \  For FY 2024, 24 states/entities signed an Information Exchange Agreement\
-      \ and are participating, and 10 states signed the Information Exchange Agreement\
-      \ of State Foster Data Exchanges.  These data exchanges assist in avoiding improper\
-      \ payments when a child's foster placement has changed.  We continue to engage\
-      \ State agencies for the purpose of expanding this exchange.  In June and September\
-      \ 2024, we held DXCOP meetings.  We continue to engage State agencies for the\
-      \ purpose of expanding this exchange.  We plan to expand our outreach efforts\
-      \ with the DXCOP and the States Data Exchange Community of Interest, to engage\
-      \ more agencies and broaden the expansion of best practices toward streamlining\
-      \ the exchange of data.  \n\nTo address improper payments caused by failure\
-      \ to access data or information needed, we are improving our death data processing.\
-      \  We collect data from a variety of sources so that we can administer our programs.\
-      \  We have a contract with every State Bureau of Vital Statistics (the custodians\
-      \ for death records) and with some jurisdictions to provide us death data. \
-      \ Since 2002, we worked with States that want and are able to build a streamlined\
-      \ death registration process known as Electronic Death Registration (EDR). \
-      \ As of January 2022, all 50 States report deaths through the EDR process. \
-      \ We plan to continue making progress in centralizing our death inputs, improving\
-      \ the quality and processing of death data, and updating historical death records\
-      \ in our databases.  In April 2024, for processing death reports, we issued\
-      \ a reminder to technicians to the Death Information Processing System for reports\
-      \ of death for enumerated individuals.  To improve the completeness of our death\
-      \ information, we are in the early stages of contracting with the National Association\
-      \ for Public Health Statistics and Information Systems on the acquisition of\
-      \ historical State death records.  This effort will increase the accuracy, integrity,\
-      \ and completeness of our death data.  \n\nTo address improper payments caused\
-      \ by inability to access the data or information needed, and failure to access\
-      \ data or information needed, we developed a data exchange for the Federal Employment\
-      \ Compensation Act Data.  The Federal Employment Compensation Act (FECA) workers’\
-      \ compensation program, which is administered by the Department of Labor (DOL),\
-      \ provides coverage to three million Federal and Postal workers.  Receipt of\
-      \ FECA benefits can offset Old-Age, Survivors, and Disability Insurance (OASDI)\
-      \ benefits.  We have agreed with DOL to move forward with our request for DOL\
-      \ FECA data.  We are working to finalize the agreement for DOL to provide FECA\
-      \ payment data to assist us in our offset requirements.  In December 2023, the\
-      \ agency established an eCOMP system Memorandum of Understanding with DOL to\
-      \ obtain FECA benefits to allow the agency to offset OASDI benefits and prevent\
-      \ or reduce overpayments.  Technicians can complete an ad hoc query in eCOMP\
-      \ to obtain FECA data, the FECA payment status, dates, amounts and it is immediately\
-      \ available to the technician via the eCOMP portal.  In April 2024, we provided\
-      \ reminders on how to process initial claims with workers compensation lump-sum\
-      \ settlement allegations.  We expect the exchange to be completed in FY 2025.\
-      \  \n\nTo address improper payments caused by inability to access the data or\
-      \ information needed, and failure to access data or information needed, and\
-      \ to reduce the reliance on self-reporting of wages, we are developing new wage\
-      \ reporting tools, such as an automated information exchange with commercial\
-      \ payroll data providers authorized by section 824 of the Bipartisan Budget\
-      \ Act of 2015, now referred to as the Payroll Information Exchange (PIE).  In\
-      \ February 2024, we published a Notice of Proposed Rulemaking (NPRM) describing\
-      \ the agency’s plans for accessing and using information from payroll data providers\
-      \ to reduce improper payments (overpayments and underpayments), which improves\
-      \ service to customers.  The public comment period closed on April 15, 2024.\
-      \  We are carefully considering the comments as we draft the final rule, which\
-      \ is currently planned for publication in winter of FY 2025.  In FY 2024, we\
-      \ completed the automated PIE wage reporting notices and created a limited issue\
-      \ diary to alert technicians when incoming wage and employment information from\
-      \ PIE doesn't automatically post to the SSI record, requiring manual review\
-      \ and action.  We plan to implement PIE in the Spring of 2025 through a phased\
-      \ approach.  This timeline will ensure compliance with rulemaking requirements\
-      \ and allow us to respond to public concerns from the NPRM public comment period."
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: "To address improper payments caused by failure to access\
@@ -1411,6 +1189,67 @@ Data_By_Year:
       \ forms, allowing advocates and organizations to provide additional support\
       \ to our mutual customers."
     Mitigation_Strategy: atp1_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: "To address improper payments caused by inability to\
+      \ access the data or information needed, we inform Old-Age, Survivors, and Disability\
+      \ Insurance beneficiaries about their reporting responsibilities.  To determine\
+      \ whether a beneficiary meets the Marital Status eligibility criteria, we must\
+      \ evaluate a beneficiary’s state of being unmarried, married, divorced, or widowed.\
+      \  Entitlement to some categories of benefits is impacted by the beneficiary’s\
+      \ marital status, so we rely on beneficiaries to report changes in their marital\
+      \ status.  Section 826 of the Bipartisan Budget Act of 2015 required the Commissioner\
+      \ to establish and implement a system permitting Disability Insurance (DI) beneficiaries\
+      \ to report their earnings electronically.  Our myWageReport (myWR) online application,\
+      \ allows DI beneficiaries, Supplemental Security Income (SSI) recipients, concurrent\
+      \ beneficiaries, and representative payees to report wages and view, print,\
+      \ or save a receipt.  DI self-reporters and their representative payees can\
+      \ report wages that occurred within a two-year timeframe from the reporting\
+      \ date.  We promote use of our online wage reporting application, myWR, on social\
+      \ media with training videos.  From October 2023 through February 2024, we released\
+      \ social media posts on Facebook and X sharing a link to our YouTube video to\
+      \ help beneficiaries learn why it is important to report wages and the automated\
+      \ electronic options for wage reporting.  In February 2024, we issued reminders\
+      \ on Social Security TV in field office reception areas to report relationship\
+      \ changes as it may affect their Social Security payments.  In August 2024,\
+      \ we published a blog about the importance of reporting changes.  The article\
+      \ provided examples of life changes that need to be reported to Social Security\
+      \ to avoid overpayments.  In July and August 2024, we used our social media\
+      \ channels to post reminders for our beneficiaries about the importance of promptly\
+      \ reporting changes to their income, resources, and living arrangements to ensure\
+      \ accurate benefits and avoid overpayments.  We plan to use our social media\
+      \ channels to post reminders for our beneficiaries about the importance of promptly\
+      \ reporting changes to their income, resources, and living arrangements to ensure\
+      \ accurate benefits and avoid overpayments.  These posts also inform beneficiaries\
+      \ how we are required by law to adjust benefits or recover debts when people\
+      \ receive payments they are not entitled to.  \n\nTo address improper payments\
+      \ caused by inability to access the data or information needed, we are working\
+      \ to simplify our notices and communications.  Some of our notices and communications\
+      \ can be complex, lengthy, and difficult to comprehend.  The difficulty can\
+      \ sometimes result from the complexity of our programs and legal requirements\
+      \ to communicate certain information.  We published several blogs and Social\
+      \ Security TV slides in field office waiting areas on the importance of reporting\
+      \ relationship changes to us for Old-Age, Survivors, and Disability Insurance\
+      \ beneficiaries to improve the responsiveness of beneficiaries and recipients\
+      \ in self-reporting information that impacts benefit payments.  We are currently\
+      \ updating the Work Activity Report (SSA-821), to make it more understandable\
+      \ and more likely to be completed by applicants and beneficiaries.  We use form\
+      \ SSA-821 to collect information about applicant and beneficiary’s work, applicable\
+      \ work incentives, and non-work-related pay.  It allows us to make accurate\
+      \ decisions as to whether beneficiaries are performing Substantial Gainful Activity.\
+      \  In addition, we developed a Work Incentive Notice pilot for increasing completion\
+      \ of the Work Activity Report by sending beneficiaries pre-notices that incorporate\
+      \ behaviorally informed language to encourage completion of these reports. \
+      \ In addition, throughout 2024 we reviewed new and revised agency notices for\
+      \ both clear messaging and plain language.  We will need to obtain Office of\
+      \ Management and Budget clearance for Form SSA-821 prior to implementation.\
+      \  We will sample notices and other communications and assess the quality and\
+      \ understandability of our communications.  We will continue to inform and remind\
+      \ beneficiaries about reporting responsibilities.  We will also continue to\
+      \ review overpayment-related notice review requests (both new and revised language)\
+      \ to make sure it is in plain language that people can read and understand."
+    Mitigation_Strategy: atp2_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: To address improper payments caused by failure to access
@@ -1436,8 +1275,38 @@ Data_By_Year:
       or terminated at different periods of time.  This will provide a consistent
       national policy.  We plan to publish the policy in FY 2025.
     Mitigation_Strategy: app6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2028+
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: "To address improper payments caused by inability to\
+      \ access data or information needed, we look for Old-Age, Survivors, and Disability\
+      \ Insurance beneficiaries who are potentially entitled for higher benefits.\
+      \  In October 2023, we mailed out more than 15,000 notices to beneficiaries\
+      \ receiving spousal benefits and more than 28,000 to surviving spouses who may\
+      \ potentially be eligible for higher retirement benefits on their own records.\
+      \  In April 2024, we issued a policy reminder to technicians to review cases\
+      \ carefully to determine whether retroactivity is applicable for surviving spouse\
+      \ benefits.  We also developed a “Potential Entitlements” Tactical Plan to educate\
+      \ people who may be eligible for Social Security benefits, particularly Survivors’\
+      \ benefits and Supplemental Security Income.  It also includes targeted outreach\
+      \ by providing materials to third parties and our regional communications staffs.\
+      \  We also conducted a longitudinal study on mailers in fiscal year (FY) 2024.\
+      \  The draft is currently in the review/clearance process.  Communications tactics\
+      \ from our Tactical Plan will continue through calendar year 2024.  \n\nTo address\
+      \ improper payments caused by failure to access data or information needed,\
+      \ we look for Old-Age, Survivors, and Disability Insurance (OASDI) beneficiaries\
+      \ who are working and it may affect their eligibility to receive OASDI benefits.\
+      \  WorkSmart is a tool that identifies Disability Insurance beneficiaries whose\
+      \ earnings put them at risk for being overpaid.  We created the WorkSmart project\
+      \ to reduce Improper Payments by alerting cases quickly after the beneficiary\
+      \ starts to work.  In FY 2024, WorkSmart continued to alert cases for work Continuing\
+      \ Disability Reviews (CDR) based on available earnings data.  WorkSmart will\
+      \ use Payroll Information Exchange data when available to alert cases for a\
+      \ work CDR.  We will continue to use WorkSmart to reduce overpayments."
+    Mitigation_Strategy: atp7_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
     Description_Action_Taken: To address improper payments caused by failure to access
       data or information needed, we issue reminders and policy clarifications to
       employees, as needed.  In November 2023, we issued a reminder to technicians
@@ -1446,7 +1315,215 @@ Data_By_Year:
       regarding the importance of securing non-covered Government Pension data timely,
       when applicable, in order to calculate the correct benefit amount.  We will
       continue to issue reminders and policy clarifications to employees, as needed.
-    Mitigation_Strategy: app3_1
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2028+
+    Description_Action_Taken: "To address improper payments caused by failure to access\
+      \ data or information needed, we are developing a Consolidated Claims Experience\
+      \ (CCE) application.  CCE will be a single-entry point for employees to process\
+      \ all agency benefits.  CCE includes eligibility screening, initial claims intake\
+      \ processing, and post-entitlement activities.  CCE will automate more computations,\
+      \ reduce manual actions, assist in the identification of potential or missed\
+      \ entitlements, and include dynamic pathing and policy references within the\
+      \ application.  Currently, only Supplemental Security Income (SSI) is available\
+      \ in CCE with additional claim types (i.e., Old-Age, Survivors, and Disability\
+      \ Insurance and Title 18) to be added in future releases.  In fiscal year (FY)\
+      \ 2023, there were several CCE updates in the SSI program to improve CCE software\
+      \ performance, correct software problems, and respond to employee feedback.\
+      \  In December 2023, CCE Announcements became available.  Now, when updates\
+      \ are made within CCE, the technicians receive a brief message the first time\
+      \ they access the application describing the changes.  Hyperlinks will be provided\
+      \ for the user to access more in-depth information, if desired.  This enhancement\
+      \ is designed to assist our busy technicians by providing just-in-time information\
+      \ within CCE, so they do not have to pause and locate references related to\
+      \ CCE.  In June 2024, we released enhancements to several CCE pages including\
+      \ the Special Enrollment Period page and Alien Deportation page to upgrade the\
+      \ User Experience Framework.  We also released an enhancement to the Printing\
+      \ and Signature page that replaces the existing Printing and Signatures page\
+      \ with redesigned Print, Sign, and Document Summary pages.  For upcoming enhancements,\
+      \ we are working on a multi-phased implementation for SSI payment continuation,\
+      \ which will automate the current legacy process to a modernized input mechanism\
+      \ to initiate and remove payment continuation.  This will reduce user error\
+      \ and reliance on the regionally developed appeals application.  We are incorporating\
+      \ the start date functionality within CCE, which is housed within a regional\
+      \ application.  We also plan to release our first retirement benefit application\
+      \ within CCE.  We will test it in a few field offices before a national release.\
+      \  \n\nTo address improper payments caused by failure to access data or information\
+      \ needed, we are developing the Continuing Disability Review (CDR) Product.\
+      \  The CDR Product is a project to streamline the continuing disability review\
+      \ process, increase efficiencies, and reduce improper payments for work CDRs.\
+      \  The multifaceted product is comprised of four separate workstreams:  Work\
+      \ CDR, Medical CDR, Electronic Disability Collect System (EDCS), and CDRs Modernization,\
+      \ across several component business and systems sponsors.  In FY 2023, CDR product\
+      \ released the i454 which allows adult beneficiaries with an online option to\
+      \ file the SSA-454 or a Medical CDR Report.  When the customer uses this online\
+      \ version, the technician's process is streamlined and allows for quicker processing.\
+      \  In FY 2024, we released Multiple Pending Claim functionality to the EDCS\
+      \ that will reduce the reliance on paper processing.  We made the eWork system\
+      \ Multi-Factor Authentication compliant.  We are currently developing a modernized\
+      \ replacement of eWork which will be integrated into the existing EDCS application.\
+      \  The eWork replacement will reinforce policy and intuitively drive best practices\
+      \ to reduce improper payments.  In FY 2024 we made technical releases for the\
+      \ eWork replacement.  We will release the minimum viable product to technicians\
+      \ in tandem with retiring eWork by the end of FY 2025.  Subsequent releases\
+      \ will be scheduled for FY 2026 if funding permits.  \n\nTo address improper\
+      \ payments caused by failure to access data or information needed, we developed\
+      \ the Technician Experience Dashboard (TED).  TED is our enterprise customer\
+      \ relationship management solution that will provide a single location for information\
+      \ about our customers’ interactions with the agency to make it easier for our\
+      \ employees to help the public and increases efficiency and accuracy, improving\
+      \ the overall customer experience.  In FY 2023, TED added Registration and Customer\
+      \ Support, Upload Document workflows, and made general improvements to the application.\
+      \  In June 2023, TED became available for use in the Boston region.  In February\
+      \ 2024, TED was rolled out nationally to all field offices and workload support\
+      \ units.  In March 2024, an additional task called External Tasks became available.\
+      \  External Tasks provides technicians the ability to open commonly used applications\
+      \ directly from TED.  As of June 2024, there are a total of 24 external applications\
+      \ available via TED.  We plan to continue to enhance the customer composite\
+      \ by bringing in and displaying more customer information from other systems.\
+      \  Releases to enhance existing functionality occur on a quarterly basis.  We\
+      \ are also working on plans to expand to other user groups, such as the field\
+      \ and regional offices including Appellate Operations.  Integration of the technician\
+      \ facing portion of Visitor Intake Process Rewrite is planned for late FY 2025.\
+      \  \n\nTo address improper payments caused by failure to access data or information\
+      \ needed, we developed processes using UIPath software.  In FY 2021, we pursued\
+      \ a contract with UIPath software, to create automated “robotic” programs that\
+      \ will perform routine or repetitive tasks.  Robotic Processing Automation (RPA),\
+      \ or “BOTs,” are available to Processing Center technicians to assist with processing\
+      \ manual awards or post-entitlement actions.  Since January 2021, several BOTs\
+      \ have been created and placed into production.  In FY 2024, we added a BOT\
+      \ utilized by headquarters analysts, that helped reduce stale Registration,\
+      \ Appointment and Services for Representatives (RASR) appointments.  Technicians\
+      \ are able to use the BOT to review and terminate stale appointments in the\
+      \ RASR database.  Use of BOTs reduces keystrokes and manual coding and detects\
+      \ exceptions and alerts before they occur.  In FY 2025, we plan to enhance the\
+      \ existing RPA scripts and identify opportunities to automate computations and\
+      \ inputs to reduce input errors.  We are making a long-term investment in robotics\
+      \ technology using the software to improve business processes and eliminate\
+      \ manual actions.  \n\nTo address improper payments caused by inability to access\
+      \ data or information needed, we developed a tool to submit and sign documents\
+      \ electronically.  In July 2023, we released the Upload Documents service into\
+      \ production.  In September 2023 we added the electronic signature feature,\
+      \ which addresses the Executive Order on Transforming Federal Customer Experience\
+      \ and Service Delivery to Rebuild Trust in Government.  In March 2024, we expanded\
+      \ the eSignature/Upload Documents service to all field offices and workload\
+      \ support units nationwide.  This release allows customers to access the service\
+      \ with fewer customer authentication requirements.  Also, in March 2024, eSignature/Upload\
+      \ Documents became available to all Field Offices and Workload Support Units\
+      \ Nationwide.  In April 2024 and subsequent months, we began releasing mobile\
+      \ friendly web fillable forms in place of PDF forms for customer completion.\
+      \  Additionally, in June 2024, we added an automated 10-day follow up reminder\
+      \ and confirmation of successful submission emails to enhance communication\
+      \ with our customers.  In September 2024, we integrated the service with my\
+      \ Social Security and also provide a new option for SMS/text communications.\
+      \  We plan to complete the following:  continue to webify forms for a mobile\
+      \ friendly experience; continue increasing the number of forms and evidence\
+      \ types available; develop a self-service option accessible from my Social Security\
+      \ and SSA.gov; continue enhanced customer communications by including Upload\
+      \ Document service option in all paper request notices; and expand to 3rd party\
+      \ forms, allowing advocates and organizations to provide additional support\
+      \ to our mutual customers."
+    Mitigation_Strategy: app1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2028+
+    Description_Action_Taken: "To address improper payments caused by inability to\
+      \ access the data or information needed, we will pursue new data exchange partners\
+      \ from government and private sectors in collaboration with our agency business\
+      \ sponsors.  We plan to expand our outreach efforts with the Data Exchange Community\
+      \ of Practice (DXCOP) and the States Data Exchange Community of Interest, to\
+      \ engage more agencies and broaden the expansion of best practices toward streamlining\
+      \ the exchange of data.  In fiscal year (FY) 2023, we implemented two new incoming\
+      \ data exchanges with State foster care agencies.  These data exchanges assist\
+      \ in avoiding improper payments when a child's foster placement has changed.\
+      \  For FY 2024, 24 states/entities signed an Information Exchange Agreement\
+      \ and are participating, and 10 states signed the Information Exchange Agreement\
+      \ of State Foster Data Exchanges.  These data exchanges assist in avoiding improper\
+      \ payments when a child's foster placement has changed.  We continue to engage\
+      \ State agencies for the purpose of expanding this exchange.  In June and September\
+      \ 2024, we held DXCOP meetings.  We continue to engage State agencies for the\
+      \ purpose of expanding this exchange.  We plan to expand our outreach efforts\
+      \ with the DXCOP and the States Data Exchange Community of Interest, to engage\
+      \ more agencies and broaden the expansion of best practices toward streamlining\
+      \ the exchange of data.  \n\nTo address improper payments caused by failure\
+      \ to access data or information needed, we are improving our death data processing.\
+      \  We collect data from a variety of sources so that we can administer our programs.\
+      \  We have a contract with every State Bureau of Vital Statistics (the custodians\
+      \ for death records) and with some jurisdictions to provide us death data. \
+      \ Since 2002, we worked with States that want and are able to build a streamlined\
+      \ death registration process known as Electronic Death Registration (EDR). \
+      \ As of January 2022, all 50 States report deaths through the EDR process. \
+      \ We plan to continue making progress in centralizing our death inputs, improving\
+      \ the quality and processing of death data, and updating historical death records\
+      \ in our databases.  In April 2024, for processing death reports, we issued\
+      \ a reminder to technicians to the Death Information Processing System for reports\
+      \ of death for enumerated individuals.  To improve the completeness of our death\
+      \ information, we are in the early stages of contracting with the National Association\
+      \ for Public Health Statistics and Information Systems on the acquisition of\
+      \ historical State death records.  This effort will increase the accuracy, integrity,\
+      \ and completeness of our death data.  \n\nTo address improper payments caused\
+      \ by inability to access the data or information needed, and failure to access\
+      \ data or information needed, we developed a data exchange for the Federal Employment\
+      \ Compensation Act Data.  The Federal Employment Compensation Act (FECA) workers’\
+      \ compensation program, which is administered by the Department of Labor (DOL),\
+      \ provides coverage to three million Federal and Postal workers.  Receipt of\
+      \ FECA benefits can offset Old-Age, Survivors, and Disability Insurance (OASDI)\
+      \ benefits.  We have agreed with DOL to move forward with our request for DOL\
+      \ FECA data.  We are working to finalize the agreement for DOL to provide FECA\
+      \ payment data to assist us in our offset requirements.  In December 2023, the\
+      \ agency established an eCOMP system Memorandum of Understanding with DOL to\
+      \ obtain FECA benefits to allow the agency to offset OASDI benefits and prevent\
+      \ or reduce overpayments.  Technicians can complete an ad hoc query in eCOMP\
+      \ to obtain FECA data, the FECA payment status, dates, amounts and it is immediately\
+      \ available to the technician via the eCOMP portal.  In April 2024, we provided\
+      \ reminders on how to process initial claims with workers compensation lump-sum\
+      \ settlement allegations.  We expect the exchange to be completed in FY 2025.\
+      \  \n\nTo address improper payments caused by inability to access the data or\
+      \ information needed, and failure to access data or information needed, and\
+      \ to reduce the reliance on self-reporting of wages, we are developing new wage\
+      \ reporting tools, such as an automated information exchange with commercial\
+      \ payroll data providers authorized by section 824 of the Bipartisan Budget\
+      \ Act of 2015, now referred to as the Payroll Information Exchange (PIE).  In\
+      \ February 2024, we published a Notice of Proposed Rulemaking (NPRM) describing\
+      \ the agency’s plans for accessing and using information from payroll data providers\
+      \ to reduce improper payments (overpayments and underpayments), which improves\
+      \ service to customers.  The public comment period closed on April 15, 2024.\
+      \  We are carefully considering the comments as we draft the final rule, which\
+      \ is currently planned for publication in winter of FY 2025.  In FY 2024, we\
+      \ completed the automated PIE wage reporting notices and created a limited issue\
+      \ diary to alert technicians when incoming wage and employment information from\
+      \ PIE doesn't automatically post to the SSI record, requiring manual review\
+      \ and action.  We plan to implement PIE in the Spring of 2025 through a phased\
+      \ approach.  This timeline will ensure compliance with rulemaking requirements\
+      \ and allow us to respond to public concerns from the NPRM public comment period."
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2028+
+    Description_Action_Taken: "To address improper payments caused by inability to\
+      \ access data or information needed, we look for Old-Age, Survivors, and Disability\
+      \ Insurance beneficiaries who are potentially entitled for higher benefits.\
+      \  In October 2023, we mailed out more than 15,000 notices to beneficiaries\
+      \ receiving spousal benefits and more than 28,000 to surviving spouses who may\
+      \ potentially be eligible for higher retirement benefits on their own records.\
+      \  In April 2024, we issued a policy reminder to technicians to review cases\
+      \ carefully to determine whether retroactivity is applicable for surviving spouse\
+      \ benefits.  We also developed a “Potential Entitlements” Tactical Plan to educate\
+      \ people who may be eligible for Social Security benefits, particularly Survivors’\
+      \ benefits and Supplemental Security Income.  It also includes targeted outreach\
+      \ by providing materials to third parties and our regional communications staffs.\
+      \  We also conducted a longitudinal study on mailers in fiscal year (FY) 2024.\
+      \  The draft is currently in the review/clearance process.  Communications tactics\
+      \ from our Tactical Plan will continue through calendar year 2024.  \n\nTo address\
+      \ improper payments caused by failure to access data or information needed,\
+      \ we look for Old-Age, Survivors, and Disability Insurance (OASDI) beneficiaries\
+      \ who are working and it may affect their eligibility to receive OASDI benefits.\
+      \  WorkSmart is a tool that identifies Disability Insurance beneficiaries whose\
+      \ earnings put them at risk for being overpaid.  We created the WorkSmart project\
+      \ to reduce Improper Payments by alerting cases quickly after the beneficiary\
+      \ starts to work.  In FY 2024, WorkSmart continued to alert cases for work Continuing\
+      \ Disability Reviews (CDR) based on available earnings data.  WorkSmart will\
+      \ use Payroll Information Exchange data when available to alert cases for a\
+      \ work CDR.  We will continue to use WorkSmart to reduce overpayments."
+    Mitigation_Strategy: app7_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -1638,6 +1715,46 @@ Data_By_Year:
       or delay in input.  To prevent these overpayments from occurring, we provide
       training and reminders for technicians when applicable and automation solutions
       to improve accuracy when possible.
+  overpayments_eligibility:
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '1445.062765'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '553.940727'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '409.434450'
+  - Key: cyp2_dit3_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Age
+    Theme_Description: The biological age of the recipient/beneficiary
+    Value: '34.035043'
+  - Key: cyp2_dit15_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '246.754065'
+  - Key: cyp2_dit10_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '280.789109'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '289.297869'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -1849,6 +1966,44 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 52.29076042
     cyp5: '833.35906235'
+  underpayments_eligibility:
+  - Key: cyp5_dit3_1
+    Payment_Type: Underpayments
+    Theme: Age
+    Theme_Description: The biological age of the recipient/beneficiary
+    Value: '25.000772'
+  - Key: cyp5_dit4_1
+    Payment_Type: Underpayments
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '8.333591'
+  - Key: cyp5_dit6_1
+    Payment_Type: Underpayments
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '466.681075'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '200.006175'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '25.000772'
+  - Key: cyp5_dit11_1
+    Payment_Type: Underpayments
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '58.335134'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '50.001544'
 Description: The OASDI program provides monthly benefits to qualified individuals
   who are retired or disabled, dependents of eligible beneficiaries, and surviving
   dependents of deceased workers.  We maintain high payment accuracy rates in our

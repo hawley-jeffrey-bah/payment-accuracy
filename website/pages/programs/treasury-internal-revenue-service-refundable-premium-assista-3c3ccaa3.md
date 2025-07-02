@@ -221,13 +221,14 @@ Data_By_Year:
       filters for audit selection of returns claiming the Premium Tax Credit (PTC)
       and identify improvement opportunities for next filing season.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: The IRS will continue to collaborate with the Department
-      of Health and Human Services (HHS), Centers for Medicare and Medicaid Services
-      (CMS) through the Premium Tax Credit Workgroup and Sub-Workgroup on issues related
-      to improper payments of the  Premium Tax Credit (PTC).
-    Mitigation_Strategy: app5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
+    Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meetings
+      with stakeholders in the Wage & Investment, Small Business & Self Employed,
+      and IT divisions, to adjust the value of prior-year compliance filters for audit
+      selection of returns claiming the  Premium Tax Credit (PTC) and identify improvement
+      opportunities for the filing season.
+    Mitigation_Strategy: atp4_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
     Description_Action_Taken: "The IRS collaborated with the Department of Health\
@@ -238,14 +239,13 @@ Data_By_Year:
       \ updates and training on various tax-related topics, such as tax law changes\
       \ to refundable tax credits.\t"
     Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
-    Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meetings
-      with stakeholders in the Wage & Investment, Small Business & Self Employed,
-      and IT divisions, to adjust the value of prior-year compliance filters for audit
-      selection of returns claiming the  Premium Tax Credit (PTC) and identify improvement
-      opportunities for the filing season.
-    Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: The IRS will continue to collaborate with the Department
+      of Health and Human Services (HHS), Centers for Medicare and Medicaid Services
+      (CMS) through the Premium Tax Credit Workgroup and Sub-Workgroup on issues related
+      to improper payments of the  Premium Tax Credit (PTC).
+    Mitigation_Strategy: app5_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2020
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -313,6 +313,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '881.498000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '38.326000'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '38.326000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -389,26 +407,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: The IRS leveraged data-sharing agreements with the Department
-      of Health and Human Services (HHS), Centers for Medicare and Medicaid Services
-      (CMS) to access critical information that aids in validating eligibility for
-      the Premium Tax Credit (PTC). This data-sharing involves the exchange of key
-      data points, such as income thresholds and enrollment in a qualified health
-      plan. With this information, the IRS can more accurately assess whether taxpayers
-      meet the eligibility requirements for the PTC. Cross Enterprise Sharing allows
-      the IRS to detect discrepancies in taxpayer filings, such as the taxpayer not
-      being in a qualified health plan and prevent improper payments during the return
-      processing stage. An additional root cause of improper payments of refundable
-      tax credits (RTCs), in addition to data needed does not exist and inability
-      to access data, is taxpayer misreporting or misunderstanding of eligibility
-      requirements. Given that RTCs rely heavily on taxpayer self-reported information,
-      taxpayers may inaccurately claim the Premium Tax Credit due to misunderstanding
-      income limits or dependency. By leveraging third-party data sources from CMS,
-      the IRS can verify key elements of returns. This is especially important given
-      the lack of a pre-approval process for these credits.
-    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: The IRS will continue to leverage data-sharing agreements
@@ -429,6 +427,28 @@ Data_By_Year:
       verify key elements of returns. This is especially important given the lack
       of a pre-approval process for these credits.
     Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
+      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
+      Employed, and Information Technology divisions, to review and adjust the value
+      of prior-year compliance filters for audit selection of returns claiming the
+      Premium Tax Credit (PTC). Based on analysis of prior-year data, the IRS refines
+      the IRS filters to better prioritize returns with higher likelihoods of errors;
+      this helps prevent improper payments by intervening earlier in the process.
+      As mentioned, throughout the IRS's history of refundable tax credit management,
+      the primary root causes of refundable tax credit-related improper payments is
+      reliance on taxpayer self-certification of an accurate return and the lack of
+      a pre-approval process. Because taxpayers are not required to prove their eligibility
+      for RTCs upfront, errors (both unintentional and intentional) can occur. Improved
+      compliance filters can catch these issues after returns are filed but before
+      payments are issued, helping to reduce improper payments. The primary result
+      of this approach is enhanced targeting of resources to areas in which errors
+      are most likely to occur. By helping taxpayers file accurate returns upfront,
+      quickly fixing errors that delay refunds and ensuring taxpayers claim the credits
+      and deductions for which they are eligible, the IRS will correct payment accuracy
+      issues without substantially increasing the burden on taxpayers and the IRS.
+    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meeting
@@ -452,28 +472,26 @@ Data_By_Year:
       result of this approach is enhanced targeting of resources to areas in which
       errors are most likely to occur.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
-      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
-      Employed, and Information Technology divisions, to review and adjust the value
-      of prior-year compliance filters for audit selection of returns claiming the
-      Premium Tax Credit (PTC). Based on analysis of prior-year data, the IRS refines
-      the IRS filters to better prioritize returns with higher likelihoods of errors;
-      this helps prevent improper payments by intervening earlier in the process.
-      As mentioned, throughout the IRS's history of refundable tax credit management,
-      the primary root causes of refundable tax credit-related improper payments is
-      reliance on taxpayer self-certification of an accurate return and the lack of
-      a pre-approval process. Because taxpayers are not required to prove their eligibility
-      for RTCs upfront, errors (both unintentional and intentional) can occur. Improved
-      compliance filters can catch these issues after returns are filed but before
-      payments are issued, helping to reduce improper payments. The primary result
-      of this approach is enhanced targeting of resources to areas in which errors
-      are most likely to occur. By helping taxpayers file accurate returns upfront,
-      quickly fixing errors that delay refunds and ensuring taxpayers claim the credits
-      and deductions for which they are eligible, the IRS will correct payment accuracy
-      issues without substantially increasing the burden on taxpayers and the IRS.
-    Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: The IRS leveraged data-sharing agreements with the Department
+      of Health and Human Services (HHS), Centers for Medicare and Medicaid Services
+      (CMS) to access critical information that aids in validating eligibility for
+      the Premium Tax Credit (PTC). This data-sharing involves the exchange of key
+      data points, such as income thresholds and enrollment in a qualified health
+      plan. With this information, the IRS can more accurately assess whether taxpayers
+      meet the eligibility requirements for the PTC. Cross Enterprise Sharing allows
+      the IRS to detect discrepancies in taxpayer filings, such as the taxpayer not
+      being in a qualified health plan and prevent improper payments during the return
+      processing stage. An additional root cause of improper payments of refundable
+      tax credits (RTCs), in addition to data needed does not exist and inability
+      to access data, is taxpayer misreporting or misunderstanding of eligibility
+      requirements. Given that RTCs rely heavily on taxpayer self-reported information,
+      taxpayers may inaccurately claim the Premium Tax Credit due to misunderstanding
+      income limits or dependency. By leveraging third-party data sources from CMS,
+      the IRS can verify key elements of returns. This is especially important given
+      the lack of a pre-approval process for these credits.
+    Mitigation_Strategy: atp5_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2021
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -605,6 +623,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '605.111600'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '26.309200'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '26.309200'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

@@ -1,0 +1,29 @@
+<button
+    type="button"
+    class="usa-tooltip"
+    data-position='{{ include.position | default: "top" }}'
+    title="{{ include.title }}"
+    aria-label="More info about field value"
+    style="
+        padding: 0 0 3px 0;
+        margin: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: none;
+        border: none;
+        vertical-align: middle;
+    "
+    >
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-hidden="true"
+    >
+        <circle cx="12" cy="12" r="10" fill="#005ea2" />
+        <rect x="11" y="10" width="2" height="6" fill="white" />
+        <circle cx="12" cy="7" r="1" fill="white" />
+    </svg>
+</button>

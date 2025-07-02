@@ -33,8 +33,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -334,6 +334,8 @@ detail_CAP5: "For the program reporting rates over 10%, the OIG recommended Amer
   \ deem the NST susceptible, per an audit recommendation. Therefore, NST was not\
   \ required to be reported until FY2024. \n"
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: AmeriCorps’ analysis determined payment recapture audits are not cost
@@ -413,6 +415,9 @@ detail_exs1: "In fiscal year 2024, AmeriCorps is reporting three programs in Pha
   \ onboarding and service is managed and verified by the agency. The improper payment\
   \ rate is well under the $10M threshold and will not be reported in FY 2025.\n"
 detail_pcp12_1: '3.0'
+detail_pcp14: 'The AmeriCorps OIG recommendations: Management agreed to include the
+  National Service Trust to the list of programs susceptible to improper payments
+  and add additional provisions to its grant terms and conditions.'
 detail_raa8: 'No'
 detail_raa9: The risk assessments for RSVP and SCP were optional but were performed
   due to the history of required Phase 2 reporting.

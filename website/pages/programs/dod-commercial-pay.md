@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Confidence_Level: '>95%'
   End_Date: 07/2021
@@ -286,6 +286,22 @@ Data_By_Year:
 
       Department''s Payment Integrity resources and available tools.'
     Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: 'The Department''s Commercial Pay program will establish
+      Defense
+
+      Finance and Accounting Service (DFAS) site and commercial pay system-specific
+      working groups in fiscal year 2024. The primary purpose of this Department-wide
+      working group initiative to ensure the creation of the new standard operating
+      procedures and appropriate milestones are established to reduce technically
+      improper and unknown payments associated with documentation retention to substantiate
+      the payments. DFAS Post-Pay Review & Analysis team will provide training to
+      review teams regarding proper documentation required for government credit card
+      transactions. This Training will be provided to the review teams during the
+      annual kick off meeting on the appropriate documentation required to complete
+      sample packages along with specific examples of acceptable documentation.'
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'The Department''s Commercial Pay program did not have
@@ -324,22 +340,6 @@ Data_By_Year:
       of technically improper payments made when regulatory and/or statutory requirements
       were not met to substantiate the payment.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'The Department''s Commercial Pay program will establish
-      Defense
-
-      Finance and Accounting Service (DFAS) site and commercial pay system-specific
-      working groups in fiscal year 2024. The primary purpose of this Department-wide
-      working group initiative to ensure the creation of the new standard operating
-      procedures and appropriate milestones are established to reduce technically
-      improper and unknown payments associated with documentation retention to substantiate
-      the payments. DFAS Post-Pay Review & Analysis team will provide training to
-      review teams regarding proper documentation required for government credit card
-      transactions. This Training will be provided to the review teams during the
-      annual kick off meeting on the appropriate documentation required to complete
-      sample packages along with specific examples of acceptable documentation.'
-    Mitigation_Strategy: app3_1
   Confidence_Level: 90% to <95%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -392,6 +392,26 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Training
+  cyp7_ucp1: '104.37'
+  cyp7_ucp1_1: 'In order to prove a payment is legal, proper and correct, all documentation
+    associated with the payment must be reviewed. Supporting documentation may include
+    contracts, contract modifications, invoice, receiving reports, and in some cases
+    payment vouchers and funding documents. If the Payment Integrity
+
+    Commercial Pay key supporting documentation, cannot be provided timely during
+    the Payment Integrity Information Act of 2019 (PIIA) Compliance review or is not
+    readily available because it is not properly maintained in various systems then
+    the payment cannot be determined as proper or improper until further
+
+    research is conducted.
+
+
+    The specific documentation that is missing are the original credit card statements.
+    The request for payment is electronically transmitted to the payment system, certified,
+    and released for payment. Without the original documentation supporting the transactions
+    presented for payment, the Department is unable to
+
+    verify if the correct amount was paid.'
   cyp8: 'When a payment cannot be reviewed due to missing or insufficient key supporting
     documentation (KSD), the payment is considered unknown until an accurate determination
     can be made. Occasionally, the KSD is maintained by a different Component or section
@@ -437,6 +457,13 @@ Data_By_Year:
 
       addition, each system has controls in place to prevent improper payments such
       as, duplicate payment logic.'
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '11.840000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -516,6 +543,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '2.56'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '2.560000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

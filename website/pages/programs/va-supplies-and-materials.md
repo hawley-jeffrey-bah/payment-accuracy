@@ -220,7 +220,7 @@ Data_By_Year:
       process was the best mitigation strategy in order to develop stronger internal
       controls and mitigate risks within existing payment processes.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: Actions taken regarding change process included identifying
@@ -298,6 +298,7 @@ Data_By_Year:
   cyp6_atp1_8: Change Process
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '33.07'
   cyp7_ucp4_1: VA is required to validate invoice amounts are in accordance with the
     contract rate prior to issuing payment. Despite having a contract in place that
     includes a price schedule, the invoice price cannot be reconciled to the contract
@@ -329,6 +330,19 @@ Data_By_Year:
       prevent overpayments from occurring by improving controls in the payment processes
       to ensure goods or services are received and by simplifying contract pricing.
       These improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '2.860160'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '5.859840'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -403,6 +417,19 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0.00'
 - Actions_Taken:
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: Actions taken included restructuring existing local
+      and national contracts and rejecting invoices that do not comply with contract
+      requirements, including no receipt for goods or services. Additionally, VA ensured
+      ordering processes were compliant with statute and regulation. These actions
+      were designed to reduce overpayments attributed to failure to access data/information,
+      technically improper payments attributed to statutory requirements of program
+      not met, and unknown payments attributed to being unable to determine whether
+      proper or improper. Change process was the best mitigation strategy in order
+      to develop stronger internal controls and mitigate risks within existing payment
+      processes.
+    Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: Actions planned include improving contract processes
@@ -419,19 +446,6 @@ Data_By_Year:
       was the best mitigation strategy in order to develop stronger internal controls
       and mitigate risks within existing payment processes.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: Actions taken included restructuring existing local
-      and national contracts and rejecting invoices that do not comply with contract
-      requirements, including no receipt for goods or services. Additionally, VA ensured
-      ordering processes were compliant with statute and regulation. These actions
-      were designed to reduce overpayments attributed to failure to access data/information,
-      technically improper payments attributed to statutory requirements of program
-      not met, and unknown payments attributed to being unable to determine whether
-      proper or improper. Change process was the best mitigation strategy in order
-      to develop stronger internal controls and mitigate risks within existing payment
-      processes.
-    Mitigation_Strategy: atp4_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -557,6 +571,7 @@ Data_By_Year:
   cyp6_atp1_8: Change Process
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '65.16'
   cyp7_ucp4_1: VA is required to obtain a proper invoice and validate invoice amounts
     are in accordance with the contract rate prior to issuing payment. A proper invoice
     was missing or despite having a contract in place that includes a price schedule,
@@ -591,6 +606,13 @@ Data_By_Year:
       and Materials is able to validate the correct payment to be made per the invoice
       or contract prior to issuing payment. These improvements will allow for more
       accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '0.310000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

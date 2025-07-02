@@ -167,6 +167,26 @@ Data_By_Year:
     cyp5: '6.6'
 - Actions_Taken:
   - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: SBA is currently in the process of developing a new
+      unified lending platform, which is heavily based on automation of the loan making
+      process.
+    Mitigation_Strategy: app1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "Per Numbered Memo 22-04, the Disaster Internal Controls\
+      \ Division is required to perform quality control and quality assurance audits\
+      \ on an ongoing basis. \n"
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: Corrective actions may include but is not limited to
+      obtaining supporting documentation from the borrower, completing a loan modification,
+      and/or adding clarifying comments to a file; corrective actions are to be completed
+      within 15 days of the final improper payment decision. The SBA provides quarterly
+      training to PDC staff on the causes and prevention of, improper payments.
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: Per Numbered Memo 22-04, training specific to Improper
       Payment Audit findings is required on an ongoing basis.
@@ -178,26 +198,6 @@ Data_By_Year:
       training of the PDC Departments may be necessary, and as a preventative measure
       to reduce potentially improper payments.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: SBA is currently in the process of developing a new
-      unified lending platform, which is heavily based on automation of the loan making
-      process.
-    Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: Corrective actions may include but is not limited to
-      obtaining supporting documentation from the borrower, completing a loan modification,
-      and/or adding clarifying comments to a file; corrective actions are to be completed
-      within 15 days of the final improper payment decision. The SBA provides quarterly
-      training to PDC staff on the causes and prevention of, improper payments.
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "Per Numbered Memo 22-04, the Disaster Internal Controls\
-      \ Division is required to perform quality control and quality assurance audits\
-      \ on an ongoing basis. \n"
-    Mitigation_Strategy: app6_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -259,6 +259,19 @@ Data_By_Year:
       \ a loan modification, and/or adding clarifying comments to the case file. In\
       \ addition, SBA provides reoccurring training to staff on causes and prevention\
       \ of improper payments. \n"
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '16.565000'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '16.565000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -292,19 +305,26 @@ Data_By_Year:
     Financial: 1.16
     Inability_to_Access_Data: 0.0
     cyp5: '1.16'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1.160000'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Quarterly training on the causes and prevention of improper
+      payments will continue into FY2025
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: SBA provides quarterly training to loan approval staff
       on the causes of and prevention of improper payments.  Training is an ongoing
       process.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Quarterly training on the causes and prevention of improper
-      payments will continue into FY2025
-    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -376,6 +396,13 @@ Data_By_Year:
       also verifies that the amount of loan is commensurate with the amount of damage.  Finally,
       SBA reviews the actual disbursement to determine that the monies are provided
       to the right person, in the right amount, and for an eligible use of proceeds.
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '24.592132'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -438,6 +465,13 @@ Data_By_Year:
     Financial: 17.944627
     Inability_to_Access_Data: 0.0
     cyp5: '17.94462671'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '17.944627'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

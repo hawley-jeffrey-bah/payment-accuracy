@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Confidence_Level: '>95%'
   End_Date: 07/2021
@@ -370,6 +370,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '63.33'
   cyp7_ucp4_1: Some organizations, within the Department, review and approve Defense
     Travel System (DTS) vouchers without first validating that travelers upload proper
     documentations to justify associated expenses.  The approving officials/certifying
@@ -406,6 +407,13 @@ Data_By_Year:
       for payment without ensuring a proper receipt is attached. Hence, the improper
       payments are within the agency control as the travelers and authorizing officials
       are agency employees.
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '99.010000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -450,6 +458,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '23.15'
+  underpayments_eligibility:
+  - Key: cyp5_dit1_1
+    Payment_Type: Underpayments
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '23.150000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

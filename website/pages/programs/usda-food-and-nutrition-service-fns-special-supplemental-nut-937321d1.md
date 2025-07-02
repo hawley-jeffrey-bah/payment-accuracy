@@ -233,30 +233,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: Food and Nutrition Service (FNS) has implemented several
-      opportunities of training for the Special Supplemental Nutrition Program for
-      Women, Infants, and Children (WIC). Annual training is provided on FNS’ National
-      Management Evaluation (ME) guidance to regional office staff who conduct MEs.
-      The goal of this training to establish standards for FNS to effectively communicate
-      findings and corrective action expectations to State agencies, to provide necessary
-      technical assistance, and to support State agency program improvements. Additional
-      WIC specific ME training is conducted throughout the year to support regional
-      staff by holding bi-monthly meetings to discuss best practices and provide technical
-      assistance, as well as specific technical assistance as needed to improve understanding
-      and compliance of ME activities. Additional training is provided to state agencies
-      through specific technical assistance during oversight activities. Training
-      activities for State agency staff are further identified through the results
-      of an annual target area report. This report looks at national trends of program
-      integrity issues as well as programmatic deficiencies across all State agencies
-      to issue technical assistance, policy memos, and training as needed. FNS has
-      also recently released several resources for WIC State agencies that target
-      improvement in the areas of vendor management and certification. These resources
-      include the WIC Vendor Management and Food Delivery Handbook, a new toolkit
-      on assessing and developing WIC Vendor Peer Group Systems, and an updated tool
-      for assessing WIC Vendor Cost Neutrality.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: A prime example of Food and Nutrition Service (FNS)
@@ -283,6 +259,30 @@ Data_By_Year:
       and integrity. This includes addressing certification and vendor issues that
       could result in improper payments.
     Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: Food and Nutrition Service (FNS) has implemented several
+      opportunities of training for the Special Supplemental Nutrition Program for
+      Women, Infants, and Children (WIC). Annual training is provided on FNS’ National
+      Management Evaluation (ME) guidance to regional office staff who conduct MEs.
+      The goal of this training to establish standards for FNS to effectively communicate
+      findings and corrective action expectations to State agencies, to provide necessary
+      technical assistance, and to support State agency program improvements. Additional
+      WIC specific ME training is conducted throughout the year to support regional
+      staff by holding bi-monthly meetings to discuss best practices and provide technical
+      assistance, as well as specific technical assistance as needed to improve understanding
+      and compliance of ME activities. Additional training is provided to state agencies
+      through specific technical assistance during oversight activities. Training
+      activities for State agency staff are further identified through the results
+      of an annual target area report. This report looks at national trends of program
+      integrity issues as well as programmatic deficiencies across all State agencies
+      to issue technical assistance, policy memos, and training as needed. FNS has
+      also recently released several resources for WIC State agencies that target
+      improvement in the areas of vendor management and certification. These resources
+      include the WIC Vendor Management and Food Delivery Handbook, a new toolkit
+      on assessing and developing WIC Vendor Peer Group Systems, and an updated tool
+      for assessing WIC Vendor Cost Neutrality.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: A prime example of Food and Nutrition Service (FNS)
@@ -309,8 +309,8 @@ Data_By_Year:
       and integrity. This includes addressing certification and vendor issues that
       could result in improper payments.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
     Description_Action_Taken: Food and Nutrition Service (FNS) has implemented several
       opportunities of training for the Special Supplemental Nutrition Program for
       Women, Infants, and Children (WIC). Annual training is provided on FNS’ National
@@ -332,7 +332,7 @@ Data_By_Year:
       include the WIC Vendor Management and Food Delivery Handbook, a new toolkit
       on assessing and developing WIC Vendor Peer Group Systems, and an updated tool
       for assessing WIC Vendor Cost Neutrality.
-    Mitigation_Strategy: app3_1
+    Mitigation_Strategy: atp3_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -379,6 +379,34 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.00'
+  overpayments_eligibility:
+  - Key: cyp3_dit3_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Age
+    Theme_Description: The biological age of the recipient/beneficiary
+    Value: '3.210500'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '25.684000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '16.052500'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '16.052500'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '3.210500'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -445,32 +473,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0.00'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: A prime example of the Food and Nutrition Service (FNS)
-      Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)
-      implementing corrective actions are through WIC oversight. FNS uses management
-      evaluations (MEs) as its primary oversight tool. MEs assure program integrity
-      by assessing WIC State agency compliance with Program requirements, evaluating
-      the accomplishment of WIC Program objectives, and providing technical assistance
-      to State Agencies and supporting efforts to improve and innovate. In FY 2020-2024,
-      FNS' ME target area for WIC was Nutrition Services. Delivering high quality
-      nutrition services is essential to carrying out the Program's mission. The Nutrition
-      Services ME examines how State agencies plan for and deliver nutrition services,
-      including nutrition and breastfeeding education. In addition to the ME target
-      area, FNS also conducts a national risk-based ME assessment to identify State
-      agencies with known program integrity issues. Program integrity issues include
-      issues relating to improper payments, vendor management, certification/eligibility,
-      fraud, or any other issue that poses a high monetary values risk to the Program.
-      The FY 2020-2024 target area also included a focus on updating existing ME materials
-      and technology. The target area supports the United States Department of Agriculture
-      (USDA) and FNS priorities related to providing high quality customer service
-      to WIC State agency partners, as well as ensuring integrity in the WIC Program
-      through the timely resolution of issues identified through MEs. FNS continues
-      to analyze ME data to identify opportunities to improve program administration
-      and integrity. This includes addressing certification and vendor issues that
-      could result in improper payments.
-    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: A prime example of the Food and Nutrition Service (FNS)
@@ -498,6 +500,32 @@ Data_By_Year:
       and integrity. This includes addressing certification and vendor issues that
       could result in improper payments.
     Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: A prime example of the Food and Nutrition Service (FNS)
+      Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)
+      implementing corrective actions are through WIC oversight. FNS uses management
+      evaluations (MEs) as its primary oversight tool. MEs assure program integrity
+      by assessing WIC State agency compliance with Program requirements, evaluating
+      the accomplishment of WIC Program objectives, and providing technical assistance
+      to State Agencies and supporting efforts to improve and innovate. In FY 2020-2024,
+      FNS' ME target area for WIC was Nutrition Services. Delivering high quality
+      nutrition services is essential to carrying out the Program's mission. The Nutrition
+      Services ME examines how State agencies plan for and deliver nutrition services,
+      including nutrition and breastfeeding education. In addition to the ME target
+      area, FNS also conducts a national risk-based ME assessment to identify State
+      agencies with known program integrity issues. Program integrity issues include
+      issues relating to improper payments, vendor management, certification/eligibility,
+      fraud, or any other issue that poses a high monetary values risk to the Program.
+      The FY 2020-2024 target area also included a focus on updating existing ME materials
+      and technology. The target area supports the United States Department of Agriculture
+      (USDA) and FNS priorities related to providing high quality customer service
+      to WIC State agency partners, as well as ensuring integrity in the WIC Program
+      through the timely resolution of issues identified through MEs. FNS continues
+      to analyze ME data to identify opportunities to improve program administration
+      and integrity. This includes addressing certification and vendor issues that
+      could result in improper payments.
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The Food and Nutrition Service (FNS) has implemented
@@ -630,6 +658,34 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit3_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Age
+    Theme_Description: The biological age of the recipient/beneficiary
+    Value: '3.142500'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '25.140000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '15.712500'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '15.712500'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '3.142500'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

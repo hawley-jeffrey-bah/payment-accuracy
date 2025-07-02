@@ -298,6 +298,45 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.00'
+  overpayments_eligibility:
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '36.641955'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '48.606675'
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '50.850060'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '6469.922340'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '835.287015'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '15.703695'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '20.938260'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -362,6 +401,45 @@ Data_By_Year:
     Financial: 1115.486856
     Inability_to_Access_Data: 0.0
     cyp5: '1295.12'
+  underpayments_eligibility:
+  - Key: cyp5_dit4_1
+    Payment_Type: Underpayments
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '4.014872'
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '17.354608'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '14.505344'
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1115.486856'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '142.333688'
+  - Key: cyp5_dit9_1
+    Payment_Type: Underpayments
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '1.295120'
+  - Key: cyp5_dit14_1
+    Payment_Type: Underpayments
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '0.129512'
 - Actions_Taken:
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
@@ -487,6 +565,45 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '81.318510'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '75.897276'
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '52.405262'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '8032.461710'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '717.409966'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '38.852177'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '37.045099'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -561,6 +678,45 @@ Data_By_Year:
     Financial: 1236.670003
     Inability_to_Access_Data: 0.0
     cyp5: '1480.51'
+  underpayments_eligibility:
+  - Key: cyp5_dit4_1
+    Payment_Type: Underpayments
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '10.659672'
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '21.171293'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '10.807723'
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1236.670003'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '198.240289'
+  - Key: cyp5_dit9_1
+    Payment_Type: Underpayments
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '2.812969'
+  - Key: cyp5_dit14_1
+    Payment_Type: Underpayments
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '0.148051'
 Description: SNAP provides food benefits to low-income families to supplement their
   grocery budgets. It is the largest domestic nutrition assistance program. SNAP is
   a Federal program administered by States (All 50 States, D.C., Guam, and the Virgin

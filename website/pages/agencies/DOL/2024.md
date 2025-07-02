@@ -987,6 +987,8 @@ detail_agy1: 'Agency Level "Confirmed Fraud" data is based on combined data from
   is required. However, a preliminary risk assessment found it to be not susceptible.
   Further Risk Assessment and reporting is anticipated for FY25 if outlays continue
   to meet legal thresholds.'
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: "With oversight from the Employment and Training Administration (ETA),\
   \ each state Unemployment Insurance (UI) agency is responsible for promoting and\
   \ maintaining UI program integrity through prevention, detection, investigation,\
@@ -1237,6 +1239,25 @@ detail_exs1: "In FY23, the Department of Labor’s (DOL), Office of Inspector Ge
   \ FPUC, PEUC, and PUA as Phase 0 and is not expected to provide further reporting\
   \ under M-21-19."
 detail_pcp12_1: '3.0'
+detail_pcp14: "FY23 Recommendations\n\"1. Maintain its current focus on increasing\
+  \ technical assistance and funding to states to improve the improper payment reduction\
+  \ strategies in order to reduce the improper payments estimate rate below the 10\
+  \ percent threshold, and demonstrate improvement on the rate;\n2. Update review\
+  \ procedures to ensure formulas are specifically confirmed as part of the annual\
+  \ review process and before the final submission of the Office of Management and\
+  \ Budget data call.; and\n3. Update its policies and procedures over the reporting\
+  \ of PUA information to include outlays after the expiration of the program, until\
+  \ such time as the outlays are no longer greater than the statutory threshold.\"\
+  \n\nPrior Year Recommendations (not closed in FY23)\n1) Maintain management’s current\
+  \ focus on increasing its technical assistance and funding to states to improve\
+  \ the improper payment reduction strategies in order to reduce the improper payments\
+  \ estimate rate below the 10 percent threshold and demonstrate improvement on the\
+  \ rate.\n•\tStatus: This finding was updated and reissued in the current year.\n\
+  \n2) Revise the methodology used to calculate the improper payment information for\
+  \ the FPUC program.\n•\tStatus: This finding was closed in the current year.\n\n\
+  3) Continue to work with OMB to develop an approved Sampling and Estimation Methodology\
+  \ Plan for the PUA program, and publish the resulting improper payment information.\
+  \ \n•\tStatus: This finding was closed in the current year.\n"
 detail_raa8: 'No'
 detail_raa9: 'Previously reporting programs are automatically risk assessed as "susceptible
   for significant IP" until or unless they report outlays or IP rates below the reporting

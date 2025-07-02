@@ -504,8 +504,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -667,6 +667,8 @@ detail_agy1: For both the Old-Age, Survivors, and Disability Insurance and Suppl
   Security Income programs, much of the overpayments occur outside of the agency’s
   control.  However, we continue to find ways to influence change where possible and
   focus on mitigation strategies within our control.
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'We meet the recovery activities program requirements of Payment Integrity
@@ -981,6 +983,19 @@ detail_exs1: 'The most recent Office of the Inspector General (OIG) Payment Inte
 
   '
 detail_pcp12_1: '1.0'
+detail_pcp14: The most recent Office of the Inspector General (OIG) Payment Integrity
+  Information Act of 2019 (PIIA) annual compliance audit was for fiscal year (FY)
+  2023.  In FY 2023, we had two programs reporting estimates above the statutory threshold,
+  our Old-Age and Survivors, Disability Insurance (OASDI) and Supplemental Security
+  Income (SSI) programs.  In the FY 2023 compliance audit, the Social Security OIG
+  concluded the agency was compliant with nine PIIA reporting requirements, but we
+  did not comply with one PIIA reporting requirement to demonstrate improvements to
+  payment integrity or reach a tolerable improper payment and unknown payment rate
+  for the OASDI and SSI programs.  The FY 2023 compliance audit report stated, “While
+  SSA has made progress implementing corrective actions to address improper payments,
+  it still has work to do.”  The FY 2023 compliance audit report included the following
+  recommendation, “We recommend SSA finalize the IP [improper payments] alignment
+  strategy for OASDI computations overpayment deficiency dollars.”
 detail_raa8: 'No'
 detail_raa9: 'Our fiscal year (FY) 2024 improper payment risk assessment of FY 2023
   administrative payments included a review of Payroll and Benefits, State Disability

@@ -225,6 +225,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '506.400857'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -375,6 +382,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '151.512297'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -473,6 +487,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.097751'
+  underpayments_eligibility:
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '0.097751'
 Description: 'In response to the COVID-19 pandemic, FTA received three emergency appropriations
   to support the nationâ€™s public transportation systems. The funding provided relief
   to transit agencies for ongoing operations rather than traditional capital investments.

@@ -35,8 +35,7 @@
         }
         @media (max-width: $tablet) {
             padding: 2rem 0;
-        }
-        @media (max-width: $mobile) {
+
             .hero-text-container {
                 width: 100%;
             }
@@ -200,7 +199,12 @@
 
 .agencies-programs-table-pagination {
     nav {
-        justify-content: right;
+        justify-content: flex-end;
+
+        @media (max-width: $tablet) {
+            justify-content: flex-start;
+        }
+
     }
 
     #pagination-prev, #pagination-next, .usa-not-current {
@@ -219,6 +223,13 @@
 .agencies-programs-filter .grid-container {
     border-radius: 20px;
     padding: 3rem 8rem;
+    @media (max-width: $mobile) {
+        padding: 2rem;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 3rem;
+    }
     h4.filter-header {
         @include default-text-styling($color: $pa-darker-blue, $size: 32px, $weight: 600, $height: 40px);
     }

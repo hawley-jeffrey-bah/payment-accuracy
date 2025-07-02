@@ -3,6 +3,15 @@ Agency: USDA
 Agency_Name: Department of Agriculture
 Data_By_Year:
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Non-competitive Technology Innovation Grants (nTIGs)
+      - Food and Nutrition Service (FNS) released $25M in Fiscal Year (FY) 23 and
+      $50M in FY 24 in non-competitive Technology Innovation Grant (nTIG) funds for
+      Child Nutrition (CN) State agencies to improve Information Technology (IT) systems.
+      FNS continues its work with grant recipients who are using nTIG funds to develop,
+      improve, maintain CN IT systems.
+    Mitigation_Strategy: app1_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q2
     Description_Action_Taken: "Serious Deficiency Proposed Rule\nThe Food and Nutrition\
@@ -71,15 +80,6 @@ Data_By_Year:
       \ will help them meet audit and monitoring requirements and improve overall\
       \ program management."
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Non-competitive Technology Innovation Grants (nTIGs)
-      - Food and Nutrition Service (FNS) released $25M in Fiscal Year (FY) 23 and
-      $50M in FY 24 in non-competitive Technology Innovation Grant (nTIG) funds for
-      Child Nutrition (CN) State agencies to improve Information Technology (IT) systems.
-      FNS continues its work with grant recipients who are using nTIG funds to develop,
-      improve, maintain CN IT systems.
-    Mitigation_Strategy: app1_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 01/2018
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -148,6 +148,30 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit1_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '38.935000'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '38.935000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '38.935000'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '38.935000'
   overpayments_outside:
     Address_Location: 38.935
     Contractor_Provider_Status: 0.0
@@ -305,6 +329,30 @@ Data_By_Year:
     Financial: 32.7375
     Inability_to_Access_Data: 0.0
     cyp5: '130.95'
+  underpayments_eligibility:
+  - Key: cyp5_dit1_1
+    Payment_Type: Underpayments
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '32.737500'
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '32.737500'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '32.737500'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '32.737500'
 Description: USDA's Child and Adult Care Food Program (CACFP) provides federal reimbursement
   through the states to child care centers and family day care homes (FDCH). Sponsoring
   organizations are responsible for immediate oversight of providers. The states are

@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: true
 Hide_Sparklines: true
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.01384257, 0.00051916, 0.07742]'
-Overpayment_Amounts_Recovered: '[0.01382569, 0.00031916, 0.04437]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[0.01384257, 0.07742]'
+Overpayment_Amounts_Recovered: '[0.01382569, 0.04437]'
+Overpayment_Years: '[2022, 2024]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -98,6 +98,8 @@ detail_agy1: "The identification of improper payments associated with awards GNT
   \ earlier in the grant lifecycle.\n•\tReporting and Transparency: Continuing to\
   \ submit comprehensive reports on any identified discrepancies and corrective actions\
   \ to relevant oversight bodies, ensuring full transparency.\n"
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: In accordance with the guidelines set forth in A-123 Appendix C, it
@@ -180,6 +182,7 @@ detail_exs1: 'The Restore Council conducts risk assessments for all programs tha
 
   '
 detail_pcp12_1: null
+detail_pcp14: No recommendations given in the most recent compliance report
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

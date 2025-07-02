@@ -686,7 +686,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Fiscal Serivce  Gulf Coast Restoration Trust Fund
+  Name: Fiscal Serivce Gulf Coast Restoration Trust Fund
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1679,7 +1679,7 @@ Risks:
 - Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
-  Program_Name: Fiscal Serivce  Gulf Coast Restoration Trust Fund
+  Program_Name: Fiscal Serivce Gulf Coast Restoration Trust Fund
   Slug: null
 - Assessments:
   - Fiscal_Year: 2024
@@ -2093,6 +2093,8 @@ detail_CAP5: 'Treasury was not in compliance with PIIA for FY 2023 due to Treasu
   that the IRS can remediate internally, but are in fact the result of factors beyond
   the Agency''s control under the current law and existing authority.'
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: "Invoices processed through the Invoice Processing Platform (IPP) are\
   \ subject to a monthly post payment audit of 10% of the total paid IPP invoices\
   \ for that month.  Invoices not processed through the Invoice Processing Platform\
@@ -2514,6 +2516,29 @@ detail_exs1: "Treasury programs in phase 1 are required to complete a PIIA risk 
   \ to bring the RTC programs into compliance with the PIIA without significant legislative\
   \ action and restructuring."
 detail_pcp12_1: '13.0'
+detail_pcp14: 'The following recommendations were in the Audit of Treasury''s Compliance
+  with the PIIA Requirements for Fiscal Year 2023 (OIG-24-029):
+
+  1. Recommends that Treasury''s Risk and Control Group (RCG) work with the Office
+  of Capital Access (OCA) management to consider all information available when answering
+  risk assessment questions to ensure adequate completion and conclusion of susceptibility
+  for these program-specific risk assessments.
+
+  2. Recommends Treasury''s RCG require OCA management to conduct and provide an updated
+  analysis and justification memo that takes into consideration known and likely improper
+  payments made to recipients at all levels as reflected in audits and other information,
+  that might impact its conclusion on whether payment recapture audits are cost-effective
+  for its pandemic relief programs.
+
+  3. Recommends Treasury''s RCG emphasize the requirement that Components review for
+  completeness and accuracy the tracking sheet used to determine the fund groups that
+  have expended over $1,000,000 and would therefore need to provide evidence of either
+  a payment recapture audit or a justification memo by Treasury''s due dates. Further,
+  RCG should complete a thorough review of the tracking sheets submitted by Components
+  for completeness and accuracy.
+
+  4. Recommends Treasury''s RCG works with all components to accurately complete and
+  review the program-specific risk assessments.'
 detail_raa8: 'Yes'
 detail_raa9: In FY 24, Treasury required federal financial assistance programs to
   complete a risk assessment addendum that focused on controls around primary recipients

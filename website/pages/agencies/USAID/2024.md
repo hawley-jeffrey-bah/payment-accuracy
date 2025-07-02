@@ -1,6 +1,6 @@
 ---
 Agency: USAID
-Agency_Name: International Assistance Programs (USAID)
+Agency_Name: Agency for International Development
 Confirmed_Fraud: null
 Eligibility_Themes: []
 Fiscal_Year: 2024
@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -205,7 +205,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 113-021 BEL  SO 2.1 CITIZEN PARTICIPATION
+  Name: 113-021 BEL SO 2.1 CITIZEN PARTICIPATION
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -217,7 +217,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 114-013 GEO  SO 1.3 PRIVATE ENTERPRISE GROWTH
+  Name: 114-013 GEO SO 1.3 PRIVATE ENTERPRISE GROWTH
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1009,7 +1009,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 190-041 IRL  SO 4.1 SPECIAL INITIATIVES
+  Name: 190-041 IRL SO 4.1 SPECIAL INITIATIVES
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1177,7 +1177,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 279-005  Increased Use of Reproductive, Maternal and Child Health
+  Name: 279-005 Increased Use of Reproductive, Maternal and Child Health
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2377,7 +2377,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 517-010  Health and Population
+  Name: 517-010 Health and Population
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2401,7 +2401,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '519-021 Ruling Justly:  More Responsive, Transparent Governance'
+  Name: '519-021 Ruling Justly: More Responsive, Transparent Governance'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2413,7 +2413,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '519-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '519-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2425,7 +2425,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '520-021 Ruling Justly:  More Responsive, Transparent Governance'
+  Name: '520-021 Ruling Justly: More Responsive, Transparent Governance'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2437,7 +2437,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '520-022 Economic Freedom:  Open, Diversified, Expanding Economies'
+  Name: '520-022 Economic Freedom: Open, Diversified, Expanding Economies'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2449,7 +2449,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '520-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '520-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2521,7 +2521,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '522-021 Ruling Justly:  More Responsive, Transparent Governance'
+  Name: '522-021 Ruling Justly: More Responsive, Transparent Governance'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2533,7 +2533,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '522-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '522-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2581,7 +2581,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '523-021 Ruling Justly:  More Responsive, Transparent Governance'
+  Name: '523-021 Ruling Justly: More Responsive, Transparent Governance'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2593,7 +2593,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '523-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '523-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2605,7 +2605,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '524-021 Ruling Justly:  More Responsive, Transparent Governance'
+  Name: '524-021 Ruling Justly: More Responsive, Transparent Governance'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2617,7 +2617,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '524-022 Economic Freedom:  Open, Diversified, Expanding Economies'
+  Name: '524-022 Economic Freedom: Open, Diversified, Expanding Economies'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2629,7 +2629,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '524-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '524-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2809,7 +2809,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '596-022 Economic Freedom:  Open, Diversified, Expanding Economies'
+  Name: '596-022 Economic Freedom: Open, Diversified, Expanding Economies'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -2821,7 +2821,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '596-023 Investing in People:  Healthier, Better-Educated People'
+  Name: '596-023 Investing in People: Healthier, Better-Educated People'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -3277,7 +3277,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '621-001 SO1:  INCREASED USE OF FP/MCH AND HIV/AIDS PREVENTIVE MEASUR'
+  Name: '621-001 SO1: INCREASED USE OF FP/MCH AND HIV/AIDS PREVENTIVE MEASUR'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4453,7 +4453,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-101 EG:  Open, Competitive Economies Promoted'
+  Name: '905-101 EG: Open, Competitive Economies Promoted'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4465,7 +4465,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-111 EIT:  Access to Critical Infrastructure Improved'
+  Name: '905-111 EIT: Access to Critical Infrastructure Improved'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4477,7 +4477,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-112 AG (Mid-East Agriculture Research):  Increased Technical  Co'
+  Name: '905-112 AG (Mid-East Agriculture Research): Increased Technical Co'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4489,7 +4489,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-201 PR:  Capacity of the Poor to Pursue Productive Livelihoods I'
+  Name: '905-201 PR: Capacity of the Poor to Pursue Productive Livelihoods I'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4501,7 +4501,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-301 ED:  Educated Populace and Skilled Workforce Developed'
+  Name: '905-301 ED: Educated Populace and Skilled Workforce Developed'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4513,7 +4513,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-401 WID:  Gender Considerations in USAID''s Development, Humanita'
+  Name: '905-401 WID: Gender Considerations in USAID''s Development, Humanita'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4525,7 +4525,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-501 DC:  Local Private Capital Mobilized to Provide Finance for'
+  Name: '905-501 DC: Local Private Capital Mobilized to Provide Finance for'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4537,7 +4537,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-701 ESP:  Global Environmental and Science Policies Mobilized to'
+  Name: '905-701 ESP: Global Environmental and Science Policies Mobilized to'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4549,7 +4549,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-801 NRM:  Management for Conservation and Sustainable Use of Nat'
+  Name: '905-801 NRM: Management for Conservation and Sustainable Use of Nat'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4561,7 +4561,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: '905-901 AG:  The Agricultural Sector''s Contribution to Economic Grow'
+  Name: '905-901 AG: The Agricultural Sector''s Contribution to Economic Grow'
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -6215,6 +6215,8 @@ detail_agy1: The Agency is currently fostering a self-reporting improper payment
   has provided the Agency the competitive advantage of identifying areas of improper
   payments vulnerabilities.  This self-reporting is performed in addition to the regulatory
   formulas for identification and reporting of improper payments.
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: To complement its extensive pre-payment controls, USAID has implemented
@@ -6309,6 +6311,9 @@ detail_exs1: "USAID remains dedicated to preventing and reducing Improper Paymen
   \ scrutiny on grants and contracts, which make up a significant portion of USAID’s\
   \ expenditures.\n\n"
 detail_pcp12_1: null
+detail_pcp14: 'The OIG made no recommendation to the FY 2023 Agency Financial Report.
+
+  '
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

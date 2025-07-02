@@ -164,6 +164,24 @@ Data_By_Year:
       \ its manual review vendor have robust quality assurance processes and continuously\
       \ update training materials and resources for manual reviews. \n"
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "Through USAC's Risk Management Council meetings, the\
+      \ different\nUSF program teams discussed strategic initiatives and risk that\
+      \ may impact USAC’s goals. The Risk Management Council meetings will continue\
+      \ to provide an opportunity to analyze and respond to identified changes and\
+      \ related risks to maintain an effective internal control system as well as\
+      \ effective enterprise systems management. \n"
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q1
+    Description_Action_Taken: "Through USAC's Risk Management Council meetings, the\
+      \ different\nUSF program teams discussed strategic initiatives and risk that\
+      \ may impact USAC’s goals. The Risk Management Council meetings provide an opportunity\
+      \ to analyze and respond to identified changes and related risks to maintain\
+      \ an effective internal control system as well as effective enterprise systems\
+      \ management. \n"
+    Mitigation_Strategy: atp5_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q1
     Description_Action_Taken: 'Monthly meetings are held between USAC’s Audit and
@@ -184,24 +202,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "Through USAC's Risk Management Council meetings, the\
-      \ different\nUSF program teams discussed strategic initiatives and risk that\
-      \ may impact USAC’s goals. The Risk Management Council meetings will continue\
-      \ to provide an opportunity to analyze and respond to identified changes and\
-      \ related risks to maintain an effective internal control system as well as\
-      \ effective enterprise systems management. \n"
-    Mitigation_Strategy: app5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q1
-    Description_Action_Taken: "Through USAC's Risk Management Council meetings, the\
-      \ different\nUSF program teams discussed strategic initiatives and risk that\
-      \ may impact USAC’s goals. The Risk Management Council meetings provide an opportunity\
-      \ to analyze and respond to identified changes and related risks to maintain\
-      \ an effective internal control system as well as effective enterprise systems\
-      \ management. \n"
-    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'Monthly meetings are held between USAC’s Audit and
@@ -261,6 +261,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '11.501000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -309,30 +316,17 @@ Data_By_Year:
       these meetings, corrective actions are discussed to prevent similar findings
       in the future.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: 'Through USAC''s Risk Management Council meetings, the
-      different
-
-      USF program teams discussed strategic initiatives and risk that may impact USAC’s
-      goals. The Risk Management Council meetings provide an opportunity to analyze
-      and respond to identified changes and related risks to maintain an effective
-      internal control system as well as effective enterprise systems
-
-      management.'
-    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'USAC will continue to conduct outreach which includes
-      updates to the
+    Description_Action_Taken: 'Through USAC''s Risk Management Council meetings, the
 
-      website training materials, conducting webinar(s) focused on common audit findings,
-      prior PQA reviews and communicating best practices based on the observations.
-      USAC provides annual training and implemented an Online Training Library to
-      provide program participants with tools that they can access at
+      different USF program teams discussed strategic initiatives and risk that may
+      impact USAC’s goals. The Risk Management Council meetings will continue to provide
+      an opportunity to analyze and respond to identified changes and related risks
+      to maintain an effective internal control system as well as effective
 
-      their convenience.'
-    Mitigation_Strategy: app3_1
+      enterprise systems management.'
+    Mitigation_Strategy: app5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: USAC will continue to hold monthly meetings between
@@ -351,15 +345,28 @@ Data_By_Year:
     Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
+    Description_Action_Taken: 'USAC will continue to conduct outreach which includes
+      updates to the
+
+      website training materials, conducting webinar(s) focused on common audit findings,
+      prior PQA reviews and communicating best practices based on the observations.
+      USAC provides annual training and implemented an Online Training Library to
+      provide program participants with tools that they can access at
+
+      their convenience.'
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
     Description_Action_Taken: 'Through USAC''s Risk Management Council meetings, the
+      different
 
-      different USF program teams discussed strategic initiatives and risk that may
-      impact USAC’s goals. The Risk Management Council meetings will continue to provide
-      an opportunity to analyze and respond to identified changes and related risks
-      to maintain an effective internal control system as well as effective
+      USF program teams discussed strategic initiatives and risk that may impact USAC’s
+      goals. The Risk Management Council meetings provide an opportunity to analyze
+      and respond to identified changes and related risks to maintain an effective
+      internal control system as well as effective enterprise systems
 
-      enterprise systems management.'
-    Mitigation_Strategy: app5_1
+      management.'
+    Mitigation_Strategy: atp5_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -442,6 +449,19 @@ Data_By_Year:
       cause of the errors identified in the assessments and will perform updates to
       training and materials related to the review of eligibility documentation and
       provide individual coaching for reviewers.
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.570000'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '46.330000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

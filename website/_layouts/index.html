@@ -5,7 +5,7 @@ permalink: /
 
 <div id="main-content" role="main" class="index-container">
   <section class="index-header-section pa-blue-background border-bottom-205 border-blue border-width-105">
-    <div class="grid-container position-relative">
+    <div class="grid-container position-relative z-0">
       <div class="grid-row position-relative">
         <img 
             class="home-header-graphic position-absolute top-2 display-none desktop:display-block"
@@ -23,9 +23,11 @@ permalink: /
   <section class="spending-trends-section bg-white">
     <div class="grid-container">
       <div class="grid-row">
-        <h3 class="spending-trends-header">Government-wide Spending Trends</h3>
+        <div class="grid-col-12">
+          <h3 class="spending-trends-header">Government-wide Spending Trends</h3>
+        </div>
       </div>
-      <ul class="usa-card-group grid-row grid-gap-6 spending-trends-cards">
+      <ul class="usa-card-group grid-row spending-trends-cards">
         <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
           {% assign Chart_Caption = "(Based on reported Government-wide spending in FY " | append: page.fiscal_year | append: ")" %}
           {% include _sparklines-chart.html
@@ -94,82 +96,86 @@ permalink: /
           <p class="text-base margin-y-1">A look at if Federal agencies’ are meeting targets for the reduction and recovery of improper payments.</p>
         </div>
         <div class="grid-col-12 desktop:grid-col-6">
-          <table class="usa-table usa-table--borderless margin-0 top-performing-table">
-            <caption class="text-ink margin-y-1">Highest Performing Agencies</caption>
-            <thead>
-              <tr>
-                <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
-                <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
-                <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for agency in page.highest_performing_agencies %}
-              <tr>
-                <th scope="row" class="agency-col">
-                  <div class="grid-container padding-0">
-                    <div class="grid-row">
-                      <div class="grid-col-auto display-flex">
-                        <img
-                          class="agency-icon flex-align-self-center padding-105"
-                          src="/assets/img/increase.svg"
-                          alt="increase icon"
-                        />
-                      </div>
-                      <div class="grid-col agency-text-cell flex-align-self-center">
-                        <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
-                        <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+          <h5 class="text-ink margin-y-1">Highest Performing Agencies</h5>
+          <div class="overflow-x-scroll">
+            <table class="usa-table usa-table--borderless margin-0 top-performing-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
+                  <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
+                  <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for agency in page.highest_performing_agencies %}
+                <tr>
+                  <th scope="row" class="agency-col">
+                    <div class="grid-container padding-0">
+                      <div class="grid-row">
+                        <div class="grid-col-auto display-flex">
+                          <img
+                            class="agency-icon flex-align-self-center padding-105"
+                            src="/assets/img/increase.svg"
+                            alt="increase icon"
+                          />
+                        </div>
+                        <div class="grid-col agency-text-cell flex-align-self-center">
+                          <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
+                          <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </th>
-                <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
-                <td class="text-middle text-center targets-met-col">
-                  <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+                  </th>
+                  <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
+                  <td class="text-middle text-center targets-met-col">
+                    <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="grid-col-12 desktop:grid-col-6">
-          <table class="usa-table usa-table--borderless margin-0 declining-table">
-            <caption class="text-ink margin-y-1">Lowest Performing Agencies</caption>
-            <thead>
-              <tr>
-                <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
-                <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
-                <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for agency in page.lowest_performing_agencies %}
-              <tr>
-                <th scope="row" class="agency-col">
-                  <div class="grid-container padding-0">
-                    <div class="grid-row">
-                      <div class="grid-col-auto display-flex">
-                        <img
-                          class="agency-icon flex-align-self-center padding-105"
-                          src="/assets/img/decrease.svg"
-                          alt="decrease icon"
-                        />
-                      </div>
-                      <div class="grid-col agency-text-cell flex-align-self-center">
-                        <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
-                        <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+          <h5 class="text-ink margin-y-1">Lowest Performing Agencies</h5>
+          <div class="overflow-x-scroll">
+            <table class="usa-table usa-table--borderless margin-0 declining-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-middle text-left agency-header agency-col">Agency</th>
+                  <th scope="col" class="text-middle text-center program-num-col">High Priority Program(s)</th>
+                  <th scope="col" class="text-middle text-center targets-met-col">Improper Payment Percentage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for agency in page.lowest_performing_agencies %}
+                <tr>
+                  <th scope="row" class="agency-col">
+                    <div class="grid-container padding-0">
+                      <div class="grid-row">
+                        <div class="grid-col-auto display-flex">
+                          <img
+                            class="agency-icon flex-align-self-center padding-105"
+                            src="/assets/img/decrease.svg"
+                            alt="decrease icon"
+                          />
+                        </div>
+                        <div class="grid-col agency-text-cell flex-align-self-center">
+                          <div class="grid-row agency-abbrev text-underline"><a href="/agency/{{ agency.Agency }}">{{ agency.Agency }}</a></div>
+                          <div class="grid-row agency-name text-base">{{ agency.Agency_Name }}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </th>
-                <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
-                <td class="text-middle text-center targets-met-col">
-                  <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+                  </th>
+                  <td class="text-middle text-center program-num-col">{{ agency.High_Priority_Programs }}</td>
+                  <td class="text-middle text-center targets-met-col">
+                    <div class="target-met-cell padding-y-05 padding-x-1">{{ agency.Improper_Payments_Rate }}%</div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

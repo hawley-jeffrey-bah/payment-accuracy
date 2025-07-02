@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -150,6 +150,8 @@ detail_agy1: MCC continues to have low identified improper payments totaling $0.
   in FY 2024.  Overall, MCC recovered $0.61 million in FY 2024 which included prior
   year improper payments.  MCC will continue to rely on the strength of MCC's internal
   controls and oversight, and diligently work to recover the remaining funds.
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: MCC concluded recovery audits would not be cost effective and benefit
@@ -212,6 +214,8 @@ detail_exs1: 'The USAID Office of Inspector General (OIG) concluded that the age
   to maintain a payment integrity environment with strong internal controls and low
   improper payments.'
 detail_pcp12_1: null
+detail_pcp14: MCC did not receive any recommendations in the most recent OIG PIIA
+  Compliance Review.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

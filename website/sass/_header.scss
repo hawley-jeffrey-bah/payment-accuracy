@@ -1,6 +1,9 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
 // Header-specific styles
 header.payment-accuracy-header.usa-header.usa-header--basic.header.homepage {
-    background-color: #112F4E;
+    background-color: $pa-dark-blue;
     
     a {
         color: white;
@@ -16,6 +19,10 @@ header.payment-accuracy-header.usa-header.usa-header--basic.header.homepage {
         font-style: normal;
         font-weight: 500;
         line-height: 16px;
+    }
+
+    nav.usa-nav {
+        background-color: $pa-dark-blue;
     }
 }
 
@@ -39,6 +46,10 @@ header.payment-accuracy-header.usa-header.usa-header--basic.header.homepage {
         font-style: normal;
         font-weight: 500;
         line-height: 40px;
+
+        @media (max-width: 430px) {
+            display: none;
+        }
     }
 
     .usa-nav__primary .usa-nav__primary a:hover

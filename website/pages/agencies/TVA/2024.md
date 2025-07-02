@@ -37,7 +37,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Charge Card Program - Tennessee Valley Authority '
+  Name: Charge Card Program - Tennessee Valley Authority
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -49,7 +49,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Payroll Program - Tennessee Valley Authority '
+  Name: Payroll Program - Tennessee Valley Authority
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -61,7 +61,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Supply Chain '
+  Name: Supply Chain
 PIIA2019_NonCompliant_Programs: []
 Payment_Accuracy_Amounts: '[]'
 Payment_Accuracy_Rate_Max: 0
@@ -101,6 +101,8 @@ detail_agy1: 'Tennessee Valley Authority is subject to Sarbanes-Oxley requiremen
   Office of
 
   Inspector General audits the work of the external auditor.'
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: Tennessee Valley Authority conducts recapture audits by looking for
   duplicate payments, self-reporting, and vendor inquiries. Additionally, a third-party
   auditor is utilized to recover monies owed to the agency.  The auditor either secures
@@ -151,6 +153,8 @@ detail_exs1: Consistent with the Payment Integrity Information Act of 2019, the 
   Valley Authority has determined that none of its programs or activities are susceptible
   to significant improper payments.
 detail_pcp12_1: null
+detail_pcp14: Tennessee Valley Authority is self-funded and maintains a strong control
+  environment, which is regularly audited by internal and external auditors.
 detail_raa8: 'No'
 detail_raa9: Tennessee Valley Authority programs undertake risk assessments at least
   every three years.

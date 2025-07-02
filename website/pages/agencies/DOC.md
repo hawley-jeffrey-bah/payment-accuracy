@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -235,7 +235,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Census Bureau - Survey of Program Dynamics '
+  Name: Census Bureau - Survey of Program Dynamics
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -283,7 +283,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Economic Development Adminsitration (EDA) - Salaries and Expenses '
+  Name: Economic Development Adminsitration (EDA) - Salaries and Expenses
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -355,7 +355,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Miniority Business Development Agency (MBDA) '
+  Name: Miniority Business Development Agency (MBDA)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -367,8 +367,8 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Miniority Business Development Agency (MBDA) - Minority Business Development
-    and Advocacy '
+  Name: Miniority Business Development Agency (MBDA) - Minority Business Development
+    and Advocacy
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -565,7 +565,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'National Telecommunications and Information Administration (NTIA) '
+  Name: National Telecommunications and Information Administration (NTIA)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -748,8 +748,8 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'National Telecommunications and Information Administration (NTIA) State and
-    Local Grant Implementation Program '
+  Name: National Telecommunications and Information Administration (NTIA) State and
+    Local Grant Implementation Program
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -761,7 +761,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Office of Inspector General (OIG) - Department of Commerce '
+  Name: Office of Inspector General (OIG) - Department of Commerce
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1220,6 +1220,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: OMB Circular A-123, Appendix C provides guidance for agencies to determine
@@ -1278,6 +1280,8 @@ detail_exs1: 'The Department of Commerce (DOC) Office of Inspector General concl
 
   '
 detail_pcp12_1: null
+detail_pcp14: The DOC Inspector General did not identify any actions needed to further
+  improve prevention and reduction measures within the Department.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

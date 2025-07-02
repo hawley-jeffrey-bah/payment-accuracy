@@ -6,7 +6,7 @@ highest_performing_agencies:
   High_Priority_Programs: 0
   Improper_Payments_Rate: 0.0
 - Agency: DOD
-  Agency_Name: Department of Defense Military Programs
+  Agency_Name: Department of Defense
   High_Priority_Programs: 0
   Improper_Payments_Rate: 0.2
 - Agency: OPM

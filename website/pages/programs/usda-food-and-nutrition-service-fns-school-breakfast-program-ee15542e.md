@@ -288,6 +288,38 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
+    Description_Action_Taken: "The School Breakfast Program (SBP) has taken the following\
+      \ Automation corrective actions:  1) Direct Certification with Medicaid:  On\
+      \ July 1, 2023, Food and Nutrition Service (FNS) announced 13 new states have\
+      \ begun participating in the Direct Certification with Medicaid Demonstration\
+      \ Project for School Year 2023-2024. The total number of states participating\
+      \ in the demonstration project will now be 38. \n2) Non-competitive Technology\
+      \ Innovation Grants (nTIGs):  In Fiscal Year 2021, FNS released $50M in non-competitive\
+      \ Technology Innovation Grant (nTIG) funds for Child Nutrition State agencies\
+      \ to improve information technology (IT) systems. FNS continues work with grant\
+      \ recipients using funds to develop, improve, and maintain Child Nutrition IT\
+      \ systems."
+    Mitigation_Strategy: atp1_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
+    Description_Action_Taken: 'The School Breakfast Program (SBP) has taken the following
+      Training corrective actions:  National training webinars:  Food and Nutrition
+      Service (FNS) held Administrative Review (AR) webinars for State agency staff,
+      providing learning materials on how to complete ARs, including timeline, resources
+      needed when conducting an AR (to include the oversight of eligibility), claiming,
+      and meal pattern.'
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: Food and Nutrition Service expects that the overall
+      improvement of information technology systems by non-competitive Technology
+      Innovation Grant recipients administering School Breakfast Program (SBP), will
+      improve the State Agency's ability to train, monitor, provide technical assistance,
+      and resolve payment inaccuracies such as overpayments that fall outside of Agency
+      control.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
     Description_Action_Taken: 'The School Breakfast Program (SBP) has taken the following
       Change Process corrective actions:  Community Eligibility Provision (CEP) Proposed
       Rule:  USDA Food and Nutrition Service published a CEP Proposed Rule on March
@@ -310,38 +342,6 @@ Data_By_Year:
       direct certification improvements, and improved opportunities to support streamlined
       automation and efficient processes at the local level.'
     Mitigation_Strategy: app1_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: Food and Nutrition Service expects that the overall
-      improvement of information technology systems by non-competitive Technology
-      Innovation Grant recipients administering School Breakfast Program (SBP), will
-      improve the State Agency's ability to train, monitor, provide technical assistance,
-      and resolve payment inaccuracies such as overpayments that fall outside of Agency
-      control.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
-    Description_Action_Taken: "The School Breakfast Program (SBP) has taken the following\
-      \ Automation corrective actions:  1) Direct Certification with Medicaid:  On\
-      \ July 1, 2023, Food and Nutrition Service (FNS) announced 13 new states have\
-      \ begun participating in the Direct Certification with Medicaid Demonstration\
-      \ Project for School Year 2023-2024. The total number of states participating\
-      \ in the demonstration project will now be 38. \n2) Non-competitive Technology\
-      \ Innovation Grants (nTIGs):  In Fiscal Year 2021, FNS released $50M in non-competitive\
-      \ Technology Innovation Grant (nTIG) funds for Child Nutrition State agencies\
-      \ to improve information technology (IT) systems. FNS continues work with grant\
-      \ recipients using funds to develop, improve, and maintain Child Nutrition IT\
-      \ systems."
-    Mitigation_Strategy: atp1_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
-    Description_Action_Taken: 'The School Breakfast Program (SBP) has taken the following
-      Training corrective actions:  National training webinars:  Food and Nutrition
-      Service (FNS) held Administrative Review (AR) webinars for State agency staff,
-      providing learning materials on how to complete ARs, including timeline, resources
-      needed when conducting an AR (to include the oversight of eligibility), claiming,
-      and meal pattern.'
-    Mitigation_Strategy: atp3_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 06/2018
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -412,6 +412,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.00'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '107.157600'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '11.761200'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '11.761200'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -510,39 +528,25 @@ Data_By_Year:
     Financial: 56.0736
     Inability_to_Access_Data: 0.0
     cyp5: '63.72'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '56.073600'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '3.823200'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '3.823200'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The Food and Nutrition Service (FNS) will provide guidance
-      and technical assistance to those states and local education agencies (LEA)
-      that are interested in choosing or have already chosen to take advantage of
-      the newly lowered the minimum Identified Student Percentage (ISP) that expands
-      access to the Community Eligibility Provision (CEP).  Lowering the minimum ISP
-      gives states and LEAs greater flexibility to offer no-cost meals to all enrolled
-      students.  Electing CEP is a voluntary decision made by LEAs based on their
-      unique student populations, and FNS understands that lowering the minimum ISP
-      will result in more schools being eligible for CEP.  However, it is essential
-      to ensure financial viability for newly eligible schools electing CEP at lower
-      ISPs. FNS's guidance and technical assistance will help LEA decisionmakers consider
-      student nutrition, educational, administrative, and financial factors prior
-      to electing CEP.  FNS will provide technical assistance to State agencies and
-      coordinate with Centers for Medicare & Medicaid Services when needed to help
-      ensure their readiness to conduct successful, accurate projects, and understand
-      reporting requirements.  Communication with State agencies will continue through
-      implementation and early period of matching activities.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: As the Food and Nutrition Service (FNS) receives the
-      preliminary results, it will be able to review this first measure of program
-      error since the COVID pandemic, when all meals were served free regardless of
-      family income. Now that schools have returned to using the National School Lunch
-      (NSLP) and School Breakfast Program (SBP) for determining household eligibility,
-      serving healthy, nutritious meals, and claiming reimbursement for those meals,
-      FNS is especially interested in Access, Participation, Eligibility, and Certification
-      (APEC) IV's results to help understand current NSLP/SBP operations as opposed
-      to using pre-COVID improper payment baseline.
-    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'Non-competitive Technology Innovation Grants (nTIGs)
@@ -566,6 +570,18 @@ Data_By_Year:
       real-time edit checks and error messages to school districts as they submit
       data to their States.'
     Mitigation_Strategy: atp1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: As the Food and Nutrition Service (FNS) receives the
+      preliminary results, it will be able to review this first measure of program
+      error since the COVID pandemic, when all meals were served free regardless of
+      family income. Now that schools have returned to using the National School Lunch
+      (NSLP) and School Breakfast Program (SBP) for determining household eligibility,
+      serving healthy, nutritious meals, and claiming reimbursement for those meals,
+      FNS is especially interested in Access, Participation, Eligibility, and Certification
+      (APEC) IV's results to help understand current NSLP/SBP operations as opposed
+      to using pre-COVID improper payment baseline.
+    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q3
     Description_Action_Taken: 'Community Eligibility Provision (CEP) Expansion
@@ -621,6 +637,26 @@ Data_By_Year:
       household application for school meal benefits with an automated data match
       against existing household income records.'
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The Food and Nutrition Service (FNS) will provide guidance
+      and technical assistance to those states and local education agencies (LEA)
+      that are interested in choosing or have already chosen to take advantage of
+      the newly lowered the minimum Identified Student Percentage (ISP) that expands
+      access to the Community Eligibility Provision (CEP).  Lowering the minimum ISP
+      gives states and LEAs greater flexibility to offer no-cost meals to all enrolled
+      students.  Electing CEP is a voluntary decision made by LEAs based on their
+      unique student populations, and FNS understands that lowering the minimum ISP
+      will result in more schools being eligible for CEP.  However, it is essential
+      to ensure financial viability for newly eligible schools electing CEP at lower
+      ISPs. FNS's guidance and technical assistance will help LEA decisionmakers consider
+      student nutrition, educational, administrative, and financial factors prior
+      to electing CEP.  FNS will provide technical assistance to State agencies and
+      coordinate with Centers for Medicare & Medicaid Services when needed to help
+      ensure their readiness to conduct successful, accurate projects, and understand
+      reporting requirements.  Communication with State agencies will continue through
+      implementation and early period of matching activities.
+    Mitigation_Strategy: app3_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 06/2018
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -814,6 +850,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '152.980000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '76.490000'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '76.490000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -971,6 +1025,24 @@ Data_By_Year:
     Financial: 47.985
     Inability_to_Access_Data: 0.0
     cyp5: '95.97'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '47.985000'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '23.992500'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '23.992500'
 Description: 'The School Breakfast Program (SBP) is a federally assisted meal program
 
   operating in public and nonprofit private schools and residential child care institutions.

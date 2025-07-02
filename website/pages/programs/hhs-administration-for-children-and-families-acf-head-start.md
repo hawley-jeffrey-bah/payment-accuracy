@@ -113,6 +113,16 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
 - Actions_Taken:
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: Errors are primarily attributed to failing to adhere
+      to the statutory requirements of the Head Start program.  The training corrective
+      actions taken by HHS include working with grant recipients in areas such as
+      procurement, source documentation, cost allocation, allowability of cost and
+      other common fiscal challenges that lead to payment errors.  HHS also enhanced
+      the Head Start monitoring tool to include transaction reviews.
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: HHS plans to provide ongoing training to recipients
@@ -127,16 +137,6 @@ Data_By_Year:
       on errors discovered through HHS Office of Inspector General audits, HHS program
       reviews, and Single Audits.
     Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: Errors are primarily attributed to failing to adhere
-      to the statutory requirements of the Head Start program.  The training corrective
-      actions taken by HHS include working with grant recipients in areas such as
-      procurement, source documentation, cost allocation, allowability of cost and
-      other common fiscal challenges that lead to payment errors.  HHS also enhanced
-      the Head Start monitoring tool to include transaction reviews.
-    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -176,6 +176,31 @@ Data_By_Year:
   cyp6: '0.00'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp1: '355.59'
+  cyp7_ucp1_1: HHS is unable to determine the specific documentation that the Head
+    Start recipient failed to provide.  In one instance, the limitation was imposed
+    because of an active fraud investigation, which prevented HHS from obtaining any
+    information from the recipient.  In the other instance, the Head Start recipient
+    did not provide transaction level detail to support expenditures.  Therefore,
+    HHS could not determine the nature of the individual expenditures or the documentation
+    required.
+  cyp7_ucp2_1: HHS is unable to determine the specific documentation that the Head
+    Start recipient failed to provide.  In one instance, the limitation was imposed
+    because of an active fraud investigation, which prevented HHS from obtaining any
+    information from the Head Start recipient.  In the other instance, the Head Start
+    recipient did not provide transaction level detail to support expenditures therefore,
+    HHS could not determine the nature of the individual expenditures or the documentation
+    required.
+  cyp7_ucp3_1: HHS is unable to determine the specific documentation that the Head
+    Start recipient failed to provide.  In one instance, the limitation was imposed
+    because the Head Start recipient is the subject of an active fraud investigation,
+    which prevented HHS from obtaining any information from the recipient.  In the
+    other instance, the Head Start recipient did not provide transaction level detail
+    to support expenditures therefore, HHS could not determine the nature of the individual
+    expenditures or the documentation required.  In both scenarios, HHS is unable
+    to determine if the payment is proper or improper without the documentation to
+    conclude if the expenditures qualified as an allowable use of funds under the
+    Head Start program.
   cyp7_ucp4_1: HHS is unable to determine the specific documentation that the Head
     Start recipient failed to provide.  In one instance, the limitation was imposed
     because the Head Start recipient is the subject of an active fraud investigation,
@@ -201,6 +226,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.00'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '187.960000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -264,7 +296,22 @@ Data_By_Year:
     Financial: 9.97
     Inability_to_Access_Data: 0.0
     cyp5: '9.97'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '9.970000'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: HHS Change Process corrective actions planned include
+      engaging expert consultant services to assess approaches to support Head Start
+      funding recipients' processes and HHS internal oversight procedures in the Head
+      Start program.  HHS also plans to issue sub-regulatory guidance to clarify fiscal
+      and operational requirements of the Head Start program.
+    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The training corrective actions taken by HHS included
@@ -275,22 +322,6 @@ Data_By_Year:
     Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: HHS plans to utilize Predictive Analytics as a corrective
-      action in the Head Start program.  HHS will leverage modern technologies to
-      support Head Start funding recipients by monitoring  aspects of recipient financial
-      performance and alerting HHS when a recipient may be moving towards non-compliance
-      with policies and procedures.
-    Mitigation_Strategy: app7_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: HHS Change Process corrective actions planned include
-      engaging expert consultant services to assess approaches to support Head Start
-      funding recipients' processes and HHS internal oversight procedures in the Head
-      Start program.  HHS also plans to issue sub-regulatory guidance to clarify fiscal
-      and operational requirements of the Head Start program.
-    Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
     Description_Action_Taken: HHS will continue to utilize audits as a corrective
       action in the Head Start program. HHS will continue to review Head Start funding
       recipients' transactions to determine if expenditures are properly supported.  HHS
@@ -298,6 +329,14 @@ Data_By_Year:
       reviews and audits by the HHS Office of Inspector General, program reviews,
       and Single Audits.
     Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: HHS plans to utilize Predictive Analytics as a corrective
+      action in the Head Start program.  HHS will leverage modern technologies to
+      support Head Start funding recipients by monitoring  aspects of recipient financial
+      performance and alerting HHS when a recipient may be moving towards non-compliance
+      with policies and procedures.
+    Mitigation_Strategy: app7_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: HHS plans to provide ongoing training to Head Start
@@ -401,6 +440,14 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Audit, Change Process, Training
   cyp7_atp1_8: Training
+  cyp7_ucp1: '933.24'
+  cyp7_ucp1_1: HHS is unable to determine the specific documentation that the Head
+    Start funding recipient failed to provide. In some instances, the Head Start funding
+    recipient did not provide transaction level detail to support expenditures therefore,
+    HHS could not determine the nature of the individual expenditures or the documentation
+    required. In all instances, HHS is unable to determine if the payment is proper
+    or improper without the documentation to conclude if the expenditures qualified
+    as an allowable use of funds under the Head Start program.
   cyp8: Payments are unknown for the Head Start program because at the time of the
     HHS review, the available documentation was not available or sufficient to determine
     if the payments were proper or improper. For two large Head Start funding recipients
@@ -416,6 +463,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '15.720000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -520,6 +574,13 @@ Data_By_Year:
     Financial: 9.19
     Inability_to_Access_Data: 0.0
     cyp5: '9.19'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '9.190000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

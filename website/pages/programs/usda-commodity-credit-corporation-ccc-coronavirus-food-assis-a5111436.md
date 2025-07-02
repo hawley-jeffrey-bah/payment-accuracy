@@ -332,6 +332,13 @@ Data_By_Year:
       entered in the application software.  In addition to the spot checks that will
       be conducted, Farm Service Agency will prioritize the use of existing data to
       pre-fill and pre-populate data fields on current and future ad hoc programs.
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '0.280000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -509,6 +516,13 @@ Data_By_Year:
       \ programs are developed and implemented. To assist in strengthening and mitigating\
       \ potential risks Farm Service Agency will review policies to determine where\
       \ adjustments are needed to improve controls over payment accuracy."
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '27.160000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

@@ -184,13 +184,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '.105'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: FHWA will work with grant recipients to improve project
-      documentation and/or payment processes, or address training deficiencies as
-      applicable for each improper payment. If applicable, FHWA will recover overpayments
-      from the grant recipient.
-    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q2
     Description_Action_Taken: FHWA compared identified improper payments with prior
@@ -198,6 +191,13 @@ Data_By_Year:
       Offices and grant recipients. If applicable, FHWA recovered overpayments from
       the grant recipient.
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: FHWA will work with grant recipients to improve project
+      documentation and/or payment processes, or address training deficiencies as
+      applicable for each improper payment. If applicable, FHWA will recover overpayments
+      from the grant recipient.
+    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -249,6 +249,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '20.465669'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -339,6 +346,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '3.10659903'
+  underpayments_eligibility:
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '3.106599'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -436,6 +450,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '1063.936073'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -541,6 +562,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.798271'
+  underpayments_eligibility:
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '0.798271'
 Description: The Federal Highway Administrationâ€™s (FHWA) Highway Planning and Construction
   (HPC) program supports State and Local Public Agencies in the design, construction,
   and maintenance of the Nationâ€™s highway system as well as various federally and

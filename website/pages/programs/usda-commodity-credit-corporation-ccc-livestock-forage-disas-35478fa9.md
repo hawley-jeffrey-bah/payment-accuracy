@@ -305,6 +305,13 @@ Data_By_Year:
       \ program training on program, payment eligibility, and acreage reporting requirements\
       \ is also planned.\n\n"
     Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: District Directors reviewed the first five program applications
+      received in the Service Center. The Farm Service Agency has implemented a SharePoint
+      system in fiscal year 2023 for those reviews to be documented and to report
+      any identified program weaknesses to the National Office.
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'District Directors will continue to review the first
@@ -323,13 +330,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: District Directors reviewed the first five program applications
-      received in the Service Center. The Farm Service Agency has implemented a SharePoint
-      system in fiscal year 2023 for those reviews to be documented and to report
-      any identified program weaknesses to the National Office.
-    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: "National Payment Eligibility and Payment Limitation\
@@ -414,6 +414,13 @@ Data_By_Year:
       program weaknesses to the National Office.  The agency's National Office Program
       Manager will monitor the SharePoint system to proactively identify any program
       weakness throughout the current program year application period.
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '27.780000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -474,7 +481,38 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.15'
+  underpayments_eligibility:
+  - Key: cyp5_dit2_1
+    Payment_Type: Underpayments
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '0.150000'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The root cause of these improper payments was failure
+      to access data information. Livestock Forage Disaster Program is currently part
+      of Farm Service Agency’s Internal Control roadmap to improve program processes.  1.
+      Currently in development is an improper payment trend analysis tool that has
+      Fiscal Year 2019-2023 improper payment data.  The tool will identify staff,
+      county offices and states with continued improper payment findings.  The tool
+      will allow the agency to target county offices and staff for targeted training
+      along with holding employees accountable, if warranted after training has been
+      provided.  2.  Standardized Training policy for Farm Programs is part of the
+      internal control roadmap for Fiscal Year 2025.  Training guidance would provide
+      standardization for Headquarters, State and County level training.
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The root cause of these improper payments was failure
+      to access data information. Monthly livestock disaster trainings with State
+      office Livestock Forage Disaster Program specialists will continue that will
+      focus on policy review, updates, and commonly asked questions. Monthly calls
+      are recorded and available for state and county office review at the Deputy
+      Administrator for Farm Program’s Livestock Forage Disaster Program training
+      SharePoint site.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The root cause of these improper payments was failure
@@ -491,30 +529,6 @@ Data_By_Year:
       on Deputy Administrator for Farm Program’s Livestock Forage Disaster Program
       Training SharePoint site.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The root cause of these improper payments was failure
-      to access data information. Monthly livestock disaster trainings with State
-      office Livestock Forage Disaster Program specialists will continue that will
-      focus on policy review, updates, and commonly asked questions. Monthly calls
-      are recorded and available for state and county office review at the Deputy
-      Administrator for Farm Program’s Livestock Forage Disaster Program training
-      SharePoint site.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The root cause of these improper payments was failure
-      to access data information. Livestock Forage Disaster Program is currently part
-      of Farm Service Agency’s Internal Control roadmap to improve program processes.  1.
-      Currently in development is an improper payment trend analysis tool that has
-      Fiscal Year 2019-2023 improper payment data.  The tool will identify staff,
-      county offices and states with continued improper payment findings.  The tool
-      will allow the agency to target county offices and staff for targeted training
-      along with holding employees accountable, if warranted after training has been
-      provided.  2.  Standardized Training policy for Farm Programs is part of the
-      internal control roadmap for Fiscal Year 2025.  Training guidance would provide
-      standardization for Headquarters, State and County level training.
-    Mitigation_Strategy: app6_1
   - Action_Taken: Planned
     Completion_Date: FY2026
     Description_Action_Taken: The root cause of these improper payments was failure
@@ -647,6 +661,13 @@ Data_By_Year:
       Commodity Credit Corporation Section 4 and 11 funding during the Fiscal Year
       2025 Commodity Credit Corporation budget request and Working Capital Fund request
       drills.  Estimated funding requirements for system enhancement is $2 million.'
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '102.190000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

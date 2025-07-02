@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -62,6 +62,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: As part of the invoice  payment process, the FEC looks for potential
@@ -105,6 +107,8 @@ detail_exs1: 'FEC is in the first year of the assessment cycle. The FEC performs
   performed during the most recent risk assessment. Business processes have not changed
   during this cycle and the risk remains low. The overall risk was found to be low.'
 detail_pcp12_1: null
+detail_pcp14: The OIG performed an audit of Improper and unknown payments.  The OIG
+  did not report any recommendations.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

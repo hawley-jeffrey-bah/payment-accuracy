@@ -1857,6 +1857,8 @@ detail_agy1: "VA has invested in payment integrity efforts, where appropriate, t
   \ and the data sources contain business rules designed to assist with the identification\
   \ and prevention of improper payments. Payments determined to be duplicates are\
   \ denied before the payment is disbursed."
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: "VA has established recovery audits in a manner that maximizes efficiency;\
   \ therefore, many programs payments are audited for overpayments that can be recovered\
   \ using the same processes and procedures. These are discussed in more detail below.\n\
@@ -2106,6 +2108,14 @@ detail_exs1: "VA has made great progress in the reduction of improper and unknow
   \ agency anticipates the Office of Inspector General will determine the Pension\
   \ program compliant in May 2027 and the PLTSS program compliant in May 2028."
 detail_pcp12_1: '3.0'
+detail_pcp14: In accordance with The Payment Integrity Information Act of 2019 (PIIA),
+  VA’s Inspector General is required to provide recommendations for actions to further
+  improve prevention and reduction of improper and unknown payments within each program
+  reporting above the statutory threshold regardless of compliance status. VA had
+  2 programs reporting estimates above the statutory threshold and the Inspector General
+  recommended reducing improper and unknown payments to below 10% for both programs.
+  The Inspector General did not provide a statement on the programs’ tolerable improper
+  and unknown payment rate status.
 detail_raa8: 'Yes'
 detail_raa9: The FY 2024 risk assessment methodology included several updates to improve
   the reliability of the risk assessment results while ensuring each VA program assesses

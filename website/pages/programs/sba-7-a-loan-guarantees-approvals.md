@@ -309,7 +309,7 @@ Data_By_Year:
       quarterly training.  SBA also provides additional training on specific topics
       throughout the year.
     Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'Specific corrective actions are determined based upon

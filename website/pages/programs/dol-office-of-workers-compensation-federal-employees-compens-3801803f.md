@@ -219,16 +219,7 @@ Data_By_Year:
     Inability_to_Access_Data: 7.54
     cyp5: '7.54'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2027+
-    Description_Action_Taken: 'The program will continue to use training corrective
-      action plans. As a result of staff
-
-      turnover training continues throughout the year and the program utilizes on
-      the spot corrective action and training to ensure issues are identified on the
-      case level.'
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'The agency has a robust training program in place to
@@ -239,6 +230,15 @@ Data_By_Year:
       This corrective action is an iterative and cyclical, OWCP provides ongoing training
       to staff - it is never complete'
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2027+
+    Description_Action_Taken: 'The program will continue to use training corrective
+      action plans. As a result of staff
+
+      turnover training continues throughout the year and the program utilizes on
+      the spot corrective action and training to ensure issues are identified on the
+      case level.'
+    Mitigation_Strategy: app3_1
   Confidence_Level: 90% to <95%
   End_Date: 06/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -305,6 +305,33 @@ Data_By_Year:
       conducts audits of both internal and system processes to identify issues. The
       agency has staff with duties focused on reviewing payment processing to ensure
       compliance with established procedures.
+  overpayments_eligibility:
+  - Key: cyp3_dit6_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '1.674600'
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '49.679800'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '4.465600'
+  - Key: cyp2_dit6_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '0.074400'
+  - Key: cyp2_dit15_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '7.365600'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -372,8 +399,32 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 11.21
     cyp5: '11.21'
+  underpayments_eligibility:
+  - Key: cyp5_dit6_1
+    Payment_Type: Underpayments
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '0.336300'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '9.976900'
+  - Key: cyp5_dit10_1
+    Payment_Type: Underpayments
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '0.896800'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2028+
+    Description_Action_Taken: The program will continue to use training corrective
+      action plans.  As a result of staff turnover training continues through the
+      year and the program utilizes on the spot corrective action and training to
+      ensure issues are identified on the case level.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: The agency has a robust training program in place to
@@ -382,13 +433,6 @@ Data_By_Year:
       available using online platforms.  This corrective action is iterative and cyclical,
       OWCP provides ongoing training to staff - it is never complete.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2028+
-    Description_Action_Taken: The program will continue to use training corrective
-      action plans.  As a result of staff turnover training continues through the
-      year and the program utilizes on the spot corrective action and training to
-      ensure issues are identified on the case level.
-    Mitigation_Strategy: app3_1
   Confidence_Level: 90% to <95%
   End_Date: 06/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -466,6 +510,33 @@ Data_By_Year:
       conducts audits of both internal and system processes to identify issues.  The
       agency has staff with duties focused on reviewing payment processes to ensure
       compliance with established procedures.
+  overpayments_eligibility:
+  - Key: cyp3_dit6_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '20.938000'
+  - Key: cyp3_dit15_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '20.938000'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '30.324000'
+  - Key: cyp2_dit6_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '1.470000'
+  - Key: cyp2_dit15_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '1.470000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -530,6 +601,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '2.77'
+  underpayments_eligibility:
+  - Key: cyp5_dit10_1
+    Payment_Type: Underpayments
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '2.770000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false
