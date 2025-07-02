@@ -500,6 +500,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: GSA's Recovery Audit contractor uses lease contracts and other lease
   documents to develop a detailed monthly rental schedule from lease commencement
   to most recent rent payment. This schedule is then compared to actual payments by
@@ -584,6 +586,10 @@ detail_exs1: 'GSA was found to be compliant in the most recent OIG Annual Compli
   GSA continues to analyze and expand audit recovery areas when warranted based on
   evidence found during the course of the year.'
 detail_pcp12_1: null
+detail_pcp14: The OIG did not provide any recommendations to further improve prevention
+  and reduction of improper payments. The OIG did make one observation, noting a minor
+  error in the summary report detailing GSA’s risk assessment criteria methodology.
+  GSA agreed with the observation and immediately corrected the error.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

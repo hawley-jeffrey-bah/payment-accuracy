@@ -65,6 +65,24 @@ Data_By_Year:
   cyp6: '0'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp2: '17842.224878'
+  cyp7_ucp2_1: 'In the forgiveness sample of 382 loans, lenders did not return sufficient
+    supporting documentation for 193 loans.  The following were among the missing
+    information from lenders/borrowers:
+
+    (1) documentation to support payroll,
+
+    (2) documentation to support the loan amount/inability to support the maximum
+    loan amount,
+
+    (3) documentation to support eligibility or PPP 2nd draw eligibility,
+
+    (4) documentation to support the forgiveness calculation, and,
+
+    (5) documentation to support revenue reduction.
+
+
+    '
   cyp8: In response to the FY 2023 PIIA Compliance Audit conducted by OIG, the SBA
     separated PPP into three payment integrity reporting categories – PPP Approvals,
     PPP Forgiveness, and PPP Purchases, and subsequently initiated the improper payments
@@ -99,6 +117,13 @@ Data_By_Year:
       \  If SBA determined that the loan was not eligible for forgiveness (in whole\
       \ or in part), the payment was considered to be improper; the PPP loan is no\
       \ longer deferred; and, the borrower must begin paying principal and interest."
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '873.928378'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -130,6 +155,13 @@ Data_By_Year:
     Financial: 22.116089
     Inability_to_Access_Data: 0.0
     cyp5: '22.116089'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '22.116089'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -143,7 +175,7 @@ Data_By_Year:
       process and/or (2) internally escalating the loan review of a loan for a loan
       review decision.'
     Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'None of the choices provided apply to SBA''s corrective
@@ -211,6 +243,9 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp2: '61.25680957'
+  cyp7_ucp2_1: Borrowers failed to provide documentation supporting eligible payroll,
+    or documentation supporting the amount of the loan forgiveness requested.
   cyp8: Unknown payments in FY2024 were  the result of borrowers or lenders which
     did not provide requested documentation. Those PPP loans with documentation requests
     outstanding were categorized as “Unknown” payments since the SBA did not have
@@ -232,6 +267,13 @@ Data_By_Year:
       \ calculated correctly.\n\nThe predominate reasons for improper payments in\
       \ PPP Loan Forgiveness were missing or incomplete documentation, and borrower\
       \ and lender errors in calculation.  \n"
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '292.253055'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -293,6 +335,13 @@ Data_By_Year:
     Financial: 25.573755
     Inability_to_Access_Data: 0.0
     cyp5: '25.57375461'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '25.573755'
 Description: 'The CARES Act established the Paycheck Protection Program loans to provide
   economic relief to small businesses and incentivize small businesses to keep their
 

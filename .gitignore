@@ -8,3 +8,4 @@ venv
 /website/.sass-cache
 /website/_site
 __pycache__/
+/data_processing/transformed

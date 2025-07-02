@@ -47,7 +47,7 @@ permalink: /
                 {% unless page.Hide_Sparklines == true or page.Is_Placeholder == true %}
                     <ul class="usa-card-group grid-row grid-gap-6 spending-trends-cards">
                         <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
-                            {% assign Chart_Caption = "(Based on federal funding spent by the agency in FY " | append: page.Fiscal_Year | append: ")" %}
+                            {% assign Chart_Caption = "(Based on federal funding spent by programs susceptible to improper payments within the agency)" %}
                             {% include _sparklines-chart.html
                                 rate_min=page.Payment_Accuracy_Rate_Min
                                 rate_max=page.Payment_Accuracy_Rate_Max
@@ -265,6 +265,18 @@ permalink: /
                                     <h5>Methods Currently Used to Recover Overpayments Identified in Recovery Audits</h5>
                                     <br />
                                     {{ page.detail_ara2_1 | newline_to_br }}
+                                {% endif %}
+
+                                {% if page.detail_ara2_3_2 != nil and page.detail_ara2_3_2 != "" %}
+                                    <h5>Programs Where Recovery Audits Are Not Cost Effective</h5>
+                                    <br />
+                                    {{ page.detail_ara2_3_2 | newline_to_br }}
+                                {% endif %}
+
+                                {% if page.detail_ara2_3 != nil and page.detail_ara2_3 != "" %}
+                                    <h5>Why Recovery Audits Are Not Cost Effective</h5>
+                                    <br />
+                                    {{ page.detail_ara2_3 | newline_to_br }}
                                 {% endif %}
                             </div>
                         </div>

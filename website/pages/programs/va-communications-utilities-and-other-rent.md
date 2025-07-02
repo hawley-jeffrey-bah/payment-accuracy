@@ -306,6 +306,7 @@ Data_By_Year:
   cyp6_atp1_8: Change Process
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '27.74'
   cyp7_ucp4_1: VA is required to validate invoice amounts are in accordance with the
     contract rate prior to issuing payment. Despite having a contract in place that
     includes a price schedule, the invoice price cannot be reconciled to the contract
@@ -337,6 +338,13 @@ Data_By_Year:
       overpayments from occurring by improving controls in the payment processes and
       simplifying contract pricing. These improvements will allow for more accurate
       payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '0.720000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -417,6 +425,19 @@ Data_By_Year:
     Financial: 0.000266
     Inability_to_Access_Data: 0.0
     cyp5: '1.33'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '1.329734'
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.000266'
 - Actions_Taken:
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
@@ -520,6 +541,7 @@ Data_By_Year:
     1.601) and Contract Modifications/General (Part 43.102).'
   cyp6_atp1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '0.73'
   cyp7_ucp4_1: VA is required to validate invoice amounts are in accordance with the
     contract rate prior to issuing payment. Despite having a contract in place that
     includes a price schedule, the invoice price cannot be reconciled to the contract
@@ -551,6 +573,13 @@ Data_By_Year:
       to prevent overpayments from occurring by improving controls in the payment
       processes and simplifying contract pricing. These improvements allowed for more
       accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '3.550000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -652,6 +681,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.42'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '0.420000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

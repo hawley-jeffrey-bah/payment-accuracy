@@ -229,6 +229,16 @@ Data_By_Year:
       strategy because improper and unknown payments resulted from manual processes
       and human error.
     Mitigation_Strategy: app1_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: Actions taken regarding automation included continuing
+      to implement new software that will provide a customized and enhanced tool to
+      streamline claims, automate eligibility determinations, payment processing,
+      detection and prevention of improper payments, and enhance reporting and auditing
+      capabilities. Additionally, VA continued with the post-implementation modernization
+      of the beneficiary travel claims processing software and other systems.
+    Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: Actions planned regarding change process include the
@@ -240,16 +250,6 @@ Data_By_Year:
       process was the best mitigation strategy in order to develop stronger internal
       controls and mitigate risks within existing payment processes.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: Actions taken regarding automation included continuing
-      to implement new software that will provide a customized and enhanced tool to
-      streamline claims, automate eligibility determinations, payment processing,
-      detection and prevention of improper payments, and enhance reporting and auditing
-      capabilities. Additionally, VA continued with the post-implementation modernization
-      of the beneficiary travel claims processing software and other systems.
-    Mitigation_Strategy: atp1_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -314,6 +314,16 @@ Data_By_Year:
   cyp6_atp1_8: Automation
   cyp7_app1_8: Automation, Change Process
   cyp7_atp1_8: Automation
+  cyp7_ucp2: '7.45'
+  cyp7_ucp2_1: VA is required to validate an applicant's eligibility documentation
+    such as income or interfacility (transfer between VA facilities) verification.
+    VA uses projected gross household income and deductible expenses to validate that
+    the applicant is eligible based on income. VA uses the non-VA care authorizations
+    and medical records to verify eligibility to transfer between VA facilities. When
+    review of the payments reveals that the station failed to obtain the eligibility
+    documentation, the payment is considered an unknown payment because the reviewer
+    is unable to discern whether the payment was a proper payment or an improper payment.
+  cyp7_ucp4: '9.58'
   cyp7_ucp4_1: VA is required to validate authorization of transport and care. However,
     the agency currently does not have the documentation necessary to determine if
     the payment is proper or not. Local VA Medical Centers failed to provide authorization
@@ -355,6 +365,25 @@ Data_By_Year:
       calculations. Additionally, system improvements will allow for automation of
       the authorizations and will ensure services are rendered, decreasing human error.
       These improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '5.575500'
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '2.637300'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '80.287200'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -431,8 +460,40 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.56'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '0.560000'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include developing new and enhanced
+      claims' processing training and deploying training resources across various
+      stakeholder groups to ensure more effective communication across target audiences.
+      Additionally, VA will continue establishing and deploying enterprise-wide infrastructure
+      solutions including reviewing the effectiveness of quality assurance and monitoring
+      reporting processes and developing and implementing effective standardized processes.
+      These actions were designed to reduce improper and unknown payment errors associated
+      with statutory requirements of program were not met and unable to determine
+      whether proper or improper. Training was the best mitigation strategy to communicate
+      the importance of consistencies in standard operating procedures.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include continuing with the post-implementation
+      modernization of beneficiary travel claims processing systems. VA enhanced automation
+      action plans to expand use of transportation modalities that will streamline
+      third-party preauthorized claims processing, integrate medical qualifications,
+      and automate contract execution. These actions were designed to address overpayments
+      and underpayments attributed to failure to access data/information, and technically
+      improper payments attributed to statutory requirements of program not met. Automation
+      was the best mitigation strategy because improper and unknown payments resulted
+      from manual processes and human error.
+    Mitigation_Strategy: app1_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: Actions taken included continuing to implement new software
@@ -453,19 +514,6 @@ Data_By_Year:
       was the best mitigation strategy because improper and unknown payments resulted
       from manual processes and human error.
     Mitigation_Strategy: atp1_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include developing new and enhanced
-      claims' processing training and deploying training resources across various
-      stakeholder groups to ensure more effective communication across target audiences.
-      Additionally, VA will continue establishing and deploying enterprise-wide infrastructure
-      solutions including reviewing the effectiveness of quality assurance and monitoring
-      reporting processes and developing and implementing effective standardized processes.
-      These actions were designed to reduce improper and unknown payment errors associated
-      with statutory requirements of program were not met and unable to determine
-      whether proper or improper. Training was the best mitigation strategy to communicate
-      the importance of consistencies in standard operating procedures.
-    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Actions taken included establishing and deploying enterprise-wide
@@ -476,18 +524,6 @@ Data_By_Year:
       to develop stronger internal controls and mitigate risks within existing payment
       processes.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include continuing with the post-implementation
-      modernization of beneficiary travel claims processing systems. VA enhanced automation
-      action plans to expand use of transportation modalities that will streamline
-      third-party preauthorized claims processing, integrate medical qualifications,
-      and automate contract execution. These actions were designed to address overpayments
-      and underpayments attributed to failure to access data/information, and technically
-      improper payments attributed to statutory requirements of program not met. Automation
-      was the best mitigation strategy because improper and unknown payments resulted
-      from manual processes and human error.
-    Mitigation_Strategy: app1_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -612,6 +648,7 @@ Data_By_Year:
   cyp6_atp1_8: Automation
   cyp7_app1_8: Training
   cyp7_atp1_8: Automation, Change Process
+  cyp7_ucp4: '17.53'
   cyp7_ucp4_1: VA is required to validate authorization of transport and care as well
     as contract pricing. However, the agency currently does not have the documentation
     necessary to determine if the payment is proper or not. VA was unable to locate
@@ -654,6 +691,25 @@ Data_By_Year:
       system improvements will allow for automation of the authorizations, closest
       facility, and will ensure services are rendered, decreasing human error. These
       improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '1.491606'
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '6.121620'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '78.606774'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -745,6 +801,19 @@ Data_By_Year:
     Financial: 1.183982
     Inability_to_Access_Data: 0.0
     cyp5: '3.59'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '2.406018'
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1.183982'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

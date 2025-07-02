@@ -161,15 +161,6 @@ Data_By_Year:
     Inability_to_Access_Data: 1.57
     cyp5: '15.21'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: A majority of the improper payments related to the inability
-      to access data/information were the result of policyholders over-reporting insurable
-      acres on rainfall index plans of insurance.  RMA will issue an Informational
-      Memorandum reminding external stakeholders of procedural requirements related
-      to acreage reporting and reiterate the importance of applying these procedures
-      accurately to prevent improper payments.
-    Mitigation_Strategy: app2_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q3
     Description_Action_Taken: A large amount of RMA's improper payments resulting
@@ -179,6 +170,17 @@ Data_By_Year:
       the Apple Crop Policy record requirements in for vertically integrated or direct-marketing
       perennial producers.
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: One type of error leading to improper payments for failure
+      to access data/information resulted from policies established under a unit structure
+      that did not meet the qualifications.  RMA policy and procedure outlines criteria
+      that must be met in order to qualify for the unit structure being requested.  When
+      these qualifications are not met the result is an improper payment. To further
+      assess improper payments associated with unit structure, RMA will conduct a
+      program review in order to determine if Approved Insurance Providers are appropriately
+      applying unit structure requirements.
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: Improper payments resulting from a failure to access
@@ -193,15 +195,13 @@ Data_By_Year:
     Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: One type of error leading to improper payments for failure
-      to access data/information resulted from policies established under a unit structure
-      that did not meet the qualifications.  RMA policy and procedure outlines criteria
-      that must be met in order to qualify for the unit structure being requested.  When
-      these qualifications are not met the result is an improper payment. To further
-      assess improper payments associated with unit structure, RMA will conduct a
-      program review in order to determine if Approved Insurance Providers are appropriately
-      applying unit structure requirements.
-    Mitigation_Strategy: app6_1
+    Description_Action_Taken: A majority of the improper payments related to the inability
+      to access data/information were the result of policyholders over-reporting insurable
+      acres on rainfall index plans of insurance.  RMA will issue an Informational
+      Memorandum reminding external stakeholders of procedural requirements related
+      to acreage reporting and reiterate the importance of applying these procedures
+      accurately to prevent improper payments.
+    Mitigation_Strategy: app2_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2021
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -261,6 +261,19 @@ Data_By_Year:
       has the ability to identify root causes and address deficiencies in the quality
       control processes at the Approved Insurance Provider (AIP) level resulting in
       fewer improper payments within our control.
+  overpayments_eligibility:
+  - Key: cyp3_dit2_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '167.580000'
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '194.120000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -309,28 +322,14 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 2.12
     cyp5: '8.120000000000001'
+  underpayments_eligibility:
+  - Key: cyp5_dit2_1
+    Payment_Type: Underpayments
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '8.120000'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: Improper payments resulting from a failure to access
-      data/information resulted from policies that were established using a unit structure
-      that did not meet the qualifications.  RMA policy and procedure outlines criteria
-      that must be met in order to qualify for the unit structure being requested.  When
-      these qualifications are not met the result can be an improper payment. To address
-      these types of errors, RMA Compliance conducted a program review to evaluate
-      documents and determine if insureds met the criteria for the unit structure
-      requested.
-    Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: 'A large amount of RMA''s improper payments were the
-      result of insured not meeting insurability requirements and inaccurately reporting
-      acreage on Pasture Rangeland Forage policies.  As a result, RMA Compliance issued
-      Information Memorandum: COM-23-003 informing Approved Insurance Providers (AIPs)
-      and their agents to remind insureds that acreage must be suitable and grown
-      for the intended use and that verifiable records are required to be maintained
-      to support acreage reported on the acreage report.'
-    Mitigation_Strategy: atp2_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'To address improper payment associated with the inability
@@ -354,6 +353,27 @@ Data_By_Year:
       are following approved FCIC loss adjustment procedures ensuring the accuracy
       of the indemnities being issued.'
     Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: 'A large amount of RMA''s improper payments were the
+      result of insured not meeting insurability requirements and inaccurately reporting
+      acreage on Pasture Rangeland Forage policies.  As a result, RMA Compliance issued
+      Information Memorandum: COM-23-003 informing Approved Insurance Providers (AIPs)
+      and their agents to remind insureds that acreage must be suitable and grown
+      for the intended use and that verifiable records are required to be maintained
+      to support acreage reported on the acreage report.'
+    Mitigation_Strategy: atp2_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: Improper payments resulting from a failure to access
+      data/information resulted from policies that were established using a unit structure
+      that did not meet the qualifications.  RMA policy and procedure outlines criteria
+      that must be met in order to qualify for the unit structure being requested.  When
+      these qualifications are not met the result can be an improper payment. To address
+      these types of errors, RMA Compliance conducted a program review to evaluate
+      documents and determine if insureds met the criteria for the unit structure
+      requested.
+    Mitigation_Strategy: atp6_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -428,6 +448,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit2_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '573.930000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -479,6 +506,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 5.32
     cyp5: '5.43'
+  underpayments_eligibility:
+  - Key: cyp5_dit2_1
+    Payment_Type: Underpayments
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '5.430000'
 Description: RMA administers the Federal Crop Insurance Program which provides crop
   insurance to farmers and ranchers. Approved Insurance Providers (AIPs) sell and
   service the policies through a partnership with RMA and share in the risk associated

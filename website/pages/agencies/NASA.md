@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -493,7 +493,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Exploration Technology Development Program (ETDP)
+  Name: Exploration Technology Development Program (ETDP)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -1876,6 +1876,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: As permitted by OMB Circular A-123, Appendix C, NASA has determined
@@ -1953,6 +1955,9 @@ detail_exs1: "In its review of NASA’s FY 2023 Payment Integrity Risk Assessmen
   \ (e.g., payment approval processes) and detective controls (e.g., the continuous\
   \ monitoring program).\n"
 detail_pcp12_1: null
+detail_pcp14: In the most recent compliance report, the OIG did not identify any new
+  issues, thus, did not make any new recommendations to further improve prevention
+  and reduction of Improper Payments and Unknown Payments within the Agency.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

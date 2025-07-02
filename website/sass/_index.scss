@@ -60,6 +60,10 @@
             @include default-text-styling($size: 20px, $weight: 400, $height: 36px)
         }
 
+        h5 {
+            @include default-text-styling($color: $pa-black, $size: 22px, $weight: 600, $height: 28px);
+        }
+
         .usa-table thead th {
             background-color: $pa-dark-blue;
             @include default-text-styling($color: $white, $size: 12px, $weight: 600, $height: 14.5px);
@@ -123,10 +127,6 @@
                 text-overflow: ellipsis;
                 display: block;
             }
-        }
-
-        .usa-table caption {
-            @include default-text-styling($color: $pa-black, $size: 22px, $weight: 600, $height: 28px);
         }
     }
 

@@ -34,8 +34,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -240,6 +240,8 @@ detail_CAP5: "In the FY 2023 annual compliance audit, OPM OIG found that OPM’s
   \ as the FEHB Experience-Rated Carriers need time to collect, audit, and report\
   \ their data back to OPM. OPM anticipates being in compliance with PIIA in FY 2025."
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'PIIA allows agencies to i exclude programs with other mechanisms to
@@ -369,6 +371,24 @@ detail_exs1: "OPM is committed to advancing a transparent, accountable, and coll
   \nIn addition to internal controls OPM uses and will continue to use training and\
   \ audits to address improper payment issues."
 detail_pcp12_1: '1.0'
+detail_pcp14: "In the latest compliance audit covering FY 2023 results, OPM’s Inspector\
+  \ General issued five recommendations to further improve prevention of improper\
+  \ payments. The OIG recommended: \n(1) that OPM issue an improper payment estimate\
+  \ for the Federal Employees Health Benefits Program’s that will allow them to be\
+  \ in compliance with the four PIIA requirements for future reporting years; \n(2)\
+  \ that Healthcare and Insurance contact OMB to obtain guidance on how to report\
+  \ an improper payment estimate in a fiscal year when a program has been separated\
+  \ into two different activities to develop an appropriate sampling and estimation\
+  \ methodology plan; \n(3) Risk Management and Internal Control strengthen its internal\
+  \ controls to show that management is performing supervisory control activities\
+  \ (e.g., a supervisory level of review) for all risk assessments conducted and that\
+  \ the review is documented and retained, (e.g., electronic signatures); \n(4) that\
+  \ Retirement Services develop, document, and implement internal controls over the\
+  \ review of all data reported on the Payment Integrity Scorecard prior to the data\
+  \ being published on paymentaccuracy.gov, including, but not limited to, such controls\
+  \ as electronic signatures or supervisory signoffs; and\n (5) that Retirement Services\
+  \ develop and implement additional cost-effective corrective actions, aimed at the\
+  \ root causes of improper payments, to further reduce the improper payments rate."
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

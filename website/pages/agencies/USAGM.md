@@ -1,6 +1,6 @@
 ---
 Agency: USAGM
-Agency_Name: United States Agency for Global Media, BBG
+Agency_Name: United States Agency for Global Media
 Confirmed_Fraud: null
 Eligibility_Themes: []
 Fiscal_Year: 2024
@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -198,6 +198,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: USAGM does not perform recovery audits due to programs not being susceptible
@@ -259,6 +261,10 @@ detail_exs1: "USAGM’s Inspector General concluded that the agency was complian
   \ 2023 recovery rate due to the recovery of a large overpayment in the FY2023 assessment\
   \ cycle.  \n"
 detail_pcp12_1: null
+detail_pcp14: During the evaluation of USAGM’s efforts to prevent and reduce improper
+  payments, OIG did not identify any needed improvements involving improper and unknown
+  payments determination, the associated estimation methodology, or actions necessary
+  to improve prevention and reduction.
 detail_raa8: 'Yes'
 detail_raa9: "USAGM made a change to our Improper Payment methodology for the FY 24\
   \ reporting period.  In prior years, USAGM's risk assessment methodology included\

@@ -477,6 +477,13 @@ def program_specific_sample_data():
                 "cyp6_app1_8": "Value26"
             }
         ],
+        "program_eligibility_information_data_points": [{
+            "Column_names": "cyp5_dit5_1",
+            "Column_values": "4.10",
+            "theme": "Address",
+            "Payment_Type": "Underpayments",
+            "Fiscal_Year": 2024
+        }],
         "program_unknown_payments_data_points": [
             {
                 "Fiscal_Year": 2023,
@@ -512,6 +519,13 @@ def program_specific_sample_data():
                 "cyp26": "cyp26"
             }
         ],
+        "program_unknown_payments_breakdown_data_points": [
+            {
+                "Fiscal_Year": 2023,
+                "Column_names": "cyp7_ucp3",
+                "Column_values": "4"
+            }
+        ],
         "program_corrective_actions_data_points": [
             {
                 "Fiscal_Year": 2023,
@@ -536,7 +550,10 @@ def program_specific_sample_data():
                 "Program_Name": "Program 1",
                 "cyp15" : "Value11",
                 "cyp20_2": "Value12",
+                "cyp29": "Value12_29",
+                "rtp4_1": "Value13_1",
                 "rtp4_2": "Value13",
+                "rtp4_3": "Value13_3",
                 "rtp1": "Value13a",
                 "rap5": "Value14",
                 "rap6": "Value15",
@@ -551,7 +568,10 @@ def program_specific_sample_data():
                 "Program_Name": "Program 1",
                 "cyp15" : "Value21",
                 "cyp20_2": "Value22",
+                "cyp29": "Value22_29",
+                "rtp4_1": "Value23_1",
                 "rtp4_2": "Value23",
+                "rtp4_3": "Value23_3",
                 "rtp1": "Value23a",
                 "rap5": "Value24",
                 "rap6": "Value25",
@@ -680,7 +700,9 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
         program_specific_sample_data["program_overpayments_outside_data_points"],
         program_specific_sample_data["program_underpayments_data_points"],
         program_specific_sample_data["program_technically_ip_data_points"],
+        program_specific_sample_data["program_eligibility_information_data_points"],
         program_specific_sample_data["program_unknown_payments_data_points"],
+        program_specific_sample_data["program_unknown_payments_breakdown_data_points"],
         program_specific_sample_data["program_corrective_actions_data_points"],
         program_specific_sample_data["program_future_outlook_data_points"],
         program_specific_sample_data["program_additional_information_data_points"],
@@ -722,7 +744,7 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
                     assert year_data["overpayments"]["Address_Location"] == "Value14"
                     assert year_data["underpayments"]["Contractor_Provider_Status"] == "Value15"
                     assert year_data["Program_Design_or_Structural_Issue"] == "Value12"
-                    assert year_data["cyp6_app1_8"] == "Value14, Value16"
+                    assert year_data["cyp6_app1_8"] == "Value16"
                     assert year_data["Insufficient_Documentation_to_Determine"] == "Value12"
                     assert year_data["cyp8"] == "Value11"
                     assert year_data["rnp3"] == "Value11"
@@ -737,11 +759,11 @@ def test_generate_program_specific_pages(mock_cursor, program_specific_sample_da
                     assert year_data["Actions_Taken"][0]["Action_Taken"] == "Action Taken 2"
                     assert year_data["Actions_Taken"][0]["Description_Action_Taken"] == "Description Action Taken 2"
                     assert year_data["overpayments"]["Failure_to_Access_Data"] == "Value23"
-                    assert year_data["cyp6_atp1_8"] == "Value23, Value25"
-                    assert year_data["cyp6_app1_8"] == "Value24, Value26"
+                    assert year_data["cyp6_atp1_8"] == "Value25"
+                    assert year_data["cyp6_app1_8"] == "Value26"
                     assert year_data["cyp6_1"] == "Value21"
-                    assert year_data["cyp7_app1_8"] == "Value25, Value27"
-                    assert year_data["cyp7_atp1_8"] == "Value24, Value26"
+                    assert year_data["cyp7_app1_8"] == "Value27"
+                    assert year_data["cyp7_atp1_8"] == "Value26"
                     assert year_data["act17_1"] == "Value23"
                     assert year_data["act17_3"] == "Value24"
                     assert year_data["IP_Unknown_Current_Year_Plus_1_Rate"] == "Value29"

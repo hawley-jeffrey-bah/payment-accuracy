@@ -142,8 +142,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -2001,6 +2001,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'The Department has determined that payment recapture audits would
@@ -2109,6 +2111,27 @@ detail_exs1: "Federal Student Aid's (FSA’s) Federal Pell Grant (Pell) and Will
   \ Department’s grants management community continues to address through its technical\
   \ assistance to grantees."
 detail_pcp12_1: null
+detail_pcp14: "The OIG recommends that the Department develop sampling and estimation\
+  \ plans for the Pell and Direct Loan programs that will produce reliable estimates.\
+  \ Specifically, the plan should (a) produce appropriate and accurate confidence\
+  \ intervals around a statistically valid point estimate; (b) consistent with 31\
+  \ U.S.C. section 3352(c)(1)(A), produce an estimate that is otherwise appropriate\
+  \ using a methodology approved by the Director of OMB; or (c) consistent with OMB\
+  \ Circular A-123 Appendix C, Part II, B(2), include a detailed explanation as to\
+  \ why it is not possible to produce a statistically-valid point estimate and appropriate\
+  \ and accurate confidence intervals around the estimate. \n\nThe OIG also recommended\
+  \ that the Department develop and implement procedures to ensure that the sampling\
+  \ populations of drawdowns are complete for the basis of calculating the improper\
+  \ payment and unknown payment estimates for the ESF program. Additionally, for programs\
+  \ that require them, design, and implement improper payment and unknown payment\
+  \ sampling and estimation plans that are appropriate for the sampling of payments\
+  \ based on accurate sampling populations and result in reliable estimates. Per the\
+  \ OIG, the improper payment and unknown payment sampling and estimation plans should\
+  \ also include language stating why sampling populations in Stage 1 may not match\
+  \ sampling population in Stage 2 and explain the statistical impact on the estimates.\
+  \ Additionally, the OIG recommended the implementation of a quality assurance checklist\
+  \ to ensure the proper details from the drawdown population are accurately included\
+  \ on the extrapolation sheet."
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

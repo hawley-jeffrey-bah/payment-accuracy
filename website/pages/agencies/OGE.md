@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: true
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -60,6 +60,8 @@ detail_agy1: OGE is a very small agency with limited resources. Payment to all s
   internal to OGE and external via our financial management shared service provider.
   Any questionable invoice is thoroughly reviewed and validated for accuracy prior
   to payment.
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: OGE has determined that it is not cost effective to conduct recovery
@@ -109,6 +111,9 @@ detail_exs1: The U.S. Office of Government Ethics (OGE) is compliant with the Pa
   integrity with multiple levels of pre-payment internal controls and constant monitoring
   of payment activities.
 detail_pcp12_1: null
+detail_pcp14: OGE does not have an OIG, as such no recommendations for actions to
+  further improve prevention and reduction of Improper Payments and Unknown Payments.
+  Further OGE does not have any programs reporting above the statutory threshold.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

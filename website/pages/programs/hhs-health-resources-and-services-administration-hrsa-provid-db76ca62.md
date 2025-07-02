@@ -124,17 +124,6 @@ Data_By_Year:
       reprocessed claims incorrectly paid due to federal government error, such as
       internal adjudication or payment errors.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: HHS will continue to prioritize the need to gather historical
-      records of policy and program decisions already made into accessible locations.
-    Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: HHS offered training to personnel and contractors on
-      conducting TIN matching, documentation retention to enable efficient assessments
-      of UIP claims.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Recipients of the UIP are subject to review as set forth
@@ -142,6 +131,17 @@ Data_By_Year:
       recipients to ensure compliance with applicable legislation and the UIP Terms
       and Conditions.
     Mitigation_Strategy: atp6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: HHS offered training to personnel and contractors on
+      conducting TIN matching, documentation retention to enable efficient assessments
+      of UIP claims.
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: HHS will continue to prioritize the need to gather historical
+      records of policy and program decisions already made into accessible locations.
+    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -198,6 +198,15 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Audit, Change Process, Training
+  cyp7_ucp3: '2.285'
+  cyp7_ucp3_1: One of HRSA's test is to determine the eligibility of recipient of
+    claims by ensuring that appropriate and sufficient documents were reviewed. When
+    HRSA is unable to receive appropriate documentation to determine the eligibility
+    of health-care providers, any payment to such providers is considered as unknown
+    payments. HRSA determined that the Tax Identification Number (TINs) of four health-care
+    providers that received claims did not match the Tax Identification Number (TINs)
+    of the health-care providers that provided services and submitted claims for the
+    some claimed that were paid.
   cyp8: A payment is considered “Unknown” when an agency is unable to obtain the documentation
     needed for a reviewer to determine whether the payment was made to the right recipient
     and/or for the right amount. Concerning FY24 UIP testing, HRSA had some “unknown
@@ -219,6 +228,13 @@ Data_By_Year:
       claims reimbursements due to the use of prior published rates when calculating
       payments or recalculated amounts not reconciling). There is inadequate documentation
       to support some claim payments.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '92.141000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -267,6 +283,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '81.378'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '81.378000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

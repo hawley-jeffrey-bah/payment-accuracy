@@ -163,27 +163,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '37.87'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'CMS will continue to conduct training sessions for
-      Part D plan sponsors on program integrity initiatives, investigations, data
-      analyses, and potential fraud schemes. Additionally, CMS will continue formal
-      outreach to plan sponsors to ensure proper payment for Part D drugs and coverage
-      for invalid or incomplete documentation.
-
-      '
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "CMS will continue to conduct audits of Part D plan\
-      \ sponsors, with a focus on drugs that are at high-risk for improper payments. \
-      \ Each type of audit is different in scope but has the same goal of educating\
-      \ Part D plan sponsors on issues of fraud, waste, and abuse, as well as identifying,\
-      \ reducing, and recovering improper inappropriate payments under Part D.  Additionally,\
-      \ CMS will continue to conduct program integrity audits of Part D plan sponsors\
-      \ to reduce improper payments and identify areas of non-compliance with program\
-      \ integrity requirements.  \n"
-    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q3
     Description_Action_Taken: 'HHS conducted Opioid Education Mission webinars in
@@ -197,7 +176,17 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: 'CMS will continue to conduct training sessions for
+      Part D plan sponsors on program integrity initiatives, investigations, data
+      analyses, and potential fraud schemes. Additionally, CMS will continue formal
+      outreach to plan sponsors to ensure proper payment for Part D drugs and coverage
+      for invalid or incomplete documentation.
+
+      '
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: "CMS conducted audits of Part D plan sponsors, with\
@@ -209,6 +198,17 @@ Data_By_Year:
       \ and identify areas of non-compliance with program integrity requirements.\
       \  \n"
     Mitigation_Strategy: atp6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "CMS will continue to conduct audits of Part D plan\
+      \ sponsors, with a focus on drugs that are at high-risk for improper payments. \
+      \ Each type of audit is different in scope but has the same goal of educating\
+      \ Part D plan sponsors on issues of fraud, waste, and abuse, as well as identifying,\
+      \ reducing, and recovering improper inappropriate payments under Part D.  Additionally,\
+      \ CMS will continue to conduct program integrity audits of Part D plan sponsors\
+      \ to reduce improper payments and identify areas of non-compliance with program\
+      \ integrity requirements.  \n"
+    Mitigation_Strategy: app6_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2021
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -254,6 +254,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '2334.940000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -322,6 +328,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1019.84'
+  underpayments_eligibility:
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '1019.840000'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -331,6 +343,19 @@ Data_By_Year:
       to plan sponsors to ensure proper payment for Part D drugs and coverage for
       invalid or incomplete documentation.
     Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS audits Part D plan sponsors to address high-risk
+      drugs and educate sponsors on fraud, waste, and abuse.  These audits have varying
+      scopes but share the goal of reducing and recovering improper Part D payments.
+      In FY 2024, the I-MEDIC continued to launch investigations, made recommendations
+      for provider revocations, sent referrals to law enforcement, and submitted referrals
+      to other entities like state pharmacy and medical boards, Medicare Quality Improvement
+      Organizations, and other Medicare contractors. HHS also audits Part D plan sponsors
+      to reduce improper payments and detect non-compliance with program integrity
+      requirements.  In FY 2024, HHS conducted four Program Integrity Audits, aiming
+      to educate plan sponsors about fraud, waste, and abuse issues.
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: In June 2024, HHS held a Part C and Part D Fraud, Waste,
@@ -345,19 +370,6 @@ Data_By_Year:
       offering feedback on their submissions and validation results compared to all
       participating sponsors.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS audits Part D plan sponsors to address high-risk
-      drugs and educate sponsors on fraud, waste, and abuse.  These audits have varying
-      scopes but share the goal of reducing and recovering improper Part D payments.
-      In FY 2024, the I-MEDIC continued to launch investigations, made recommendations
-      for provider revocations, sent referrals to law enforcement, and submitted referrals
-      to other entities like state pharmacy and medical boards, Medicare Quality Improvement
-      Organizations, and other Medicare contractors. HHS also audits Part D plan sponsors
-      to reduce improper payments and detect non-compliance with program integrity
-      requirements.  In FY 2024, HHS conducted four Program Integrity Audits, aiming
-      to educate plan sponsors about fraud, waste, and abuse issues.
-    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: CMS will continue to conduct audits of Part D plan sponsors,
@@ -436,6 +448,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '3052.650000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -492,6 +510,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '522.44'
+  underpayments_eligibility:
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '522.440000'
 Description: Medicare Part D is a federal prescription drug benefit program for Medicare
   beneficiaries. The primary causes of overpayments are drug discrepancies (when the
   drug dispensed differs from the drug prescribed), drug pricing discrepancies (when

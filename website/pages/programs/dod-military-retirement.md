@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Confidence_Level: '>95%'
   End_Date: 09/2020
@@ -255,6 +255,26 @@ Data_By_Year:
     Inability_to_Access_Data: 5.75
     cyp5: '5.75'
 - Actions_Taken:
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: Military Retirement Operations collaborated with the
+      Disbursing office on a Lean 6 project, focused on refining and enhancing the
+      Reclamation Process. This was in preparation of an Internal Review audit slated
+      for June 2023 which further tested Disbursing’s reclamation process. Military
+      Retirement pursued efforts with Treasury and Veteran Affairs to implement the
+      use of the Treasury's Do Not Pay (DNP) database. During Military Retirement’s
+      testing it was determined that pertinent death data was missing. As a result,
+      Military Retirement pursued receiving data through Experian, it has been determined
+      that this source also does not contain all pertinent data and Military Retirement
+      and DMDC (Defense Manpower Data Center) are working to reengage with SSA (Social
+      Security Administration) to be effective in calendar year 2024. Additionally,
+      Military Retirement is pursuing Treasury's DNP for future use as DNP is working
+      to obtain the missing data directly from the SSA Death Master file. Military
+      Retirement has partnered with other agencies as a part of the Payment Integrity
+      Center of Excellence working group, which focuses on synchronization of interagency
+      efforts to streamline multiple lines of corrective action efforts and effectiveness
+      in reducing IP and UP. The Working Group was established during Q1 FY 2023.
+    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: "The Department's Military Retirement program will perform\
@@ -269,6 +289,15 @@ Data_By_Year:
       \ errors.\n\n3. In FY 2024, Military Retirement will focus on  areas for improvement\
       \ to streamline compliance with the PIIA."
     Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: DFAS Military Retirement Operations completed the final
+      phase of Survivor Benefit Plan (SBP) - Dependency and Indemnity Compensation
+      (DIC) offset elimination in January 2023. These mitigation efforts were in response
+      to prior Improper Payment findings. The bulk of improper payments are driven
+      by cost refund errors when reducing SBP survivor benefits by the amount of DIC
+      payments to the member.
+    Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: "DFAS-Cleveland processes pay and account maintenance\
@@ -290,26 +319,6 @@ Data_By_Year:
     Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
-    Description_Action_Taken: Military Retirement Operations collaborated with the
-      Disbursing office on a Lean 6 project, focused on refining and enhancing the
-      Reclamation Process. This was in preparation of an Internal Review audit slated
-      for June 2023 which further tested Disbursing’s reclamation process. Military
-      Retirement pursued efforts with Treasury and Veteran Affairs to implement the
-      use of the Treasury's Do Not Pay (DNP) database. During Military Retirement’s
-      testing it was determined that pertinent death data was missing. As a result,
-      Military Retirement pursued receiving data through Experian, it has been determined
-      that this source also does not contain all pertinent data and Military Retirement
-      and DMDC (Defense Manpower Data Center) are working to reengage with SSA (Social
-      Security Administration) to be effective in calendar year 2024. Additionally,
-      Military Retirement is pursuing Treasury's DNP for future use as DNP is working
-      to obtain the missing data directly from the SSA Death Master file. Military
-      Retirement has partnered with other agencies as a part of the Payment Integrity
-      Center of Excellence working group, which focuses on synchronization of interagency
-      efforts to streamline multiple lines of corrective action efforts and effectiveness
-      in reducing IP and UP. The Working Group was established during Q1 FY 2023.
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
     Description_Action_Taken: The FY 2023 Corrective Action Plan (CAP) for the Military
       Retirement Program was developed to reduce the number of improper and unknown
       payments across the program.  The Military Retirement Program worked through
@@ -318,15 +327,6 @@ Data_By_Year:
       several mechanisms including on the job training to ensure their staff was well
       informed in order to prevent improper payments.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: DFAS Military Retirement Operations completed the final
-      phase of Survivor Benefit Plan (SBP) - Dependency and Indemnity Compensation
-      (DIC) offset elimination in January 2023. These mitigation efforts were in response
-      to prior Improper Payment findings. The bulk of improper payments are driven
-      by cost refund errors when reducing SBP survivor benefits by the amount of DIC
-      payments to the member.
-    Mitigation_Strategy: atp4_1
   Confidence_Level: 90% to <95%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -379,6 +379,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Change Process, Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '23.12'
   cyp7_ucp4_1: The Military Retirement program received two errors in FY 2023 related
     to unknown payments. Both errors were related to insufficient/missing documentation.
     For the missing Survivor Benefit Package (SBP), Military Retirement has controls
@@ -414,6 +415,17 @@ Data_By_Year:
       and Accounting Service Military Retirement Operations team in Fiscal Year (FY)
       2023 significantly reduced monetary loss errors resulted in the program's removal
       from the previous OMB High Priority program status going into FY 2024.
+  overpayments_eligibility:
+  - Key: cyp3_dit11_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '0.260000'
+  - Key: cyp2_dit11_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '75.230000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -486,6 +498,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '44.23'
+  underpayments_eligibility:
+  - Key: cyp5_dit11_1
+    Payment_Type: Underpayments
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '44.230000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

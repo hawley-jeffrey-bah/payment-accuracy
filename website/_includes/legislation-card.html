@@ -3,6 +3,21 @@
         <a href="{{ include.link }}" target="_blank" rel="noopener noreferrer"><h4 class="usa-card__heading">{{ include.headline }}</h4></a>
     </div>
     <div class="usa-card__body">
-        <p>{{ include.text }}</p>
+        <p>
+            {% if include.link1 != nil and include.link1 != "" %}
+                <a href="{{ include.link1 }}" target="_blank" rel="noopener noreferrer">{{ include.text1 }}</a>
+            {% else %}
+                {{ include.text1 }}
+            {% endif %}
+        </p>
+        {% if include.text2 != nil and include.text2 != "" %}
+            <p>
+                {% if include.link2 != nil and include.link2 != "" %}
+                    <a href="{{ include.link2 }}" target="_blank" rel="noopener noreferrer">{{ include.text2 }}</a>
+                {% else %}
+                    {{ include.text2 }}
+                {% endif %}
+            </p>
+        {% endif %}
     </div>
 </div>

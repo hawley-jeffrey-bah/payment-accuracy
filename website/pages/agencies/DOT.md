@@ -788,6 +788,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: Federal personnel within DOT’s Payment Integrity Center performed the
   recovery audit focusing on DOT payments made between April 2023 through March 2024.
   DOT considers all overpayments identified through the fiscal year 2024 audit to
@@ -926,6 +928,10 @@ detail_exs1: "The Department of Transportation (DOT) prioritizes payment integri
   \ take pride in our payment integrity efforts and remain committed to strengthening\
   \ our payment processing controls going forward."
 detail_pcp12_1: null
+detail_pcp14: DOT’s Inspector General concluded that the agency was compliant with
+  PIIA requirements as prescribed by OMB in the FY 2023 audit and did not make any
+  recommendations. In addition, the OIG will issue a report in FY 2025 with a determination
+  on whether DOT was compliant with PIIA requirements in FY 2024.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

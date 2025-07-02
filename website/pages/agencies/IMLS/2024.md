@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.001]'
-Overpayment_Amounts_Recovered: '[0.0, 0.001]'
-Overpayment_Years: '[2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -128,6 +128,8 @@ Years_Available:
 - 2023
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: Insignificant amount of improper payments. There were no underpayments
@@ -168,6 +170,8 @@ detail_exs1: 'The Improper Payment Information Act of 2002 (IPIA) and subsequent
 
   '
 detail_pcp12_1: null
+detail_pcp14: OIG did not provide recommendations to further improve prevention of
+  improper payments
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

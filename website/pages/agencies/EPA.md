@@ -19,8 +19,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -291,6 +291,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'The PIIA requires federal agencies to conduct payment recapture audit
@@ -427,6 +429,21 @@ detail_exs1: "In FY 2024 the EPA was found compliant with the requirements of th
   \ received substantial resources under the Inflation Reduction Act and Infrastructure\
   \ Investment and Jobs Act.\n"
 detail_pcp12_1: null
+detail_pcp14: "In the Environmental Protection Agency's most recent PIIA annual compliance\
+  \ review, the Office of Inspector General’s reported the agency \"has made progress\
+  \ in resolving corrective action plans and efforts to prevent and reduce improper\
+  \ payments from prior audit recommendations, but Agency corrective actions are still\
+  \ in process. The Agency satisfied these requirements for PIIA compliance for FY\
+  \ 2023 but has an opportunity to improve internal controls to provide better oversight\
+  \ of its payment integrity activities.\"\nAs a result of its review, the OIG recommended\
+  \ that:\n(1)\tThe chief financial officer develop guidance for generating and maintaining\
+  \ documentation to support risk assessment determinations of whether EPA programs\
+  \ are susceptible to significant improper payments. \n(2)\tThe EPA should develop\
+  \ oversight guidance and mechanisms to monitor the resolution of unknown payments,\
+  \ as well as develop processes and tools to periodically collect and analyze agencywide\
+  \ payment integrity activities and related information for preventing and reducing\
+  \ improper and unknown payments. \nThe EPA has agreed to these recommendations and\
+  \ implemented them in June of this year.\n"
 detail_raa8: 'Yes'
 detail_raa9: The EPA revised the weighting of the individual risk factors in its qualitative
   risk assessment to reflect the relative importance of each factor. In past two years,

@@ -208,6 +208,25 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
+    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) will
+      continue to train staff on proper procedures for reviewing submitted package
+      documentation and making Public Assistance – Validate as You Go (VAYGo) scoped
+      payments. VAYGo HQ conducts training courses via VAYGo University (VU) to support
+      Regional and Recipient VAYGo stakeholders. VAYGo HQ is planning to host a workshop
+      in early fiscal year (FY) 2025 with FEMA Regional VAYGo Points of Contact. This
+      workshop will provide strategic and tactical strategies to support FY 2024 testing
+      efforts. In addition, VAYGo HQ will continue to conduct VAYGo roadshows as requested
+      from FEMA Regions. VAYGo HQ will continue to be part of the April 2025 Public
+      Assistance Working Session (PAWS). FEMA will continue publication of helpful
+      tools resources to guide the Public Assistance funding application process on
+      the FEMA website. Over 20 courses will also remain readily available through
+      the FEMA Emergency Management Institute (EMI) that can be accessed at any time
+      and completed via self-pace. This level of engagement across multiple VAYGo
+      spectrums will continue to enhance the level of knowledge required to strengthen
+      the Public Assistance program leading to successful VAYGo results.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
     Description_Action_Taken: The Federal Emergency Management Agency (FEMA) developed
       a Validate as You Go (VAYGo) Module within the FEMA Grants Manager / Grants
       Portal platform. The module has workflows to support VAYGo testing, process
@@ -217,39 +236,6 @@ Data_By_Year:
       goal of improving the VAYGo customer service experience for internal and external
       VAYGo stakeholders. This is an ongoing effort.
     Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: "In 2022, the Federal Emergency Management Agency (FEMA)\
-      \ Public Assistance Task Force (PATF) engaged an independent review to objectively\
-      \ assess the Public Assistance National Delivery Model. The review focused on\
-      \ the implementation and subsequent performance of the National Delivery Model\
-      \ process using program data from 2018 through July 2022 and stakeholder feedback\
-      \ from April 2022 through July 2022. Once recommendations were developed based\
-      \ on the gap analysis findings, the Assessment Team socialized the recommendations\
-      \ with relevant offices and FEMA leadership in July 2022 with a final report\
-      \ being issued in January 2023. \n\nThe Payment Integrity Information Act of\
-      \ 2019 (PIIA) requires agencies to review and assess all programs and activities\
-      \ they administer and identify those determined to be susceptible to significant\
-      \ improper payments, estimate the annual amount of improper payments, and submit\
-      \ those estimates to Congress. In accordance with the Office of Management and\
-      \ Budget (OMB) Circular No. A-123, Appendix C, \"Requirements for Payment Integrity\
-      \ Improvement\", federal agencies are required to assess improper payments and\
-      \ report annually on their efforts. In compliance with these requirements, the\
-      \ FEMA Public Assistance - Validate as You Go (VAYGo) program has conducted\
-      \ reviews and published results in 2022 (over FY 2020 disbursement activity)\
-      \ and in 2024 (over FY 2021 and FY 2022 disbursement activity consolidated).\
-      \ \n\nIn addition, FEMA performed an assessment of internal control over financial\
-      \ reporting including performing tests of operating effectiveness, for the FY\
-      \ 2023 performance period. These internal control assessments included a review\
-      \ over Grants Management with no material internal control issues noted. \n\n\
-      Finally, the FEMA Public Assistance program regularly is subject to external\
-      \ and/or independent audit reviews to include those conducted by the DHS Office\
-      \ of the Inspector General (OIG) and the Government Accountability Office (GAO).\
-      \ Two recent reviews by these entities include a 2024 review conducted by the\
-      \ GAO, GAO-24-106676: “Disaster Relief Fund: Lessons Learned from COVID-19 Could\
-      \ Improve FEMA’s Estimates”, and a 2022 review conducted by the OIG, OIG-22-51:\
-      \ “Assessment of FEMA’s Public Assistance Alternative Procedures Program”."
-    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: The Federal Emergency Management Agency (FEMA) will
@@ -269,31 +255,7 @@ Data_By_Year:
       that fosters a positive and successful VAYGo testing environment for all VAYGo
       stakeholders.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'The Payment Integrity Information Act of 2019 (PIIA)
-      requires agencies to review and assess all programs and activities they administer
-      and identify those determined to be susceptible to significant improper payments,
-      estimate the annual amount of improper payments, and submit those estimates
-      to Congress. In accordance with the Office of Management and Budget (OMB) Circular
-      No. A-123, Appendix C, "Requirements for Payment Integrity Improvement", federal
-      agencies are required to assess improper payments and report annually on their
-      efforts. In compliance with these requirements, the Federal Emergency Management
-      Agency (FEMA) Public Assistance - Validate as You Go (VAYGo) program will continue
-      to conduct a review and publish results in 2025.
-
-
-      In addition, FEMA will perform an assessment of internal control over financial
-      reporting including performing tests of operating effectiveness, for the FY
-      2025 performance period. These internal control assessments include a review
-      over Grants Management.
-
-
-      Finally, the FEMA Public Assistance program regularly is subject to external
-      and/or independent audit reviews to include those conducted by the DHS Office
-      of the Inspector General (OIG) and the Government Accountability Office (GAO).'
-    Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: "The National Delivery Model has increased simplicity\
@@ -330,23 +292,28 @@ Data_By_Year:
     Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) will
-      continue to train staff on proper procedures for reviewing submitted package
-      documentation and making Public Assistance – Validate as You Go (VAYGo) scoped
-      payments. VAYGo HQ conducts training courses via VAYGo University (VU) to support
-      Regional and Recipient VAYGo stakeholders. VAYGo HQ is planning to host a workshop
-      in early fiscal year (FY) 2025 with FEMA Regional VAYGo Points of Contact. This
-      workshop will provide strategic and tactical strategies to support FY 2024 testing
-      efforts. In addition, VAYGo HQ will continue to conduct VAYGo roadshows as requested
-      from FEMA Regions. VAYGo HQ will continue to be part of the April 2025 Public
-      Assistance Working Session (PAWS). FEMA will continue publication of helpful
-      tools resources to guide the Public Assistance funding application process on
-      the FEMA website. Over 20 courses will also remain readily available through
-      the FEMA Emergency Management Institute (EMI) that can be accessed at any time
-      and completed via self-pace. This level of engagement across multiple VAYGo
-      spectrums will continue to enhance the level of knowledge required to strengthen
-      the Public Assistance program leading to successful VAYGo results.
-    Mitigation_Strategy: app3_1
+    Description_Action_Taken: 'The Payment Integrity Information Act of 2019 (PIIA)
+      requires agencies to review and assess all programs and activities they administer
+      and identify those determined to be susceptible to significant improper payments,
+      estimate the annual amount of improper payments, and submit those estimates
+      to Congress. In accordance with the Office of Management and Budget (OMB) Circular
+      No. A-123, Appendix C, "Requirements for Payment Integrity Improvement", federal
+      agencies are required to assess improper payments and report annually on their
+      efforts. In compliance with these requirements, the Federal Emergency Management
+      Agency (FEMA) Public Assistance - Validate as You Go (VAYGo) program will continue
+      to conduct a review and publish results in 2025.
+
+
+      In addition, FEMA will perform an assessment of internal control over financial
+      reporting including performing tests of operating effectiveness, for the FY
+      2025 performance period. These internal control assessments include a review
+      over Grants Management.
+
+
+      Finally, the FEMA Public Assistance program regularly is subject to external
+      and/or independent audit reviews to include those conducted by the DHS Office
+      of the Inspector General (OIG) and the Government Accountability Office (GAO).'
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: "To help meet the goals of the 2022-2026 Strategic Plan,\
@@ -404,6 +371,39 @@ Data_By_Year:
       \ 9, 2023, FEMA reinstated VAYGo, which now includes the new implementation\
       \ guide and a new closeout benefit for qualifying recipients."
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: "In 2022, the Federal Emergency Management Agency (FEMA)\
+      \ Public Assistance Task Force (PATF) engaged an independent review to objectively\
+      \ assess the Public Assistance National Delivery Model. The review focused on\
+      \ the implementation and subsequent performance of the National Delivery Model\
+      \ process using program data from 2018 through July 2022 and stakeholder feedback\
+      \ from April 2022 through July 2022. Once recommendations were developed based\
+      \ on the gap analysis findings, the Assessment Team socialized the recommendations\
+      \ with relevant offices and FEMA leadership in July 2022 with a final report\
+      \ being issued in January 2023. \n\nThe Payment Integrity Information Act of\
+      \ 2019 (PIIA) requires agencies to review and assess all programs and activities\
+      \ they administer and identify those determined to be susceptible to significant\
+      \ improper payments, estimate the annual amount of improper payments, and submit\
+      \ those estimates to Congress. In accordance with the Office of Management and\
+      \ Budget (OMB) Circular No. A-123, Appendix C, \"Requirements for Payment Integrity\
+      \ Improvement\", federal agencies are required to assess improper payments and\
+      \ report annually on their efforts. In compliance with these requirements, the\
+      \ FEMA Public Assistance - Validate as You Go (VAYGo) program has conducted\
+      \ reviews and published results in 2022 (over FY 2020 disbursement activity)\
+      \ and in 2024 (over FY 2021 and FY 2022 disbursement activity consolidated).\
+      \ \n\nIn addition, FEMA performed an assessment of internal control over financial\
+      \ reporting including performing tests of operating effectiveness, for the FY\
+      \ 2023 performance period. These internal control assessments included a review\
+      \ over Grants Management with no material internal control issues noted. \n\n\
+      Finally, the FEMA Public Assistance program regularly is subject to external\
+      \ and/or independent audit reviews to include those conducted by the DHS Office\
+      \ of the Inspector General (OIG) and the Government Accountability Office (GAO).\
+      \ Two recent reviews by these entities include a 2024 review conducted by the\
+      \ GAO, GAO-24-106676: “Disaster Relief Fund: Lessons Learned from COVID-19 Could\
+      \ Improve FEMA’s Estimates”, and a 2022 review conducted by the OIG, OIG-22-51:\
+      \ “Assessment of FEMA’s Public Assistance Alternative Procedures Program”."
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: "Readily available on the FEMA.gov website, the Federal\
@@ -516,6 +516,18 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Audit, Automation, Change Process, Training
   cyp7_atp1_8: Audit, Automation, Change Process, Training
+  cyp7_ucp3: '1396.1401011'
+  cyp7_ucp3_1: "The Federal Emergency Management Agency (FEMA) Public Assistance -\
+    \ Validate as You Go (VAYGo) program and process focuses on ensuring grantee drawdowns\
+    \ and disbursements to sub-grantees are compliant with all applicable Federal\
+    \ laws, regulations, and policies. As part of this incremental oversight review,\
+    \ financial documentation is to be reviewed throughout the lifecycle of the grant\
+    \ in order to support the grantee drawdowns. Based on testing results, necessary\
+    \ documentation is not always made readily available by the regional, state, and\
+    \ local entities to fully support the drawdown activity. Unknown Payments (UPs)\
+    \ have been attributable to:\n•\tMissing proof of payment to subrecipient vendors\
+    \ for supplies and equipment\n•\tLabor timesheets and documentation of recipient\
+    \ salary / payroll detail\n•\tEtc."
   cyp8: "Payments are considered Unknown Payments (UPs) when the associated recipient\
     \ and subrecipient(s), if applicable, fail to provide adequate supporting documentation\
     \ in accordance with the grant agreement, such as amendments or price tables,\
@@ -567,6 +579,13 @@ Data_By_Year:
       under the Payment Integrity Information Act of 2019 (PIIA), are within the agency's
       control. Therefore, all resulting improper payments, to include overpayments,
       have also been determined to be within the control of the agency.
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '136.346743'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

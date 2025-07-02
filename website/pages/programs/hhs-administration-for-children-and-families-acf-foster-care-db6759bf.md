@@ -258,40 +258,6 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: HHS will continue to utilize training as a corrective
-      action in the Title IV-E Foster Care Program. HHS recorded a series of videos
-      to provide on-demand training on the Title IV-E Foster Care Eligibility Reviews
-      instrument and how compliance is assessed.  These videos will be finalized and
-      released in FY 2025, making them available as on-demand training for Title IV-E
-      agencies and federal staff.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS utilized training as a corrective action in the
-      Title IV-E Foster Care Program.  HHS conducted trainings for federal and state
-      reviewers on the Title IV-E Review Instrument and Instructions to prepare for
-      the Title IV-E Foster Care Eligibility Reviews.  HHS also offered monthly office
-      hours to address specific eligibility questions and review instrument sections.  In
-      addition, HHS provided guidance and communication with states to strengthen
-      Title IV-E programs, including the Foster Care program, and improve their effectiveness.
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS worked with state Title IV-E agencies to improve
-      program compliance and share successful strategies. In addition, at the conclusion
-      of each Title IV-E Foster Care Eligibility Reviews,  HHS issues a detailed state-specific
-      report on identified improper payments and promising practices; imposes disallowances
-      for identified overpayments; and requires a Program Improvement Plan for states
-      not in substantial compliance.
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: HHS utilized audits as a corrective action in the Title
-      IV-E Foster Care Program. HHS continuously reviews Title IV-E quarterly claims
-      to address and correct any errors or anomalies in state submissions.
-    Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
     Description_Action_Taken: HHS will continue to utilize cross enterprise sharing
       as a corrective action in the Title IV-E Foster Care Program. HHS will continue
       to collaborate with state Title IV-E Foster Care agencies to improve comprehension
@@ -303,10 +269,19 @@ Data_By_Year:
     Mitigation_Strategy: app5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: HHS will continue to utilize audits as a corrective
-      action in the Title IV-E Foster Care Program. HHS will continue to review states'
-      Title IV-E quarterly claims to address and rectify claiming errors and anomalies.
-    Mitigation_Strategy: app6_1
+    Description_Action_Taken: HHS will continue to utilize training as a corrective
+      action in the Title IV-E Foster Care Program. HHS recorded a series of videos
+      to provide on-demand training on the Title IV-E Foster Care Eligibility Reviews
+      instrument and how compliance is assessed.  These videos will be finalized and
+      released in FY 2025, making them available as on-demand training for Title IV-E
+      agencies and federal staff.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS utilized audits as a corrective action in the Title
+      IV-E Foster Care Program. HHS continuously reviews Title IV-E quarterly claims
+      to address and correct any errors or anomalies in state submissions.
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: HHS utilized the Change Process as a corrective action
@@ -316,6 +291,31 @@ Data_By_Year:
       policies and clarifying eligibility requirements to help states understand complex
       Title IV-E Foster Care payment regulations.
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS worked with state Title IV-E agencies to improve
+      program compliance and share successful strategies. In addition, at the conclusion
+      of each Title IV-E Foster Care Eligibility Reviews,  HHS issues a detailed state-specific
+      report on identified improper payments and promising practices; imposes disallowances
+      for identified overpayments; and requires a Program Improvement Plan for states
+      not in substantial compliance.
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: HHS will continue to utilize audits as a corrective
+      action in the Title IV-E Foster Care Program. HHS will continue to review states'
+      Title IV-E quarterly claims to address and rectify claiming errors and anomalies.
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: HHS utilized training as a corrective action in the
+      Title IV-E Foster Care Program.  HHS conducted trainings for federal and state
+      reviewers on the Title IV-E Review Instrument and Instructions to prepare for
+      the Title IV-E Foster Care Eligibility Reviews.  HHS also offered monthly office
+      hours to address specific eligibility questions and review instrument sections.  In
+      addition, HHS provided guidance and communication with states to strengthen
+      Title IV-E programs, including the Foster Care program, and improve their effectiveness.
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 05/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -390,6 +390,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit5_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '61.160000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 61.16
@@ -514,6 +521,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1.16'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '1.160000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

@@ -5,37 +5,6 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
-    Description_Action_Taken: 'The Department-funded UI Integrity Center completed
-      and published multiple lessons to the NASWA Learning Management System, which
-      included eLearning lessons in Data Analysis, the Integrity Data Hub (IDH), and
-      the Behavioral Insights curricula.
-
-
-      The UI Integrity Center received 1,417 new learner enrollments for FY 2023,
-      bringing total all-time enrollments to 16,297 learners. In FY 2023, the UI Integrity
-      Center conducted the Basic UI Fraud Investigations course 19 times to a total
-      of 319 learners. More than 225 hours of eLearning instruction are available
-      in seven certificate tracks, and 208 individual lessons and courses are offered
-      via eLearning, virtual classrooms, and instructor led training.
-
-
-      Additionally, the UI Integrity Center’s IDH team actively works with states
-      to implement the datasets available through the IDH for the prevention and detection
-      of improper payments and fraud in the UI program. The IDH team conducts bi-weekly
-      IDH update calls with states and provides direct technical assistance and peer-to-peer
-      engagements. The IDH team also continued conducting onsite IDH implementation
-      support services, which are designed as short, in-person engagements with states
-      to provide training and aid states with the understanding and utilization of
-      the IDH system and results data.
-
-
-      ETA and the UI Integrity Center also presented and provided UI-related trainings
-      at virtual and in-person conferences throughout FY 2023.
-
-      '
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
     Description_Action_Taken: "The reporting period for the PUA program is the entire\
       \ life of the program (April 2020 through September 2021) therefore, actions\
       \ taken span this entire period. \n\nETA and the Department of Labor's Office\
@@ -83,6 +52,37 @@ Data_By_Year:
       \ resources to over 2,800.\n\nThe Library’s COVID-19 special collection, dedicated\
       \ to the pandemic and the UI system emergency response, includes over 400 resources.\n"
     Mitigation_Strategy: atp5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: 'The Department-funded UI Integrity Center completed
+      and published multiple lessons to the NASWA Learning Management System, which
+      included eLearning lessons in Data Analysis, the Integrity Data Hub (IDH), and
+      the Behavioral Insights curricula.
+
+
+      The UI Integrity Center received 1,417 new learner enrollments for FY 2023,
+      bringing total all-time enrollments to 16,297 learners. In FY 2023, the UI Integrity
+      Center conducted the Basic UI Fraud Investigations course 19 times to a total
+      of 319 learners. More than 225 hours of eLearning instruction are available
+      in seven certificate tracks, and 208 individual lessons and courses are offered
+      via eLearning, virtual classrooms, and instructor led training.
+
+
+      Additionally, the UI Integrity Center’s IDH team actively works with states
+      to implement the datasets available through the IDH for the prevention and detection
+      of improper payments and fraud in the UI program. The IDH team conducts bi-weekly
+      IDH update calls with states and provides direct technical assistance and peer-to-peer
+      engagements. The IDH team also continued conducting onsite IDH implementation
+      support services, which are designed as short, in-person engagements with states
+      to provide training and aid states with the understanding and utilization of
+      the IDH system and results data.
+
+
+      ETA and the UI Integrity Center also presented and provided UI-related trainings
+      at virtual and in-person conferences throughout FY 2023.
+
+      '
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2021
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -118,6 +118,7 @@ Data_By_Year:
   cyp5_atp1_8: Cross Enterprise Sharing, Training
   cyp6: '0'
   cyp7_atp1_8: Cross Enterprise Sharing, Training
+  cyp7_ucp3: '21086.40'
   cyp8: These payments are unknown since their accuracy could not be definitively
     established or refuted. For the PUA program, payment accuracy assessments were
     made by state Reviewers who were tasked with reviewing sampled PUA cases. However,
@@ -143,6 +144,13 @@ Data_By_Year:
       tools and/or functions are exclusively available to state agencies for use throughout
       the life of a claim. Therefore, inadequate use of these options/functions is
       within the control of the state agency.
+  overpayments_eligibility:
+  - Key: cyp2_dit9_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '20644.740000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -204,6 +212,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1820.00'
+  underpayments_eligibility:
+  - Key: cyp5_dit9_1
+    Payment_Type: Underpayments
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '1820.000000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

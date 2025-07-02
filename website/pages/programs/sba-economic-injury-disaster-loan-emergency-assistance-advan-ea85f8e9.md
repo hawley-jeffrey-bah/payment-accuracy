@@ -96,6 +96,14 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
+    Description_Action_Taken: 'Per Numbered Memo 22-04, the Disaster Internal Controls
+      Division is required to
+
+      perform quality control and quality assurance audits on an ongoing basis. It
+      should be noted, there is no additional funding for this program.'
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
     Description_Action_Taken: 'Per Numbered Memo 22-04, training specific to Improper
       Payment Audit
 
@@ -123,14 +131,6 @@ Data_By_Year:
       payment decision. The SBA provides quarterly training to PDC staff on the causes
       and prevention of, improper payments.'
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'Per Numbered Memo 22-04, the Disaster Internal Controls
-      Division is required to
-
-      perform quality control and quality assurance audits on an ongoing basis. It
-      should be noted, there is no additional funding for this program.'
-    Mitigation_Strategy: app6_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -189,6 +189,19 @@ Data_By_Year:
       from the borrower, competing a loan modification, and/or adding clarifying comments
       to the case files. In addition, SBA provides reoccurring training to staff on
       causes and prevention of improper payments.
+  overpayments_eligibility:
+  - Key: cyp2_dit4_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '1.267500'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '3.802500'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

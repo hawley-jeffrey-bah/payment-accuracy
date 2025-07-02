@@ -1,8 +1,19 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The United States Army National Guard (ARNG) Financial
+      Services will continue to host virtual trainings to the 50 States, Territories
+      and the District of Columbia. The ARNG, in conjunction with the United States
+      Army Reserve, will start a Military pay certification program in Q2 of FY2025
+      to provide baseline Military pay training to new state pay technicians. These
+      trainings will be offered quarterly to maintain pay proficiency across the 50
+      States, Territories and the District of Columbia (in addition to the virtual
+      monthly trainings that are already provided).
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: To continue to mitigate the risk of improper payments,
@@ -21,17 +32,6 @@ Data_By_Year:
       also clearly outline what functions are the responsibility of state pay offices
       and AMPOs while a ARNG service member is on active duty or in a deployment status.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The United States Army National Guard (ARNG) Financial
-      Services will continue to host virtual trainings to the 50 States, Territories
-      and the District of Columbia. The ARNG, in conjunction with the United States
-      Army Reserve, will start a Military pay certification program in Q2 of FY2025
-      to provide baseline Military pay training to new state pay technicians. These
-      trainings will be offered quarterly to maintain pay proficiency across the 50
-      States, Territories and the District of Columbia (in addition to the virtual
-      monthly trainings that are already provided).
-    Mitigation_Strategy: app3_1
   Confidence_Level: 90% to <95%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -141,6 +141,18 @@ Data_By_Year:
   cyp6_atp1_8: Change Process, Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Change Process, Training
+  cyp7_ucp3: '29.09'
+  cyp7_ucp3_1: The United States Army National Guard (ARNG) payments annotated as
+    technically improper payment errors were caused by housing allowance payments
+    that were made without a current DA Form 5960 "Basic Allowance For Housing (BAH)
+    Authorization And Dependency Declaration." DA Form 5960s were subsequently produced
+    after the entitlement was fully substantiated; however, they were provided after
+    the sampled payment was made, thus resulting in a technically improper payment.
+    DA 5960s, which authorize housing allowance, were a large percentage of the documentation
+    that could not be provided. Without a current DA Form 5960, the ARNG cannot determine
+    if the payment was improper or proper. Likewise, there were ARNG drill attendance
+    rosters that were missing signatures. Similar to the DA 5960s, without the signature
+    on the drill form, the ARNG cannot conclude if the payment was proper or improper.
   cyp8: The Military Pay Army National Guard (ARNG) program scenarios are broad and
     complex based upon the requirements to authorize an entitlement or deduction.
     For example, an unknown sample covering Military pay and allowances, could be
@@ -178,6 +190,18 @@ Data_By_Year:
       pay and the prevention of improper payments. MOAs also clearly outline what
       functions are the responsibility of state pay offices and AMPOs while a ARNG
       service member is on active duty or in a deployment status.
+  overpayments_eligibility:
+  - Key: cyp2_dit7_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '1.950400'
+  - Key: cyp2_dit11_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '2.289600'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -264,6 +288,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '7.52'
+  underpayments_eligibility:
+  - Key: cyp5_dit7_1
+    Payment_Type: Underpayments
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '6.692800'
+  - Key: cyp5_dit11_1
+    Payment_Type: Underpayments
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '0.827200'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

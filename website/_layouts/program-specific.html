@@ -44,7 +44,7 @@ permalink: /
                     <p>PROGRAM METRICS</p>
                     <h2>${{page.Outlays | round: 0 | thousands_separator}} M</h2>
                     <p>in <strong>total outlays</strong>, with a</p>
-                    <h2>{{ page.Payment_Accuracy_Rate | round: 0 }}%</h2>
+                    <h2>{{ page.Payment_Accuracy_Rate | round: 1 }}%</h2>
                     <p><strong>payment accuracy</strong> rate</p>
                 </div>
             </div>
@@ -180,14 +180,15 @@ permalink: /
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col" class="width-card-lg">Mitigation strategy</th>
-                                                                <th scope="col">Description of corrective actions taken</th>
+                                                                <th scope="col">Description of the Corrective Action</th>
                                                                 <th scope="col">Completion Date</th>
                                                                 <th scope="col" class="status">Status</th>
                                                                 <th scope="col" class="expand-col"></th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            {% for action_taken in year_data.Actions_Taken %}
+                                                            {% assign sorted_action_taken = year_data.Actions_Taken | sort: "Action_Taken" %}
+                                                            {% for action_taken in sorted_action_taken %}
                                                                 <tr>
                                                                     <td scope="row" class="mitigation-strategy-col text-top">
                                                                     {% assign strategy = action_taken.Mitigation_Strategy | strip %}
@@ -253,12 +254,6 @@ permalink: /
                                 </div>
                             {% endif %}
 
-                            {% assign overpayments_eligibility_none_reported = false %}
-                            {% if year_data.overpayments.Address_Location == nil and year_data.overpayments.Contractor_Provider_Status == nil and year_data.overpayments.Financial == nil %}
-                                {% assign overpayments_eligibility_none_reported = true %}
-                            {% endif %}
-                            {% assign overpayments_eligibility_info_sum = year_data.overpayments.Address_Location | plus: year_data.overpayments.Contractor_Provider_Status | plus: year_data.overpayments.Financial %}
-
                             {% assign overpayment_mitigations_planned_count = year_data.cyp2_app1_8 | size %}
                             {% assign overpayment_mitigations_taken_count = year_data.cyp2_atp1_8 | size %}
 
@@ -273,7 +268,8 @@ permalink: /
                             {% endif %}
 
                             {% assign hide_overpayments_eligibility_accordion = false %}
-                            {% if overpayments_eligibility_none_reported == true or overpayments_eligibility_info_sum == 0 %}
+                            {% assign overpayments_eligibility_size = year_data.overpayments_eligibility | size %}
+                            {% if year_data.overpayments_eligibility == nil or overpayments_eligibility_size == 0 %}
                                 {% assign hide_overpayments_eligibility_accordion = true %}
                             {% endif %}
 
@@ -287,17 +283,12 @@ permalink: /
                                 {% assign hide_underpayments_accordion = true %}
                             {% endif %}
 
-                            {% assign underpayments_eligibility_none_reported = false %}
-                            {% if year_data.underpayments.Address_Location == nil and year_data.underpayments.Contractor_Provider_Status == nil %}
-                                {% assign underpayments_eligibility_none_reported = true %}
-                            {% endif %}
-                            {% assign underpayments_eligibility_info_sum = year_data.underpayments.Address_Location | plus: year_data.underpayments.Contractor_Provider_Status %}
-
                             {% assign underpayment_mitigations_planned_count = year_data.cyp5_app1_8 | size %}
                             {% assign underpayment_mitigations_taken_count = year_data.cyp5_atp1_8 | size %}
 
                             {% assign hide_underpayments_eligibility_accordion = false %}
-                            {% if underpayments_eligibility_none_reported == true or underpayments_eligibility_info_sum == 0 %}
+                            {% assign underpayments_eligibility_size = year_data.underpayments_eligibility | size %}
+                            {% if year_data.underpayments_eligibility == nil or underpayments_eligibility_size == 0 %}
                                 {% assign hide_underpayments_eligibility_accordion = true %}
                             {% endif %}
 
@@ -330,7 +321,7 @@ permalink: /
                             {% endif %}
 
                             {% assign hide_unknown_payments_accordion = false %}
-                            {% if year_data.cyp8 == nil and year_data.cyp7_ucp4_1 == nil %}
+                            {% if year_data.cyp8 == nil and year_data.cyp7_ucp4_1 == nil and year_data.cyp7_ucp1 == nil and year_data.cyp7_ucp2 == nil and year_data.cyp7_ucp3 == nil and year_data.cyp7_ucp4 == nil %}
                                 {% assign hide_unknown_payments_accordion = true %}
                             {% endif %}
 
@@ -422,13 +413,17 @@ permalink: /
                                                                     {% endif %}
 
                                                                     <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <thead>
+                                                                            <th>Overpayment root cause</th>
+                                                                            <th>Overpayment amount</th>
+                                                                        </thead>
                                                                         <tbody>
                                                                             {% if year_data.overpayments.cyp2 != nil %}
                                                                                 <tr>
-                                                                                    <td>Amount of overpayments within the agency's control</td>
-                                                                                    <td class="amount-col">
+                                                                                    <td><strong>Amount of overpayments within the agency's control</strong></td>
+                                                                                    <td class="amount-col"><strong>
                                                                                         ${{ year_data.overpayments.cyp2 | round: 2 | thousands_separator }} M
-                                                                                    </td>
+                                                                                    </strong></td>
                                                                                 </tr>
                                                                             {% endif %}
                                                                             {% if year_data.Hide_cyp2_cop1 != true %}
@@ -475,16 +470,20 @@ permalink: /
                                                                     {% endif %}
 
                                                                     <table class="usa-table usa-table--borderless overpayments-table">
+                                                                        <thead>
+                                                                            <th>Overpayment root cause</th>
+                                                                            <th>Overpayment amount</th>
+                                                                        </thead>
                                                                         <tbody>
                                                                             {% if year_data.overpayments_outside.cyp3 != nil %}
                                                                                 <tr>
-                                                                                    <td>Amount of overpayments outside the agency's control</td>
-                                                                                    <td class="amount-col">
+                                                                                    <td><strong>Amount of overpayments outside the agency's control</strong></td>
+                                                                                    <td class="amount-col"><strong>
                                                                                         ${{ year_data.overpayments_outside.cyp3 | round: 2 | thousands_separator }} M
-                                                                                    </td>
+                                                                                    </strong></td>
                                                                                 </tr>
                                                                             {% endif %}
-                                                                            {% if year_data.Hide_cyp3_cop1 != true and year_data.Hide_cyp3_cop4 != true %}
+                                                                            {% if year_data.Hide_cyp3_cop1 != true or year_data.Hide_cyp3_cop4 != true %}
                                                                                 <tr>
                                                                                     <td>Amount of overpayments that occurred because the data/information needed to validate payment accuracy prior to making a payment does not exist</td>
                                                                                     <td class="amount-col">
@@ -492,7 +491,7 @@ permalink: /
                                                                                     </td>
                                                                                 </tr>
                                                                             {% endif %}
-                                                                            {% if year_data.Hide_cyp3_cop2 != true and year_data.Hide_cyp3_cop5 != true %}
+                                                                            {% if year_data.Hide_cyp3_cop2 != true or year_data.Hide_cyp3_cop5 != true %}
                                                                                 <tr>
                                                                                     <td>The amount of overpayments that occurred because of an inability to access the data/information needed to validate payment accuracy prior to making a payment</td>
                                                                                     <td class="amount-col">
@@ -500,7 +499,7 @@ permalink: /
                                                                                     </td>
                                                                                 </tr>
                                                                             {% endif %}
-                                                                            {% if year_data.Hide_cyp3_cop3 != true and year_data.Hide_cyp3_cop6 != true %}
+                                                                            {% if year_data.Hide_cyp3_cop3 != true or year_data.Hide_cyp3_cop6 != true %}
                                                                                 <tr>
                                                                                     <td>The amount of overpayments that occurred because of a failure to access data/information needed to validate payment accuracy prior to making a payment</td>
                                                                                     <td class="amount-col">
@@ -529,33 +528,21 @@ permalink: /
                                                                             <th>Eligibility amount</th>
                                                                         </thead>
                                                                         <tbody>
-                                                                            {% if year_data.overpayments.Address_Location != nil %}
+                                                                            {% assign sorted_overpayments_eligibility = year_data.overpayments_eligibility %}
+                                                                            {% for eligibility_item in sorted_overpayments_eligibility %}
                                                                                 <tr>
-                                                                                    <td>Overpayments within the agency’s control</td>
-                                                                                    <td>Address/location: information regarding where the applicant/recipient lived, owned property, or was physically present in a specific location</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.overpayments.Address_Location | round: 2 | thousands_separator }} M
-                                                                                    </td>
+                                                                                   <td>{{ eligibility_item.Payment_Type }}</td>
+                                                                                   <td>
+                                                                                        {{ eligibility_item.Theme }}
+                                                                                        {% if eligibility_item.Theme_Description != nil and eligibility_item.Theme_Description != "" %}
+                                                                                            {% include _info-button.html title=eligibility_item.Theme_Description %}
+                                                                                        {% endif %}
+                                                                                   </td>
+                                                                                   <td class="amount-col">
+                                                                                       ${{ eligibility_item.Value | round: 2 | thousands_separator }} M
+                                                                                   </td>
                                                                                 </tr>
-                                                                            {% endif %}
-                                                                            {% if year_data.overpayments.Contractor_Provider_Status != nil %}
-                                                                                <tr>
-                                                                                    <td>Overpayments within the agency’s control</td>
-                                                                                    <td>Contractor or provider status: status or standing of contractor or provider, including recipient eligibility to provide medical services</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.overpayments.Contractor_Provider_Status | round: 2 | thousands_separator }} M
-                                                                                    </td>
-                                                                                </tr>
-                                                                            {% endif %}
-                                                                            {% if year_data.overpayments.Financial != nil %}
-                                                                                <tr>
-                                                                                    <td>Overpayments within the agency’s control</td>
-                                                                                    <td>Financial: the financial position or status of a beneficiary, recipient, applicant, or their family</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.overpayments.Financial | round: 2 | thousands_separator }} M
-                                                                                    </td>
-                                                                                </tr>
-                                                                            {% endif %}
+                                                                            {% endfor %}
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
@@ -616,10 +603,10 @@ permalink: /
                                                                         <tbody>
                                                                             {% if year_data.underpayments.cyp5 != nil %}
                                                                                 <tr>
-                                                                                    <td>Amount of underpayments</td>
-                                                                                    <td class="amount-col">
+                                                                                    <td><strong>Amount of underpayments</strong></td>
+                                                                                    <td class="amount-col"><strong>
                                                                                         ${{ year_data.underpayments.cyp5 | round: 2 | thousands_separator }} M
-                                                                                    </td>
+                                                                                    </strong></td>
                                                                                 </tr>
                                                                             {% endif %}
                                                                             {% if year_data.Hide_cyp5_cup1 != true %}
@@ -666,22 +653,20 @@ permalink: /
                                                                             <th>Eligibility amount</th>
                                                                         </thead>
                                                                         <tbody>
-                                                                            {% if year_data.underpayments.Address_Location != nil %}
+                                                                            {% assign sorted_underpayments_eligibility = year_data.underpayments_eligibility %}
+                                                                            {% for eligibility_item in sorted_underpayments_eligibility %}
                                                                                 <tr>
-                                                                                    <td>Address/location: information regarding where the applicant/recipient lived, owned property, or was physically present in a specific location</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.underpayments.Address_Location | round: 2 | thousands_separator }} M
+                                                                                   <td>
+                                                                                        {{ eligibility_item.Theme }}
+                                                                                        {% if eligibility_item.Theme_Description != nil and eligibility_item.Theme_Description != "" %}
+                                                                                            {% include _info-button.html title=eligibility_item.Theme_Description position="right" %}
+                                                                                        {% endif %}
                                                                                     </td>
+                                                                                   <td class="amount-col">
+                                                                                       ${{ eligibility_item.Value | round: 2 | thousands_separator }} M
+                                                                                   </td>
                                                                                 </tr>
-                                                                            {% endif %}
-                                                                            {% if year_data.underpayments.Contractor_Provider_Status != nil %}
-                                                                                <tr>
-                                                                                    <td>Contractor or provider status: status or standing of contractor or provider, including recipient eligibility to provide medical services</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.underpayments.Contractor_Provider_Status | round: 2 | thousands_separator }} M
-                                                                                    </td>
-                                                                                </tr>
-                                                                            {% endif %}
+                                                                            {% endfor %}
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
@@ -738,14 +723,6 @@ permalink: /
 
                                                                     <table class="usa-table usa-table--borderless overpayments-table">
                                                                         <tbody>
-                                                                            {% if year_data.cyp6 != nil %}
-                                                                                <tr>
-                                                                                    <td>Amount of technically improper payments</td>
-                                                                                    <td class="amount-col">
-                                                                                        ${{ year_data.cyp6 | round: 2 | thousands_separator }} M
-                                                                                    </td>
-                                                                                </tr>
-                                                                            {% endif %}
                                                                             {% if year_data.Program_Design_or_Structural_Issue != nil %}
                                                                                 <tr>
                                                                                     <td>The amount improper payments that were paid to the right recipient for the correct amount but were considered technically improper because of failure to follow statute or regulation</td>
@@ -856,42 +833,53 @@ permalink: /
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            Other
-                                                                            <button
-                                                                                type="button"
-                                                                                class="usa-tooltip"
-                                                                                data-position="top"
-                                                                                title="Unknown Payment caused by insufficient or lack of documentation from a scenario not previously specified"
-                                                                                aria-label="More info about unknown payment"
-                                                                                style="
-                                                                                    padding: 0 0 3px 0;
-                                                                                    margin: 0;
-                                                                                    width: 1.5rem;
-                                                                                    height: 1.5rem;
-                                                                                    background: none;
-                                                                                    border: none;
-                                                                                    vertical-align: middle;
-                                                                                "
-                                                                                >
-                                                                                <svg
-                                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                                    width="16"
-                                                                                    height="16"
-                                                                                    viewBox="0 0 24 24"
-                                                                                    role="img"
-                                                                                    aria-hidden="true"
-                                                                                >
-                                                                                    <circle cx="12" cy="12" r="10" fill="#005ea2" />
-                                                                                    <rect x="11" y="10" width="2" height="6" fill="white" />
-                                                                                    <circle cx="12" cy="7" r="1" fill="white" />
-                                                                                </svg>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td>${{ year_data.Insufficient_Documentation_to_Determine | round: 2 | thousands_separator }} M</td>
-                                                                        <td>{{ year_data.cyp7_ucp4_1 }}</td>
-                                                                    </tr>
+                                                                    {% if year_data.cyp7_ucp1 != nil %}
+                                                                        <tr>
+                                                                            <td>
+                                                                                Vendors/Providers
+                                                                                {% include _info-button.html
+                                                                                    title="Unknown Payment caused by insufficient or lack of documentation from vendors/providers" %}
+                                                                            </td>
+                                                                            <td>${{ year_data.cyp7_ucp1 | round: 2 | thousands_separator }} M</td>
+                                                                            <td>{{ year_data.cyp7_ucp1_1 }}</td>
+                                                                        </tr>
+                                                                    {% endif %}
+
+                                                                    {% if year_data.cyp7_ucp2 != nil %}
+                                                                        <tr>
+                                                                            <td>
+                                                                                Applicants
+                                                                                {% include _info-button.html
+                                                                                    title="Unknown Payment caused by insufficient or lack of documentation from applicants" %}
+                                                                            </td>
+                                                                            <td>${{ year_data.cyp7_ucp2 | round: 2 | thousands_separator }} M</td>
+                                                                            <td>{{ year_data.cyp7_ucp2_1 }}</td>
+                                                                        </tr>
+                                                                    {% endif %}
+
+                                                                    {% if year_data.cyp7_ucp3 != nil %}
+                                                                        <tr>
+                                                                            <td>
+                                                                                States
+                                                                                {% include _info-button.html
+                                                                                    title="Unknown Payment caused by insufficient or lack of documentation from states" %}
+                                                                            </td>
+                                                                            <td>${{ year_data.cyp7_ucp3 | round: 2 | thousands_separator }} M</td>
+                                                                            <td>{{ year_data.cyp7_ucp3_1 }}</td>
+                                                                        </tr>
+                                                                    {% endif %}
+
+                                                                    {% if year_data.cyp7_ucp4 != nil %}
+                                                                        <tr>
+                                                                            <td>
+                                                                                Other
+                                                                                {% include _info-button.html
+                                                                                    title="Unknown Payment caused by insufficient or lack of documentation from a scenario not previously specified" %}
+                                                                            </td>
+                                                                            <td>${{ year_data.cyp7_ucp4 | round: 2 | thousands_separator }} M</td>
+                                                                            <td>{{ year_data.cyp7_ucp4_1 }}</td>
+                                                                        </tr>
+                                                                    {% endif %}
                                                                 </tbody>
                                                             </table>
                                                             </div>
@@ -1002,7 +990,7 @@ permalink: /
                                                             {% if year_data.Hide_Program_Results_Future_Outlook_Baseline_Table == false %}
                                                                 <table class="usa-table usa-table--borderless future-outlook-projections">
                                                                     <thead>
-                                                                        <th colspan="2">Out-year improper payment and unknown payment projections</th>
+                                                                        <th colspan="2">Out-year improper payment and unknown payment projections and target</th>
                                                                     </thead>
                                                                     <tbody>
                                                                         {% if year_data.Outlays_Current_Year_Plus_1_Amount != nil %}
@@ -1052,18 +1040,26 @@ permalink: /
                                                         <div id="future-outlook-explanation-{{ year_data.Year }}" class="usa-accordion__content">
                                                             {% if year_data.Payment_Accuracy_Rate != nil %}
                                                                 {% assign ip_unknown_rate = 100 | minus: year_data.Payment_Accuracy_Rate %}
-                                                                <p><strong>The program's current year improper and unknown payment rate is {{ ip_unknown_rate | round: 2 }} %.</strong></p>
+                                                                <p>
+                                                                    The program's current year improper payment and unknown payment rate of {{ ip_unknown_rate | round: 2 }} %
+                                                                    {% assign rtp1_lower = year_data.rtp1 | downcase %}
+                                                                    {% if rtp1_lower == 'yes' %}
+                                                                        has been achieved with a balance of payment integrity risk and controls and represents the lowest rate that can be achieved without disproportionally increasing another risk, therefore it is the tolerable rate.
+                                                                    {% elsif rtp1_lower == 'no' %}
+                                                                        has not been achieved with a balance of payment integrity risk and controls and does not represent the lowest rate that can be achieved without disproportionally increasing another risk, therefore it is not the tolerable rate.
+                                                                    {% else %}
+                                                                        may or may not be the tolerable rate. The agency has not yet determined the tolerable rate for this program.
+                                                                    {% endif %}
+                                                                </p>
                                                             {% endif %}
-                                                            {% if year_data.rtp1 != nil and year_data.rtp1 != '' %}
-                                                                <p><strong>
-                                                                    The programs current year Improper Payment and Unknown Payment rate has been achieved with a balance of payment integrity risk
-                                                                    and controls and represents the lowest rate that can be achieved without disproportionally increasing another risk,
-                                                                    as such the programs current year Improper Payment and Unknown Payment rate is the tolerable rate:
-                                                                    {{ year_data.rtp1 }}.
-                                                                </strong></p>
+                                                            {% if year_data.rtp4_1 != nil and year_data.rtp4_1 != '' %}
+                                                                <p>{{ year_data.rtp4_1 | newline_to_br }}</p>
                                                             {% endif %}
                                                             {% if year_data.rtp4_2 != nil and year_data.rtp4_2 != '' %}
                                                                 <p>{{ year_data.rtp4_2 | newline_to_br }}</p>
+                                                            {% endif %}
+                                                            {% if year_data.rtp4_3 != nil and year_data.rtp4_3 != '' %}
+                                                                <p>{{ year_data.rtp4_3 | newline_to_br }}</p>
                                                             {% endif %}
                                                         </div>
                                                     </div>
@@ -1090,11 +1086,12 @@ permalink: /
                                         </div>
                                         <div class="grid-col-12" id="program-scorecards-additional-information-{{ year_data.Year }}">
                                             <h4 class="tab-heading">Additional Programmatic Information</h4>
-                                            {% if year_data.rnp4 != nil and year_data.rnp4 != '' %}
-                                                <p>{{ year_data.rnp4 | newline_to_br }}</p>
-                                            {% endif %}
                                             {% if year_data.pro1 != nil and year_data.pro1 != '' %}
                                                 <p>{{ year_data.pro1 | newline_to_br }}</p>
+                                            {% endif %}
+                                            {% if year_data.rnp4 != nil and year_data.rnp4 != '' %}
+                                                <p><strong>Accountability for Detecting, Preventing, and Recovering Improper Payments</strong></p>
+                                                <p>{{ year_data.rnp4 | newline_to_br }}</p>
                                             {% endif %}
                                         </div>
                                     </div>

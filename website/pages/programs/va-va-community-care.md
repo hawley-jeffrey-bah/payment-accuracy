@@ -212,31 +212,6 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: Actions planned regarding change process include clarifying
-      payment methodology within VA and third party administrators to bill at the
-      correct allowable rates.  VA will also implement system checks for non-contract
-      payments to suspend specific institutional inpatient and ambulance claims for
-      manual review prior to payment. In addition, VA will instruct third party administrators
-      to follow standard billing practices as defined in the contract. VA will communicate
-      to claims processing agents to not process claims when timely filing requirements
-      are not met.
-    Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: Actions taken regarding change process include updated
-      internal policies, ensuring the correct rates are being paid, and timely filing
-      requirements are accurately enforced in the Electronic Claims Adjudication Management
-      System. VA also improved pre-payment checks in the authorization system to improve
-      claims processing accuracy. In addition, VA researched why Veteran's other health
-      insurance information was not present in the payment system to correct and prevent
-      future deficiencies. VA also continued with the post-implementation of the MISSION
-      Act. This includes moving previous non-contract claims into compliant purchasing
-      vehicles such as agreements and contracts. Finally, VA documented the decision
-      of whether or not to apply the Centers for Medicare and Medicaid Services End-Stage
-      Renal Disease network reduction to VA dialysis claims.
-    Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
     Description_Action_Taken: Actions planned regarding training include VA will provide
       training on claims processing requirements when required other health insurance
       documentation is missing.
@@ -262,6 +237,31 @@ Data_By_Year:
       Dialysis Contract claims processing to Electronic Claims Adjudication Management
       System to auto-process correct rates.
     Mitigation_Strategy: atp1_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: Actions taken regarding change process include updated
+      internal policies, ensuring the correct rates are being paid, and timely filing
+      requirements are accurately enforced in the Electronic Claims Adjudication Management
+      System. VA also improved pre-payment checks in the authorization system to improve
+      claims processing accuracy. In addition, VA researched why Veteran's other health
+      insurance information was not present in the payment system to correct and prevent
+      future deficiencies. VA also continued with the post-implementation of the MISSION
+      Act. This includes moving previous non-contract claims into compliant purchasing
+      vehicles such as agreements and contracts. Finally, VA documented the decision
+      of whether or not to apply the Centers for Medicare and Medicaid Services End-Stage
+      Renal Disease network reduction to VA dialysis claims.
+    Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: Actions planned regarding change process include clarifying
+      payment methodology within VA and third party administrators to bill at the
+      correct allowable rates.  VA will also implement system checks for non-contract
+      payments to suspend specific institutional inpatient and ambulance claims for
+      manual review prior to payment. In addition, VA will instruct third party administrators
+      to follow standard billing practices as defined in the contract. VA will communicate
+      to claims processing agents to not process claims when timely filing requirements
+      are not met.
+    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -313,6 +313,7 @@ Data_By_Year:
   cyp6: '0.00'
   cyp7_app1_8: Training
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '32.85'
   cyp7_ucp4_1: VA is required to validate the appropriate reimbursement rate per the
     other health insurance information for non-contract related payments. However,
     the agency currently does not have the documentation necessary to determine if
@@ -351,6 +352,19 @@ Data_By_Year:
       to include a prepayment check, and simplifying contract pricing. Additionally,
       system improvements will allow for automation of the authorization review, decreasing
       human error. These improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '590.726647'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '363.443353'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -421,6 +435,13 @@ Data_By_Year:
     Financial: 5.36
     Inability_to_Access_Data: 0.0
     cyp5: '5.36'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '5.360000'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -430,17 +451,6 @@ Data_By_Year:
       Audit was the best mitigation strategy to help identify overpayments and perform
       a follow-up process.
     Mitigation_Strategy: app6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include ensuring contract language is
-      clear and clarify any inconsistent payment methodology instances with third-party
-      administrators regarding payment discrepancies. Additionally, VA will engage
-      in a contract modification to further elaborate on standard episode of care
-      claims processing. In addition, VA will ensure timely filing criteria is clear
-      and proper monitoring is in place. Change process was the best mitigation strategy
-      in order to develop stronger internal controls and mitigate risks within existing
-      payment processes.
-    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q3
     Description_Action_Taken: Actions taken included clarified payment methodology
@@ -453,6 +463,17 @@ Data_By_Year:
       was the best mitigation strategy in order to develop stronger internal controls
       and mitigate risks within existing payment processes.
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include ensuring contract language is
+      clear and clarify any inconsistent payment methodology instances with third-party
+      administrators regarding payment discrepancies. Additionally, VA will engage
+      in a contract modification to further elaborate on standard episode of care
+      claims processing. In addition, VA will ensure timely filing criteria is clear
+      and proper monitoring is in place. Change process was the best mitigation strategy
+      in order to develop stronger internal controls and mitigate risks within existing
+      payment processes.
+    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q3
     Description_Action_Taken: Actions taken included updating the claims processing
@@ -594,6 +615,19 @@ Data_By_Year:
       overpayments from occurring by improving controls in the payment processes and
       simplifying contract pricing. These improvements will allow for more accurate
       payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '92.491860'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '324.138140'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

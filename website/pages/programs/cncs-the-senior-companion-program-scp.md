@@ -167,6 +167,18 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0.066'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: AmeriCorps plans to continue to provide training and
+      resources to grantees to ensure proper utilization of grant funds. AmeriCorps
+      has a Payment Integrity Corrective Action Plan working group that includes accountable
+      program officials and key agency stakeholders. The working group has created
+      training and resources targeted at the root cause drivers of improper payments
+      which are available on the agency’s website or grantee training platform (LITMOS).
+      The working group plans to analyze the FY 2023 improper payments root cause
+      drivers and explore opportunities to create new resources or expand on those
+      that currently exist in FY 2024.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: AmeriCorps had established a Payment Integrity Corrective
@@ -180,18 +192,6 @@ Data_By_Year:
       cause drivers of improper payments to the corresponding applicable statute,
       regulation, and available training. This will continue for the FY 2023 assessment.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: AmeriCorps plans to continue to provide training and
-      resources to grantees to ensure proper utilization of grant funds. AmeriCorps
-      has a Payment Integrity Corrective Action Plan working group that includes accountable
-      program officials and key agency stakeholders. The working group has created
-      training and resources targeted at the root cause drivers of improper payments
-      which are available on the agency’s website or grantee training platform (LITMOS).
-      The working group plans to analyze the FY 2023 improper payments root cause
-      drivers and explore opportunities to create new resources or expand on those
-      that currently exist in FY 2024.
-    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -237,6 +237,7 @@ Data_By_Year:
   cyp6: '0'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '3.305'
   cyp7_ucp4_1: 'The AmeriCorps Payment Integrity Assessment uses documentation submitted
     by grantees to support the selected federal expenses charged against the grant.
     There are situations where the grantee is unable to provide the required documentation
@@ -262,6 +263,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '2.025000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -311,6 +319,13 @@ Data_By_Year:
     Financial: 0.046
     Inability_to_Access_Data: 0.0
     cyp5: '0.046'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.046000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

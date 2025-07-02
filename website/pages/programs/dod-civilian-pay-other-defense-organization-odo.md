@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
@@ -31,6 +31,27 @@ Data_By_Year:
       samples in a timely manner based off of the deliverable schedule.'
     Mitigation_Strategy: app4_1
   - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'Due to the delays with the system upgrades the DoD
+      Education Activity (DoDEA) has implemented a manual compensating control since
+      March 2024. Management has identified the following concerns with this compensating
+      control:
+
+      1) It has become a burden on the DoDEA staff. Specifically, continuing this
+      process would require digitally signing the CAC for over 12,000 documents a
+      year.
+
+
+      2) This manual process carries a large risk of PII data spillage as the information
+      included on the SF1190 and the DD1614, contains PII.
+
+
+      3) It is not cost beneficial nor an acceptable risk for DoDEA to continue with
+      this compensating control.
+
+      '
+    Mitigation_Strategy: atp4_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: A DoDEA employee must complete a Standard Form(SF)-1190
@@ -65,27 +86,6 @@ Data_By_Year:
       \ are to be modernized in the coming years and will provide the capability to\
       \ have CAC signatures on the SF1190 and DD1614.\n"
     Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'Due to the delays with the system upgrades the DoD
-      Education Activity (DoDEA) has implemented a manual compensating control since
-      March 2024. Management has identified the following concerns with this compensating
-      control:
-
-      1) It has become a burden on the DoDEA staff. Specifically, continuing this
-      process would require digitally signing the CAC for over 12,000 documents a
-      year.
-
-
-      2) This manual process carries a large risk of PII data spillage as the information
-      included on the SF1190 and the DD1614, contains PII.
-
-
-      3) It is not cost beneficial nor an acceptable risk for DoDEA to continue with
-      this compensating control.
-
-      '
-    Mitigation_Strategy: atp4_1
   Confidence_Level: 90% to <95%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -183,6 +183,25 @@ Data_By_Year:
   cyp6_atp1_8: Automation, Change Process
   cyp7_app1_8: Automation, Change Process
   cyp7_atp1_8: Automation, Change Process
+  cyp7_ucp2: '322.48'
+  cyp7_ucp2_1: "The key supporting documentation for some samples that was not provided\
+    \ includes the following: market pay validation, Foreign Allowances Application,\
+    \ Grant and Report (SF-1190), Standard Form 50 (SF-50) Notification of Personnel\
+    \ Action.  As mentioned above, the vendor responsible for providing the documentation\
+    \ is CHRA.  CHRA went through a consolidation period in which points of contact\
+    \ (POCs) and their roles were reshuffled. The time of submission of the missing\
+    \ key supporting documentation identified above varies depending on the life event.\
+    \   \nThis CIV Pay Other Defense Organization program is unable to conclude that\
+    \ the payment made was properly supported without the proper key supporting documentation.\
+    \  Depending on the life event, the proper supporting documentation will prove\
+    \ out the eligibility criteria that needs to be validated.  A proper court document\
+    \ for example would determine whether an alimony garnishment or child support\
+    \ payment for example are either proper or improper.\n Additionally, a main point\
+    \ of issue involved overseas entitlements. Historically, for the audit, CHRA made\
+    \ contact with the Overseas Entitlement office for key supporting documentation\
+    \ related to overseas employees. However, during this audit year, CHRA informed\
+    \ the DHA that they were unable to provide the documentation on time (likely due\
+    \ to the reshuffling of personnel). \n"
   cyp8: The Department’s unknown payments were primarily a result of the lack of sufficient
     key supporting documentation (KSD) to substantiate whether payments were proper
     or improper at the time of post-payment reviews. Specifically, with payments related
@@ -220,6 +239,13 @@ Data_By_Year:
       \ within the ODOs is being done to reduce instances of these overpayments. \
       \ By implementing stronger internal controls these overpayments should be significantly\
       \ reduced.\n"
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '1.330000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -321,6 +347,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.88'
+  underpayments_eligibility:
+  - Key: cyp5_dit1_1
+    Payment_Type: Underpayments
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '0.880000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

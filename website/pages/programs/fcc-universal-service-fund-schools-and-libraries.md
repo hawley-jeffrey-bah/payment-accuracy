@@ -159,13 +159,29 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q1
+    Description_Action_Taken: Through USAC's Risk Management Council meetings, the
+      different Universal Service Fund (USF) program teams discussed strategic initiatives
+      and risks that may impact USAC’s goals. The Risk Management Council meetings
+      will continue to provide an opportunity to analyze and respond to identified
+      changes and related risks to maintain an effective internal control system as
+      well as effective enterprise systems management.
+    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The FCC initiated a rulemaking proceeding in December
-      2021 regarding the establishment of a USF Schools and Libraries Bidding Portal
-      to enhance competitive bidding compliance. The Competitive Bidding Portal (WC
-      Docket No. 21-455) rulemaking proceeding remains open at this time.
-    Mitigation_Strategy: app1_1
+    Completion_Date: FY2024
+    Description_Action_Taken: USAC will continue to hold monthly meetings between
+      USAC’s Audit and Assurance Division (AAD) and USAC leadership to discuss findings
+      identified by AAD. During these meetings, corrective actions are discussed to
+      prevent similar audit findings from re-occurring in the future.
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q1
+    Description_Action_Taken: Monthly meetings are held between USAC’s Audit and Assurance
+      Division (AAD) and USAC leadership to discuss audit findings identified by AAD.
+      During these meetings, corrective actions are discussed to prevent similar audit
+      findings from re-occurring in the future.
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: The Schools and Libraries program team will continue
@@ -177,29 +193,6 @@ Data_By_Year:
       annual training and implemented an Online Training Library to provide program
       participants with additional tools that they can access at their convenience.
     Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q1
-    Description_Action_Taken: Through USAC's Risk Management Council meetings, the
-      different Universal Service Fund (USF) program teams discussed strategic initiatives
-      and risks that may impact USAC’s goals. The Risk Management Council meetings
-      will continue to provide an opportunity to analyze and respond to identified
-      changes and related risks to maintain an effective internal control system as
-      well as effective enterprise systems management.
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q1
-    Description_Action_Taken: Monthly meetings are held between USAC’s Audit and Assurance
-      Division (AAD) and USAC leadership to discuss audit findings identified by AAD.
-      During these meetings, corrective actions are discussed to prevent similar audit
-      findings from re-occurring in the future.
-    Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: USAC will continue to hold monthly meetings between
-      USAC’s Audit and Assurance Division (AAD) and USAC leadership to discuss findings
-      identified by AAD. During these meetings, corrective actions are discussed to
-      prevent similar audit findings from re-occurring in the future.
-    Mitigation_Strategy: app6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: The Schools and Libraries program team will continue
@@ -225,6 +218,13 @@ Data_By_Year:
       in the Schools and Libraries program, including the competitive bidding and
       invoicing requirements.
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The FCC initiated a rulemaking proceeding in December
+      2021 regarding the establishment of a USF Schools and Libraries Bidding Portal
+      to enhance competitive bidding compliance. The Competitive Bidding Portal (WC
+      Docket No. 21-455) rulemaking proceeding remains open at this time.
+    Mitigation_Strategy: app1_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -285,6 +285,19 @@ Data_By_Year:
       Center (EPC), which is also expected to help identify invoicing errors before
       disbursements are issued.  This systems consolidation transition is scheduled
       to occur between November 3 and 7, 2023.
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '17.136000'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '15.767000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -339,24 +352,12 @@ Data_By_Year:
     cyp5: '0'
 - Actions_Taken:
   - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The Schools and Libraries program team will continue
-      to enhance its outreach approach, providing customized and specific directions
-      to program participants based on the participants’ Payment Quality Assurance
-      (PQA) exceptions. Outreach includes updates to the website training materials,
-      and conducting webinar(s) focused on and communicating best practices based
-      on the observations made during the prior year’s PQA reviews. USAC provides
-      annual training and has implemented an Online Training Library to provide program
-      participants with additional tools that they can access at their convenience.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: The Schools and Libraries program team transitioned
-      the invoicing process from the Legacy Systems to the E-Rate Productivity Center
-      (EPC), which will identify invoicing errors before disbursements are issued.  E-Rate
-      EPC Invoicing implemented system updates to improve security and authentication
-      of invoice filers.
-    Mitigation_Strategy: atp1_1
+    Completion_Date: FY2027
+    Description_Action_Taken: The FCC initiated a rulemaking proceeding in December
+      2021 regarding establishing a USF Schools and Libraries Bidding Portal to enhance
+      competitive bidding compliance. The Competitive Bidding Portal (WC Docket No.
+      21-455) rulemaking proceeding remains open at this time.
+    Mitigation_Strategy: app1_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: The Schools and Libraries program team has continued
@@ -378,13 +379,34 @@ Data_By_Year:
       a change process for  the new invoicing system.  The automated system provides
       more upfront data validations to mitigate improper payments.
     Mitigation_Strategy: atp4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: Through USAC's Risk Management Council meetings, the
+      different Universal Service Fund (USF) program teams discussed strategic initiatives
+      and risks that may impact USAC’s goals. The Risk Management Council meetings
+      will continue to provide an opportunity to analyze and respond to identified
+      changes and related risks to maintain an effective internal control system as
+      well as effective enterprise systems management.
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: The Schools and Libraries program team transitioned
+      the invoicing process from the Legacy Systems to the E-Rate Productivity Center
+      (EPC), which will identify invoicing errors before disbursements are issued.  E-Rate
+      EPC Invoicing implemented system updates to improve security and authentication
+      of invoice filers.
+    Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
-    Completion_Date: FY2027
-    Description_Action_Taken: The FCC initiated a rulemaking proceeding in December
-      2021 regarding establishing a USF Schools and Libraries Bidding Portal to enhance
-      competitive bidding compliance. The Competitive Bidding Portal (WC Docket No.
-      21-455) rulemaking proceeding remains open at this time.
-    Mitigation_Strategy: app1_1
+    Completion_Date: FY2025
+    Description_Action_Taken: The Schools and Libraries program team will continue
+      to enhance its outreach approach, providing customized and specific directions
+      to program participants based on the participants’ Payment Quality Assurance
+      (PQA) exceptions. Outreach includes updates to the website training materials,
+      and conducting webinar(s) focused on and communicating best practices based
+      on the observations made during the prior year’s PQA reviews. USAC provides
+      annual training and has implemented an Online Training Library to provide program
+      participants with additional tools that they can access at their convenience.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: Through USAC's Risk Management Council meetings, the
@@ -401,15 +423,6 @@ Data_By_Year:
       identified by AAD. During these meetings, corrective actions are discussed to
       prevent similar audit findings from re-occurring in the future.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: Through USAC's Risk Management Council meetings, the
-      different Universal Service Fund (USF) program teams discussed strategic initiatives
-      and risks that may impact USAC’s goals. The Risk Management Council meetings
-      will continue to provide an opportunity to analyze and respond to identified
-      changes and related risks to maintain an effective internal control system as
-      well as effective enterprise systems management.
-    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: USAC will continue to hold monthly meetings between
@@ -497,6 +510,19 @@ Data_By_Year:
       team transitioned the invoicing process from the SL Legacy Systems to the E-Rate
       Productivity Center (EPC), which is expected to help identify invoicing errors
       before disbursements are issued.
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '10.610000'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '20.500000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

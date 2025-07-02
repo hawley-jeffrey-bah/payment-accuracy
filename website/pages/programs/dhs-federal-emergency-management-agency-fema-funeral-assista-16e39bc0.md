@@ -57,6 +57,70 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
 - Actions_Taken:
   - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: "The Payment Integrity Information Act of 2019 (PIIA)\
+      \ requires agencies to review and assess all programs and activities they administer\
+      \ and identify those determined to be susceptible to significant improper payments,\
+      \ estimate the annual amount of improper payments, and submit those estimates\
+      \ to Congress. In accordance with the Office of Management and Budget (OMB)\
+      \ Circular No. A-123, Appendix C, \"Requirements for Payment Integrity Improvement\"\
+      , federal agencies are required to assess improper payments and report annually\
+      \ on their efforts. In compliance with these requirements, the Federal Emergency\
+      \ Management Agency (FEMA) Funeral Assistance program has conducted reviews\
+      \ and published results in 2024, over fiscal year (FY) 2022 program disbursement\
+      \ activity. \n\nFEMA also performed an assessment of internal control over financial\
+      \ reporting including performing tests of operating effectiveness, for the FY\
+      \ 2023 and FY 2024 performance period. These internal control assessments included\
+      \ a review over Grants Management with no material internal control issues noted.\
+      \ \n\nIn addition to internal compliance and control audits and PIIA assessments\
+      \ utilizing a random statistical sampling of COVID-19 Funeral Assistance disbursements,\
+      \ the following audit corrective actions have been taken: \n•\tFEMA Office of\
+      \ the Chief Financial Officer conducted quarterly internal control testing for\
+      \ the annual test of operating effectiveness over COVID Funeral Assistance potential\
+      \ risks.\n•\tThe Government Accountability Office (GAO) was required to conduct\
+      \ 60-day incremental audits in support of the Coronavirus Aid, Relief, and Economic\
+      \ Security Act (CARES Act) funding inclusive of one review specific to COVID-19\
+      \ Funeral Assistance.\n•\tThe DHS Office of the Inspector General (OIG) initiated\
+      \ an audit engagement for COVID-19 Funeral Assistance. \n•\tThe quantity of\
+      \ Quality Control (QC) inspections and frequency of reporting has been addressed\
+      \ through collaborative effort to streamline access and distribution of QC monitoring\
+      \ reports enabling more effective real time coaching opportunities to improve\
+      \ contractor performance."
+    Mitigation_Strategy: atp6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) is strengthening
+      the insurance verification process to assist in the review for a potential duplication
+      of benefits. Through Funeral Assistance program reviews, there were noted instances
+      applicant submitted limited insurance documents from life insurance companies,
+      but it was not clear if the decedent actually had funeral and/or burial insurance
+      coverage within the policy. As such, the program has made updates to the current
+      operating procedures to strengthen the insurance verification process. FEMA
+      will consider insurance specifically intended only for funeral and burial costs
+      a duplication of benefits and will not consider more general insurance for which
+      proceeds may be used towards funeral costs. This will continue to be program’s
+      approach and it will be further clarified in the next version of the Individual
+      Assistance Program and Policy Guide (IAPPG). In addition, FEMA is also enhancing
+      the change management process as it relates to critical changes made throughout
+      the assistance period to ensure that all relevant personnel and staff are aware
+      of changes to the operating procedures and program requirements.
+    Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: Due to the expanded nature of COVID-19 Funeral assistance,
+      the Federal Emergency Management Agency (FEMA) implemented additional reports
+      to monitor and mitigate the potential for Improper Payments (IPs) and Unknown
+      Payments (UPs). These daily reports identify data anomalies, to include (1)
+      funeral assistance applications containing three or more decedents; (2) applications
+      without decedent information; (3) applications transferred to another disaster;
+      and (4) applications canceled as exact duplicates. Identification of these data
+      elements were used to provide reminders and supplemental refresher trainings.
+      Additionally, FEMA Recovery established a new section in the Reporting and Analytics
+      Division in October 2022, solely dedicated to payment integrity, including case
+      reviews, application of fraud prevention tools and controls, and coordination
+      of guidance and procedure changes with the Individual Assistance (IA) program.
+    Mitigation_Strategy: atp7_1
+  - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: "The Federal Emergency Management Agency (FEMA) acquired\
       \ the services of a call center service provider contractor to assist with processing\
@@ -82,56 +146,21 @@ Data_By_Year:
     Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) is strengthening
-      the insurance verification process to assist in the review for a potential duplication
-      of benefits. Through Funeral Assistance program reviews, there were noted instances
-      applicant submitted limited insurance documents from life insurance companies,
-      but it was not clear if the decedent actually had funeral and/or burial insurance
-      coverage within the policy. As such, the program has made updates to the current
-      operating procedures to strengthen the insurance verification process. FEMA
-      will consider insurance specifically intended only for funeral and burial costs
-      a duplication of benefits and will not consider more general insurance for which
-      proceeds may be used towards funeral costs. This will continue to be program’s
-      approach and it will be further clarified in the next version of the Individual
-      Assistance Program and Policy Guide (IAPPG). In addition, FEMA is also enhancing
-      the change management process as it relates to critical changes made throughout
-      the assistance period to ensure that all relevant personnel and staff are aware
-      of changes to the operating procedures and program requirements.
-    Mitigation_Strategy: app4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: A COVID-19 Funeral Assistance Task Force was created
-      and led by a Federal Coordinating Officer (FCO). The task force coordinated
-      with the DHS Office of General Counsel (OGC), Office of Information and Regulatory
-      Affairs and Congressional representatives for policy implementation which is
-      publicly available onFEMA.gov. Extensive collaboration efforts also included
-      working with Department, interagency, state and community partners including
-      the DHS Office of the Inspector General (OIG), Operational Reporting Branch,
-      Communications Division, Service Center Support, External Affairs, State, Tribal
-      and Territorial Consultations, National funeral Home Directors, Board of Medical
-      Examiners; Community Partners such as Veteran Services, DHS, and the Department
-      of Treasury's Bureau of Fiscal Services.
-    Mitigation_Strategy: atp5_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) Individual
-      Assistance (IA) Division provided refresher training in March 2023 to staff
-      processing requests for COVID-19 Funeral Assistance. Going forward, FEMA will
-      continue to coordinate with the Program Management Section (PMS) to send reminders
-      to the staff processing funeral determinations to help reinforce guidance and
-      enable personnel to mitigate errors. FEMA is also providing detailed instructions
-      and examples of information processing that staff should verify on the internet
-      and how to appropriately document within the application file record comments.
-      In the early stages of COVID-19 Funeral Assistance, the internet search was
-      not an option to resolving missing verification points. This was causing multiple
-      calls to applicants asking them to provide the information, when funeral homes
-      were not responding to verification calls, and leading to a high number of ineligible
-      cases. Later guidance was updated to include an internet search in order to
-      find information that would help with the verification process and reduce the
-      burden on the applicant to provide. The internet search can assist caseworkers
-      in finding a phone number of the funeral home, validating the funeral home is
-      a valid business and confirming the death occurred by locating an obituary.
-    Mitigation_Strategy: app3_1
+    Description_Action_Taken: "The Payment Integrity Information Act of 2019 (PIIA)\
+      \ requires agencies to review and assess all programs and activities they administer\
+      \ and identify those determined to be susceptible to significant improper payments,\
+      \ estimate the annual amount of improper payments, and submit those estimates\
+      \ to Congress. In accordance with the Office of Management and Budget (OMB)\
+      \ Circular A-123, Appendix C, \"Requirements for Payment Integrity Improvement\"\
+      , federal agencies are required to assess improper payments and report annually\
+      \ on their efforts. In compliance with these requirements, the Federal Emergency\
+      \ Management Agency (FEMA) Funeral Assistance program will conduct a review\
+      \ and publish results in 2025 over fiscal year (FY) 2023 program disbursement\
+      \ activity. \n\nIn addition, FEMA will perform an assessment of internal control\
+      \ over financial reporting including performing tests of operating effectiveness,\
+      \ for the FY 2025 performance period. These internal control assessments include\
+      \ a review over Grants Management."
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: "The National Emergency Management Information System\
@@ -169,37 +198,6 @@ Data_By_Year:
       \ include manually reviewing NEMIS flags."
     Mitigation_Strategy: atp1_1
   - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: "The Payment Integrity Information Act of 2019 (PIIA)\
-      \ requires agencies to review and assess all programs and activities they administer\
-      \ and identify those determined to be susceptible to significant improper payments,\
-      \ estimate the annual amount of improper payments, and submit those estimates\
-      \ to Congress. In accordance with the Office of Management and Budget (OMB)\
-      \ Circular No. A-123, Appendix C, \"Requirements for Payment Integrity Improvement\"\
-      , federal agencies are required to assess improper payments and report annually\
-      \ on their efforts. In compliance with these requirements, the Federal Emergency\
-      \ Management Agency (FEMA) Funeral Assistance program has conducted reviews\
-      \ and published results in 2024, over fiscal year (FY) 2022 program disbursement\
-      \ activity. \n\nFEMA also performed an assessment of internal control over financial\
-      \ reporting including performing tests of operating effectiveness, for the FY\
-      \ 2023 and FY 2024 performance period. These internal control assessments included\
-      \ a review over Grants Management with no material internal control issues noted.\
-      \ \n\nIn addition to internal compliance and control audits and PIIA assessments\
-      \ utilizing a random statistical sampling of COVID-19 Funeral Assistance disbursements,\
-      \ the following audit corrective actions have been taken: \n•\tFEMA Office of\
-      \ the Chief Financial Officer conducted quarterly internal control testing for\
-      \ the annual test of operating effectiveness over COVID Funeral Assistance potential\
-      \ risks.\n•\tThe Government Accountability Office (GAO) was required to conduct\
-      \ 60-day incremental audits in support of the Coronavirus Aid, Relief, and Economic\
-      \ Security Act (CARES Act) funding inclusive of one review specific to COVID-19\
-      \ Funeral Assistance.\n•\tThe DHS Office of the Inspector General (OIG) initiated\
-      \ an audit engagement for COVID-19 Funeral Assistance. \n•\tThe quantity of\
-      \ Quality Control (QC) inspections and frequency of reporting has been addressed\
-      \ through collaborative effort to streamline access and distribution of QC monitoring\
-      \ reports enabling more effective real time coaching opportunities to improve\
-      \ contractor performance."
-    Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: "The Federal Emergency Management Agency (FEMA) acquired\
       \ the services of a call center service provider contractor to assist with processing\
@@ -225,36 +223,38 @@ Data_By_Year:
     Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: "The Payment Integrity Information Act of 2019 (PIIA)\
-      \ requires agencies to review and assess all programs and activities they administer\
-      \ and identify those determined to be susceptible to significant improper payments,\
-      \ estimate the annual amount of improper payments, and submit those estimates\
-      \ to Congress. In accordance with the Office of Management and Budget (OMB)\
-      \ Circular A-123, Appendix C, \"Requirements for Payment Integrity Improvement\"\
-      , federal agencies are required to assess improper payments and report annually\
-      \ on their efforts. In compliance with these requirements, the Federal Emergency\
-      \ Management Agency (FEMA) Funeral Assistance program will conduct a review\
-      \ and publish results in 2025 over fiscal year (FY) 2023 program disbursement\
-      \ activity. \n\nIn addition, FEMA will perform an assessment of internal control\
-      \ over financial reporting including performing tests of operating effectiveness,\
-      \ for the FY 2025 performance period. These internal control assessments include\
-      \ a review over Grants Management."
-    Mitigation_Strategy: app6_1
+    Description_Action_Taken: The Federal Emergency Management Agency (FEMA) Individual
+      Assistance (IA) Division provided refresher training in March 2023 to staff
+      processing requests for COVID-19 Funeral Assistance. Going forward, FEMA will
+      continue to coordinate with the Program Management Section (PMS) to send reminders
+      to the staff processing funeral determinations to help reinforce guidance and
+      enable personnel to mitigate errors. FEMA is also providing detailed instructions
+      and examples of information processing that staff should verify on the internet
+      and how to appropriately document within the application file record comments.
+      In the early stages of COVID-19 Funeral Assistance, the internet search was
+      not an option to resolving missing verification points. This was causing multiple
+      calls to applicants asking them to provide the information, when funeral homes
+      were not responding to verification calls, and leading to a high number of ineligible
+      cases. Later guidance was updated to include an internet search in order to
+      find information that would help with the verification process and reduce the
+      burden on the applicant to provide. The internet search can assist caseworkers
+      in finding a phone number of the funeral home, validating the funeral home is
+      a valid business and confirming the death occurred by locating an obituary.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
-    Description_Action_Taken: Due to the expanded nature of COVID-19 Funeral assistance,
-      the Federal Emergency Management Agency (FEMA) implemented additional reports
-      to monitor and mitigate the potential for Improper Payments (IPs) and Unknown
-      Payments (UPs). These daily reports identify data anomalies, to include (1)
-      funeral assistance applications containing three or more decedents; (2) applications
-      without decedent information; (3) applications transferred to another disaster;
-      and (4) applications canceled as exact duplicates. Identification of these data
-      elements were used to provide reminders and supplemental refresher trainings.
-      Additionally, FEMA Recovery established a new section in the Reporting and Analytics
-      Division in October 2022, solely dedicated to payment integrity, including case
-      reviews, application of fraud prevention tools and controls, and coordination
-      of guidance and procedure changes with the Individual Assistance (IA) program.
-    Mitigation_Strategy: atp7_1
+    Description_Action_Taken: A COVID-19 Funeral Assistance Task Force was created
+      and led by a Federal Coordinating Officer (FCO). The task force coordinated
+      with the DHS Office of General Counsel (OGC), Office of Information and Regulatory
+      Affairs and Congressional representatives for policy implementation which is
+      publicly available onFEMA.gov. Extensive collaboration efforts also included
+      working with Department, interagency, state and community partners including
+      the DHS Office of the Inspector General (OIG), Operational Reporting Branch,
+      Communications Division, Service Center Support, External Affairs, State, Tribal
+      and Territorial Consultations, National funeral Home Directors, Board of Medical
+      Examiners; Community Partners such as Veteran Services, DHS, and the Department
+      of Treasury's Bureau of Fiscal Services.
+    Mitigation_Strategy: atp5_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -389,6 +389,19 @@ Data_By_Year:
       \ assistance to those that had already incurred costs and met the required eligibility\
       \ and documentation requirements, it was determined that all identified overpayments\
       \ are inside of the agency's control to prevent improper payments from occurring."
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '50.843955'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '1.572493'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -554,6 +567,13 @@ Data_By_Year:
     Financial: 7.04948
     Inability_to_Access_Data: 0.0
     cyp5: '7.04947984'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '7.049480'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

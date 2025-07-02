@@ -247,17 +247,6 @@ Data_By_Year:
     Mitigation_Strategy: app5_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
-    Description_Action_Taken: "The IRS held its annual Dependent Database (DDb) meetings\
-      \ with stakeholders in the Wage & Investment, Small Business & Self Employed,\
-      \ and IT divisions, to adjust the value of prior-year compliance filters for\
-      \ audit selection of returns claiming the Additional Child Tax Credit (ACTC)\
-      \ and identify improvement opportunities for the filing season. Further, the\
-      \ IRS organized five Nationwide Tax Forums in various cities to provide valuable\
-      \ information, updates and training on various tax-related topics, such as tax\
-      \ law changes to refundable tax credits.\t"
-    Mitigation_Strategy: atp4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
     Description_Action_Taken: The IRS leveraged data sharing pursuant to various interagency
       agreements, e.g., Department of Health and Human Services (HHS) Office of Child
       Support enforcement (OCSE), and the Social Security Administration (SSA), to
@@ -272,6 +261,17 @@ Data_By_Year:
       compliance filters for audit selection of returns claiming the Additional Child
       Tax Credit (ACTC) and identify improvement opportunities for next filing season.
     Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
+    Description_Action_Taken: "The IRS held its annual Dependent Database (DDb) meetings\
+      \ with stakeholders in the Wage & Investment, Small Business & Self Employed,\
+      \ and IT divisions, to adjust the value of prior-year compliance filters for\
+      \ audit selection of returns claiming the Additional Child Tax Credit (ACTC)\
+      \ and identify improvement opportunities for the filing season. Further, the\
+      \ IRS organized five Nationwide Tax Forums in various cities to provide valuable\
+      \ information, updates and training on various tax-related topics, such as tax\
+      \ law changes to refundable tax credits.\t"
+    Mitigation_Strategy: atp4_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2020
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -339,6 +339,42 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '16.383900'
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '98.303400'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '70.996900'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '16.383900'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '5.461300'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '338.600600'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -416,27 +452,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
-      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
-      Employed, and IT divisions, to review and adjust the value of prior-year compliance
-      filters for audit selection of returns claiming the Additional Child Tax Credit
-      (ACTC). Based on analysis of prior-year data, the IRS refines the IRS filters
-      to better prioritize returns with higher likelihoods of errors; this helps prevent
-      improper payments by intervening earlier in the process. The annual Dependent
-      Database (DDb) meeting helps to mitigate the refundable tax credits (RTCs) improper
-      payment primary root causes (1) data/information needed does not exist at the
-      point of return filing and (2) inability to access data/information at the time
-      the return is filed. Due to the taxpayer’s misrepresentation or misunderstanding
-      of key points of eligibility requirements, especially for self-employment or
-      other income not reported to the IRS by third-parties, and reliance on taxpayer
-      self-certification, errors (both unintentional and intentional) can occur. Improved
-      compliance filters can enhance these issues after returns are filed but before
-      payments are issued, helping to reduce improper payments. The primary result
-      of this approach is enhanced targeting of resources to areas in which errors
-      are most likely to occur.
-    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meeting
@@ -507,6 +522,27 @@ Data_By_Year:
       of returns. This is especially important given the lack of a pre-approval process
       for these credits.
     Mitigation_Strategy: atp5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
+      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
+      Employed, and IT divisions, to review and adjust the value of prior-year compliance
+      filters for audit selection of returns claiming the Additional Child Tax Credit
+      (ACTC). Based on analysis of prior-year data, the IRS refines the IRS filters
+      to better prioritize returns with higher likelihoods of errors; this helps prevent
+      improper payments by intervening earlier in the process. The annual Dependent
+      Database (DDb) meeting helps to mitigate the refundable tax credits (RTCs) improper
+      payment primary root causes (1) data/information needed does not exist at the
+      point of return filing and (2) inability to access data/information at the time
+      the return is filed. Due to the taxpayer’s misrepresentation or misunderstanding
+      of key points of eligibility requirements, especially for self-employment or
+      other income not reported to the IRS by third-parties, and reliance on taxpayer
+      self-certification, errors (both unintentional and intentional) can occur. Improved
+      compliance filters can enhance these issues after returns are filed but before
+      payments are issued, helping to reduce improper payments. The primary result
+      of this approach is enhanced targeting of resources to areas in which errors
+      are most likely to occur.
+    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2021
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -639,6 +675,42 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '103.396800'
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '620.380800'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '448.052800'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '103.396800'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '34.465600'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '2136.867200'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

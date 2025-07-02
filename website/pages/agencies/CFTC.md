@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -79,6 +79,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'The Commission determined that implementing a payment recapture audit
@@ -216,6 +218,10 @@ detail_exs1: "On March 2, 2020, the Payment Integrity Information Act of 2019 (P
   \ reviews any changes to its programs in between preparing formal risk assessments\
   \ to identify whether a new risk assessment should be conducted."
 detail_pcp12_1: null
+detail_pcp14: There were no new or open recommendations in the latest OIG report on
+  CFTC's payment integrity reporting. The agency continues to monitor the payment
+  activity within its programs in a timely manner to ensure that we are in full compliance
+  with PIIA requirements.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

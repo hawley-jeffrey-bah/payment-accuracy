@@ -235,6 +235,7 @@ Data_By_Year:
   cyp6: '0'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '12.340'
   cyp7_ucp4_1: 'The AmeriCorps Payment Integrity Assessment uses documentation submitted
     by grantees to support the selected federal expenses charged against the grant.
     There are situations where the grantee cannot provide the required documentation
@@ -260,6 +261,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '11.876000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -305,7 +313,24 @@ Data_By_Year:
     Financial: 0.091
     Inability_to_Access_Data: 0.0
     cyp5: '.091'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.091000'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: AmeriCorps had previously established a Payment Integrity
+      Corrective Action Plan working group. This group will be revived in FY 2025
+      analyzing the latest payment integrity results and determining the best actions
+      to reduce rates. Additionally, AmeriCorps has developed an internal control
+      for grantees trainings that will be required in the FY 2025 terms and conditions.
+      AmeriCorps will develop specific required remediations for grantees with identical
+      year over year findings.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: AmeriCorps had previously established a Payment Integrity
@@ -318,16 +343,6 @@ Data_By_Year:
       root cause drivers of improper payments to the corresponding applicable statute,
       regulation, and available trainings. This will continue for the FY 2025 assessment.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: AmeriCorps had previously established a Payment Integrity
-      Corrective Action Plan working group. This group will be revived in FY 2025
-      analyzing the latest payment integrity results and determining the best actions
-      to reduce rates. Additionally, AmeriCorps has developed an internal control
-      for grantees trainings that will be required in the FY 2025 terms and conditions.
-      AmeriCorps will develop specific required remediations for grantees with identical
-      year over year findings.
-    Mitigation_Strategy: app3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: The agency will continue to provide resolution packets
@@ -411,6 +426,7 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Change Process, Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '25.877'
   cyp7_ucp4_1: 'The AmeriCorps Payment Integrity Assessment uses documentation submitted
     by grantees to support the selected federal expenses charged against the grant.
     There are situations where the grantee is unable to provide the required documentation
@@ -436,6 +452,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '7.910000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -489,6 +512,13 @@ Data_By_Year:
     Financial: 0.004
     Inability_to_Access_Data: 0.0
     cyp5: '0.004'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.004000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

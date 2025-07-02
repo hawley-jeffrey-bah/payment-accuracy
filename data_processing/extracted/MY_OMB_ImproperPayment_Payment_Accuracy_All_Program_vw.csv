@@ -1240,8 +1240,8 @@
 "DOD","Travel Pay - U.S. Army Corps of Engineers (USACE)","2020","2019-07-01","2020-06-01","0.95","  +/- 0.35","190.8163543500","0.8037961400","0.7791918600","0.0246042800","0.0000000000","0.0000000000","0.00408346480000","0.00012894220000","0.00000000000000","0.00000000000000","0.00421240700000","0.8037961400","0.00421240700000","","","","","",0
 "DOD","Travel Pay - U.S. Army Corps of Engineers (USACE)","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "DOD","Travel Pay - U.S. Army Corps of Engineers (USACE)","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"DOD","Travel Pay Army – Defense Travel System (DTS)","2024","2023-07-01","2024-06-01","90% to <95%","0.7","2190.8500000000","151.2700000000","48.0500000000","8.3300000000","36.9200000000","94.8900000000","0.02193212680000","0.00380217723700","0.01685190679400","0.04331195654700","0.06904626058400","188.1900000000","0.08589816737800","0.06500000000000","2212.7500000000","31.3800000000","113.4500000000","0.06545249124400",0
-"DOD","Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)","2024","2023-07-01","2024-06-01","90% to <95%","1.04","2356.1200000000","175.5000000000","53.2700000000","9.6800000000","53.7200000000","112.5500000000","0.02260920496400","0.00410844948500","0.02280019693400","0.04776921379200","0.07448686824100","229.2200000000","0.09728706517500","0.07400000000000","2379.6800000000","45.6700000000","131.6200000000","0.07450161366200",0
+"DOD","Travel Pay Army – Defense Travel System (DTS)","2024","2023-07-01","2024-06-01","90% to <95%","0.7","2190.8500000000","151.2700000000","48.0500000000","8.3300000000","36.9200000000","94.8900000000","0.02193212680000","0.00380217723700","0.01685190679400","0.04331195654700","0.06904626058400","188.1900000000","0.08589816737800","0.06500000000000","2212.7500000000","31.3800000000","113.4500000000","0.06545249124400",0
+"DOD","Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)","2024","2023-07-01","2024-06-01","90% to <95%","1.04","2356.1200000000","175.5000000000","53.2700000000","9.6800000000","53.7200000000","112.5500000000","0.02260920496400","0.00410844948500","0.02280019693400","0.04776921379200","0.07448686824100","229.2200000000","0.09728706517500","0.07400000000000","2379.6800000000","45.6700000000","131.6200000000","0.07450161366200",0
 "DOE","Benefits - Payroll","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "DOE","Benefits - Payroll","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "DOE","Benefits - Travel","2021","","","","","","","","","","","","","","","","","","","","","","",0
@@ -1574,14 +1574,14 @@
 "DOL","Employment and Training Administration - National Dislocated Worker Grants (NDWG)","2018","","","","","","","","","","","","","","","","","","","","","","",0
 "DOL","Employment and Training Administration - National Dislocated Worker Grants (NDWG)","2019","","","","","","","","","","","","","","","","","","","","","","",0
 "DOL","Employment and Training Administration - National Dislocated Worker Grants (NDWG)","2020","2019-10-01","2020-09-30","1.00","%  +/- 0","15.4000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.0000000000","0.00000000000000","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2004","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2005","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2006","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2007","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2008","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2009","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2010","","","","","","","","","","","","","","","","","","","","","","",0
-"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.   ","2011","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2004","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2005","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2006","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2007","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2008","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2009","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2010","","","","","","","","","","","","","","","","","","","","","","",0
+"DOL","Employment and Training Administration - National Dislocated Worker Grants/Dislocated Worker National Reserve.  ","2011","","","","","","","","","","","","","","","","","","","","","","",0
 "DOL","Employment and Training Administration – Unemployment Insurance – Federal Pandemic Unemployment Assistance","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "DOL","Employment and Training Administration - WIOA - Dislocated Worker Employment and Training Activities","2004","","","","","0.0000000000","","","","","","","","","","","","","","","","","",0
 "DOL","Employment and Training Administration - WIOA - Dislocated Worker Employment and Training Activities","2005","","","","","3743.0000000000","","","","","","","","","","0.00213732300000","8.0000000000","0.00213732300000","","","","","",0
@@ -2960,8 +2960,8 @@
 "HHS","Centers for Medicare & Medicaid Services (CMS) Medicare Fee-for-Service (FFS) - Accelerated and Advance Payment Program","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Centers for Medicare & Medicaid Services (CMS) Medicare Fee-for-Service (FFS) - Accelerated and Advance Payment Program","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Centers for Medicare & Medicaid Services (CMS) Merit-Based Incentive Payment System","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"HHS","Centers for Medicare & Medicaid Services (CMS) Quality Activities  (Medicare Fee-for-Service)","2021","","","","","","","","","","","","","","","","","","","","","","",0
-"HHS","Centers for Medicare & Medicaid Services (CMS) Quality Activities  (Medicare Fee-for-Service)","2022","","","","","","","","","","","","","","","","","","","","","","",0
+"HHS","Centers for Medicare & Medicaid Services (CMS) Quality Activities (Medicare Fee-for-Service)","2021","","","","","","","","","","","","","","","","","","","","","","",0
+"HHS","Centers for Medicare & Medicaid Services (CMS) Quality Activities (Medicare Fee-for-Service)","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Centers for Medicare & Medicaid Services (CMS) Risk Corridors","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Centers for Medicare & Medicaid Services (CMS) State Marketplace Establishment Grants","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Centers for Medicare & Medicaid Services (CMS) Transitional Reinsurance","2022","","","","","","","","","","","","","","","","","","","","","","",0
@@ -3019,7 +3019,7 @@
 "HHS","HRSA - Disaster Relief","2018","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","HRSA - Disaster Relief","2019","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","HRSA - Disaster Relief","2020","2018-10-01","2019-09-01","0.95"," +/- 3","18.6858551800","0.0750000000","0.0750000000","0.0000000000","0.0000000000","0.0000000000","0.00401373120000","0.00000000000000","0.00000000000000","0.00000000000000","0.00401373120000","0.0750000000","0.00401373120000","","","","","",0
-"HHS","Indian Health Service (IHS) -  Purchased/Referred Care (Clinical Services)","2022","","","","","","","","","","","","","","","","","","","","","","",0
+"HHS","Indian Health Service (IHS) - Purchased/Referred Care (Clinical Services)","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Indian Health Service (IHS) - Contract Support Costs","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Indian Health Service (IHS) - Hospitals and Health Clinics (Clinical Services)","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "HHS","Indian Health Service (IHS) Clinical Services - Testing, Tracing, Containment, Mitigation, and Related Activities (Transfer from Public Health Emergency and Social Services Emergency Fund) - Disaster Relief","2021","","","","","","","","","","","","","","","","","","","","","","",0
@@ -3433,7 +3433,7 @@
 "NASA","Exploration Construction of Facilities (CoF)","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "NASA","Exploration Ground Systems (EGS)","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "NASA","Exploration Ground Systems (EGS)","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"NASA","Exploration Technology Development Program (ETDP)","2021","","","","","","","","","","","","","","","","","","","","","","",0
+"NASA","Exploration Technology Development Program (ETDP)","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "NASA","Gateway","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "NASA","Gateway","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "NASA","Glenn Research Center (GRC)","2021","","","","","","","","","","","","","","","","","","","","","","",0
@@ -4131,8 +4131,8 @@
 "TREASURY","District of Columbia Pensions - DC Judicial Retirement & Survivors Annuity Fund","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "TREASURY","Financial Crimes Enforcement Network - Salaries and Expenses","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "TREASURY","Financial Crimes Enforcement Network - Salaries and Expenses","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"TREASURY","Fiscal Serivce  Gulf Coast Restoration Trust Fund","2021","","","","","","","","","","","","","","","","","","","","","","",0
-"TREASURY","Fiscal Serivce  Gulf Coast Restoration Trust Fund","2022","","","","","","","","","","","","","","","","","","","","","","",0
+"TREASURY","Fiscal Serivce Gulf Coast Restoration Trust Fund","2021","","","","","","","","","","","","","","","","","","","","","","",0
+"TREASURY","Fiscal Serivce Gulf Coast Restoration Trust Fund","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "TREASURY","Fiscal Service - American Indian & Alaskan Native","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "TREASURY","Fiscal Service - American Indian & Alaskan Native","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "TREASURY","Fiscal Service - Check Forgery Insurance Fund","2021","","","","","","","","","","","","","","","","","","","","","","",0
@@ -4537,19 +4537,19 @@
 "USDA","Animal and Plant Health Inspection Service (APHIS) Trust Funds","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Commodity Credit Corporation (CCC) Administrative Contracts","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Commodity Credit Corporation (CCC) Administrative Contracts","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2012","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2013","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2014","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2015","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2016","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2017","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2018","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2019","2017-10-02","2018-09-02","$0.95","  +/-  3","3798.5000000000","257.8200000000","257.1600000000","0.6600000000","354.1800000000","0.0000000000","0.06770040810000","0.00017375280000","0.09324206920000","0.00000000000000","0.06787416090000","612.0000000000","0.16111623010000","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2020","2018-10-01","2019-09-30","0.95"," +/- 3","1091.9000000000","51.5100000000","0.0000000000","0.0000000000","0.0000000000","51.5100000000","0.00000000000000","0.00000000000000","0.00000000000000","0.04717464970000","0.04717464970000","51.5100000000","0.04717464970000","","","","","",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2021","2019-10-01","2020-09-01",">90%","3.0","2635.3400000000","62.9400000000","8.1400000000","0.0000000000","0.0000000000","54.8000000000","0.00308878550000","0.00000000000000","0.00000000000000","0.02079428080000","0.02388306630000","62.9400000000","0.02388306630000","","5439.0000000000","0.0000000000","129.4500000000","0.02380033090000",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2022","2020-10-01","2021-09-01","95% to <100%","3.0","6290.8400000000","378.7800000000","74.2400000000","0.0000000000","0.0000000000","304.5400000000","0.01180128570000","0.00000000000000","0.00000000000000","0.04841006920000","0.06021135490000","378.7800000000","0.06021135490000","","5349.0000000000","0.0000000000","119.0000000000","0.02224714900000",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2023","2021-10-01","2022-09-01","95% to <100%","3.0","2199.8500000000","189.1300000000","86.3600000000","0.0000000000","0.0000000000","102.7700000000","0.03925722210000","0.00000000000000","0.00000000000000","0.04671682160000","0.08597404370000","189.1300000000","0.08597404370000","0.06450000000000","876.0000000000","0.0000000000","56.5000000000","0.06449771690000",0
-"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss Coverage (ARC/PLC)","2024","2022-10-01","2023-09-01","95% to <100%","3.0","355.3400000000","45.4200000000","10.0700000000","0.0000000000","0.0000000000","35.3500000000","0.02833905555200","0.00000000000000","0.00000000000000","0.09948218607500","0.12782124162800","45.4200000000","0.12782124162800","0.09990000000000","147.0000000000","0.0000000000","14.6900000000","0.09993197278900",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2012","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2013","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2014","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2015","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2016","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2017","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2018","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2019","2017-10-02","2018-09-02","$0.95","  +/-  3","3798.5000000000","257.8200000000","257.1600000000","0.6600000000","354.1800000000","0.0000000000","0.06770040810000","0.00017375280000","0.09324206920000","0.00000000000000","0.06787416090000","612.0000000000","0.16111623010000","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2020","2018-10-01","2019-09-30","0.95"," +/- 3","1091.9000000000","51.5100000000","0.0000000000","0.0000000000","0.0000000000","51.5100000000","0.00000000000000","0.00000000000000","0.00000000000000","0.04717464970000","0.04717464970000","51.5100000000","0.04717464970000","","","","","",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2021","2019-10-01","2020-09-01",">90%","3.0","2635.3400000000","62.9400000000","8.1400000000","0.0000000000","0.0000000000","54.8000000000","0.00308878550000","0.00000000000000","0.00000000000000","0.02079428080000","0.02388306630000","62.9400000000","0.02388306630000","","5439.0000000000","0.0000000000","129.4500000000","0.02380033090000",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2022","2020-10-01","2021-09-01","95% to <100%","3.0","6290.8400000000","378.7800000000","74.2400000000","0.0000000000","0.0000000000","304.5400000000","0.01180128570000","0.00000000000000","0.00000000000000","0.04841006920000","0.06021135490000","378.7800000000","0.06021135490000","","5349.0000000000","0.0000000000","119.0000000000","0.02224714900000",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2023","2021-10-01","2022-09-01","95% to <100%","3.0","2199.8500000000","189.1300000000","86.3600000000","0.0000000000","0.0000000000","102.7700000000","0.03925722210000","0.00000000000000","0.00000000000000","0.04671682160000","0.08597404370000","189.1300000000","0.08597404370000","0.06450000000000","876.0000000000","0.0000000000","56.5000000000","0.06449771690000",0
+"USDA","Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss Coverage (ARC/PLC)","2024","2022-10-01","2023-09-01","95% to <100%","3.0","355.3400000000","45.4200000000","10.0700000000","0.0000000000","0.0000000000","35.3500000000","0.02833905555200","0.00000000000000","0.00000000000000","0.09948218607500","0.12782124162800","45.4200000000","0.12782124162800","0.09990000000000","147.0000000000","0.0000000000","14.6900000000","0.09993197278900",0
 "USDA","Commodity Credit Corporation (CCC) Agriculture Wool Apparel Manufacturers Trust Fund","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Commodity Credit Corporation (CCC) Agriculture Wool Apparel Manufacturers Trust Fund","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Commodity Credit Corporation (CCC) Biomass Crop Assistance Program (BCAP)","2021","","","","","","","","","","","","","","","","","","","","","","",0
@@ -5098,16 +5098,16 @@
 "USDA","National Institute of Food and Agriculture (NIFA) Integrated Activities","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","National Institute of Food and Agriculture (NIFA) Research and Education Activities","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","National Institute of Food and Agriculture (NIFA) Research and Education Activities","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2012","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2013","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2014","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2015","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2016","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2017","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2018","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2019","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2020","2018-10-01","2019-09-30","0.95"," +/- 3","70.5000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.0000000000","0.00000000000000","","","","","",0
-"USDA","Natural Resources Conservation Service (NRCS)  P.L. 116-120 Disasters","2021","2019-10-01","2020-09-01",">90%","3.0","13.9400000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.0000000000","0.00000000000000","","15.0000000000","0.0000000000","0.2200000000","0.01466666670000",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2012","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2013","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2014","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2015","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2016","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2017","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2018","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2019","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2020","2018-10-01","2019-09-30","0.95"," +/- 3","70.5000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.0000000000","0.00000000000000","","","","","",0
+"USDA","Natural Resources Conservation Service (NRCS) P.L. 116-120 Disasters","2021","2019-10-01","2020-09-01",">90%","3.0","13.9400000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.0000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.00000000000000","0.0000000000","0.00000000000000","","15.0000000000","0.0000000000","0.2200000000","0.01466666670000",0
 "USDA","Natural Resources Conservation Service (NRCS) Conservation Programs","2004","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Natural Resources Conservation Service (NRCS) Conservation Programs","2005","","","","","1027.0000000000","","","","","","","","","","0.01557935740000","16.0000000000","0.01557935740000","","","","","",0
 "USDA","Natural Resources Conservation Service (NRCS) Conservation Programs","2006","","","","","1375.0000000000","","","","","","","","","","0.00218181820000","3.0000000000","0.00218181820000","","","","","",0
@@ -5234,8 +5234,8 @@
 "USDA","Rural Housing Service (RHS) Multi-Family Housing Rental Assistance Program","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515)","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515)","2022","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515)  (HIM Disasters)","2021","","","","","","","","","","","","","","","","","","","","","","",0
-"USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515)  (HIM Disasters)","2022","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515) (HIM Disasters)","2021","","","","","","","","","","","","","","","","","","","","","","",0
+"USDA","Rural Housing Service (RHS) Multi-Family Housing Rural Rental Housing Direct Loans (Section 515) (HIM Disasters)","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Rural Housing Service (RHS) Rural Community Development Initiative Grants","2021","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Rural Housing Service (RHS) Rural Community Development Initiative Grants","2022","","","","","","","","","","","","","","","","","","","","","","",0
 "USDA","Rural Housing Service (RHS) Single Family Housing Direct Loans","2021","","","","","","","","","","","","","","","","","","","","","","",0

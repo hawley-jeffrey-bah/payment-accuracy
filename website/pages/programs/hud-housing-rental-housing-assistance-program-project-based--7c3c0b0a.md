@@ -304,6 +304,7 @@ Data_By_Year:
   cyp26: '0'
   cyp6: '0.0'
   cyp7_atp1_8: Training
+  cyp7_ucp4: '45.24'
   cyp7_ucp4_1: "Provide a minimum of 6-8 sentences identifying the entity/scenario\
     \ that failed to provide the documentation and describing the specific documentation\
     \ that the entity/scenario failed to provide and explain why the program is unable\

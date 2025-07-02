@@ -155,12 +155,20 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: "HHS will continue existing prior authorization processes.\
-      \ HHS will also continue to screen new and existing Medicare providers and suppliers.\
-      \ HHS will continue to use the Medical Review Accuracy Award Fee Metric to measure\
-      \ the accuracy of Medicare Administrative Contractor (MAC) decisions across\
-      \ MACs. \n"
-    Mitigation_Strategy: app4_1
+    Description_Action_Taken: "Due to the high volume of Medicare claims processed\
+      \ by HHS daily and the significant cost associated with conducting medical reviews\
+      \ of an individual claim, HHS will continue to rely on automated edits to identify\
+      \ inappropriate claims.  HHS designed its systems to detect anomalies and prevent\
+      \ payment for many erroneous claims through these efforts.  HHS will also continue\
+      \ using the National Correct Coding Initiative (NCCI) to prevent inappropriate\
+      \ payments of Medicare Part B claims and Medicaid claims. \n"
+    Mitigation_Strategy: app1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "HHS will continue the Targeted Probe and Educate (TPE)\
+      \ process , which consists of up to three rounds of review of 20-40 claims per\
+      \ round, with one-on-one education provided at the end of each round. . \n"
+    Mitigation_Strategy: app6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'The Fraud Prevention System analyzes Medicare FFS claims
@@ -172,39 +180,17 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app7_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'HHS will educate providers and Durable Medical Equipment
-      Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning
-      Network (MLN) articles called Provider Compliance Tips.   HHS contractors will
-      also continue to give individualized provider education opportunities after
-      targeted probe and educate audits, if necessary.   HHS will also continue releasing
-      comparative billing reports and detailed review results letters to providers
-      to give them additional information on billing correctly.
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: 'The Fraud Prevention System analyzes Medicare FFS claims
+      using sophisticated algorithms to target investigative resources; generate alerts
+      for suspect claims or providers and suppliers; and facilitate and support investigations
+      of the most egregious, suspect, or aberrant activity.
 
       '
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "Due to the high volume of Medicare claims processed\
-      \ by HHS daily and the significant cost associated with conducting medical reviews\
-      \ of an individual claim, HHS relies on automated edits to identify inappropriate\
-      \ claims.  HHS designed its systems to detect anomalies and prevent payment\
-      \ for many erroneous claims through these efforts.  HHS also uses the National\
-      \ Correct Coding Initiative (NCCI) to prevent inappropriate payments of Medicare\
-      \ Part B claims and Medicaid claims. \n"
-    Mitigation_Strategy: atp1_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "HHS continued the Targeted Probe and Educate (TPE)\
-      \ process, which consists of up to three rounds of review of 20-40 claims per\
-      \ round, with one-on-one education provided at the end of each round. Supplemental\
-      \ Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) were\
-      \ also ongoing in FY 2023. \n"
-    Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
+    Mitigation_Strategy: atp7_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'HHS educated providers and Durable Medical Equipment
@@ -218,23 +204,7 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "HHS will continue the Targeted Probe and Educate (TPE)\
-      \ process , which consists of up to three rounds of review of 20-40 claims per\
-      \ round, with one-on-one education provided at the end of each round. . \n"
-    Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: 'The Fraud Prevention System analyzes Medicare FFS claims
-      using sophisticated algorithms to target investigative resources; generate alerts
-      for suspect claims or providers and suppliers; and facilitate and support investigations
-      of the most egregious, suspect, or aberrant activity.
-
-      '
-    Mitigation_Strategy: atp7_1
-  - Action_Taken: Completed
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'In FY 2023, HHS continued existing prior authorization
@@ -252,14 +222,44 @@ Data_By_Year:
     Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2024
+    Description_Action_Taken: 'HHS will educate providers and Durable Medical Equipment
+      Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning
+      Network (MLN) articles called Provider Compliance Tips.   HHS contractors will
+      also continue to give individualized provider education opportunities after
+      targeted probe and educate audits, if necessary.   HHS will also continue releasing
+      comparative billing reports and detailed review results letters to providers
+      to give them additional information on billing correctly.
+
+      '
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "HHS will continue existing prior authorization processes.\
+      \ HHS will also continue to screen new and existing Medicare providers and suppliers.\
+      \ HHS will continue to use the Medical Review Accuracy Award Fee Metric to measure\
+      \ the accuracy of Medicare Administrative Contractor (MAC) decisions across\
+      \ MACs. \n"
+    Mitigation_Strategy: app4_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
     Description_Action_Taken: "Due to the high volume of Medicare claims processed\
       \ by HHS daily and the significant cost associated with conducting medical reviews\
-      \ of an individual claim, HHS will continue to rely on automated edits to identify\
-      \ inappropriate claims.  HHS designed its systems to detect anomalies and prevent\
-      \ payment for many erroneous claims through these efforts.  HHS will also continue\
-      \ using the National Correct Coding Initiative (NCCI) to prevent inappropriate\
-      \ payments of Medicare Part B claims and Medicaid claims. \n"
-    Mitigation_Strategy: app1_1
+      \ of an individual claim, HHS relies on automated edits to identify inappropriate\
+      \ claims.  HHS designed its systems to detect anomalies and prevent payment\
+      \ for many erroneous claims through these efforts.  HHS also uses the National\
+      \ Correct Coding Initiative (NCCI) to prevent inappropriate payments of Medicare\
+      \ Part B claims and Medicaid claims. \n"
+    Mitigation_Strategy: atp1_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: "HHS continued the Targeted Probe and Educate (TPE)\
+      \ process, which consists of up to three rounds of review of 20-40 claims per\
+      \ round, with one-on-one education provided at the end of each round. Supplemental\
+      \ Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) were\
+      \ also ongoing in FY 2023. \n"
+    Mitigation_Strategy: atp6_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -311,6 +311,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit5_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '20847.287400'
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '9366.172600'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 20847.2874
@@ -386,17 +398,32 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1015.34'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '20.306800'
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '995.033200'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: "HHS educated providers and Durable Medical Equipment\
-      \ Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning\
-      \ Network (MLN) articles called Provider Compliance Tips.  The tips cover Part\
-      \ A, B, and DME services with high Medicare improper payment rates. HHS posted\
-      \ 61 articles to the website in FY 2024.   HHS contractors also give individualized\
-      \ provider education opportunities after targeted probe and educate audits,\
-      \ if necessary.   \n"
-    Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: 'Due to the high volume of Medicare claims processed
+      by HHS daily and the significant cost associated with conducting medical reviews
+      of an individual claim, HHS relies on automated edits to identify inappropriate
+      claims.  HHS designed its systems to detect anomalies and prevent payment for
+      many erroneous claims through these efforts.  HHS also uses the National Correct
+      Coding Initiative (NCCI) to prevent inappropriate payments of Medicare Part
+      B claims and Medicaid claims. HHS will continue to use these strategies to reduce
+      iimproper payments in FY 2025.
+
+      '
+    Mitigation_Strategy: app1_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'In FY 2025, HHS will continue the existing prior authorization
@@ -416,37 +443,35 @@ Data_By_Year:
     Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
-    Description_Action_Taken: "The Fraud Prevention System analyzes Medicare FFS claims\
-      \ using sophisticated algorithms to target investigative resources; generates\
-      \ alerts for suspect claims or providers and suppliers; and facilitates and\
-      \ supports investigations  of the most egregious, suspect, or aberrant activity.\
-      \ \n"
-    Mitigation_Strategy: atp7_1
+    Description_Action_Taken: "HHS educated providers and Durable Medical Equipment\
+      \ Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning\
+      \ Network (MLN) articles called Provider Compliance Tips.  The tips cover Part\
+      \ A, B, and DME services with high Medicare improper payment rates. HHS posted\
+      \ 61 articles to the website in FY 2024.   HHS contractors also give individualized\
+      \ provider education opportunities after targeted probe and educate audits,\
+      \ if necessary.   \n"
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'HHS will educate providers and Durable Medical Equipment
-      Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning
-      Network (MLN) articles called Provider Compliance Tips.   HHS contractors will
-      also continue to give individualized provider education opportunities after
-      targeted probe and educate audits, if necessary.   HHS will resume releasing
-      comparative billing reports and detailed review results letters to providers
-      to give them additional information on billing correctly.
+    Description_Action_Taken: 'The Fraud Prevention System analyzes Medicare FFS claims
+      using sophisticated algorithms to target investigative resources; generates
+      alerts for suspect claims or providers and suppliers; and facilitates and supports
+      investigations  of the most egregious, suspect, or aberrant activity. HHS will
+      continue to use the Fraud Prevention System as a key corrective action in FY
+      2025.
 
       '
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'Due to the high volume of Medicare claims processed
-      by HHS daily and the significant cost associated with conducting medical reviews
-      of an individual claim, HHS relies on automated edits to identify inappropriate
-      claims.  HHS designed its systems to detect anomalies and prevent payment for
-      many erroneous claims through these efforts.  HHS also uses the National Correct
-      Coding Initiative (NCCI) to prevent inappropriate payments of Medicare Part
-      B claims and Medicaid claims. HHS will continue to use these strategies to reduce
-      iimproper payments in FY 2025.
+    Mitigation_Strategy: app7_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'HHS continued the Targeted Probe and Educate (TPE)
+      process, which consists of up to three rounds of review of 20-40 claims per
+      round, with one-on-one education provided at the end of each round. Supplemental
+      Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) were also
+      ongoing in FY 2024.
 
       '
-    Mitigation_Strategy: app1_1
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'In FY 2024, HHS continued existing prior authorization
@@ -466,26 +491,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'HHS will continue the Targeted Probe and Educate (TPE)
-      process , which consists of up to three rounds of review of 20-40 claims per
-      round, with one-on-one education provided at the end of each round. Supplemental
-      Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) activities
-      will also continue in FY 2025.
-
-      '
-    Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'HHS continued the Targeted Probe and Educate (TPE)
-      process, which consists of up to three rounds of review of 20-40 claims per
-      round, with one-on-one education provided at the end of each round. Supplemental
-      Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) were also
-      ongoing in FY 2024.
-
-      '
-    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: "Due to the high volume of Medicare claims processed\
@@ -498,15 +503,34 @@ Data_By_Year:
     Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'The Fraud Prevention System analyzes Medicare FFS claims
-      using sophisticated algorithms to target investigative resources; generates
-      alerts for suspect claims or providers and suppliers; and facilitates and supports
-      investigations  of the most egregious, suspect, or aberrant activity. HHS will
-      continue to use the Fraud Prevention System as a key corrective action in FY
-      2025.
+    Description_Action_Taken: 'HHS will continue the Targeted Probe and Educate (TPE)
+      process , which consists of up to three rounds of review of 20-40 claims per
+      round, with one-on-one education provided at the end of each round. Supplemental
+      Medical Review Contractor (SMRC) and Recovery Audit Contractor (RAC) activities
+      will also continue in FY 2025.
 
       '
-    Mitigation_Strategy: app7_1
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: 'HHS will educate providers and Durable Medical Equipment
+      Prosthetics/Orthotics  & Supplies (DMEPOS) providers through Medicare Learning
+      Network (MLN) articles called Provider Compliance Tips.   HHS contractors will
+      also continue to give individualized provider education opportunities after
+      targeted probe and educate audits, if necessary.   HHS will resume releasing
+      comparative billing reports and detailed review results letters to providers
+      to give them additional information on billing correctly.
+
+      '
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: "The Fraud Prevention System analyzes Medicare FFS claims\
+      \ using sophisticated algorithms to target investigative resources; generates\
+      \ alerts for suspect claims or providers and suppliers; and facilitates and\
+      \ supports investigations  of the most egregious, suspect, or aberrant activity.\
+      \ \n"
+    Mitigation_Strategy: atp7_1
   Confidence_Level: 95% to <100%
   End_Date: 06/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -580,6 +604,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit5_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '21390.448500'
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '9610.201500'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 21390.4485
@@ -650,6 +686,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '701.98'
+  underpayments_eligibility:
+  - Key: cyp5_dit5_1
+    Payment_Type: Underpayments
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '70.198000'
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '631.782000'
 Description: Medicare Fee-for-Service (FFS) is a federal health insurance program
   that provides hospital insurance (Part A) and supplementary medical insurance (Part
   B) to eligible citizens. The primary causes of overpayments continue to be insufficient

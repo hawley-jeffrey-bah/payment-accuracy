@@ -223,6 +223,20 @@ Data_By_Year:
       to develop stronger internal controls and mitigate risks within existing payment
       processes.
     Mitigation_Strategy: app4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: Actions planned regarding automation include working
+      to determine if a system update in the Electronic Claims Adjudication Management
+      System is needed to ensure Homemaker/Home Health Aide Service, Community Nursing
+      Home, and Veteran Directed Care claims are paid appropriately. VA will then
+      develop an effective corrective action for implementation. These actions are
+      designed to address overpayments and underpayments attributed to failure to
+      access data/information, technically improper payments attributed to statutory
+      requirements of program not met, and unknown payments attributed to being unable
+      to determine whether proper or improper. Automation was the best mitigation
+      strategy because improper and unknown payments resulted from manual processes
+      and human error.
+    Mitigation_Strategy: app1_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q3
     Description_Action_Taken: Actions taken regarding automation to address overpayments
@@ -246,20 +260,6 @@ Data_By_Year:
       and unknown payments attributed to being unable to determine whether proper
       or improper.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: Actions planned regarding automation include working
-      to determine if a system update in the Electronic Claims Adjudication Management
-      System is needed to ensure Homemaker/Home Health Aide Service, Community Nursing
-      Home, and Veteran Directed Care claims are paid appropriately. VA will then
-      develop an effective corrective action for implementation. These actions are
-      designed to address overpayments and underpayments attributed to failure to
-      access data/information, technically improper payments attributed to statutory
-      requirements of program not met, and unknown payments attributed to being unable
-      to determine whether proper or improper. Automation was the best mitigation
-      strategy because improper and unknown payments resulted from manual processes
-      and human error.
-    Mitigation_Strategy: app1_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -324,6 +324,7 @@ Data_By_Year:
   cyp6_atp1_8: Change Process
   cyp7_app1_8: Automation, Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp4: '54.31'
   cyp7_ucp4_1: VA is required to validate the appropriate reimbursement rate per the
     contract or agreement. However, the agency currently does not have the documentation
     necessary to determine if the payment is proper or not. Specifically, VA is not
@@ -360,6 +361,19 @@ Data_By_Year:
       to include a prepayment check, and simplifying contract pricing. Additionally,
       system improvements will allow for automation of the authorization review, decreasing
       human error. These improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '161.108914'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '157.351086'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -440,8 +454,24 @@ Data_By_Year:
     Financial: 0.57
     Inability_to_Access_Data: 0.0
     cyp5: '0.57'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '0.570000'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include working internally with facilities
+      to provide education and training to resolve missing documentation errors related
+      to authorization, payment or Veteran level of care to support the payment process.
+      These actions are designed to reduce unknown payments attributed to being unable
+      to determine whether proper or improper. Training was the best mitigation strategy
+      to communicate the importance of consistencies in standard operating procedures.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: Actions taken included working to ensure invoices are
@@ -460,39 +490,6 @@ Data_By_Year:
     Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include updating the claims processing
-      system to pay Bowel and Bladder and Community Nursing Home claims appropriately.
-      These actions are designed to reduce underpayments attributed to failure to
-      access data/information and technically improper payments attributed to statutory
-      requirements of the program were not met. Automation was the best mitigation
-      strategy because improper payments resulted from manual processes and human
-      error.
-    Mitigation_Strategy: app1_1
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: Actions taken included updating the claims processing
-      system to pay or deny Homemaker/Home Health Aid Service, Community Nursing Home,
-      and Veteran Directed Care claims appropriately. These actions were taken to
-      address overpayments attributed to failure to access data/information, technically
-      improper payments attributed to statutory requirements of program not met, and
-      unknown payments attributed to being unable to determine whether proper or improper.
-      Although the overall corrective actions were not fully implemented/completed
-      during FY 2024, tasks within the actions were completed to move the overall
-      action implementation forward. Automation was the best mitigation strategy because
-      improper and unknown payments resulted from manual processes and human error.
-    Mitigation_Strategy: atp1_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include working internally with facilities
-      to provide education and training to resolve missing documentation errors related
-      to authorization, payment or Veteran level of care to support the payment process.
-      These actions are designed to reduce unknown payments attributed to being unable
-      to determine whether proper or improper. Training was the best mitigation strategy
-      to communicate the importance of consistencies in standard operating procedures.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
     Description_Action_Taken: Actions planned include moving to a standardized rate
       schedule for Community Nursing Home payments in order to transition payments
       from a legacy system to an automated claims adjudication system. Additionally,
@@ -509,6 +506,30 @@ Data_By_Year:
       mitigation strategy in order to develop stronger internal controls and mitigate
       risks within existing payment processes.
     Mitigation_Strategy: app4_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: Actions taken included updating the claims processing
+      system to pay or deny Homemaker/Home Health Aid Service, Community Nursing Home,
+      and Veteran Directed Care claims appropriately. These actions were taken to
+      address overpayments attributed to failure to access data/information, technically
+      improper payments attributed to statutory requirements of program not met, and
+      unknown payments attributed to being unable to determine whether proper or improper.
+      Although the overall corrective actions were not fully implemented/completed
+      during FY 2024, tasks within the actions were completed to move the overall
+      action implementation forward. Automation was the best mitigation strategy because
+      improper and unknown payments resulted from manual processes and human error.
+    Mitigation_Strategy: atp1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include updating the claims processing
+      system to pay Bowel and Bladder and Community Nursing Home claims appropriately.
+      These actions are designed to reduce underpayments attributed to failure to
+      access data/information and technically improper payments attributed to statutory
+      requirements of the program were not met. Automation was the best mitigation
+      strategy because improper payments resulted from manual processes and human
+      error.
+    Mitigation_Strategy: app1_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -637,6 +658,18 @@ Data_By_Year:
   cyp6_atp1_8: Automation, Change Process
   cyp7_app1_8: Change Process, Training
   cyp7_atp1_8: Automation, Change Process
+  cyp7_ucp1: '46.39'
+  cyp7_ucp1_1: VA is required to validate that the provider or third-party administrator
+    submits a clean claim. However, the agency currently does not have the documentation
+    or information necessary to determine if the payment is proper or not. Specifically,
+    the claim does not always comply with substantially all clean claim requirements
+    per the contract or agreement. This occurs when the claim lacks the information
+    necessary to process the claim or the information submitted was insufficient.
+    For this reason, we are unable to conclude whether the payment is proper or improper
+    at time of payment without that documentation or information. The missing documentation
+    or information needed from the will assist VA in determining whether or not the
+    billed amount on the claim or the paid amount is accurate.
+  cyp7_ucp4: '56.54'
   cyp7_ucp4_1: VA is required to validate that a valid consultation is completed or
     documentation supporting the billed level of care is provided by the VA facility
     prior to processing the payment. However, the agency currently does not have the
@@ -675,6 +708,19 @@ Data_By_Year:
       contract pricing. Additionally, system improvements will allow for automation
       of the review of claim data against the authorization, decreasing human error.
       These improvements will allow for more accurate payment validation.
+  overpayments_eligibility:
+  - Key: cyp2_dit5_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Contractor of Provider Status
+    Theme_Description: "Status or standing of contractor or provider, including recipient\
+      \ eligibility to \r\nprovide medical services"
+    Value: '135.957240'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '82.342760'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -765,6 +811,13 @@ Data_By_Year:
     Financial: 6.41
     Inability_to_Access_Data: 0.0
     cyp5: '6.41'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '6.410000'
 Description: Purchased Long Term Services and Supports strives to empower Veterans
   to rise above the challenges of aging, disability, or serious illness. Geriatrics
   and Extended Care is for Veterans of all ages, including their families and caregivers.

@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Confidence_Level: '>95%'
   End_Date: 09/2020
@@ -342,6 +342,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '168.15'
   cyp7_ucp4_1: The Military Pay- Army program scenarios are broad and complex based
     upon the requirements to authorize an entitlement or deduction. The Army Commanders
     and unit Human Resource professionals sometimes do not strictly adhere to the
@@ -375,6 +376,18 @@ Data_By_Year:
       KSDs and be able to submit them for review upon request. Hence, it is within
       the agency's control to keep their personnel trained and accountable for following
       proper record keeping procedures to ensure overpayments decrease.
+  overpayments_eligibility:
+  - Key: cyp2_dit7_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '4.725000'
+  - Key: cyp2_dit11_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Military Status
+    Theme_Description: The condition of being, or having been in the uniformed services
+    Value: '4.025000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -442,6 +455,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.20'
+  underpayments_eligibility:
+  - Key: cyp5_dit7_1
+    Payment_Type: Underpayments
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '0.200000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false
