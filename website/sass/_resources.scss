@@ -37,6 +37,10 @@
 
     .resources-dataset-title {
         padding: 0px 6rem;
+
+        @media (max-width: $tablet) {
+            padding: 1rem;
+        }
     }
 
     h2 {
@@ -62,7 +66,14 @@
 
 .gray-box {
     background-color: #f0f0f0;
-    padding: 40px 6rem;
+    padding: 3rem 8rem;
+    @media (max-width: $mobile) {
+        padding: 2rem;
+    }
+
+    @media (max-width: $tablet) {
+        padding: 3rem;
+    }
     width: 100%;
     border-radius: 20px;
 
@@ -97,6 +108,7 @@
     align-items: center;
     gap: 10px;
     margin: 0;
+    max-width: none;
     
     .usa-label {
         margin: 0;

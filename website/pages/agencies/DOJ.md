@@ -139,6 +139,8 @@ detail_agy1: The Department performs an annual assessment of risks related to th
   is critical for ensuring the improper payment program is managed (i.e., improper
   payments identified, and recovery activities implemented) effectively on an ongoing
   basis across the Department.
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: The Department has used all of the methods identified in the prior
   questions, as well as other methods, to recover overpayments identified through
   recovery audit activities. This includes the U.S. Department of Treasury's reclamation
@@ -189,6 +191,8 @@ detail_exs1: The Department of Justice (DOJ) does not currently have any program
   improper payment risk assessment to determine susceptibility to improper payments
   and performing payment recapture and recovery activities on an annual basis.
 detail_pcp12_1: null
+detail_pcp14: Not applicable to the DOJ. No recommendations were provided in the most
+  recent compliance examination performed by the OIG.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

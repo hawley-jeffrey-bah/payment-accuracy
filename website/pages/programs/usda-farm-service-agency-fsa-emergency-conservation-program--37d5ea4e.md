@@ -311,35 +311,6 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: The root cause of improper payments was failure to access
-      data/information. Errors resulted from the payment calculations using old calculation
-      methods. The eligible cost of practice or component were calculated incorrectly.  Farm
-      Service Agency has developed new program payment scenarios which eliminates
-      the county office requirement to compute cost share items considered eligible.
-      The agency has provided policy on the use of the new payment scenarios and will
-      continue to provide training and assistance in the transition of these new methods.  It
-      is the goal of the agency to prevent ineligible costs and ensure the correct
-      reimbursement rates are used.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q1
-    Description_Action_Taken: Farm Service Agency has developed new program payment
-      scenarios which eliminates the County Office requirement to compute cost share
-      items considered eligible.  The agency has provided policy on the use of the
-      new payment scenarios and continues to provide training and assistance as we
-      transition to this new method.
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: "The requirement to have an FSA-23 on file before the\
-      \ cost share agreement is approved and included on the CCC-770 Checklist.  Farm\
-      \ Service Agency has revised the CCC-770 checklist to capture the District Director\
-      \ reviews during approval, payment, and lifespan of the practice.\n\nIn addition,\
-      \ the agency will incorporate Emergency Conservation Program-Disasters into\
-      \ the Internal Review Document Tracking System to track actions. \n"
-    Mitigation_Strategy: atp4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
     Description_Action_Taken: 'The root cause of improper payments was failure to
       access data/information.  Improper payment findings were related to the FSA-23
       not being on file before the cost share agreement was approved.  The requirement
@@ -360,6 +331,35 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q1
+    Description_Action_Taken: Farm Service Agency has developed new program payment
+      scenarios which eliminates the County Office requirement to compute cost share
+      items considered eligible.  The agency has provided policy on the use of the
+      new payment scenarios and continues to provide training and assistance as we
+      transition to this new method.
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: "The requirement to have an FSA-23 on file before the\
+      \ cost share agreement is approved and included on the CCC-770 Checklist.  Farm\
+      \ Service Agency has revised the CCC-770 checklist to capture the District Director\
+      \ reviews during approval, payment, and lifespan of the practice.\n\nIn addition,\
+      \ the agency will incorporate Emergency Conservation Program-Disasters into\
+      \ the Internal Review Document Tracking System to track actions. \n"
+    Mitigation_Strategy: atp4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: The root cause of improper payments was failure to access
+      data/information. Errors resulted from the payment calculations using old calculation
+      methods. The eligible cost of practice or component were calculated incorrectly.  Farm
+      Service Agency has developed new program payment scenarios which eliminates
+      the county office requirement to compute cost share items considered eligible.
+      The agency has provided policy on the use of the new payment scenarios and will
+      continue to provide training and assistance in the transition of these new methods.  It
+      is the goal of the agency to prevent ineligible costs and ensure the correct
+      reimbursement rates are used.
+    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -427,6 +427,13 @@ Data_By_Year:
       \ webinar/virtual training sessions will occur at least quarterly to ensure\
       \ all State staff are aware of updated policy requirements and clarifications\
       \ to all requirements."
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '21.080000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -483,6 +490,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.04'
+  underpayments_eligibility:
+  - Key: cyp5_dit2_1
+    Payment_Type: Underpayments
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '0.040000'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -494,53 +508,41 @@ Data_By_Year:
       \ hot topics, but also topics that target Payment Integrity Information Act\
       \ deficiencies.  \n"
     Mitigation_Strategy: app3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: Null.
-    Mitigation_Strategy: atp8_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: "The root cause of these improper payments was failure\
-      \ to access data.  New policy will be implemented to require:\n\nPrior to Approval,\
-      \ the CCC-770 will be completed by Program Technicians and County Executive\
-      \ Directors in its entirety for every Emergency Conservation Program-Disasters\
-      \ and Emergency Forest Restoration Program application. Also, require the District\
-      \ Directors to review and sign the CCC-770 for the first 5 applications prior\
-      \ to County Office Committee approval, or 10 applications if the County Office\
-      \ has not implemented Emergency Conservation Program-Disasters within the last\
-      \ 2 years. \n\nPrior to Payment, the CCC-770 will be completed by Program Technicians\
-      \ and County Executive Directors in its entirety (excluding spot check) for\
-      \ every agreement prior to payment. Require the District Directors to review\
-      \ and sign the CCC-770 in its entirety (excluding spot check) for the first\
-      \ 5-10 applications prior to payment. \n\nA percentage of paid Emergency Conservation\
-      \ Program-Disasters agreements to be reviewed by the State Office Program Specialist\
-      \ to ensure adherence to policy and proper payments.  A minimum of 5% of paid\
-      \ agreement will be required for State Office review.  Selections will be determined\
-      \ by State Office and State Office reviewers will report deficiencies to State\
-      \ Executive Director and require corrective actions, if necessary.  State Executive\
-      \ Director will have discretion to require additional State Office reviews based\
-      \ on result of 5% review.  \n"
-    Mitigation_Strategy: app4_1
+      \ to access data.\nInternal Review Documentation and Tracking System - The integration\
+      \ of Emergency Conservation Program-Disasters into the Internal Review Documentation\
+      \ and Tracking System is planned for August 31, 2024.  Farm Service Agency is\
+      \ initiating/transitioning the Emergency Conservation Program County Executive\
+      \ Director and District Director review process and producer spot checks to\
+      \ Internal Review Documentation and Tracking System, with full implementation\
+      \ expected in Fiscal Year2024. Internal Review Documentation and Tracking System\
+      \ will serve as Farm Service Agency’s tool to make certain reviews are timely\
+      \ completed and review results are monitored and evaluated to ensure Emergency\
+      \ Conservation Program-Disasters policies are being followed.  Farm Service\
+      \ Agency’s Internal Review Documentation and Tracking System is a centralized,\
+      \ automated internal control tracking system that allows users and management\
+      \ at all levels to complete and track program audits and reviews. \n"
+    Mitigation_Strategy: app1_1
   - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
+    Completion_Date: FY2024 Q4
     Description_Action_Taken: "The root cause for this category was related to not\
-      \ following statutory requirements.\n\nNew Software Platform - The new Emergency\
-      \ Conservation Program-Disasters software was released into production in January\
-      \ 2024 and applies to disasters occurring Fiscal Year 2024 and forward.  An\
-      \ introductory training for the Emergency Conservation Program-Disasters software\
-      \ was conducted nationwide on December 6, 2023, and January 9 and 10, 2024.\
-      \ \n \nFarm Service Agency developed new software to process Emergency Conservation\
-      \ Program-Disasters cost share applications and payments more efficiently and\
-      \ reduce administrative errors.  The new application software contains validations\
-      \ to prevent many of the common Payment Integrity Information Act errors described\
-      \ such as performs eligibility checks for the status of the CCC-902 and AD-1026\
-      \ in the subsidiary to meet statutory requirements without impacting application\
-      \ approval.  However, agreements prior to Fiscal Year 2024 that are loaded in\
-      \ Cost Share Software do not include eligibility checks in the software. Therefore,\
-      \ it is a manual process to check subsidiary for CCC-902s and AD-1026s for older\
-      \ agreements. Continued training will help to address this issue until old contracts\
-      \ and the old system is phased out."
-    Mitigation_Strategy: atp1_1
+      \ following statutory requirements. Additional webinar/virtual training sessions\
+      \ are held on an as-needed-basis as well as the third Thursday of each month,\
+      \ to ensure all State Office staff are aware of updated policy requirements\
+      \ and clarifications to all requirements.  Training topics include not only\
+      \ hot topics, but also topics that target Payment Integrity Information Act\
+      \ deficiencies.   \n \nEmergency Conservation Program-Disasters Training Series\
+      \ for all Farm Service Agency employees with Emergency Conservation Program-Disasters\
+      \ responsibilities. The first training occurred on June 5, 2024, with over 760\
+      \ attendees. The series resumed July 17, after acreage reporting was complete\
+      \ through September 11, 2024.  Trainings will cover policy and software pain\
+      \ points as well as Payment Integrity Information Act findings and root causes.\
+      \ \n \nDeputy Administrator for Farm Programs provided In-person trainings June\
+      \ 13-21, 2024, in Florida which covered many of the Payment Integrity Information\
+      \ Act findings, policy pain points, and software pain points.  \n\n"
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: "The root cause for this category was related to not\
@@ -596,19 +598,6 @@ Data_By_Year:
       \ in the process of producer spot checking Emergency Conservation Program-Disasters\
       \ practices within the lifespan of the practice.\n\n"
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: "The root cause for this category was related to not\
-      \ following statutory requirements. The new software will require time to adequately\
-      \ analyze if the new software functionality meets the goal of reducing administrative\
-      \ errors. \n \nThe completion of the CCC-770 ECP-1 or ECP-3 ensures compliance\
-      \ of all statutory requirements. If the preparers, County Executive Directors\
-      \ and District Directors sign the CCC-770s without meeting the statutory requirements,\
-      \ then as stated on this form, the CCC-770 will be used to hold the responsible\
-      \ party accountable.    \n \nTraining feedback from State and County Offices\
-      \ has been very positive. The trainings have helped them understand subjects\
-      \ that they previously misunderstood handled incorrectly. \n"
-    Mitigation_Strategy: atp7_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'The root cause of these improper payments was failure
@@ -656,41 +645,66 @@ Data_By_Year:
       \ an Integrity and Accountability notice will re-iterate policy related to each\
       \ finding.\n\n"
     Mitigation_Strategy: app7_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: "The root cause for this category was related to not\
-      \ following statutory requirements. Additional webinar/virtual training sessions\
-      \ are held on an as-needed-basis as well as the third Thursday of each month,\
-      \ to ensure all State Office staff are aware of updated policy requirements\
-      \ and clarifications to all requirements.  Training topics include not only\
-      \ hot topics, but also topics that target Payment Integrity Information Act\
-      \ deficiencies.   \n \nEmergency Conservation Program-Disasters Training Series\
-      \ for all Farm Service Agency employees with Emergency Conservation Program-Disasters\
-      \ responsibilities. The first training occurred on June 5, 2024, with over 760\
-      \ attendees. The series resumed July 17, after acreage reporting was complete\
-      \ through September 11, 2024.  Trainings will cover policy and software pain\
-      \ points as well as Payment Integrity Information Act findings and root causes.\
-      \ \n \nDeputy Administrator for Farm Programs provided In-person trainings June\
-      \ 13-21, 2024, in Florida which covered many of the Payment Integrity Information\
-      \ Act findings, policy pain points, and software pain points.  \n\n"
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: "The root cause of these improper payments was failure\
-      \ to access data.\nInternal Review Documentation and Tracking System - The integration\
-      \ of Emergency Conservation Program-Disasters into the Internal Review Documentation\
-      \ and Tracking System is planned for August 31, 2024.  Farm Service Agency is\
-      \ initiating/transitioning the Emergency Conservation Program County Executive\
-      \ Director and District Director review process and producer spot checks to\
-      \ Internal Review Documentation and Tracking System, with full implementation\
-      \ expected in Fiscal Year2024. Internal Review Documentation and Tracking System\
-      \ will serve as Farm Service Agency’s tool to make certain reviews are timely\
-      \ completed and review results are monitored and evaluated to ensure Emergency\
-      \ Conservation Program-Disasters policies are being followed.  Farm Service\
-      \ Agency’s Internal Review Documentation and Tracking System is a centralized,\
-      \ automated internal control tracking system that allows users and management\
-      \ at all levels to complete and track program audits and reviews. \n"
-    Mitigation_Strategy: app1_1
+      \ to access data.  New policy will be implemented to require:\n\nPrior to Approval,\
+      \ the CCC-770 will be completed by Program Technicians and County Executive\
+      \ Directors in its entirety for every Emergency Conservation Program-Disasters\
+      \ and Emergency Forest Restoration Program application. Also, require the District\
+      \ Directors to review and sign the CCC-770 for the first 5 applications prior\
+      \ to County Office Committee approval, or 10 applications if the County Office\
+      \ has not implemented Emergency Conservation Program-Disasters within the last\
+      \ 2 years. \n\nPrior to Payment, the CCC-770 will be completed by Program Technicians\
+      \ and County Executive Directors in its entirety (excluding spot check) for\
+      \ every agreement prior to payment. Require the District Directors to review\
+      \ and sign the CCC-770 in its entirety (excluding spot check) for the first\
+      \ 5-10 applications prior to payment. \n\nA percentage of paid Emergency Conservation\
+      \ Program-Disasters agreements to be reviewed by the State Office Program Specialist\
+      \ to ensure adherence to policy and proper payments.  A minimum of 5% of paid\
+      \ agreement will be required for State Office review.  Selections will be determined\
+      \ by State Office and State Office reviewers will report deficiencies to State\
+      \ Executive Director and require corrective actions, if necessary.  State Executive\
+      \ Director will have discretion to require additional State Office reviews based\
+      \ on result of 5% review.  \n"
+    Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: "The root cause for this category was related to not\
+      \ following statutory requirements.\n\nNew Software Platform - The new Emergency\
+      \ Conservation Program-Disasters software was released into production in January\
+      \ 2024 and applies to disasters occurring Fiscal Year 2024 and forward.  An\
+      \ introductory training for the Emergency Conservation Program-Disasters software\
+      \ was conducted nationwide on December 6, 2023, and January 9 and 10, 2024.\
+      \ \n \nFarm Service Agency developed new software to process Emergency Conservation\
+      \ Program-Disasters cost share applications and payments more efficiently and\
+      \ reduce administrative errors.  The new application software contains validations\
+      \ to prevent many of the common Payment Integrity Information Act errors described\
+      \ such as performs eligibility checks for the status of the CCC-902 and AD-1026\
+      \ in the subsidiary to meet statutory requirements without impacting application\
+      \ approval.  However, agreements prior to Fiscal Year 2024 that are loaded in\
+      \ Cost Share Software do not include eligibility checks in the software. Therefore,\
+      \ it is a manual process to check subsidiary for CCC-902s and AD-1026s for older\
+      \ agreements. Continued training will help to address this issue until old contracts\
+      \ and the old system is phased out."
+    Mitigation_Strategy: atp1_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: "The root cause for this category was related to not\
+      \ following statutory requirements. The new software will require time to adequately\
+      \ analyze if the new software functionality meets the goal of reducing administrative\
+      \ errors. \n \nThe completion of the CCC-770 ECP-1 or ECP-3 ensures compliance\
+      \ of all statutory requirements. If the preparers, County Executive Directors\
+      \ and District Directors sign the CCC-770s without meeting the statutory requirements,\
+      \ then as stated on this form, the CCC-770 will be used to hold the responsible\
+      \ party accountable.    \n \nTraining feedback from State and County Offices\
+      \ has been very positive. The trainings have helped them understand subjects\
+      \ that they previously misunderstood handled incorrectly. \n"
+    Mitigation_Strategy: atp7_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: Null.
+    Mitigation_Strategy: atp8_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -830,6 +844,13 @@ Data_By_Year:
       \ program integrity in procedure, provides timely monitoring of program administration,\
       \ alerts supervisor immediately as issues of potential concern arise.\n\n•\t\
       Alert supervisor immediately as issues of potential concern arise.\n"
+  overpayments_eligibility:
+  - Key: cyp2_dit2_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '43.320000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -908,6 +929,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1.68'
+  underpayments_eligibility:
+  - Key: cyp5_dit2_1
+    Payment_Type: Underpayments
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '1.680000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

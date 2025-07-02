@@ -364,9 +364,9 @@
                 border: 1px solid $accent-cool;
             }
             td.status .not-completed {
-                color: $error-primary;
-                background-color: $error-lighter;
-                border: 1px solid $error-primary;
+                color: #EF5E25;
+                background-color: #FFF5EE;
+                border: 1px solid #EF5E25;
             }
             td.status .planned,
             td.status .completed,

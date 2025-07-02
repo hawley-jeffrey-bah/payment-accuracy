@@ -75,6 +75,22 @@ Data_By_Year:
   cyp6: '0'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp2: '3940.713556'
+  cyp7_ucp2_1: "Specific documentation was requested, and not provided, to verify\
+    \ the identity of the borrower:\n\n-Evidence or attestation that the borrower\
+    \ was an existing customer\n-Explanation of how lender followed BSA policy to\
+    \ identify borrower\n-Explanation of how lender used BSA equivalent policy to\
+    \ identify borrower \n\nSpecific documents were requested, and not provided to\
+    \ verify the monthly payroll amount:\n\n-Payroll Processor Records\n-Payroll Tax\
+    \ Filings\n-Form 1099-Mics\n-Income and expenses from a sole proprietorship\n\
+    -Bank records sufficient to demonstrate the qualifying payroll amount\n\nSpecific\
+    \ documents were requested, and not provided to verify that the business was in\
+    \ Operation on or around February 15, 2020 and/or had employees for whom they\
+    \ paid payroll on or around February 15, 2020.\n\n-Payroll Processor Records\n\
+    -Payroll Tax Filings\n-Form 1099-Mics\n-Income and expenses from a sole proprietorship\n\
+    -Bank records sufficient to demonstrate the qualifying payroll amount\n-Payroll\
+    \ statement or similar documentation from the pay period that covered February\
+    \ 15, 2020\n\n"
   cyp8: In response to the FY 2023 PIIA Compliance Audit conducted by OIG, the SBA
     separated PPP into three payment integrity reporting categories – PPP Approvals,
     PPP Forgiveness, and PPP Purchases, and subsequently initiated the improper payments
@@ -110,6 +126,13 @@ Data_By_Year:
       \ has complied with all PPP Loan Program Requirements. SBA reviewed a sample\
       \ of those PPP loan guaranty purchases for improper payments, after the guaranty\
       \ was purchased.\n"
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '125.770037'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -143,17 +166,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: The corrective action was not fully completed this reporting
-      period
-    Description_Action_Taken: "None of the choices provided apply to SBA's corrective\
-      \ actions related to this program.  Nevertheless, a choice of action is required.\
-      \  Change process is selected as it most closely matches the actions SBA is\
-      \ taking.\n\nTo recover PPP Loan Guaranty improper payments, the SBA will use\
-      \ processes similar to the process used for its 7(a) guaranty purchase portfolio,\
-      \ which begin with demanding repayment from the lender.  Processes are ongoing.\
-      \ \n"
-    Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'None of the choices provided apply to SBA''s corrective
@@ -166,6 +178,17 @@ Data_By_Year:
       to the process used for its 7(a) guaranty purchase portfolio, which begin with
       demanding repayment from the lender.'
     Mitigation_Strategy: app4_1
+  - Action_Taken: Not Completed
+    Completion_Date: The corrective action was not fully completed this reporting
+      period
+    Description_Action_Taken: "None of the choices provided apply to SBA's corrective\
+      \ actions related to this program.  Nevertheless, a choice of action is required.\
+      \  Change process is selected as it most closely matches the actions SBA is\
+      \ taking.\n\nTo recover PPP Loan Guaranty improper payments, the SBA will use\
+      \ processes similar to the process used for its 7(a) guaranty purchase portfolio,\
+      \ which begin with demanding repayment from the lender.  Processes are ongoing.\
+      \ \n"
+    Mitigation_Strategy: atp4_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -231,6 +254,11 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Change Process
   cyp7_atp1_8: Change Process
+  cyp7_ucp2: '16.70071071'
+  cyp7_ucp2_1: Among the supporting documents the Lender was required to provide to
+    SBA were Borrower Certifications, verification of borrower identity, verification
+    of existence of the business in February 2020, and documentation of the number
+    of employees.
   cyp8: One loan in the PPP Guaranty Purchase sample was categorized as Unknown.  The
     Lender failed to return documentation to support the guaranty purchase.
   overpayments:
@@ -248,6 +276,13 @@ Data_By_Year:
       the lender received borrower certifications, including whether the borrower
       had been in business on or around February 20, 2020.  SBA also checked that
       the eligible payroll was accurately accounted for.
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1662.304118'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

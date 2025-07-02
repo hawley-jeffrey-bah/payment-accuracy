@@ -58,6 +58,47 @@ compliance_survey_to_criterion_mapping_2022 = {
 
 SLUGIFIED_PROGRAM_NAME_MAPPINGS = {}
 
+def getThemeDescription(theme):
+    theme_description = ""
+    if theme == "Address/Location":
+        theme_description = "Information regarding where the applicant/recipient lived, owned property, or was \r\nphysically present in a specific location"
+    elif theme == "Marital Status":
+        theme_description = "A person's state of being single, married, separated, divorced, or widowed"
+    elif theme == "Military Status":
+        theme_description = "The condition of being, or having been in the uniformed services"
+    elif theme == "Prisoner Status":
+        theme_description = "Eligibility for benefits or payment based on prisoner status"
+    elif theme == "Receiving Benefits from Other Sources":
+        theme_description = "Beneficiary or recipient is receiving benefits from an additional source"
+    elif theme == "Residency":
+        theme_description = "Status of recipient's living location or arrangement"
+    elif theme == "Employment":
+        theme_description = "The employment status of the recipient/beneficiary"
+    elif theme == "Financial":
+        theme_description = "The financial position or status of a beneficiary, recipient, or their family"
+    elif theme == "Household Size":
+        theme_description = "Number of family mmembers in a household"
+    elif theme == "Medical Status":
+        theme_description = "Identifies whether a person is sick/healthy"
+    elif theme == "Affiliation":
+        theme_description = "Criteria that require the applicant/recipient as being attached or connected to \r\na type of group, organization, or particular attribute"
+    elif theme == "Age":
+        theme_description = "The biological age of the recipient/beneficiary"
+    elif theme == "Citizenship":
+        theme_description = "Recognized as a United States citizen through birth or naturalization, or as a \r\nlawfully present non-citizen in the United States"
+    elif theme == "Contractor of Provider Status":
+        theme_description = "Status or standing of contractor or provider, including recipient eligibility to \r\nprovide medical services"
+    elif theme == "Deceased":
+        theme_description = "Date of death of the recipient/beneficiary"
+    elif theme == "Dependency":
+        theme_description = "Describes who the recipient/beneficiary relies on as a primary source of support"
+    elif theme == "Education" or theme == "Education Related":
+        theme_description = "The education level or enrollment status of the recipient/beneficiary"
+    elif theme == "Identity":
+        theme_description = "Able to establish that someone is uniquely who they claim to be"
+
+    return theme_description
+
 def slugify(name, max_length=60):
     slug = re.sub(r'[^a-zA-Z0-9]+', '-', name.lower()).strip('-')
     if len(slug) > max_length:
@@ -226,43 +267,50 @@ def generate_agency_programs_page(cursor: sqlite3.Cursor):
 
     program_rows = cursor.fetchall()
 
+    yearsCriteria = ','.join(['?'] * len(AGENCY_SPECIFIC_FISCAL_YEARS))
     query = f"""
         SELECT
-            all_agencies_years.Agency,
-            all_agencies_years.Agency_Name,
-            COALESCE(ROUND(a.Outlays, 2),0) AS [Total_Spent_Federal_Funding],
-            COALESCE(c.Num_Programs,0),
-            COALESCE(a.Susceptible_Programs,0),
-            COALESCE(a.High_Priority_Programs,0),
-            COALESCE(ROUND(a.Improper_Payments_Rate, 2),0),
+            reported_any_year.Agency,
+            reported_any_year.Agency_Name,
+            COALESCE(ROUND(cy.Outlays, 2),0) AS [Total_Spent_Federal_Funding],
+            COALESCE(compliance.Num_Programs,0),
+            COALESCE(cy.Susceptible_Programs,0),
+            COALESCE(cy.High_Priority_Programs,0),
+            COALESCE(ROUND(cy.Improper_Payments_Rate, 2),0),
             CASE
-                WHEN b.Improper_Payments_Rate IS NULL THEN NULL
-                ELSE ROUND(a.Improper_Payments_Rate - b.Improper_Payments_Rate, 2)
+                WHEN py.Improper_Payments_Rate IS NULL THEN NULL
+                ELSE ROUND(cy.Improper_Payments_Rate - py.Improper_Payments_Rate, 2)
             END AS [Relative_Change]
-        FROM all_agencies_years
-            LEFT JOIN all_agencies_data_aggregation a
-            ON all_agencies_years.[Agency] = a.[Agency] AND all_agencies_years.[Fiscal_Year] = a.[Fiscal_Year]
+        FROM (
+            SELECT DISTINCT Agency, Agency_Name FROM all_agencies_years WHERE [Fiscal_Year] IN ({yearsCriteria})
+        ) reported_any_year
+            LEFT JOIN (
+                SELECT *
+                FROM all_agencies_data_aggregation
+                WHERE Fiscal_Year = ?
+            ) cy
+            ON reported_any_year.[Agency] = cy.[Agency]
             LEFT JOIN (
                 SELECT
                     Agency,
                     Improper_Payments_Rate
                 FROM all_agencies_data_aggregation
                 WHERE Fiscal_Year = ?
-            ) b
-            ON a.Agency = b.Agency
+            ) py
+            ON cy.Agency = py.Agency
             LEFT JOIN (
                 SELECT
                     [Agency],
                     [Fiscal_Year],
                     COUNT(*) AS [Num_Programs]
                 FROM [program_compliance]
+                WHERE Fiscal_Year = ?
                 GROUP BY [Agency], [Fiscal_Year]
-            ) c ON all_agencies_years.Agency = c.Agency AND all_agencies_years.Fiscal_Year = c.Fiscal_Year
-        WHERE all_agencies_years.Fiscal_Year = ?
-        ORDER BY COALESCE(ROUND(a.Outlays, 2),0) DESC
+            ) compliance ON reported_any_year.Agency = compliance.Agency
+        ORDER BY COALESCE(ROUND(cy.Outlays, 2),0) DESC
     """
 
-    cursor.execute(query, (config.FISCAL_YEAR-1,config.FISCAL_YEAR))
+    cursor.execute(query, AGENCY_SPECIFIC_FISCAL_YEARS + [config.FISCAL_YEAR, config.FISCAL_YEAR-1, config.FISCAL_YEAR])
 
     agency_rows = cursor.fetchall()
 
@@ -448,12 +496,33 @@ def generate_agency_specific_pages_for_year(cursor: sqlite3.Cursor, year):
 
         paymentRecoveryAmountsQuery = f"""
             SELECT
-                [Fiscal_Year],
-                [Overpayment_Amount_Identified_For_Recapture_($M)],
-                [Overpayment_Amount_Recovered_($M)]
+                [recovery_amounts].[Fiscal_Year],
+                COALESCE([recovery_amounts].[Overpayment_Amount_Identified_For_Recapture_($M)],0) AS [Overpayment_Amount_Identified_For_Recapture_($M)],
+                COALESCE([recovery_amounts].[Overpayment_Amount_Recovered_($M)],0) AS [Overpayment_Amount_Recovered_($M)]
             FROM [recovery_amounts]
-            WHERE [Agency] = ? AND [Fiscal_Year] IN ({recoveryYearsCriteria})
-            ORDER BY [Fiscal_Year]
+            LEFT JOIN (
+                SELECT [Fiscal_Year], [agency], [value] FROM [agency_data_raw]
+                WHERE [Key] = 'ara1'
+            ) [ara1] ON
+                [recovery_amounts].[Fiscal_Year] = [ara1].[Fiscal_Year] AND
+                [recovery_amounts].[Agency] = [ara1].[agency]
+            LEFT JOIN (
+                SELECT [Fiscal_Year], [agency], [value] FROM [agency_data_raw]
+                WHERE [Key] = 'ara2'
+            ) [ara2] ON
+                [recovery_amounts].[Fiscal_Year] = [ara2].[Fiscal_Year] AND
+                [recovery_amounts].[Agency] = [ara2].[agency]
+            WHERE
+                [recovery_amounts].[Agency] = ? AND
+                [recovery_amounts].[Fiscal_Year] IN ({recoveryYearsCriteria}) AND
+                -- strip out years where no recovery audit or activities were conducted
+                (
+                    UPPER(COALESCE([ara1].[value],'')) <> 'NO' OR
+                    UPPER(COALESCE([ara2].[value],'')) <> 'NO'
+                ) AND
+                -- if nothing was identified for recovery, there's nothing to display
+                ROUND([recovery_amounts].[Overpayment_Amount_Identified_For_Recapture_($M)],2) > 0
+            ORDER BY [recovery_amounts].[Fiscal_Year]
         """
         cursor.execute(paymentRecoveryAmountsQuery, [agency["Agency"]] + recoveryYears)
         recoveryAmountDetails = cursor.fetchall()
@@ -463,9 +532,9 @@ def generate_agency_specific_pages_for_year(cursor: sqlite3.Cursor, year):
 
         dataPointQuery = f"""
             SELECT
-                [Payment_Accuracy_Rate],
-                [Improper_Payments_Rate],
-                [Unknown_Payments_Rate],
+                COALESCE([Payment_Accuracy_Rate],0) AS [Payment_Accuracy_Rate],
+                COALESCE([Improper_Payments_Rate],0) AS [Improper_Payments_Rate],
+                COALESCE([Unknown_Payments_Rate],0) AS [Unknown_Payments_Rate],
                 COALESCE([Outlays],0)
                     - COALESCE([CY_Overpayment_Amount],0)
                     - COALESCE([CY_Underpayment_Amount],0)
@@ -478,7 +547,10 @@ def generate_agency_specific_pages_for_year(cursor: sqlite3.Cursor, year):
                 COALESCE([CY_Unknown_Payments],0) AS [Unknown_Amount],
                 [Fiscal_Year]
             FROM all_agencies_data_aggregation
-            WHERE [Agency] = ? AND [Fiscal_Year] IN ({yearsCriteria})
+            WHERE
+                [Agency] = ? AND
+                [Fiscal_Year] IN ({yearsCriteria}) AND
+                [Payment_Accuracy_Rate] IS NOT NULL
             ORDER BY [Fiscal_Year]
         """
 
@@ -671,23 +743,27 @@ def hide_agency_specific_sections(agencyObj):
             hasRecoveryKey = True
             break
 
+    recoveryAuditsSkipped = "detail_ara2" in agencyObj and agencyObj["detail_ara2"].upper() == 'NO'
+
     agencyObj["Hide_Integrity_Results"] = "Improper_Payments_Data_Years" not in agencyObj or \
-            agencyObj["Improper_Payments_Data_Years"] is None or \
-            agencyObj["Improper_Payments_Data_Years"] == '[]'
+        agencyObj["Improper_Payments_Data_Years"] is None or \
+        agencyObj["Improper_Payments_Data_Years"] == '[]'
     # Sparklines with one datapoint are not useful
     agencyObj["Hide_Sparklines"] = agencyObj["Hide_Integrity_Results"] or \
         "," not in agencyObj["Improper_Payments_Data_Years"]
 
-    agencyObj["Hide_Recovery_Details"] = not hasRecoveryKey and \
-        ("detail_arp18" not in agencyObj or agencyObj["detail_arp18"] is None or agencyObj["detail_arp18"] == '')
+    agencyObj["Hide_Recovery_Details"] = recoveryAuditsSkipped or (not hasRecoveryKey and \
+        ("detail_arp18" not in agencyObj or agencyObj["detail_arp18"] is None or agencyObj["detail_arp18"] == ''))
     agencyObj["Hide_Recovery_Audits"] = \
         ("detail_arp17" not in agencyObj or agencyObj["detail_arp17"] is None or agencyObj["detail_arp17"] == '') and \
-        ("detail_ara2_1" not in agencyObj or agencyObj["detail_ara2_1"] is None or agencyObj["detail_ara2_1"] == '')
+        ("detail_ara2_1" not in agencyObj or agencyObj["detail_ara2_1"] is None or agencyObj["detail_ara2_1"] == '') and \
+        ("detail_ara2_3" not in agencyObj or agencyObj["detail_ara2_3"] is None or agencyObj["detail_ara2_3"] == '') and \
+        ("detail_ara2_3_2" not in agencyObj or agencyObj["detail_ara2_3_2"] is None or agencyObj["detail_ara2_3_2"] == '')
     agencyObj["Hide_Recovery_Info"] = agencyObj["Hide_Recovery_Details"] and \
         ("detail_ara2_1" not in agencyObj or agencyObj["detail_ara2_1"] is None or agencyObj["detail_ara2_1"] == '') and \
         ("Overpayment_Years" not in agencyObj or agencyObj["Overpayment_Years"] is None or agencyObj["Overpayment_Years"] == '[]')
 
-    agencyObj["Hide_Disposition_of_Funds"] = ("recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor"] is None) and \
+    agencyObj["Hide_Disposition_of_Funds"] = recoveryAuditsSkipped or (("recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor"] is None) and \
         ("recovery_Disposition_of_Funds_through_FM_Improvement_Activities" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_through_FM_Improvement_Activities"] is None) and \
         ("recovery_Disposition_of_Funds_Through_Original_Purpose" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_Through_Original_Purpose"] is None) and \
         ("recovery_Disposition_of_Funds_Through_Office_of_Inspector_General" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_Through_Office_of_Inspector_General"] is None) and \
@@ -699,7 +775,7 @@ def hide_agency_specific_sections(agencyObj):
         ("recovery_Aging_of_Outstanding_OP_Identified_Amt_over_1_year" not in agencyObj or agencyObj["recovery_Aging_of_Outstanding_OP_Identified_Amt_over_1_year"] is None) and \
         ("recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable" not in agencyObj or agencyObj["recovery_Aging_of_Outstanding_OP_Identified_determined_not_collectable"] is None) and \
         ("recovery_Recovery_Audit_Amount_Identified_In_Prior_Reporting_Periods_Determined_Not_Collectable_During_This_Reporting_Period" not in agencyObj or agencyObj["recovery_Recovery_Audit_Amount_Identified_In_Prior_Reporting_Periods_Determined_Not_Collectable_During_This_Reporting_Period"] is None) and \
-        ("detail_ara2_2" not in agencyObj or agencyObj["detail_ara2_2"] is None)
+        ("detail_ara2_2" not in agencyObj or agencyObj["detail_ara2_2"] is None))
     agencyObj["Hide_Do_Not_Pay"] = ("detail_dpa5" not in agencyObj or agencyObj["detail_dpa5"] is None or agencyObj["detail_dpa5"] == '') and \
         ("detail_dpa2" not in agencyObj or agencyObj["detail_dpa2"] is None or agencyObj["detail_dpa2"] == '') and \
         ("detail_dpa3" not in agencyObj or agencyObj["detail_dpa3"] is None or agencyObj["detail_dpa3"] == '')
@@ -955,8 +1031,8 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 [action_data].[Column_names] AS [Mitigation_Strategy],
                 [action_data].[Column_values] AS [Description_Action_Taken],
                 CASE
-                    WHEN [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\' AND [action_data].Column_values NOT LIKE 'The corrective action was not fully completed%' THEN 'Planned'
-                    WHEN ([action_data].Column_names LIKE 'atp%\\_1' ESCAPE '\\' OR [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\') AND [action_data].Column_values LIKE 'The corrective action was not fully completed%' THEN 'Not Completed'
+                    WHEN [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\' AND [date_lookup].[Column_values] NOT LIKE 'The corrective action was not fully completed%' THEN 'Planned'
+                    WHEN ([action_data].Column_names LIKE 'atp%\\_1' ESCAPE '\\' OR [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\') AND [date_lookup].[Column_values] LIKE 'The corrective action was not fully completed%' THEN 'Not Completed'
                     ELSE 'Completed'
                 END as [Action_Taken],
                 [date_lookup].[Column_values] AS [Completion_Date]
@@ -1053,20 +1129,38 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
             data_by_year_dict[fiscal_year]["Hide_" + row["Column_names"]] = True
 
         overpayments_query = f"""
-            SELECT DISTINCT
-                a.Fiscal_Year,
-                a.[Program_Name],
-                b.Column_values AS [cyp2_1],
-                c.[Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
-                c.[Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
-                c.[Failure_to_Access_Data],
-                c.[Address_Location],
-                c.[Contractor_or_Provider_Status],
-                c.[Financial],
-                d.Multiselect_Text AS [cyp2_atp1_8],
-                e.Multiselect_Text AS [cyp2_app1_8],
-                f.Column_values AS [cyp2]
-            FROM principal_table_columns AS a
+            SELECT
+	            a.[Agency],
+				a.[Program_Name],
+				a.[Fiscal_Year],
+				a.[Payment_Type],
+				b.Column_values AS [cyp2_1],
+				a.[Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
+				a.[Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
+				a.[Failure_to_Access_Data],
+				a.[Address_Location],
+				a.[Contractor_or_Provider_Status],
+				a.[Financial],
+                d.[Multiselect_Text] AS [cyp2_atp1_8],
+                e.[Multiselect_Text] AS [cyp2_app1_8],
+				f.Column_values AS [cyp2]
+            FROM (SELECT
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type],
+				SUM([Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis]) AS [Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
+				SUM([Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data]) AS [Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
+				SUM([Failure_to_Access_Data]) AS [Failure_to_Access_Data],
+				SUM([Address_Location]) AS [Address_Location],
+				SUM([Contractor_or_Provider_Status]) AS [Contractor_or_Provider_Status],
+				SUM([Financial]) AS [Financial]
+            FROM (SELECT DISTINCT * FROM ip_root_causes) subquery
+            GROUP BY
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type]) a
             LEFT JOIN (
                 SELECT * FROM principal_table_columns
                 WHERE Column_names = 'cyp2_1' AND Column_values <> ''
@@ -1074,48 +1168,48 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 ON a.Agency = b.Agency
                 AND a.Program_Name = b.Program_Name
                 AND a.Fiscal_Year = b.Fiscal_Year
-            LEFT JOIN (
-                SELECT
-                    [Agency],
-                    [Program_Name],
-                    [Fiscal_Year],
-                    [Payment_Type],
-                    SUM([Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis]) AS [Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
-                    SUM([Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data]) AS [Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
-                    SUM([Failure_to_Access_Data]) AS [Failure_to_Access_Data],
-                    SUM([Address_Location]) AS [Address_Location],
-                    SUM([Contractor_or_Provider_Status]) AS [Contractor_or_Provider_Status],
-                    SUM([Financial]) AS [Financial]
-                FROM ip_root_causes
-                GROUP BY
-                    [Agency],
-                    [Program_Name],
-                    [Fiscal_Year],
-                    [Payment_Type]
-            ) AS c
-                ON a.Agency = c.Agency
-                AND a.[Program_Name] = c.[Program_Name]
-                AND a.Fiscal_Year = c.Fiscal_Year
-                AND c.[Payment_Type] = 'Overpayments within agency control'
-            LEFT JOIN mitigation_strategies AS d
-                ON a.Agency = d.Agency
-                AND a.[Program_Name] = d.[Program_Name]
-                AND a.Fiscal_Year = d.Fiscal_Year
-                AND d.Column_names = 'cyp2_atp1_8'
-                AND d.Multiselect_Text <> ''
-            LEFT JOIN mitigation_strategies AS e
-                ON a.Agency = e.Agency
-                AND a.[Program_Name] = e.[Program_Name]
-                AND a.Fiscal_Year = e.Fiscal_Year
-                AND e.Column_names = 'cyp2_app1_8'
-                AND e.Multiselect_Text <> ''
             LEFT JOIN principal_table_columns AS f
                 ON a.Agency = f.Agency
                 AND a.[Program_Name] = f.[Program_Name]
                 AND a.Fiscal_Year = f.Fiscal_Year
                 AND f.Column_names = 'cyp2'
                 AND f.Column_values <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp2_atp1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery1
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS d
+                ON a.Agency = d.Agency
+                AND a.[Program_Name] = d.[Program_Name]
+                AND a.Fiscal_Year = d.Fiscal_Year
+                AND d.Multiselect_Text <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp2_app1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery2
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS e
+                ON a.Agency = e.Agency
+                AND a.[Program_Name] = e.[Program_Name]
+                AND a.Fiscal_Year = e.Fiscal_Year
+                AND e.Multiselect_Text <> ''
             WHERE a.[Program_Name] = ?
+                AND a.[Payment_Type] = 'Overpayments within agency control'
                 AND a.[Fiscal_Year] IN ({yearsCriteria})
         """
 
@@ -1138,22 +1232,12 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
 
             if fiscal_year not in data_by_year_dict:
                 data_by_year_dict[fiscal_year] = {}
-            
+
             if cyp2_atp1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp2_atp1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp2_atp1_8 not in values_set:
-                    values_set.add(cyp2_atp1_8)
-                    year_data["cyp2_atp1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp2_atp1_8"] = cyp2_atp1_8
 
             if cyp2_app1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp2_app1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp2_app1_8 not in values_set:
-                    values_set.add(cyp2_app1_8)
-                    year_data["cyp2_app1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp2_app1_8"] = cyp2_app1_8
             
             for key, value in {
                 "cyp2_1" : cyp2_1,
@@ -1263,43 +1347,79 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                     data_by_year_dict[fiscal_year]["overpayments_outside"][key] = value
 
         underpayments_query = f"""
-            SELECT DISTINCT
-                a.Fiscal_Year,
-                a.[Program_Name],
-                c.[Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
-                c.[Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
-                c.[Failure_to_Access_Data],
-                c.[Address_Location],
-                c.[Contractor_or_Provider_Status],
-                c.[Financial],
-                d.Multiselect_Text AS [cyp5_atp1_8],
-                e.Multiselect_Text AS [cyp5_app1_8],
-                f.Column_values AS [cyp5]
-            FROM principal_table_columns AS a
-            LEFT JOIN ip_root_causes AS c
-                ON a.Agency = c.Agency
-                AND a.[Program_Name] = c.[Program_Name]
-                AND a.Fiscal_Year = c.Fiscal_Year
-                AND c.[Payment_Type] = 'Underpayments'
-            LEFT JOIN mitigation_strategies AS d
-                ON a.Agency = d.Agency
-                AND a.[Program_Name] = d.[Program_Name]
-                AND a.Fiscal_Year = d.Fiscal_Year
-                AND d.Column_names = 'cyp5_atp1_8'
-                AND d.Multiselect_Text <> ''
-            LEFT JOIN mitigation_strategies AS e
-                ON a.Agency = e.Agency
-                AND a.[Program_Name] = e.[Program_Name]
-                AND a.Fiscal_Year = e.Fiscal_Year
-                AND e.Column_names = 'cyp5_app1_8'
-                AND e.Multiselect_Text <> ''
+            SELECT
+	            a.[Agency],
+				a.[Program_Name],
+				a.[Fiscal_Year],
+				a.[Payment_Type],
+				a.[Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
+				a.[Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
+				a.[Failure_to_Access_Data],
+				a.[Address_Location],
+				a.[Contractor_or_Provider_Status],
+				a.[Financial],
+                d.[Multiselect_Text] AS [cyp5_atp1_8],
+                e.[Multiselect_Text] AS [cyp5_app1_8],
+				f.Column_values AS [cyp5]
+            FROM (SELECT
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type],
+				SUM([Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis]) AS [Inability_to_Authenticate_Eligibility:_Data_Needed_Does_Not_Exis],
+				SUM([Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data]) AS [Inability_to_Authenticate_Eligibility:_Inability_to_Access_Data],
+				SUM([Failure_to_Access_Data]) AS [Failure_to_Access_Data],
+				SUM([Address_Location]) AS [Address_Location],
+				SUM([Contractor_or_Provider_Status]) AS [Contractor_or_Provider_Status],
+				SUM([Financial]) AS [Financial]
+            FROM (SELECT DISTINCT * FROM ip_root_causes) subquery
+            GROUP BY
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type]) a
             LEFT JOIN principal_table_columns AS f
                 ON a.Agency = f.Agency
                 AND a.[Program_Name] = f.[Program_Name]
                 AND a.Fiscal_Year = f.Fiscal_Year
                 AND f.Column_names = 'cyp5'
                 AND f.Column_values <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp5_atp1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery1
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS d
+                ON a.Agency = d.Agency
+                AND a.[Program_Name] = d.[Program_Name]
+                AND a.Fiscal_Year = d.Fiscal_Year
+                AND d.Multiselect_Text <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp5_app1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery2
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS e
+                ON a.Agency = e.Agency
+                AND a.[Program_Name] = e.[Program_Name]
+                AND a.Fiscal_Year = e.Fiscal_Year
+                AND e.Multiselect_Text <> ''
             WHERE a.[Program_Name] = ?
+                AND a.[Payment_Type] = 'Underpayments'
                 AND a.[Fiscal_Year] IN ({yearsCriteria})
         """
 
@@ -1323,20 +1443,10 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 data_by_year_dict[fiscal_year] = {}
 
             if cyp5_atp1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp5_atp1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp5_atp1_8 not in values_set:
-                    values_set.add(cyp5_atp1_8)
-                    year_data["cyp5_atp1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp5_atp1_8"] = cyp5_atp1_8
 
             if cyp5_app1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp5_app1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp5_app1_8 not in values_set:
-                    values_set.add(cyp5_app1_8)
-                    year_data["cyp5_app1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp5_app1_8"] = cyp5_app1_8
 
             for key, value in {
                 "Data_Needed_Does_Not_Exist" : data_needed_does_not_exist,
@@ -1353,15 +1463,28 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                     data_by_year_dict[fiscal_year]["underpayments"][key] = value
 
         technically_ip_query = f"""
-            SELECT DISTINCT
-                a.Fiscal_Year,
-                a.[Program_Name],
-                b.Column_values AS [cyp6_1],
-                c.[Program_Design_or_Structural_Issue],
-                d.Multiselect_Text AS [cyp6_atp1_8],
-                e.Multiselect_Text AS [cyp6_app1_8],
-                f.Column_values AS [cyp6]
-            FROM principal_table_columns AS a
+            SELECT
+	            a.[Agency],
+				a.[Program_Name],
+				a.[Fiscal_Year],
+				a.[Payment_Type],
+				a.[Program_Design_or_Structural_Issue],
+				b.Column_values AS [cyp6_1],
+                d.[Multiselect_Text] AS [cyp6_atp1_8],
+                e.[Multiselect_Text] AS [cyp6_app1_8],
+				f.Column_values AS [cyp6]
+            FROM (SELECT
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type],
+				SUM([Program_Design_or_Structural_Issue]) AS [Program_Design_or_Structural_Issue]
+            FROM (SELECT DISTINCT * FROM ip_root_causes) subquery
+            GROUP BY
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type]) a
             LEFT JOIN (
                 SELECT * FROM principal_table_columns
                 WHERE Column_names = 'cyp6_1' AND Column_values <> ''
@@ -1369,30 +1492,48 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 ON a.Agency = b.Agency
                 AND a.Program_Name = b.Program_Name
                 AND a.Fiscal_Year = b.Fiscal_Year
-            LEFT JOIN ip_root_causes AS c
-                ON a.Agency = c.Agency
-                AND a.[Program_Name] = c.[Program_Name]
-                AND a.Fiscal_Year = c.Fiscal_Year
-                AND c.[Payment_Type] = 'Technically Improper'
-            LEFT JOIN mitigation_strategies AS d
-                ON a.Agency = d.Agency
-                AND a.[Program_Name] = d.[Program_Name]
-                AND a.Fiscal_Year = d.Fiscal_Year
-                AND d.Column_names = 'cyp6_atp1_8'
-                AND d.Multiselect_Text <> ''
-            LEFT JOIN mitigation_strategies AS e
-                ON a.Agency = e.Agency
-                AND a.[Program_Name] = e.[Program_Name]
-                AND a.Fiscal_Year = e.Fiscal_Year
-                AND e.Column_names = 'cyp6_app1_8'
-                AND e.Multiselect_Text <> ''
             LEFT JOIN principal_table_columns AS f
                 ON a.Agency = f.Agency
                 AND a.[Program_Name] = f.[Program_Name]
                 AND a.Fiscal_Year = f.Fiscal_Year
                 AND f.Column_names = 'cyp6'
                 AND f.Column_values <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp6_atp1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery1
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS d
+                ON a.Agency = d.Agency
+                AND a.[Program_Name] = d.[Program_Name]
+                AND a.Fiscal_Year = d.Fiscal_Year
+                AND d.Multiselect_Text <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp6_app1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery2
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS e
+                ON a.Agency = e.Agency
+                AND a.[Program_Name] = e.[Program_Name]
+                AND a.Fiscal_Year = e.Fiscal_Year
+                AND e.Multiselect_Text <> ''
             WHERE a.[Program_Name] = ?
+                AND a.[Payment_Type] = 'Technically Improper'
                 AND a.[Fiscal_Year] IN ({yearsCriteria})
         """
 
@@ -1412,20 +1553,10 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 data_by_year_dict[fiscal_year] = {}
 
             if cyp6_atp1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp6_atp1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp6_atp1_8 not in values_set:
-                    values_set.add(cyp6_atp1_8)
-                    year_data["cyp6_atp1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp6_atp1_8"] = cyp6_atp1_8
 
             if cyp6_app1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp6_app1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp6_app1_8 not in values_set:
-                    values_set.add(cyp6_app1_8)
-                    year_data["cyp6_app1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp6_app1_8"] = cyp6_app1_8
 
             for key, value in {
                 "cyp6_1" : cyp6_1,
@@ -1435,18 +1566,86 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 if value is not None:
                     data_by_year_dict[fiscal_year][key] = value
 
+        eligibility_information_query = f"""
+            SELECT
+                [Column_names],
+                [Column_values],
+                [theme],
+                CASE
+                    WHEN a.[Column_names] LIKE 'cyp2%' THEN 'Overpayments Within Agency Control'
+                    WHEN a.[Column_names] LIKE 'cyp3%' THEN 'Overpayments Outside Agency Control'
+                    ELSE 'Underpayments'
+                END AS [Payment_Type],
+                a.[Fiscal_Year]
+            FROM principal_table_columns a
+            LEFT JOIN eligibility_themes b ON
+                substr([Column_names],instr(a.[Column_names],'_') + 1) = concat(b.key,'_1')
+            WHERE
+                a.[Column_names] LIKE 'cyp%\\_dit%\\_1' ESCAPE '\\' AND
+                LENGTH(a.[Column_names]) <= 13 AND
+                a.[Program_Name] = ? AND
+                a.[Column_values] IS NOT NULL AND
+                a.[Fiscal_Year] IN ({yearsCriteria})
+            ORDER BY [Payment_Type], [theme]
+        """
+
+        cursor.execute(eligibility_information_query, [program["Program_Name"]] + PROGRAM_SPECIFIC_FISCAL_YEARS)
+
+        eligibility_information = cursor.fetchall()
+
+        for row in eligibility_information:
+            fiscal_year = row["Fiscal_Year"]
+            if fiscal_year not in data_by_year_dict:
+                data_by_year_dict[fiscal_year] = {}
+
+            theme_description = getThemeDescription(row["theme"])
+
+            if row["Payment_Type"] == "Underpayments":
+                if 'underpayments_eligibility' not in data_by_year_dict[fiscal_year]:
+                    data_by_year_dict[fiscal_year]['underpayments_eligibility'] = []
+                data_by_year_dict[fiscal_year]['underpayments_eligibility'].append({
+                    "Key": row["Column_names"],
+                    "Value": row["Column_values"],
+                    "Theme": row["theme"],
+                    "Payment_Type": row["Payment_Type"],
+                    "Theme_Description": theme_description
+                })
+            else:
+                if 'overpayments_eligibility' not in data_by_year_dict[fiscal_year]:
+                    data_by_year_dict[fiscal_year]['overpayments_eligibility'] = []
+                data_by_year_dict[fiscal_year]['overpayments_eligibility'].append({
+                    "Key": row["Column_names"],
+                    "Value": row["Column_values"],
+                    "Theme": row["theme"],
+                    "Payment_Type": row["Payment_Type"],
+                    "Theme_Description": theme_description
+                })
+
         unknown_payments_query = f"""
-            SELECT DISTINCT
-                a.Fiscal_Year,
-                a.[Program_Name],
-                b.Column_values AS [cyp8],
-                c.[Insufficient_Documentation_to_Determine],
-                d.Column_values AS [cyp7_ucp4_1],
-                e.Multiselect_Text AS [cyp7_atp1_8],
-                f.Multiselect_Text AS [cyp7_app1_8],
-                g.Column_values AS [rac3],
-                h.Column_values AS [cyp26]
-            FROM principal_table_columns AS a
+            SELECT
+	            a.[Agency],
+				a.[Program_Name],
+				a.[Fiscal_Year],
+				a.[Payment_Type],
+				a.[Insufficient_Documentation_to_Determine],
+                                b.Column_values AS [cyp8],
+				d.Column_values AS [cyp7_ucp4_1],
+                e.[Multiselect_Text] AS [cyp7_atp1_8],
+                f.[Multiselect_Text] AS [cyp7_app1_8],
+				g.Column_values AS [rac3],
+                                h.Column_values AS [cyp26]
+            FROM (SELECT
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type],
+				SUM([Insufficient_Documentation_to_Determine]) AS [Insufficient_Documentation_to_Determine]
+            FROM (SELECT DISTINCT * FROM ip_root_causes) subquery
+            GROUP BY
+				[Agency],
+				[Program_Name],
+				[Fiscal_Year],
+				[Payment_Type]) a
             LEFT JOIN (
                 SELECT * FROM principal_table_columns
                 WHERE Column_names = 'cyp8' AND Column_values <> ''
@@ -1454,29 +1653,12 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 ON a.Agency = b.Agency
                 AND a.Program_Name = b.Program_Name
                 AND a.Fiscal_Year = b.Fiscal_Year
-            LEFT JOIN ip_root_causes AS c
-                ON a.Agency = c.Agency
-                AND a.[Program_Name] = c.[Program_Name]
-                AND a.Fiscal_Year = c.Fiscal_Year
-                AND c.[Payment_Type] = 'Unknown'
             LEFT JOIN principal_table_columns AS d
                 ON a.Agency = d.Agency
                 AND a.[Program_Name] = d.[Program_Name]
                 AND a.Fiscal_Year = d.Fiscal_Year
                 AND d.Column_names = 'cyp7_ucp4_1'
                 AND d.Column_values <> ''
-            LEFT JOIN mitigation_strategies AS e
-                ON a.Agency = e.Agency
-                AND a.[Program_Name] = e.[Program_Name]
-                AND a.Fiscal_Year = e.Fiscal_Year
-                AND e.Column_names = 'cyp7_atp1_8'
-                AND e.Multiselect_Text <> ''
-            LEFT JOIN mitigation_strategies AS f
-                ON a.Agency = f.Agency
-                AND a.[Program_Name] = f.[Program_Name]
-                AND a.Fiscal_Year = f.Fiscal_Year
-                AND f.Column_names = 'cyp7_app1_8'
-                AND f.Multiselect_Text <> ''
             LEFT JOIN principal_table_columns AS g
                 ON a.Agency = g.Agency
                 AND a.[Program_Name] = g.[Program_Name]
@@ -1489,7 +1671,42 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 AND a.Fiscal_Year = h.Fiscal_Year
                 AND h.Column_names = 'cyp26'
                 AND h.Column_values <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp7_atp1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery1
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS e
+                ON a.Agency = e.Agency
+                AND a.[Program_Name] = e.[Program_Name]
+                AND a.Fiscal_Year = e.Fiscal_Year
+                AND e.Multiselect_Text <> ''
+            LEFT JOIN (
+                SELECT
+                    Agency,
+                    Fiscal_Year,
+                    Program_Name,
+                    group_concat(COALESCE(Multiselect_Text,''),', ') AS Multiselect_Text
+                FROM (
+                    SELECT * FROM mitigation_strategies
+                    WHERE Column_names = 'cyp7_app1_8'
+                    ORDER BY Multiselect_Text
+                ) subquery2
+                GROUP BY Agency, Fiscal_Year, Program_Name
+            ) AS f
+                ON a.Agency = f.Agency
+                AND a.[Program_Name] = f.[Program_Name]
+                AND a.Fiscal_Year = f.Fiscal_Year
+                AND e.Multiselect_Text <> ''
             WHERE a.[Program_Name] = ?
+                AND a.[Payment_Type] = 'Unknown'
                 AND a.[Fiscal_Year] IN ({yearsCriteria})
         """
 
@@ -1511,20 +1728,10 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 data_by_year_dict[fiscal_year] = {}
 
             if cyp7_atp1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp7_atp1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp7_atp1_8 not in values_set:
-                    values_set.add(cyp7_atp1_8)
-                    year_data["cyp7_atp1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp7_atp1_8"] = cyp7_atp1_8
 
             if cyp7_app1_8:
-                year_data = data_by_year_dict.setdefault(fiscal_year, {})
-                current_values = year_data.get("cyp7_app1_8", "")
-                values_set = set(v.strip() for v in current_values.split(',') if v.strip())
-                if cyp7_app1_8 not in values_set:
-                    values_set.add(cyp7_app1_8)
-                    year_data["cyp7_app1_8"] = ', '.join(sorted(values_set))
+                data_by_year_dict[fiscal_year]["cyp7_app1_8"] = cyp7_app1_8
 
             for key, value in {
                 "cyp8" : cyp8,
@@ -1535,6 +1742,40 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
             }.items():
                 if value is not None:
                     data_by_year_dict[fiscal_year][key] = value
+
+        unknown_payments_breakdown_query = f"""
+            SELECT DISTINCT
+                Fiscal_Year,
+                Column_names,
+                Column_values
+            FROM principal_table_columns
+            WHERE Program_Name = ? AND Fiscal_Year IN ({yearsCriteria}) AND Column_names IN (
+                    'cyp7_ucp1'
+                    ,'cyp7_ucp2'
+                    ,'cyp7_ucp3'
+                    ,'cyp7_ucp4'
+                    ,'cyp7_ucp1_1'
+                    ,'cyp7_ucp2_1'
+                    ,'cyp7_ucp3_1'
+                    ,'cyp7_ucp4_1'
+                ) AND
+                Column_values IS NOT NULL AND
+                Column_values <> '' AND
+                Column_values <> '0' AND
+                Column_values <> '0.0' AND
+                Column_values <> '0.00'
+        """
+
+        cursor.execute(unknown_payments_breakdown_query, [program["Program_Name"]] + PROGRAM_SPECIFIC_FISCAL_YEARS)
+
+        unknown_payments_breakdown = cursor.fetchall()
+
+        for row in unknown_payments_breakdown:
+            fiscal_year = row["Fiscal_Year"]
+            if fiscal_year not in data_by_year_dict:
+                data_by_year_dict[fiscal_year] = {}
+
+            data_by_year_dict[fiscal_year][row["Column_names"]] = row["Column_values"]
 
         corrective_actions_query = f"""
             SELECT DISTINCT
@@ -1603,7 +1844,10 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 a.[Program_Name],
                 b.Column_values AS [cyp15],
                 d.Column_values AS [cyp20_2],
+                k.Column_values AS [cyp29],
+                i.Column_values AS [rtp4_1],
                 e.Column_values AS [rtp4_2],
+                j.Column_values AS [rtp4_3],
                 h.Column_values AS [rtp1],
                 f.Column_values AS [rap5],
                 g.Column_values AS [rap6],
@@ -1654,6 +1898,24 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                 AND a.Fiscal_Year = h.Fiscal_Year
                 AND h.Column_names = 'rtp1'
                 AND h.Column_values <> ''
+            LEFT JOIN principal_table_columns AS i
+                ON a.Agency = i.Agency
+                AND a.[Program_Name] = i.[Program_Name]
+                AND a.Fiscal_Year = i.Fiscal_Year
+                AND i.Column_names = 'rtp4_1'
+                AND i.Column_values <> ''
+            LEFT JOIN principal_table_columns AS j
+                ON a.Agency = j.Agency
+                AND a.[Program_Name] = j.[Program_Name]
+                AND a.Fiscal_Year = j.Fiscal_Year
+                AND j.Column_names = 'rtp4_3'
+                AND j.Column_values <> ''
+            LEFT JOIN principal_table_columns AS k
+                ON a.Agency = k.Agency
+                AND a.[Program_Name] = k.[Program_Name]
+                AND a.Fiscal_Year = k.Fiscal_Year
+                AND k.Column_names = 'cyp29'
+                AND k.Column_values <> ''
             WHERE a.[Program_Name] = ?
                 AND a.[Fiscal_Year] IN ({yearsCriteria})
         """
@@ -1805,9 +2067,17 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                     data_by_year_dict[data_year]["Payment_Accuracy_Rate"] is None or \
                     data_by_year_dict[data_year]["Payment_Accuracy_Rate"] == 0
                 ) and (
+                    "rtp4_1" not in data_by_year_dict[data_year] or \
+                    data_by_year_dict[data_year]["rtp4_1"] is None or \
+                    data_by_year_dict[data_year]["rtp4_1"] == ''
+                ) and (
                     "rtp4_2" not in data_by_year_dict[data_year] or \
                     data_by_year_dict[data_year]["rtp4_2"] is None or \
                     data_by_year_dict[data_year]["rtp4_2"] == ''
+                ) and (
+                    "rtp4_3" not in data_by_year_dict[data_year] or \
+                    data_by_year_dict[data_year]["rtp4_3"] is None or \
+                    data_by_year_dict[data_year]["rtp4_3"] == ''
                 ) and (
                     "rtp1" not in data_by_year_dict[data_year] or \
                     data_by_year_dict[data_year]["rtp1"] is None or \

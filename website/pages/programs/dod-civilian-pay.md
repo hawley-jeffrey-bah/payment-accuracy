@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Confidence_Level: '>95%'
   End_Date: 09/2020
@@ -262,15 +262,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0.05'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q3
-    Description_Action_Taken: The FY 2023 Corrective Action Plan for the Civilian
-      Pay Program was developed to address the technically improper payments due to
-      the lack of or inability to provide adequate key supporting documentation for
-      disbursements from samples selected during post pay review of the program.  The
-      error reason for the majority of the civilian payments was that the SF 1190s
-      did not have an authorizing signature.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'Army Civilian Field Offices were unable to provide
@@ -300,6 +291,15 @@ Data_By_Year:
       (DAPS) which is to be housed on their internal ServiceNow network. With the
       upgrade, DoDEA will be adding the ability for CAC-enabled signatures and dates.'
     Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q3
+    Description_Action_Taken: The FY 2023 Corrective Action Plan for the Civilian
+      Pay Program was developed to address the technically improper payments due to
+      the lack of or inability to provide adequate key supporting documentation for
+      disbursements from samples selected during post pay review of the program.  The
+      error reason for the majority of the civilian payments was that the SF 1190s
+      did not have an authorizing signature.
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'DoDEA is in the process of completing a system modernization
@@ -381,6 +381,10 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp1: '0.000'
+  cyp7_ucp2: '0.0000'
+  cyp7_ucp3: '0.0000'
+  cyp7_ucp4: '53.12'
   cyp7_ucp4_1: "The Department of Defense Education Activity (DoDEA) employees utilize\
     \ the Travel Order Processing System (TOPS) to request travel orders for non-TDY\
     \ requirements. These include Permanent Change of Station (PCS for First Duty\
@@ -425,6 +429,18 @@ Data_By_Year:
       consistently applied. With better understanding and adherence to established
       payroll procedures, coupled with quality assurance reviews, the Department has
       the ability to prevent these improper payments from continuing to occur.
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '4.854500'
+  - Key: cyp2_dit15_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '1.795500'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -513,6 +529,18 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '0.61'
+  underpayments_eligibility:
+  - Key: cyp5_dit1_1
+    Payment_Type: Underpayments
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '0.567300'
+  - Key: cyp5_dit15_1
+    Payment_Type: Underpayments
+    Theme: Employment
+    Theme_Description: The employment status of the recipient/beneficiary
+    Value: '0.042700'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.01, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.01, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[0.01]'
+Overpayment_Amounts_Recovered: '[0.01]'
+Overpayment_Years: '[2022]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -62,6 +62,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: The USITC has one program (Research, Investigations, and Reports) that
@@ -122,6 +124,15 @@ detail_exs1: USITC Inspector General concluded that the agency was compliant wit
   PIIA. USITC maintains payment integrity with well-established processes, strong
   financial controls and continuous monitoring.
 detail_pcp12_1: null
+detail_pcp14: "The USITC's Inspector General issued their most recent Payment Integrity\
+  \ Determination Report in May 2024, and determined that the Commission complied\
+  \ with applicable PIIA requirements for Fiscal Year 2023.  The IG agreed that the\
+  \ most recent risk assessment for FY 2021 did not identify any programs or activities\
+  \ susceptible to significant improper payments at or above the reporting threshold.\
+  \  The IG also agreed with the OCFO’s conclusion that the Commission is at low risk\
+  \ for significant improper payments and that the Commission’s programs are below\
+  \ the established thresholds for additional reporting requirements.  No recommendations\
+  \ were issued by the IG for FY 2023 activities. \n"
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

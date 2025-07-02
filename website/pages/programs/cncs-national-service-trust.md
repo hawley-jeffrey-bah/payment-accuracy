@@ -109,6 +109,15 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: "•\tAmeriCorps had previously established a Payment\
+      \ Integrity Corrective Action Plan working group. This group will be revived\
+      \ in FY 2025 analyzing the latest payment integrity results and determining\
+      \ the best actions to reduce rates. Additionally, AmeriCorps has developed an\
+      \ internal control for grantees trainings that will be required in the FY 2025\
+      \ terms and conditions."
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: "•\tAmeriCorps had previously established a Payment\
@@ -121,15 +130,6 @@ Data_By_Year:
       \ assessment linking specific root cause drivers of improper payments to the\
       \ corresponding applicable statute, regulation, and available trainings."
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: "•\tAmeriCorps had previously established a Payment\
-      \ Integrity Corrective Action Plan working group. This group will be revived\
-      \ in FY 2025 analyzing the latest payment integrity results and determining\
-      \ the best actions to reduce rates. Additionally, AmeriCorps has developed an\
-      \ internal control for grantees trainings that will be required in the FY 2025\
-      \ terms and conditions."
-    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -199,6 +199,7 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '3.35'
   cyp7_ucp4_1: The AmeriCorps Payment Integrity Assessment uses documentation submitted
     by grantees and agency-maintained documentation to support the National Service
     Trust disbursement of education awards. There are situations where the grantee

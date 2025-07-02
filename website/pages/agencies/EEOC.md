@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.001, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -104,6 +104,8 @@ detail_CAP5: 'It was recommended that EEOC implement agency-wide Improper Paymen
 
   '
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: "The OMB guidance addresses implementing payment recapture audits,\
@@ -176,6 +178,12 @@ detail_exs1: "\"In Fiscal Year (FY) 2024, the Equal Employment Opportunity Commi
   \ and determined that the Pay and Benefits Program is not susceptible to significant\
   \ improper payments or unknown payments.  \"\n"
 detail_pcp12_1: '3.0'
+detail_pcp14: "It was recommended that EEOC implement agency-wide Improper Payment\
+  \ Risk Assessment Standard Operating Procedures (SOP) based on OMB A-123 Appendix\
+  \ C guidance and identify a responsible point of contact for each significant program.\
+  \ The responsible party should report results of their risk assessment to the EEOC\
+  \ responsible official.   It was also recommended to implement an SOP to ensure\
+  \ annual compliance with OMB A-136 PIIA review and reporting requirements.   \n"
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

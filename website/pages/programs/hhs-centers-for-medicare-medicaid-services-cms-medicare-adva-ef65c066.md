@@ -171,7 +171,14 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '1254.76'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: 'HHS plans to continue conducting Risk Adjustment Data
+      Validation (RADV) audits to address improper payments.
+
+      '
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'Conducted contract-level RADV audits to verify the
@@ -181,13 +188,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'HHS plans to continue conducting Risk Adjustment Data
-      Validation (RADV) audits to address improper payments.
-
-      '
-    Mitigation_Strategy: app6_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'HHS plans to hold additiional training on Medicare
@@ -254,6 +254,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '14648.720000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -315,14 +321,21 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1902.04'
+  underpayments_eligibility:
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '1902.040000'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'HHS plans to continue conducting RADV audits to address
-      improper payments. HHS will also continue to develop a Part C strategy.
+    Description_Action_Taken: 'HHS plans to hold additional trainings on Medicare
+      Part C Fraud, Waste, and Abuse covering the latest schemes, trends, data analysis,
+      and investigations.
 
       '
-    Mitigation_Strategy: app6_1
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'In March 2024, HHS held a Medicare Part C Fraud, Waste,
@@ -346,12 +359,11 @@ Data_By_Year:
     Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'HHS plans to hold additional trainings on Medicare
-      Part C Fraud, Waste, and Abuse covering the latest schemes, trends, data analysis,
-      and investigations.
+    Description_Action_Taken: 'HHS plans to continue conducting RADV audits to address
+      improper payments. HHS will also continue to develop a Part C strategy.
 
       '
-    Mitigation_Strategy: app3_1
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: "HHS conducts contract-level RADV audits to verify the\
@@ -429,6 +441,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit18_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '17204.230000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -491,6 +509,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '1862.68'
+  underpayments_eligibility:
+  - Key: cyp5_dit18_1
+    Payment_Type: Underpayments
+    Theme: Medical Status
+    Theme_Description: Identifies whether a person is sick/healthy
+    Value: '1862.680000'
 Description: Under the Medicare Advantage Program, also known as Medicare Part C,
   beneficiaries can opt to receive their Medicare benefits through a private health
   plan. Approximately half of all Medicare beneficiaries are enrolled in Medicare

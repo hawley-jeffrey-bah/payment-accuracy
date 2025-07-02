@@ -10,7 +10,7 @@ Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
 Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.184, 5e-06]'
-Overpayment_Amounts_Recovered: '[0.0, 0.184, 5e-06]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[0.184]'
+Overpayment_Amounts_Recovered: '[0.184]'
+Overpayment_Years: '[2023]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -503,6 +503,8 @@ Years_Available:
 - 2022
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: null
@@ -545,6 +547,8 @@ detail_exs1: In review of the annual program appropriations presented in the ris
   assessment table, there is no risk of significant improper payments given that the
   $10M and $100M thresholds could not be met or exceeded with existing appropriations.
 detail_pcp12_1: null
+detail_pcp14: The OIG did not provide any specific recommendations to further improve
+  prevention and reduction of improper payments.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

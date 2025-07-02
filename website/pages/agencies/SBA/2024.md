@@ -62,8 +62,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: false
 Hide_Integrity_Results: false
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: false
@@ -225,32 +225,6 @@ PIIA2019_Compliant_Programs:
   Compliant_Overall: true
   Name: Paycheck Protection Program (PPP) Loan Approvals
   Slug: sba-paycheck-protection-program-ppp-loan-approvals
-- Compliant_1A: true
-  Compliant_1B: true
-  Compliant_2A: true
-  Compliant_2B: true
-  Compliant_3: false
-  Compliant_4: false
-  Compliant_5A: true
-  Compliant_5B: true
-  Compliant_5C: true
-  Compliant_6: false
-  Compliant_Overall: false
-  Name: Paycheck Protection Program (PPP) Loan Forgiveness
-  Slug: sba-paycheck-protection-program-ppp-loan-forgiveness
-- Compliant_1A: true
-  Compliant_1B: true
-  Compliant_2A: true
-  Compliant_2B: true
-  Compliant_3: false
-  Compliant_4: false
-  Compliant_5A: true
-  Compliant_5B: true
-  Compliant_5C: true
-  Compliant_6: false
-  Compliant_Overall: false
-  Name: Paycheck Protection Program (PPP) Loan Guaranty Purchases
-  Slug: sba-paycheck-protection-program-ppp-loan-guaranty-purchases
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -472,6 +446,32 @@ PIIA2019_NonCompliant_Programs:
   Compliant_Overall: false
   Name: Disaster Assistance Loans
   Slug: sba-disaster-assistance-loans
+- Compliant_1A: true
+  Compliant_1B: true
+  Compliant_2A: true
+  Compliant_2B: true
+  Compliant_3: false
+  Compliant_4: false
+  Compliant_5A: true
+  Compliant_5B: true
+  Compliant_5C: true
+  Compliant_6: false
+  Compliant_Overall: false
+  Name: Paycheck Protection Program (PPP) Loan Forgiveness
+  Slug: sba-paycheck-protection-program-ppp-loan-forgiveness
+- Compliant_1A: true
+  Compliant_1B: true
+  Compliant_2A: true
+  Compliant_2B: true
+  Compliant_3: false
+  Compliant_4: false
+  Compliant_5A: true
+  Compliant_5B: true
+  Compliant_5C: true
+  Compliant_6: false
+  Compliant_Overall: false
+  Name: Paycheck Protection Program (PPP) Loan Guaranty Purchases
+  Slug: sba-paycheck-protection-program-ppp-loan-guaranty-purchases
 - Compliant_1A: false
   Compliant_1B: false
   Compliant_2A: true
@@ -662,6 +662,8 @@ detail_CAP5: "Requirement 1a: The OIG found the SBA did not publish payment inte
   \ is working closely with supporting staff to ensure the statistical sampling is\
   \ accurate to estimate an improper payment estimate."
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: In FY 2024, the SBA did not conduct any recovery audits. In prior years,
@@ -761,6 +763,58 @@ detail_exs1: 'In FY 2024, the SBA has made great strides in our payment integrit
 
   '
 detail_pcp12_1: '4.0'
+detail_pcp14: 'The FY 2024 PIIA Compliance Audit identified the following recommendations
+  for the SBA:
+
+  1) OIG recommended the Administrator to coordinate with the CFO to continue to provide
+  training and collaborate with program office staff to ensure the timely and complete
+  reconciliation of the population of transactions used for estimating improper payments
+  to the GL, as needed.
+
+  2) OIG recommended the Administrator to coordinate with the CFO to proactively seek
+  and obtain guidance from OMB in the first year of a new program''s implementation
+  and develop a plan to ensure compliance with PIIA reporting requirements, as needed.
+
+  3) OIG recommended the Administrator to coordinate with the CFO to enhance existing
+  procedures using the framework in the GAO Green Book to design and implement robust
+  internal and quality control processes to ensure complete and accurate reporting
+  of annual improper payment results and formalized risk assessment processes to ensure
+  all programs and activities are considered sufficiently to meet PIIA reporting objectives.
+
+  4) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to design and implement enforceable actions and
+  controls to hold lenders accountable for not providing all documentation requested
+  for loan samples in a timely manner.
+
+  5) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to formally document and implement additional preventative
+  and monitoring controls to determine the eligibility of loans prior to loan approval
+  and payments and loan guaranty purchases.
+
+  6) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to collaborate with the responsible staff involved
+  in the payment integrity reporting process to ensure timely and complete reconciliations
+  are performed on the populations subject to sampling for improper payment reviews.
+
+  7) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to exercise effective management review controls
+  over the statistician''s work product by verifying that the documentation of the
+  sampling and estimation methodology plans comprehensively outlines the implemented
+  sampling and extrapolation methodology, while maintaining statistical validity.
+
+  8) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to design and implement effective communication
+  and review processes with responsible staff involved in the payment integrity reporting
+  process to ensure compliance for the reporting of new programs and activities.
+
+  9) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to design and document adequate review procedures
+  to ensure that the results of the sample meet the PIIA objectives.
+
+  10) OIG recommended the Administrator to coordinate with the Associate Administrator
+  of the Office of Capital Access to design and implement a formal review process
+  to ensure corrective action plans developed, implemented, and published are adequately
+  addressing the true root causes of improper and unknown payments.'
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

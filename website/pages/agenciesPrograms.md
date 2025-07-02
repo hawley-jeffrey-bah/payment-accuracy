@@ -113,7 +113,7 @@ agencies:
   susceptible_programs: 2
   total_spent_federal_funding: 1413474.59
 - agency: DOD
-  agency_name: Department of Defense Military Programs
+  agency_name: Department of Defense
   high_priority_programs: 0
   improper_payments_rate: 0.25
   num_programs: 48
@@ -145,16 +145,16 @@ agencies:
     total_spent_federal_funding: 4839.37
   - high_priority_program: false
     ip_rate: 6.9
-    program_name: Travel Pay Army – Defense Travel System (DTS)
+    program_name: Travel Pay Army – Defense Travel System (DTS)
     relative_change: null
     slug: dod-travel-pay-army-defense-travel-system-dts
     total_spent_federal_funding: 2190.85
   - high_priority_program: false
     ip_rate: 7.45
-    program_name: Travel Pay Department of Air Force (DAF) – Defense Travel System
+    program_name: Travel Pay Department of Air Force (DAF) – Defense Travel System
       (DTS)
     relative_change: null
-    slug: dod-travel-pay-department-of-air-force-daf-defense-travel-sy-00cfe2ec
+    slug: dod-travel-pay-department-of-air-force-daf-defense-travel-sy-4c65b680
     total_spent_federal_funding: 2356.12
   relative_change: 0.08
   susceptible_programs: 6
@@ -194,10 +194,10 @@ agencies:
   programs:
   - high_priority_program: false
     ip_rate: 12.78
-    program_name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and
+    program_name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage and
       Price Loss Coverage (ARC/PLC)
     relative_change: 4.18
-    slug: usda-commodity-credit-corporation-ccc-agriculture-risk-cover-e297465e
+    slug: usda-commodity-credit-corporation-ccc-agriculture-risk-cover-32a1d32e
     total_spent_federal_funding: 355.34
   - high_priority_program: false
     ip_rate: 9.71
@@ -643,6 +643,15 @@ agencies:
   relative_change: -2.46
   susceptible_programs: 3
   total_spent_federal_funding: 608.75
+- agency: AB
+  agency_name: United States Access Board
+  high_priority_programs: 0
+  improper_payments_rate: 0
+  num_programs: 0
+  programs: []
+  relative_change: null
+  susceptible_programs: 0
+  total_spent_federal_funding: 0
 - agency: CFTC
   agency_name: Commodity Futures Trading Commission
   high_priority_programs: 0
@@ -1050,6 +1059,15 @@ agencies:
   relative_change: null
   susceptible_programs: 0
   total_spent_federal_funding: 0
+- agency: NMB
+  agency_name: National Mediation Board
+  high_priority_programs: 0
+  improper_payments_rate: 0
+  num_programs: 0
+  programs: []
+  relative_change: null
+  susceptible_programs: 0
+  total_spent_federal_funding: 0
 - agency: NRC
   agency_name: Nuclear Regulatory Commission
   high_priority_programs: 0
@@ -1078,6 +1096,15 @@ agencies:
   relative_change: null
   susceptible_programs: 0
   total_spent_federal_funding: 0
+- agency: NTSB
+  agency_name: National Transportation Safety Board
+  high_priority_programs: 0
+  improper_payments_rate: 0
+  num_programs: 0
+  programs: []
+  relative_change: null
+  susceptible_programs: 0
+  total_spent_federal_funding: 0
 - agency: OGE
   agency_name: Office of Government Ethics
   high_priority_programs: 0
@@ -1103,6 +1130,15 @@ agencies:
     program_name: null
     relative_change: null
     total_spent_federal_funding: 0
+  relative_change: null
+  susceptible_programs: 0
+  total_spent_federal_funding: 0
+- agency: OSHRC
+  agency_name: Occupational Safety and Health Review Commission
+  high_priority_programs: 0
+  improper_payments_rate: 0
+  num_programs: 0
+  programs: []
   relative_change: null
   susceptible_programs: 0
   total_spent_federal_funding: 0
@@ -1233,7 +1269,7 @@ agencies:
   susceptible_programs: 0
   total_spent_federal_funding: 0
 - agency: USAGM
-  agency_name: United States Agency for Global Media, BBG
+  agency_name: United States Agency for Global Media
   high_priority_programs: 0
   improper_payments_rate: 0
   num_programs: 9
@@ -1247,7 +1283,7 @@ agencies:
   susceptible_programs: 0
   total_spent_federal_funding: 0
 - agency: USAID
-  agency_name: International Assistance Programs (USAID)
+  agency_name: Agency for International Development
   high_priority_programs: 0
   improper_payments_rate: 0
   num_programs: 483

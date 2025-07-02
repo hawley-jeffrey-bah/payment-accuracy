@@ -10,8 +10,8 @@ Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
 Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -37,7 +37,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: 'Salaries and Expenses (Direct) '
+  Name: Salaries and Expenses (Direct)
 PIIA2019_NonCompliant_Programs: []
 Payment_Accuracy_Amounts: '[]'
 Payment_Accuracy_Rate_Max: 0
@@ -66,6 +66,8 @@ detail_agy1: Throughout the year, DNFSB maintains payment integrity by executing
   Interior Business Center (DOI/IBC) for accounting system support and accounts payable
   processing. In FY2025, DNFSB will continue to ensure all requirements for Payment
   Integrity Information Act (PIIA) are properly documented and completed.
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: null
@@ -126,6 +128,15 @@ detail_exs1: 'DNFSB conducts periodic review of all programs and activities to i
 
   '
 detail_pcp12_1: null
+detail_pcp14: DNFSB is pleased to report that in the most recent Performance Audit
+  of DNFSB’s compliance with the Payment Integrity Information Act audit, the OIG
+  did not issue any recommendations for improvement. The OIG assessed DNFSB’s compliance
+  with OMB guidance and corresponding reporting instructions and determined that DNFSB
+  met the applicable requirements for PIIA compliance for the program identified as
+  susceptible to improper payments (IP) or unknown payments (UP). The OIG found DNFSB’s
+  reporting of and performance in reducing and recapturing IPs and UPs to be generally
+  accurate and complete.  The OIG determined that DNFSB complied with the requirements
+  of the PIIA for FY 2023.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

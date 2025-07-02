@@ -355,6 +355,8 @@ detail_agy1: The FCC will conduct risk assessments in two of its phase 1 program
   next year and in FY26, the Commission will perform risk assessments on the remaining
   programs that are in phase 1 in accordance with the 3 year cycle plan.  However,
   the FCC will perform an off year risk assessment if conditions warrant such action.
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: There are various methods used by the FCC to recover funds.  Some of
   these methods include but are not limited to demand letters, consent decrees, credit
   memos, offsets, and notice of apparent liabilities (NALs).
@@ -471,6 +473,23 @@ detail_exs1: "In accordance with the Improper Payment Information Act (IPIA) of 
   \ OIG and its auditor so that our programs are in compliance with the guidance outlined\
   \ in OMB M-21-19. \n"
 detail_pcp12_1: '3.0'
+detail_pcp14: 'In the most recent PIIA audit report the auditor identified 5 findings
+  resulting in 5 recommendations.  The FCC takes seriously the findings and recommendations
+  from our OIG and its auditor.  The FCC is committed to making the necessary improvements
+  to its programs and will work with its partners and the OIG to ensure improvements
+  in compliance with OMB M-21-19.  Some of the recommendations highlighted include:
+  1) Directing our programs Administrator to continue enhancing applicant outreach
+  programs to educate applicants on the S&L program rules, especially rules relating
+  to the competitive bidding processes,2) Direct our programs Administrator to enhance
+  the use of automation tools in EPC to check invoices for common errors and invoices
+  that are flagged as having a high risk of non-compliance with program invoicing
+  requirements, 3) Develop P&P that acknowledge the interdependent relationships between
+  the FCC, the TRS Fund Administrator, and TRS Providers, 4) Direct our programs Administrator
+  to perform a cost-benefit analysis to identify additional approaches for further
+  reducing the improper payment rate the reporting threshold and 5) Develop and implement
+  policies and procedures to identify, quantify, and report on paymentaccuracy.gov
+  any downward revisions that are submitted by providers resulting from provider non-compliant
+  conduct.'
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

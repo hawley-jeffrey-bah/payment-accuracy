@@ -179,6 +179,19 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '81.13'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: "RS plans to continue receiving the robust and comprehensive\
+      \ Death Master File under a separate agreement with SSA (checking). RS uses\
+      \ an automated process to match against the data provided in the Death Master\
+      \ File and the Consolidated Death Match. \n\nIn addition, the Quality Assurance\
+      \ Group will continue to provide feedback through monthly and  formal quarterly\
+      \ reports with recommendations, if applicable. These reports will provide specific\
+      \ analysis meant to discover trends that may not be discernible in any given\
+      \ month. The information gained through these audits will be used to make informed\
+      \ decisions regarding resources and to ensure compliance with policies and procedures\
+      \ governing the determination and payment of benefits.\n"
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: Regular quality assurance audits were used to assess
@@ -198,19 +211,6 @@ Data_By_Year:
 
       improves accuracy which affects improper payments.'
     Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: "RS plans to continue receiving the robust and comprehensive\
-      \ Death Master File under a separate agreement with SSA (checking). RS uses\
-      \ an automated process to match against the data provided in the Death Master\
-      \ File and the Consolidated Death Match. \n\nIn addition, the Quality Assurance\
-      \ Group will continue to provide feedback through monthly and  formal quarterly\
-      \ reports with recommendations, if applicable. These reports will provide specific\
-      \ analysis meant to discover trends that may not be discernible in any given\
-      \ month. The information gained through these audits will be used to make informed\
-      \ decisions regarding resources and to ensure compliance with policies and procedures\
-      \ governing the determination and payment of benefits.\n"
-    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'RS is aware of the improper payments; however, systemic
@@ -285,6 +285,7 @@ Data_By_Year:
   cyp6: '0'
   cyp7_app1_8: Audit, Training
   cyp7_atp1_8: Audit, Training
+  cyp7_ucp4: '23.5'
   cyp7_ucp4_1: Federal agencies are required to provide complete retirement packages.
     Through audits, the Quality Assurance Group identifies retirement claims that
     need additional information or clarification to determine if a recipient is receiving
@@ -323,6 +324,12 @@ Data_By_Year:
       Pay (DNP) portal, conducting monthly searches of annuitants who are reported
       as deceased through the death data sources (i.e. EVVE-FOD, DOD, DOS, AIS-OBIT,
       AIS-PROB, PACER, DMF-Public), verifying death and stopping further payments.
+  overpayments_eligibility:
+  - Key: cyp2_dit6_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '224.330000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -377,6 +384,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '113.22'
+  underpayments_eligibility:
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '113.220000'
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
@@ -386,25 +399,6 @@ Data_By_Year:
       all of which impact annuity calculations. Identifying specific skill gaps and
       developing targeted training can enhance accuracy and reduce improper payments.
     Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'RS plans to use Death Record Confidence Scoring Tool
-      (DRCST).  Which is an automated process that matches data from the Death Master
-      File with the Consolidated Death Match. Furthermore, the Quality Assurance Group
-      will maintain feedback through monthly and quarterly reports, offering recommendations
-      as needed. These reports will include specific analyses to uncover trends that
-      may not be immediately apparent, allowing for informed resource decisions and
-      ensuring compliance with policies governing benefit determinations and payments.
-
-
-      The Death Record Confidence Scoring Tool (DRC Scoring Tool) is a product used
-      to identify payments at risk of being issued to a deceased payee.  The DRC Scoring
-      Tool converts information into a confidence score based on the likelihood the
-      individual is truly deceased. The Office of Payment Integrity at the Department
-      of Treasury then uses the confidence score in combination with payment information
-      within the customer’s dataset to identify the records that have the greatest
-      potential impact for at-risk dollars.'
-    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: RS acknowledges the occurrence of improper payments;
@@ -425,6 +419,25 @@ Data_By_Year:
       for any discovered overpayments.  Additionally, OPM utilizes the Treasury's
       Do Not Pay Portal to identify annuitants who should have been reported deceased.
     Mitigation_Strategy: atp6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: 'RS plans to use Death Record Confidence Scoring Tool
+      (DRCST).  Which is an automated process that matches data from the Death Master
+      File with the Consolidated Death Match. Furthermore, the Quality Assurance Group
+      will maintain feedback through monthly and quarterly reports, offering recommendations
+      as needed. These reports will include specific analyses to uncover trends that
+      may not be immediately apparent, allowing for informed resource decisions and
+      ensuring compliance with policies governing benefit determinations and payments.
+
+
+      The Death Record Confidence Scoring Tool (DRC Scoring Tool) is a product used
+      to identify payments at risk of being issued to a deceased payee.  The DRC Scoring
+      Tool converts information into a confidence score based on the likelihood the
+      individual is truly deceased. The Office of Payment Integrity at the Department
+      of Treasury then uses the confidence score in combination with payment information
+      within the customer’s dataset to identify the records that have the greatest
+      potential impact for at-risk dollars.'
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Regular quality assurance audits assess the accuracy
@@ -505,6 +518,7 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Audit, Training
   cyp7_atp1_8: Audit, Training
+  cyp7_ucp4: '11.94'
   cyp7_ucp4_1: Federal agencies are required to provide complete retirement packages.
     Through audits, the Quality Assurance Group identifies retirement claims that
     need additional information or clarification to determine if a recipient is receiving
@@ -538,6 +552,12 @@ Data_By_Year:
       mail to verify eligibility.   Do Not Pay (DNP) Portal: Monthly searches are
       performed to verify deaths reported through various sources (e.g., EVVE-FOD,
       DOD, DOS) to prevent further payments.'
+  overpayments_eligibility:
+  - Key: cyp2_dit6_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '243.700000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -583,6 +603,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '93.75'
+  underpayments_eligibility:
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '93.750000'
 Description: RS provides Federal employees, retirees and their families with benefits
   that offer choice, value, and quality to be a competitive employer. Eligible retirees
   and survivors generally receive recurring monthly benefits. The status of an annuitant

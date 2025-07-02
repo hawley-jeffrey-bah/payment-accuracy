@@ -164,17 +164,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: SBA provided training at lender conferences in order
-      to provide lenders an understanding of the most common root causes of the improper
-      payments.  SBA recently updated its loan making Standard Operating Procedure
-      (SOP) and provided training to Lenders.  SBA provides regular feedback to Loan
-      Center management and staff regarding Improper Payments, Root Causes, and Corrective
-      Actions. Quality Control and Quality Assurance staff for 9 of SBA's 10 reporting
-      programs meet regularly to discuss improper payment related issues that may
-      be common to all teams.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: "SBA plans to continue its training at Lender conferences\
@@ -186,6 +175,17 @@ Data_By_Year:
       \ also continue to have Quality Control and Quality Assurance staff meet regularly\
       \ to discuss issues common to all."
     Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: SBA provided training at lender conferences in order
+      to provide lenders an understanding of the most common root causes of the improper
+      payments.  SBA recently updated its loan making Standard Operating Procedure
+      (SOP) and provided training to Lenders.  SBA provides regular feedback to Loan
+      Center management and staff regarding Improper Payments, Root Causes, and Corrective
+      Actions. Quality Control and Quality Assurance staff for 9 of SBA's 10 reporting
+      programs meet regularly to discuss improper payment related issues that may
+      be common to all teams.
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -249,6 +249,13 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp2: '27.71412'
+  cyp7_ucp2_1: The loan supporting this project involves the purchase of land/ construction
+    of building for a start -up pole frame building package manufacturer.  Although
+    the project appears to be a Do-It-Yourself project, neither the borrower nor the
+    lender has provided sufficient documentation to enable SBA to determine whether
+    the project is managed by a general contractor or is a DIY project.  SBA's Standard
+    Operating Procedures for requirements for each are different.
   cyp8: In FY 2023, one 504 loan was identified as an unknown payment in the amount
     of $1,462,000.  The CDC did not provide sufficient information for SBA to determine
     whether the borrower for this loan was eligible.
@@ -308,7 +315,15 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
-  - Action_Taken: Completed
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Specific corrective actions are determined based upon
+      the primary reason for the error, with the purpose of both remedying the error
+      and preventing recurrence. SBA plans to continue external training for CDC lenders
+      to ensure that appropriate documentation is obtained and analyzed prior to loan
+      approval and that policy requirements are met.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Not Completed
     Completion_Date: The corrective action was not fully completed this reporting
       period
     Description_Action_Taken: 'External training for lenders to ensure that appropriate
@@ -318,14 +333,6 @@ Data_By_Year:
 
       Training is an ongoing process.'
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Specific corrective actions are determined based upon
-      the primary reason for the error, with the purpose of both remedying the error
-      and preventing recurrence. SBA plans to continue external training for CDC lenders
-      to ensure that appropriate documentation is obtained and analyzed prior to loan
-      approval and that policy requirements are met.
-    Mitigation_Strategy: app3_1
   Confidence_Level: 95% to <100%
   End_Date: 03/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -403,6 +410,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '50.43'
   cyp7_ucp4_1: Two loans were determined to be Unknown due to (1) the timing of a
     divorce settlement and (2) awaiting an appraisal for real estate collateral.
   cyp8: Two loans were determined to be Unknown due to (1) the timing of a divorce

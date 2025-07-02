@@ -226,6 +226,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '40.670000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -266,20 +273,14 @@ Data_By_Year:
     Financial: 11.04
     Inability_to_Access_Data: 11.04
     cyp5: '11.04'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '11.040000'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: High Cost will conduct its annual Circle of Life webinars
-      to address top common audit findings. The webinar will provide common errors
-      and best practices suggested to avoid these findings.
-    Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Monthly meetings will continue to be held between USAC’s
-      Audit and Assurance Division (AAD) and USAC leadership to discuss findings identified
-      by AAD. During these meetings, corrective actions are discussed to prevent similar
-      findings in the future.
-    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: Monthly meetings will continue to be held between USAC’s
@@ -287,12 +288,6 @@ Data_By_Year:
       by AAD. During these meetings, corrective actions are discussed to prevent similar
       findings in the future.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q1
-    Description_Action_Taken: High Cost will conduct its annual Circle of Life webinars
-      to address top common audit findings. The webinar will provide common errors
-      and best practices suggested to avoid these findings.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q1
     Description_Action_Taken: Through USAC's Risk Management Council meetings, the
@@ -311,6 +306,25 @@ Data_By_Year:
       to analyze and respond to identified changes and related risks to maintain an
       effective internal control system.'
     Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Monthly meetings will continue to be held between USAC’s
+      Audit and Assurance Division (AAD) and USAC leadership to discuss findings identified
+      by AAD. During these meetings, corrective actions are discussed to prevent similar
+      findings in the future.
+    Mitigation_Strategy: app6_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: High Cost will conduct its annual Circle of Life webinars
+      to address top common audit findings. The webinar will provide common errors
+      and best practices suggested to avoid these findings.
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q1
+    Description_Action_Taken: High Cost will conduct its annual Circle of Life webinars
+      to address top common audit findings. The webinar will provide common errors
+      and best practices suggested to avoid these findings.
+    Mitigation_Strategy: atp3_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -381,6 +395,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '55.180000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -436,6 +457,13 @@ Data_By_Year:
     Financial: 26.57
     Inability_to_Access_Data: 26.57
     cyp5: '26.57'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '26.570000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

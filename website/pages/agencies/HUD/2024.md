@@ -1016,6 +1016,8 @@ detail_CAP5: "OIG did not make any new recommendations in 2024-FO-0006 but the t
   \ published IP/UP rate for the Payee Tier for this program in FY24 based upon OMB\
   \ guidance.\n* HUD does not agree with recommendation 2023-FO-0009 1A."
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: "Office of Healthy Homes Lead Hazard Control - Lead Hazard Reduction\n\
   During grant execution, the Office of Lead Hazard Control and Healthy Homes (OLHCHH)\
   \ reviews grantee invoices, vouchers and supporting documentation. If an improper\
@@ -1712,6 +1714,9 @@ detail_exs1: "In FY 2024, HUD conducted a comprehensive risk assessment of its d
   \ HUD’s Enterprise Voucher Management System (eVMS) and the Enhanced EIV tool.\n\
   \n"
 detail_pcp12_1: '3.0'
+detail_pcp14: HUD OIG issued recommendations in Management alert 2024-IG-0001. HUD
+  OIG didn't recommend any additional recommendations within the most recent compliance
+  report 2024-FO-0006.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

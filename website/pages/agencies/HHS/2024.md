@@ -1413,18 +1413,6 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Indian Health Service (IHS) -  Purchased/Referred Care (Clinical Services)
-- Compliant_1A: true
-  Compliant_1B: true
-  Compliant_2A: true
-  Compliant_2B: true
-  Compliant_3: true
-  Compliant_4: true
-  Compliant_5A: true
-  Compliant_5B: true
-  Compliant_5C: true
-  Compliant_6: true
-  Compliant_Overall: true
   Name: Indian Health Service (IHS) - Alcohol and Substance Abuse (Clinical Services)
 - Compliant_1A: true
   Compliant_1B: true
@@ -1486,6 +1474,18 @@ PIIA2019_Compliant_Programs:
   Compliant_6: true
   Compliant_Overall: true
   Name: Indian Health Service (IHS) - Mental Health (Clinical Services)
+- Compliant_1A: true
+  Compliant_1B: true
+  Compliant_2A: true
+  Compliant_2B: true
+  Compliant_3: true
+  Compliant_4: true
+  Compliant_5A: true
+  Compliant_5B: true
+  Compliant_5C: true
+  Compliant_6: true
+  Compliant_Overall: true
+  Name: Indian Health Service (IHS) - Purchased/Referred Care (Clinical Services)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -4953,8 +4953,8 @@ Risks:
 - Assessments:
   - Fiscal_Year: 2021
     Susceptible: 'No'
-  Program_Name: Centers for Medicare & Medicaid Services (CMS) Quality Activities  (Medicare
-    Fee-for-Service)
+  Program_Name: Centers for Medicare & Medicaid Services (CMS) Quality Activities
+    (Medicare Fee-for-Service)
   Slug: null
 - Assessments:
   - Fiscal_Year: 2019
@@ -5175,11 +5175,6 @@ Risks:
   Program_Name: Health Resources and Services Administration (HRSA) - Ryan White HIV/AIDS
   Slug: null
 - Assessments:
-  - Fiscal_Year: 2023
-    Susceptible: 'No'
-  Program_Name: Indian Health Service (IHS) -  Purchased/Referred Care (Clinical Services)
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Indian Health Service (IHS) - Contract Support Costs
@@ -5199,6 +5194,11 @@ Risks:
   - Fiscal_Year: 2024
     Susceptible: 'No'
   Program_Name: Indian Health Service (IHS) - Public Health Nursing (Preventive Health)
+  Slug: null
+- Assessments:
+  - Fiscal_Year: 2023
+    Susceptible: 'No'
+  Program_Name: Indian Health Service (IHS) - Purchased/Referred Care (Clinical Services)
   Slug: null
 - Assessments:
   - Fiscal_Year: 2024
@@ -5559,6 +5559,8 @@ detail_agy1: 'HHS is committed to reducing improper payments, improving services
   Looking forward, HHS will continue refining corrective actions and methodologies
   to strengthen compliance with the Payment Integrity Information Act (PIIA). Further
   details are available in the annual Agency Financial Report and on PaymentAccuracy.gov.'
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: The agency employs various methods to recover improper payments identified
   in recovery audits. For Medicare Fee-for-Service (FFS), CMS issues a demand letter,
   and the amount owed can be offset from future payments or refunded directly by the
@@ -5744,6 +5746,16 @@ detail_exs1: 'The U.S. Department of Health and Human Services (HHS) remains ded
   methodologies and corrective actions to ensure compliance with PIIA requirements.
   Further details are available in the annual Agency Financial Report and on PaymentAccuracy.gov.'
 detail_pcp12_1: '3.0'
+detail_pcp14: The OIG recommended several actions to improve the prevention and reduction
+  of improper and unknown payments. HHS should conduct timely risk assessments for
+  all programs with annual outlays over $10 million, ensuring assessments occur at
+  least once every three years. It also advised accelerating recovery audits and implementing
+  corrective actions for Medicare Part C to address existing delays. To enhance compliance,
+  HHS needs to improve the methodology for the COVID-19 Uninsured Program's payment
+  estimates and ensure all risk-susceptible programs report improper payment estimates.
+  Additionally, the OIG supported HHS's proposal for statutory changes to improve
+  monitoring and reporting for the Temporary Assistance for Needy Families (TANF)
+  program, which would help establish an improper payment measurement.
 detail_raa8: 'Yes'
 detail_raa9: The FY 2024 risk assessment process was updated to enhance compliance
   and evaluate all programs with annual outlays over $10 million. HHS established

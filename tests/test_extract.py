@@ -235,8 +235,8 @@ def test_MY_OMB_ImproperPayment_Payment_Program_Compliance_vw(get_agency_codes):
     assert_has_rows(df)
     assert_column_count(df, 16)
     assert_column_count_is_consistent(path)
-    assert_fiscal_year_found(df, 1)
-    assert_all_agencies_mapped(df, 0, get_agency_codes)
+    assert_fiscal_year_found(df, 0)
+    assert_all_agencies_mapped(df, 1, get_agency_codes)
     assert_no_duplicates(df, ["Agency", "Program_Name", "Fiscal_Year"])
 
 def test_MY_OMB_ImproperPayment_Payment_Recovery_Details_unpivotted_vw(get_agency_codes):

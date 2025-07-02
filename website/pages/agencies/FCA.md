@@ -10,7 +10,7 @@ Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
 Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: true
 Hide_Sparklines: true
@@ -46,6 +46,8 @@ detail_CAP5: null
 detail_agy1: The Farm Credit Administration performs a 3-year risk assessment of all
   its payment types. Our most recent assessment for data as of Sept. 30, 2023, found
   that we are at low risk for improper payments.
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: null
@@ -92,6 +94,8 @@ detail_exs1: The Farm Credit Administration (FCA) Inspector General (IG) determi
   through combined efforts with our shared service provider, strong payment controls,
   and continuous monitoring.
 detail_pcp12_1: null
+detail_pcp14: There were no recommendations from our Office of Inspector General on
+  Payment Integrity.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

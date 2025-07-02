@@ -257,6 +257,13 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '0'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: The IRS will continue to educate tax professionals on
+      their due diligence requirements regarding the American Opportunity Tax Credit
+      (AOTC), through venues such as the annual IRS Nationwide Tax Forums and the
+      Latino Tax Fest.
+    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
     Description_Action_Taken: "The IRS held its annual Dependent Database (DDb) meetings\
@@ -267,11 +274,12 @@ Data_By_Year:
     Mitigation_Strategy: atp4_1
   - Action_Taken: Planned
     Completion_Date: FY2024
-    Description_Action_Taken: The IRS will continue to educate tax professionals on
-      their due diligence requirements regarding the American Opportunity Tax Credit
-      (AOTC), through venues such as the annual IRS Nationwide Tax Forums and the
-      Latino Tax Fest.
-    Mitigation_Strategy: app3_1
+    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
+      (DDb) meetings with stakeholders in the Wage & Investment, Small Business &
+      Self Employed, and IT divisions, to evaluate the effectiveness of prior-year
+      compliance filters for audit selection of returns claiming the American Opportunity
+      Tax Credit (AOTC) and identify improvement opportunities for next filing season.
+    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
     Description_Action_Taken: The IRS educated tax professionals on their due diligence
@@ -281,14 +289,6 @@ Data_By_Year:
       information, updates and training on various tax-related topics, such as tax
       law changes to refundable tax credits.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
-      (DDb) meetings with stakeholders in the Wage & Investment, Small Business &
-      Self Employed, and IT divisions, to evaluate the effectiveness of prior-year
-      compliance filters for audit selection of returns claiming the American Opportunity
-      Tax Credit (AOTC) and identify improvement opportunities for next filing season.
-    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2020
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -352,6 +352,35 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '16.513800'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '1387.159200'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '214.679400'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '16.513800'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '16.513800'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -418,6 +447,33 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2025
+    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
+      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
+      Employed, and Information Technology divisions, to review and adjust the value
+      of prior-year compliance filters for audit selection of returns claiming the
+      American Opportunity Tax Credit (AOTC). Based on analysis of prior-year data,
+      the IRS refines the IRS filters to better prioritize returns with higher likelihoods
+      of errors; this helps prevent improper payments by intervening earlier in the
+      process. Based on analysis of prior-year data, the IRS refines the IRS filters
+      to better prioritize returns with higher likelihoods of errors; this helps prevent
+      improper payments by intervening earlier in the process. As mentioned throughout
+      the IRS's history of refundable tax credit management, the primary root causes
+      of refundable tax credit-related improper payments is reliance on taxpayer self-certification
+      of an accurate return and the lack of a pre-approval process. Because taxpayers
+      are not required to prove their eligibility for RTCs upfront, errors (both unintentional
+      and intentional) can occur. Improved audit selection filters can catch these
+      issues after returns are filed but before payments are issued, helping to reduce
+      improper payments. The primary result of this approach is enhanced targeting
+      of resources to areas in which errors are most likely to occur. The IRS is re-aligning
+      its efforts to further its strategic initiatives; accordingly, the IRS is investing
+      in taxpayer outreach and education, in lieu of conducting additional pre-refund
+      audits. By helping taxpayers file accurate returns upfront, quickly fixing errors
+      that delay refunds and ensuring taxpayers claim the credits and deductions for
+      which they are eligible, the IRS will correct payment accuracy issues without
+      substantially increasing the burden on taxpayers and the IRS.
+    Mitigation_Strategy: app4_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
     Description_Action_Taken: The IRS will continue to educate tax professionals on
       their due diligence requirements regarding the American Opportunity Tax Credit
       (AOTC), through venues such as the annual IRS Nationwide Tax Forums and the
@@ -457,33 +513,6 @@ Data_By_Year:
       Training addresses this root cause by equipping tax professionals with knowledge
       to claim RTCs accurately.
     Mitigation_Strategy: atp3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
-      (DDb) meetings with stakeholders in Taxpayer Services, Small Business & Self
-      Employed, and Information Technology divisions, to review and adjust the value
-      of prior-year compliance filters for audit selection of returns claiming the
-      American Opportunity Tax Credit (AOTC). Based on analysis of prior-year data,
-      the IRS refines the IRS filters to better prioritize returns with higher likelihoods
-      of errors; this helps prevent improper payments by intervening earlier in the
-      process. Based on analysis of prior-year data, the IRS refines the IRS filters
-      to better prioritize returns with higher likelihoods of errors; this helps prevent
-      improper payments by intervening earlier in the process. As mentioned throughout
-      the IRS's history of refundable tax credit management, the primary root causes
-      of refundable tax credit-related improper payments is reliance on taxpayer self-certification
-      of an accurate return and the lack of a pre-approval process. Because taxpayers
-      are not required to prove their eligibility for RTCs upfront, errors (both unintentional
-      and intentional) can occur. Improved audit selection filters can catch these
-      issues after returns are filed but before payments are issued, helping to reduce
-      improper payments. The primary result of this approach is enhanced targeting
-      of resources to areas in which errors are most likely to occur. The IRS is re-aligning
-      its efforts to further its strategic initiatives; accordingly, the IRS is investing
-      in taxpayer outreach and education, in lieu of conducting additional pre-refund
-      audits. By helping taxpayers file accurate returns upfront, quickly fixing errors
-      that delay refunds and ensuring taxpayers claim the credits and deductions for
-      which they are eligible, the IRS will correct payment accuracy issues without
-      substantially increasing the burden on taxpayers and the IRS.
-    Mitigation_Strategy: app4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meeting
@@ -639,6 +668,35 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '14.313000'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '1202.292000'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '186.069000'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '14.313000'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '14.313000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

@@ -222,15 +222,24 @@ Data_By_Year:
     cyp5: '17.30'
 - Actions_Taken:
   - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'FSA will continue to perform a variety of general public
-      awareness campaigns, training, and other outreach to the community including
-      to prospective students and parents to help ensure applicants are aware of the
-      importance of completing the FAFSA and correctly reporting all relevant information.
-      FSA will continue to consider Behavioral/Psych Influence in designing this outreach.
+    Completion_Date: FY2025
+    Description_Action_Taken: 'FSA will continue to work with Treasury to implement
+      the authorities provided in the FUTURE Act that will allow FSA to obtain income
+      data directly from the IRS. The cross-enterprise sharing of data will improve
+      verification of applicants’ and borrowers’ income data.
 
       '
-    Mitigation_Strategy: app2_1
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: 'FSA performs a variety of general public awareness
+      campaigns, training, and other outreach to the community including to prospective
+      students and parents to help ensure applicants are aware of the importance of
+      completing the FAFSA and correctly reporting all relevant information. FSA considers
+      Behavioral/Psych Influence in designing this outreach.
+
+      '
+    Mitigation_Strategy: atp2_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: 'FSA will also continue to review the annual Single
@@ -245,37 +254,50 @@ Data_By_Year:
       '
     Mitigation_Strategy: app6_1
   - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'Through the Student Aid and Borrower Eligibility (SABER)
-      Initiative, FSA will continue to implement the Fostering Undergraduate Talent
-      by Unlocking Resources for Education (FUTURE) Act and Free Application for Federal
-      Student Aid (FAFSA) Simplification Act which ultimately will streamline and
-      strengthen the collection of data used to determine eligibility for student
-      financial assistance. Implementation of the authorities provided in the FUTURE
-      Act will significantly improve data authentication by enabling FSA to automatically
-      receive certain federal tax information (FTI) from the IRS through a direct-data
-      exchange with applicant approval and enabling customers to automatically report
-      their income for the total and permanent disability (TPD) discharge post-monitoring,
-      income driven repayment (IDR), and FAFSA processes. Implementation of the authorities
-      provided in the FAFSA Simplification Act will improve reporting through, for
-      example, modifying the questions that students and their families have to answer
-      on the FAFSA form and requiring ED to conduct early awareness and outreach of
-      student aid eligibility.
+    Completion_Date: FY2024
+    Description_Action_Taken: 'The FSA Central Processing System performs analytics
+      to determine which applicants should be flagged for verification prior to receiving
+      financial aid. In FY24, FSA will assess and revise as necessary its verification
+      model and guidance.
 
       '
-    Mitigation_Strategy: app4_1
+    Mitigation_Strategy: app7_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: 'FSA will continue to perform a variety of general public
+      awareness campaigns, training, and other outreach to the community including
+      to prospective students and parents to help ensure applicants are aware of the
+      importance of completing the FAFSA and correctly reporting all relevant information.
+      FSA will continue to consider Behavioral/Psych Influence in designing this outreach.
+
+      '
+    Mitigation_Strategy: app2_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
-    Description_Action_Taken: 'FSA reviews the annual Single Audit Act compliance
-      audits of schools performed by independent auditors to evaluate schools’ administration
-      of FSA programs. For deficiencies identified by the auditors, schools are required
-      to develop corrective action plans. FSA reviews and evaluates the effectiveness
-      of schools’ corrective actions and mitigation efforts for noted exceptions.
-      When an improper payment is detected and deemed collectable, FSA establishes
-      an account receivable and pursues collection.
+    Description_Action_Taken: 'FSA publishes and delivers various free trainings,
+      guidance, and resources for school financial aid administrators to target the
+      root causes of IPs and UPs and other frequently identified compliance issues.
+      For example, FSA publishes updates to questions and answers about verification
+      requirements to help clarify verification requirements and reduce the risk of
+      verification deficiencies.
 
       '
-    Mitigation_Strategy: atp6_1
+    Mitigation_Strategy: atp3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2023 Q4
+    Description_Action_Taken: 'The FSA Central Processing System performs analytics
+      to determine which applicants should be flagged for verification prior to receiving
+      financial aid. FSA annually assesses and revises its verification model.
+
+
+      FSA estimates IPs and UPs for the Direct Loan program by using R Code. As part
+      of using R, FSA is able to perform analysis on prior year results to better
+      understand expected IP and UP results. Further, FSA uses logarithmic analysis
+      to predict future rates and establish a tolerable rate and reduction target
+      in accordance with OMB Circular A-123, Appendix C guidance.
+
+      '
+    Mitigation_Strategy: atp7_1
   - Action_Taken: Planned
     Completion_Date: FY2024
     Description_Action_Taken: "FSA will continue to publish and deliver various free\
@@ -292,23 +314,16 @@ Data_By_Year:
     Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
-    Description_Action_Taken: 'FSA performs a variety of general public awareness
-      campaigns, training, and other outreach to the community including to prospective
-      students and parents to help ensure applicants are aware of the importance of
-      completing the FAFSA and correctly reporting all relevant information. FSA considers
-      Behavioral/Psych Influence in designing this outreach.
+    Description_Action_Taken: 'FSA reviews the annual Single Audit Act compliance
+      audits of schools performed by independent auditors to evaluate schools’ administration
+      of FSA programs. For deficiencies identified by the auditors, schools are required
+      to develop corrective action plans. FSA reviews and evaluates the effectiveness
+      of schools’ corrective actions and mitigation efforts for noted exceptions.
+      When an improper payment is detected and deemed collectable, FSA establishes
+      an account receivable and pursues collection.
 
       '
-    Mitigation_Strategy: atp2_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: 'The FSA Central Processing System performs analytics
-      to determine which applicants should be flagged for verification prior to receiving
-      financial aid. In FY24, FSA will assess and revise as necessary its verification
-      model and guidance.
-
-      '
-    Mitigation_Strategy: app7_1
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: 'FSA is committed to improving the access, use, and
@@ -353,39 +368,24 @@ Data_By_Year:
     Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'FSA will continue to work with Treasury to implement
-      the authorities provided in the FUTURE Act that will allow FSA to obtain income
-      data directly from the IRS. The cross-enterprise sharing of data will improve
-      verification of applicants’ and borrowers’ income data.
+    Description_Action_Taken: 'Through the Student Aid and Borrower Eligibility (SABER)
+      Initiative, FSA will continue to implement the Fostering Undergraduate Talent
+      by Unlocking Resources for Education (FUTURE) Act and Free Application for Federal
+      Student Aid (FAFSA) Simplification Act which ultimately will streamline and
+      strengthen the collection of data used to determine eligibility for student
+      financial assistance. Implementation of the authorities provided in the FUTURE
+      Act will significantly improve data authentication by enabling FSA to automatically
+      receive certain federal tax information (FTI) from the IRS through a direct-data
+      exchange with applicant approval and enabling customers to automatically report
+      their income for the total and permanent disability (TPD) discharge post-monitoring,
+      income driven repayment (IDR), and FAFSA processes. Implementation of the authorities
+      provided in the FAFSA Simplification Act will improve reporting through, for
+      example, modifying the questions that students and their families have to answer
+      on the FAFSA form and requiring ED to conduct early awareness and outreach of
+      student aid eligibility.
 
       '
-    Mitigation_Strategy: app5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: 'FSA publishes and delivers various free trainings,
-      guidance, and resources for school financial aid administrators to target the
-      root causes of IPs and UPs and other frequently identified compliance issues.
-      For example, FSA publishes updates to questions and answers about verification
-      requirements to help clarify verification requirements and reduce the risk of
-      verification deficiencies.
-
-      '
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2023 Q4
-    Description_Action_Taken: 'The FSA Central Processing System performs analytics
-      to determine which applicants should be flagged for verification prior to receiving
-      financial aid. FSA annually assesses and revises its verification model.
-
-
-      FSA estimates IPs and UPs for the Direct Loan program by using R Code. As part
-      of using R, FSA is able to perform analysis on prior year results to better
-      understand expected IP and UP results. Further, FSA uses logarithmic analysis
-      to predict future rates and establish a tolerable rate and reduction target
-      in accordance with OMB Circular A-123, Appendix C guidance.
-
-      '
-    Mitigation_Strategy: atp7_1
+    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -465,6 +465,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '67.820000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -548,25 +554,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '18.00'
+  underpayments_eligibility:
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '18.000000'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'FSA will continue to publish and deliver various free
-      trainings, guidance, and resources for school financial aid administrators to
-      target the root causes of IPs and UPs and other frequently identified compliance
-      issues. For example, FSA will continue to publish updates to questions and answers
-      about verification requirements to help clarify verification requirements and
-      reduce the risk of verification deficiencies.
-
-
-      FSA will also continue to annually host the FSA Training Conference and analyze
-      the attendance patterns of institutions and their stakeholders, which will allow
-      FSA to understand attendance trends and develop training content accordingly.
-      FSA will ensure many offices within FSA continue to collectively participate
-      to ensure key objects and milestones are met.
-
-      '
-    Mitigation_Strategy: app3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'FSA will also continue to review the annual Single
@@ -580,36 +574,16 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: app6_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'FSA worked with Treasury to implement the authorities
-      provided in the FUTURE Act that will allow FSA to obtain income data directly
-      from the IRS. The cross-enterprise sharing of data improves verification of
-      applicants’ and borrowers’ income data. Additional information regarding implementation
-      of the authorities provided in the FUTURE Act is described in the "Change Process"
-      response.
-
-      '
-    Mitigation_Strategy: atp5_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: Through the Student Aid and Borrower Eligibility (SABER)
-      Initiative, FSA has implemented the Fostering Undergraduate Talent by Unlocking
-      Resources for Education (FUTURE) Act and Free Application for Federal Student
-      Aid (FAFSA) Simplification Act which streamlines and strengthens the collection
-      of data used to determine eligibility for student financial assistance. Implementation
-      of the authorities provided in the FUTURE Act improves data authentication by
-      enabling FSA to automatically receive certain federal tax information (FTI)
-      from the IRS through a direct-data exchange with applicant approval and enabling
-      customers to automatically report their income for the total and permanent disability
-      (TPD) discharge post-monitoring, income driven repayment (IDR), and FAFSA processes.
-      Implementation of the authorities provided in the FAFSA Simplification Act improve
-      reporting through, for example, modifying the questions that students and their
-      families have to answer on the FAFSA form and requiring ED to conduct early
-      awareness and outreach of student aid eligibility. In FY 2025, FSA will continue
-      to implement the FUTURE Act FAFSA solution for students and families with individual
-      taxpayer identification numbers (ITINs) during the 2026–27 FAFSA cycle.
-    Mitigation_Strategy: app4_1
+    Description_Action_Taken: 'FSA will continue to perform a variety of general public
+      awareness campaigns, training, and other outreach to the community including
+      to prospective students and parents to help ensure applicants are aware of the
+      importance of completing the FAFSA and correctly reporting all relevant information.
+      FSA will continue to consider Behavioral/Psych Influence in designing this outreach.
+
+      '
+    Mitigation_Strategy: app2_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: 'The FAFSA Processing System performs analytics to determine
@@ -621,27 +595,14 @@ Data_By_Year:
     Mitigation_Strategy: app7_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'FSA publishes and delivers various free trainings,
-      guidance, and resources for school financial aid administrators to target the
-      root causes of IPs and UPs and other frequently identified compliance issues.
-      For example, FSA publishes updates to questions and answers about verification
-      requirements to help clarify verification requirements and reduce the risk of
-      verification deficiencies.
+    Description_Action_Taken: 'FSA performs a variety of general public awareness
+      campaigns, training, and other outreach to the community including to prospective
+      students and parents to help ensure applicants are aware of the importance of
+      completing the FAFSA and correctly reporting all relevant information. FSA considers
+      Behavioral/Psych Influence in designing this outreach.
 
       '
-    Mitigation_Strategy: atp3_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'FSA reviews the annual Single Audit Act compliance
-      audits of schools performed by independent auditors to evaluate schools’ administration
-      of FSA programs. For deficiencies identified by the auditors, schools are required
-      to develop corrective action plans. FSA reviews and evaluates the effectiveness
-      of schools’ corrective actions and mitigation efforts for noted exceptions.
-      When an improper payment is detected and deemed collectable, FSA establishes
-      an account receivable and pursues collection.
-
-      '
-    Mitigation_Strategy: atp6_1
+    Mitigation_Strategy: atp2_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'FSA is committed to improving the access, use, and
@@ -680,24 +641,47 @@ Data_By_Year:
     Mitigation_Strategy: atp4_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'FSA performs a variety of general public awareness
-      campaigns, training, and other outreach to the community including to prospective
-      students and parents to help ensure applicants are aware of the importance of
-      completing the FAFSA and correctly reporting all relevant information. FSA considers
-      Behavioral/Psych Influence in designing this outreach.
+    Description_Action_Taken: 'FSA worked with Treasury to implement the authorities
+      provided in the FUTURE Act that will allow FSA to obtain income data directly
+      from the IRS. The cross-enterprise sharing of data improves verification of
+      applicants’ and borrowers’ income data. Additional information regarding implementation
+      of the authorities provided in the FUTURE Act is described in the "Change Process"
+      response.
 
       '
-    Mitigation_Strategy: atp2_1
+    Mitigation_Strategy: atp5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'FSA reviews the annual Single Audit Act compliance
+      audits of schools performed by independent auditors to evaluate schools’ administration
+      of FSA programs. For deficiencies identified by the auditors, schools are required
+      to develop corrective action plans. FSA reviews and evaluates the effectiveness
+      of schools’ corrective actions and mitigation efforts for noted exceptions.
+      When an improper payment is detected and deemed collectable, FSA establishes
+      an account receivable and pursues collection.
+
+      '
+    Mitigation_Strategy: atp6_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'FSA will continue to perform a variety of general public
-      awareness campaigns, training, and other outreach to the community including
-      to prospective students and parents to help ensure applicants are aware of the
-      importance of completing the FAFSA and correctly reporting all relevant information.
-      FSA will continue to consider Behavioral/Psych Influence in designing this outreach.
+    Description_Action_Taken: 'FSA will continue to work with Treasury to implement
+      the authorities provided in the FUTURE Act that will allow FSA to obtain income
+      data directly from the IRS. The cross-enterprise sharing of data will continue
+      to improve verification of applicants’ and borrowers’ income data.
 
       '
-    Mitigation_Strategy: app2_1
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'FSA publishes and delivers various free trainings,
+      guidance, and resources for school financial aid administrators to target the
+      root causes of IPs and UPs and other frequently identified compliance issues.
+      For example, FSA publishes updates to questions and answers about verification
+      requirements to help clarify verification requirements and reduce the risk of
+      verification deficiencies.
+
+      '
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'The FAFSA Processing System performs analytics to determine
@@ -715,13 +699,41 @@ Data_By_Year:
     Mitigation_Strategy: atp7_1
   - Action_Taken: Planned
     Completion_Date: FY2025
-    Description_Action_Taken: 'FSA will continue to work with Treasury to implement
-      the authorities provided in the FUTURE Act that will allow FSA to obtain income
-      data directly from the IRS. The cross-enterprise sharing of data will continue
-      to improve verification of applicants’ and borrowers’ income data.
+    Description_Action_Taken: 'FSA will continue to publish and deliver various free
+      trainings, guidance, and resources for school financial aid administrators to
+      target the root causes of IPs and UPs and other frequently identified compliance
+      issues. For example, FSA will continue to publish updates to questions and answers
+      about verification requirements to help clarify verification requirements and
+      reduce the risk of verification deficiencies.
+
+
+      FSA will also continue to annually host the FSA Training Conference and analyze
+      the attendance patterns of institutions and their stakeholders, which will allow
+      FSA to understand attendance trends and develop training content accordingly.
+      FSA will ensure many offices within FSA continue to collectively participate
+      to ensure key objects and milestones are met.
 
       '
-    Mitigation_Strategy: app5_1
+    Mitigation_Strategy: app3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Through the Student Aid and Borrower Eligibility (SABER)
+      Initiative, FSA has implemented the Fostering Undergraduate Talent by Unlocking
+      Resources for Education (FUTURE) Act and Free Application for Federal Student
+      Aid (FAFSA) Simplification Act which streamlines and strengthens the collection
+      of data used to determine eligibility for student financial assistance. Implementation
+      of the authorities provided in the FUTURE Act improves data authentication by
+      enabling FSA to automatically receive certain federal tax information (FTI)
+      from the IRS through a direct-data exchange with applicant approval and enabling
+      customers to automatically report their income for the total and permanent disability
+      (TPD) discharge post-monitoring, income driven repayment (IDR), and FAFSA processes.
+      Implementation of the authorities provided in the FAFSA Simplification Act improve
+      reporting through, for example, modifying the questions that students and their
+      families have to answer on the FAFSA form and requiring ED to conduct early
+      awareness and outreach of student aid eligibility. In FY 2025, FSA will continue
+      to implement the FUTURE Act FAFSA solution for students and families with individual
+      taxpayer identification numbers (ITINs) during the 2026–27 FAFSA cycle.
+    Mitigation_Strategy: app4_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -883,6 +895,18 @@ Data_By_Year:
     Sharing, Predictive Analytics, Training
   cyp7_atp1_8: Audit, Behavioral/Psych Influence, Change Process, Cross Enterprise
     Sharing, Predictive Analytics, Training
+  cyp7_ucp1: '6.34'
+  cyp7_ucp1_1: 'FSA leverages compliance audit data to estimate improper payments
+    and unknown payments. In some instances, there is a lack of or insufficient audit
+    documentation when attempting to identify improper payments. This primarily occurs
+    when the supplemental information provided to FSA in accordance with the OMB Compliance
+    Supplement is unclear or inconsistent with the results of the compliance audit
+    and final audit determination (FAD) letter. If this occurs, FSA must follow-up
+    with auditors. In instances that auditors did not retain the documentation, or
+    if the auditor is unable to provide FSA the supplemental information timely, FSA
+    records unknown payments in accordance with OMB Circular A-123, Appendix C.
+
+    '
   cyp8: 'FSA leverages compliance audit data to estimate improper payments and unknown
     payments. In some
 
@@ -919,6 +943,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '83.000000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -1032,6 +1062,12 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '6.08'
+  underpayments_eligibility:
+  - Key: cyp5_dit8_1
+    Payment_Type: Underpayments
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '6.080000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

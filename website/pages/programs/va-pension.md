@@ -217,6 +217,22 @@ Data_By_Year:
       was the best mitigation strategy in order to improve accuracy and accessibility
       of data to validate beneficiary income and eligibility status prior to payment.
     Mitigation_Strategy: app1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
+    Description_Action_Taken: Actions planned regarding audit include randomly reviewing
+      claim processors’ work to ensure policies and procedures are properly applied
+      in making accurate pension rate decisions to prevent future improper payments.
+      In FY 2023, errors are largely attributable to failure to access data/information
+      prior to issuing payment. Due to administrative errors, corrective action includes
+      conducting Special Focus Reviews to ensure claims processors apply proper policies
+      and procedures in making accurate decisions. Additional audit actions include
+      taking corrective actions when improper payments are identified such as proper
+      adjudication of claims or collection of overpayments if applicable. These actions
+      are designed to reduce improper payment errors associated with failure to access
+      data/information needed to ensure proper payment amounts. Audit was the best
+      mitigation strategy in order to identify discrepancies and reinforce adherence
+      to policies and procedures to make accurate decisions prior to payment.
+    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2023 Q4
     Description_Action_Taken: Actions taken regarding automation include conducting
@@ -257,22 +273,6 @@ Data_By_Year:
       mitigation strategy in order to identify discrepancies and reinforce adherence
       to policies and procedures to make accurate decisions prior to payment.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: Actions planned regarding audit include randomly reviewing
-      claim processors’ work to ensure policies and procedures are properly applied
-      in making accurate pension rate decisions to prevent future improper payments.
-      In FY 2023, errors are largely attributable to failure to access data/information
-      prior to issuing payment. Due to administrative errors, corrective action includes
-      conducting Special Focus Reviews to ensure claims processors apply proper policies
-      and procedures in making accurate decisions. Additional audit actions include
-      taking corrective actions when improper payments are identified such as proper
-      adjudication of claims or collection of overpayments if applicable. These actions
-      are designed to reduce improper payment errors associated with failure to access
-      data/information needed to ensure proper payment amounts. Audit was the best
-      mitigation strategy in order to identify discrepancies and reinforce adherence
-      to policies and procedures to make accurate decisions prior to payment.
-    Mitigation_Strategy: app6_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2022
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -337,6 +337,46 @@ Data_By_Year:
       Security Administration income match. The program is also working with claims
       processing stations on the individual errors identified each fiscal year. These
       improvements will result in increased payment accuracy.'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '32.729928'
+  - Key: cyp3_dit12_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Prisoner Status
+    Theme_Description: Eligibility for benefits or payment based on prisoner status
+    Value: '22.990072'
+  - Key: cyp2_dit6_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Deceased
+    Theme_Description: Date of death of the recipient/beneficiary
+    Value: '25.037694'
+  - Key: cyp2_dit7_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '1.920402'
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '319.873752'
+  - Key: cyp2_dit10_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '2.971188'
+  - Key: cyp2_dit12_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Prisoner Status
+    Theme_Description: Eligibility for benefits or payment based on prisoner status
+    Value: '12.536964'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -432,21 +472,14 @@ Data_By_Year:
     Financial: 1.21
     Inability_to_Access_Data: 0.0
     cyp5: '1.21'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1.210000'
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include randomly reviewing claims processors’
-      work to ensure policies and procedures are properly applied in making accurate
-      pension rate decisions to prevent future improper payments. Due to human errors,
-      corrective action will include conducting focused reviews to ensure claims processors
-      properly apply policies and procedures in making accurate pension rate decisions.
-      These actions are designed to reduce future improper payment errors associated
-      with failure to access data/information needed to ensure proper payment amounts
-      and unknown payments attributed to being unable to determine whether proper
-      or improper. Audit was the best mitigation strategy in order to identify systemic
-      discrepancies and reinforce adherence to policies and procedures to improve
-      accurate pension rate decisions prior to payment.
-    Mitigation_Strategy: app6_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Actions taken included randomly reviewing claims processors’
@@ -461,26 +494,6 @@ Data_By_Year:
       discrepancies and reinforce adherence to policies and procedures to improve
       accurate pension rate decisions prior to payment.
     Mitigation_Strategy: atp6_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: Actions planned include conducting quarterly matches
-      with the Social Security Administration to identify variances between Social
-      Security Administration income a beneficiary is receiving versus the amounts
-      reported by a beneficiary to VA. Differences indicate potential changes in a
-      beneficiary’s income, which could require a change to their pension benefit.
-      Validating whether a change is needed and making changes if necessary, prevents
-      future improper payments. To address the root cause, VA will use the existing
-      match between Social Security Administration income data and VA income data
-      for pension beneficiaries. This enables VA to identify variances which are indicators
-      of potential overpayments. Claims with variances are prioritized and sent to
-      claims processors in batches to resolve discrepancies, adjust benefits if appropriate,
-      and prevent future overpayments. These actions are designed to reduce future
-      improper payment errors associated with failure to access data/information needed
-      to ensure proper payment amounts and unknown payments attributed to being unable
-      to determine whether proper or improper. Automation was the best mitigation
-      strategy in order to improve accuracy and accessibility of data to validate
-      beneficiary income prior to payment.
-    Mitigation_Strategy: app1_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: Actions taken included conducting quarterly matches
@@ -509,6 +522,26 @@ Data_By_Year:
     Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include conducting quarterly matches
+      with the Social Security Administration to identify variances between Social
+      Security Administration income a beneficiary is receiving versus the amounts
+      reported by a beneficiary to VA. Differences indicate potential changes in a
+      beneficiary’s income, which could require a change to their pension benefit.
+      Validating whether a change is needed and making changes if necessary, prevents
+      future improper payments. To address the root cause, VA will use the existing
+      match between Social Security Administration income data and VA income data
+      for pension beneficiaries. This enables VA to identify variances which are indicators
+      of potential overpayments. Claims with variances are prioritized and sent to
+      claims processors in batches to resolve discrepancies, adjust benefits if appropriate,
+      and prevent future overpayments. These actions are designed to reduce future
+      improper payment errors associated with failure to access data/information needed
+      to ensure proper payment amounts and unknown payments attributed to being unable
+      to determine whether proper or improper. Automation was the best mitigation
+      strategy in order to improve accuracy and accessibility of data to validate
+      beneficiary income prior to payment.
+    Mitigation_Strategy: app1_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
     Description_Action_Taken: Actions planned include training staff to ensure policies
       and procedures are properly applied in making accurate pension rate decisions
       to prevent future improper payments. To address the root cause, training will
@@ -519,6 +552,20 @@ Data_By_Year:
       Training was the best mitigation strategy in order to improve awareness and
       increase skills to improve accurate pension rate decisions prior to payment.
     Mitigation_Strategy: app3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: Actions planned include randomly reviewing claims processors’
+      work to ensure policies and procedures are properly applied in making accurate
+      pension rate decisions to prevent future improper payments. Due to human errors,
+      corrective action will include conducting focused reviews to ensure claims processors
+      properly apply policies and procedures in making accurate pension rate decisions.
+      These actions are designed to reduce future improper payment errors associated
+      with failure to access data/information needed to ensure proper payment amounts
+      and unknown payments attributed to being unable to determine whether proper
+      or improper. Audit was the best mitigation strategy in order to identify systemic
+      discrepancies and reinforce adherence to policies and procedures to improve
+      accurate pension rate decisions prior to payment.
+    Mitigation_Strategy: app6_1
   Confidence_Level: 95% to <100%
   End_Date: 09/2023
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -650,6 +697,7 @@ Data_By_Year:
   cyp6: '0.0'
   cyp7_app1_8: Audit, Automation, Training
   cyp7_atp1_8: Audit, Automation
+  cyp7_ucp4: '114.57'
   cyp7_ucp4_1: If a benefit payment is identified as a potential overpayment due to
     a beneficiary failing to inform VA of changes that impact the payment rate, VA
     must provide a 60-day due process period that protects a beneficiary’s rights
@@ -686,6 +734,19 @@ Data_By_Year:
       The program is also working with claims processing stations on the human errors
       identified each fiscal year. These improvements will result in increased payment
       accuracy.'
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '26.037396'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '355.742604'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -771,6 +832,19 @@ Data_By_Year:
     Financial: 22.178871
     Inability_to_Access_Data: 0.0
     cyp5: '22.23'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '22.178871'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '0.051129'
 Description: 'The Pension program helps wartime Veterans and their survivors cope
   with financial challenges by providing supplemental income to recipients who meet
   the annual income and net worth limits set by law. A change in benefit payment occurs

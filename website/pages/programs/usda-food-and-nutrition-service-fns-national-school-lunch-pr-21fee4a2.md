@@ -290,20 +290,6 @@ Data_By_Year:
     Inability_to_Access_Data: 0.0
     cyp5: '45.60'
 - Actions_Taken:
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
-    Description_Action_Taken: "The National School Lunch Program (NSLP) has taken\
-      \ the following Automation corrective actions:  1) Direct Certification with\
-      \ Medicaid:  On July 1, 2023, Food and Nutrition Service (FNS) announced 13\
-      \ new states have begun participating in the Direct Certification with Medicaid\
-      \ Demonstration Project for School Year 2023-2024. The total number of states\
-      \ participating in the demonstration project will now be 38. \n2) Non-competitive\
-      \ Technology Innovation Grants (nTIGs):  In Fiscal Year 2021, FNS released $50M\
-      \ in non-competitive Technology Innovation Grant (nTIG) funds for Child Nutrition\
-      \ State agencies to improve information technology (IT) systems. FNS continues\
-      \ work with grant recipients using funds to develop, improve, and maintain Child\
-      \ Nutrition IT systems."
-    Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2023
     Description_Action_Taken: "The National School Lunch Program (NSLP) plans to implement\
@@ -332,12 +318,18 @@ Data_By_Year:
     Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
-    Description_Action_Taken: 'The National School Lunch Program (NSLP) has taken
-      the following Change Process corrective actions:  Community Eligibility Provision
-      (CEP) Proposed Rule:  USDA Food and Nutrition Service published a CEP Proposed
-      Rule on March 23, 2023. The rule proposes to lower CEP’s minimum identified
-      student percentage (ISP) from 40% to 25% to increase program reach.'
-    Mitigation_Strategy: atp4_1
+    Description_Action_Taken: "The National School Lunch Program (NSLP) has taken\
+      \ the following Automation corrective actions:  1) Direct Certification with\
+      \ Medicaid:  On July 1, 2023, Food and Nutrition Service (FNS) announced 13\
+      \ new states have begun participating in the Direct Certification with Medicaid\
+      \ Demonstration Project for School Year 2023-2024. The total number of states\
+      \ participating in the demonstration project will now be 38. \n2) Non-competitive\
+      \ Technology Innovation Grants (nTIGs):  In Fiscal Year 2021, FNS released $50M\
+      \ in non-competitive Technology Innovation Grant (nTIG) funds for Child Nutrition\
+      \ State agencies to improve information technology (IT) systems. FNS continues\
+      \ work with grant recipients using funds to develop, improve, and maintain Child\
+      \ Nutrition IT systems."
+    Mitigation_Strategy: atp1_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
     Description_Action_Taken: 'The National School Lunch Program (NSLP) has taken
@@ -347,6 +339,14 @@ Data_By_Year:
       timeline, resources needed when conducting an AR (to include the oversight of
       eligibility), claiming, and meal pattern.'
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
+    Description_Action_Taken: 'The National School Lunch Program (NSLP) has taken
+      the following Change Process corrective actions:  Community Eligibility Provision
+      (CEP) Proposed Rule:  USDA Food and Nutrition Service published a CEP Proposed
+      Rule on March 23, 2023. The rule proposes to lower CEP’s minimum identified
+      student percentage (ISP) from 40% to 25% to increase program reach.'
+    Mitigation_Strategy: atp4_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 06/2018
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -417,6 +417,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.00'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '251.149600'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '39.655200'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '39.655200'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -515,7 +533,60 @@ Data_By_Year:
     Financial: 185.674
     Inability_to_Access_Data: 0.0
     cyp5: '215.90'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '185.674000'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '15.113000'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '15.113000'
 - Actions_Taken:
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: As the Food and Nutrition Service (FNS) receives the
+      preliminary results, it will be able to review this first measure of program
+      error since the COVID pandemic, when all meals were served free regardless of
+      family income. Now that schools have returned to using the National School Lunch
+      (NSLP) and School Breakfast Program (SBP) for determining household eligibility,
+      serving healthy, nutritious meals, and claiming reimbursement for those meals,
+      FNS is especially interested in Access, Participation, Eligibility, and Certification
+      (APEC) IV's results to help understand current NSLP/SBP operations as opposed
+      to using pre-COVID improper payment baseline.
+    Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: 'Non-competitive Technology Innovation Grants (nTIGs)
+
+      In Fiscal Year (FY) 2024, the Food and Nutrition Service (FNS) released $50M
+      in non-competitive Technology Innovation Grant (nTIG) funds for child nutrition
+      (CN) State agencies to improve Information Technology (IT) systems. FNS continues
+      its work with grant recipients who are using funds to develop, improve, maintain
+      CN IT systems.
+
+
+      Data Validation Service (DVS)
+
+      Encourage state agency adoption of FNS-developed data validation service
+
+      FNS modified its process of reviewing state agency management of the National
+      School Lunch Program (NSLP) to encourage adoption of a FNS-developed tool to
+      reduce error in the reporting of NSLP administrative data. The tool, the DVS
+      is an Application Programming Interface (API) that States can include in their
+      platforms for collecting data from their school districts. The DVS provides
+      real-time edit checks and error messages to school districts as they submit
+      data to their States.'
+    Mitigation_Strategy: atp1_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q3
     Description_Action_Taken: 'Community Eligibility Provision (CEP) Expansion
@@ -578,29 +649,6 @@ Data_By_Year:
 
       '
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: 'Non-competitive Technology Innovation Grants (nTIGs)
-
-      In Fiscal Year (FY) 2024, the Food and Nutrition Service (FNS) released $50M
-      in non-competitive Technology Innovation Grant (nTIG) funds for child nutrition
-      (CN) State agencies to improve Information Technology (IT) systems. FNS continues
-      its work with grant recipients who are using funds to develop, improve, maintain
-      CN IT systems.
-
-
-      Data Validation Service (DVS)
-
-      Encourage state agency adoption of FNS-developed data validation service
-
-      FNS modified its process of reviewing state agency management of the National
-      School Lunch Program (NSLP) to encourage adoption of a FNS-developed tool to
-      reduce error in the reporting of NSLP administrative data. The tool, the DVS
-      is an Application Programming Interface (API) that States can include in their
-      platforms for collecting data from their school districts. The DVS provides
-      real-time edit checks and error messages to school districts as they submit
-      data to their States.'
-    Mitigation_Strategy: atp1_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: "The Food and Nutrition Service (FNS) will provide guidance\
@@ -621,18 +669,6 @@ Data_By_Year:
       \ and understand reporting requirements.  Communication with State agencies\
       \ will continue through implementation and early period of matching activities."
     Mitigation_Strategy: app3_1
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: As the Food and Nutrition Service (FNS) receives the
-      preliminary results, it will be able to review this first measure of program
-      error since the COVID pandemic, when all meals were served free regardless of
-      family income. Now that schools have returned to using the National School Lunch
-      (NSLP) and School Breakfast Program (SBP) for determining household eligibility,
-      serving healthy, nutritious meals, and claiming reimbursement for those meals,
-      FNS is especially interested in Access, Participation, Eligibility, and Certification
-      (APEC) IV's results to help understand current NSLP/SBP operations as opposed
-      to using pre-COVID improper payment baseline.
-    Mitigation_Strategy: app4_1
   Confidence_Level: There is no confidence level associated with the estimate
   End_Date: 06/2018
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -834,6 +870,24 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '540.690000'
+  - Key: cyp3_dit17_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '270.345000'
+  - Key: cyp3_dit13_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '270.345000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -998,6 +1052,24 @@ Data_By_Year:
     Financial: 181.42
     Inability_to_Access_Data: 0.0
     cyp5: '362.84'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '181.420000'
+  - Key: cyp5_dit17_1
+    Payment_Type: Underpayments
+    Theme: Household Size
+    Theme_Description: Number of family mmembers in a household
+    Value: '90.710000'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '90.710000'
 Description: 'The National School Lunch Program (NSLP) is a federally assisted meal
   program
 

@@ -1,6 +1,6 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Confirmed_Fraud: 2371.64
 Eligibility_Themes:
 - Program_Name: Civilian Pay – Army
@@ -117,7 +117,7 @@ Eligibility_Themes:
       resolve the error, further research is being conducted to obtain the proper
       order to determine the validity of the entitlement.
     Theme: Military Status
-- Program_Name: Travel Pay Army – Defense Travel System (DTS)
+- Program_Name: Travel Pay Army – Defense Travel System (DTS)
   Themes:
   - Barriers: The main causes of improper and unknown payments within the travel pay
       program are missing or invalid receipts, miscalculation of reimbursement amount
@@ -147,7 +147,7 @@ Eligibility_Themes:
       with travel orders regulation and the Joint Travel Regulation (JTR) when travelers
       were directed to perform travel before the issuance of actual travel orders.'
     Theme: Address/Location
-- Program_Name: Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)
+- Program_Name: Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)
   Themes:
   - Barriers: The Department of the Air Force (DAF) Defense Travel System (DTS) vouchers
       are ultimately the DAF’s responsibility, control . There is a known lack of
@@ -596,20 +596,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Army – Defense Travel System (DTS)
-  Slug: dod-travel-pay-army-defense-travel-system-dts
-- Compliant_1A: true
-  Compliant_1B: true
-  Compliant_2A: true
-  Compliant_2B: true
-  Compliant_3: true
-  Compliant_4: true
-  Compliant_5A: true
-  Compliant_5B: true
-  Compliant_5C: true
-  Compliant_6: true
-  Compliant_Overall: true
-  Name: Travel Pay Army – Integrated Automated Travel System (IATS)
+  Name: Travel Pay Army – Integrated Automated Travel System (IATS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -633,19 +620,6 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)
-  Slug: dod-travel-pay-department-of-air-force-daf-defense-travel-sy-00cfe2ec
-- Compliant_1A: true
-  Compliant_1B: true
-  Compliant_2A: true
-  Compliant_2B: true
-  Compliant_3: true
-  Compliant_4: true
-  Compliant_5A: true
-  Compliant_5B: true
-  Compliant_5C: true
-  Compliant_6: true
-  Compliant_Overall: true
   Name: Travel Pay Marine Corps - MARINE CORPS TOTAL FORCE SYSTEM (MCTFS)
 - Compliant_1A: true
   Compliant_1B: true
@@ -658,7 +632,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Marine Corps – Defense Travel System (DTS)
+  Name: Travel Pay Marine Corps – Defense Travel System (DTS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -670,7 +644,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Marine Corps – Integrated Automated Travel System (IATS)
+  Name: Travel Pay Marine Corps – Integrated Automated Travel System (IATS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -682,7 +656,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Navy – Defense Travel System (DTS)
+  Name: Travel Pay Navy – Defense Travel System (DTS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -694,7 +668,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Navy – Integrated Automated Travel System (IATS)
+  Name: Travel Pay Navy – Integrated Automated Travel System (IATS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -706,7 +680,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Other Defense Organization (ODO) –  Defense Travel System (DTS)
+  Name: Travel Pay Other Defense Organization (ODO) – Defense Travel System (DTS)
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -718,8 +692,8 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Travel Pay Other Defense Organization (ODO) – Integrated Automated Travel System
-    (IATS)
+  Name: Travel Pay Other Defense Organization (ODO) – Integrated Automated Travel
+    System (IATS)
 PIIA2019_NonCompliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -773,6 +747,32 @@ PIIA2019_NonCompliant_Programs:
   Compliant_Overall: false
   Name: Military Pay Army – National Guard
   Slug: dod-military-pay-army-national-guard
+- Compliant_1A: true
+  Compliant_1B: true
+  Compliant_2A: true
+  Compliant_2B: true
+  Compliant_3: false
+  Compliant_4: true
+  Compliant_5A: true
+  Compliant_5B: true
+  Compliant_5C: true
+  Compliant_6: true
+  Compliant_Overall: false
+  Name: Travel Pay Army – Defense Travel System (DTS)
+  Slug: dod-travel-pay-army-defense-travel-system-dts
+- Compliant_1A: true
+  Compliant_1B: true
+  Compliant_2A: true
+  Compliant_2B: true
+  Compliant_3: false
+  Compliant_4: true
+  Compliant_5A: true
+  Compliant_5B: true
+  Compliant_5C: true
+  Compliant_6: true
+  Compliant_Overall: false
+  Name: Travel Pay Department of Air Force (DAF) – Defense Travel System (DTS)
+  Slug: dod-travel-pay-department-of-air-force-daf-defense-travel-sy-4c65b680
 Payment_Accuracy_Amounts: '[664584.16, 614851.42, 619706.2593, 254917.63]'
 Payment_Accuracy_Rate_Max: 99.8
 Payment_Accuracy_Rate_Min: 99.6
@@ -1007,6 +1007,8 @@ detail_CAP5: 'The DoD Office of Inspector General (OIG) evaluated the compliance
 
   '
 detail_agy1: null
+detail_ara1: 'No'
+detail_ara2: 'Yes'
 detail_ara2_1: The main objective of the Department’s Payment Recovery Audit (PRA)
   program is to identify, recapture, and reallocate overpayments made by Department
   of Defense (DoD) Components in support of the DoD mission, while simultaneously
@@ -1140,6 +1142,38 @@ detail_exs1: "The Department of Defense (DoD or the Department) met the overarch
   \ N. Barbosa \n\t\t\t\t\tDirector \n\t\t\t\t\tFinancial Management Policy and Reporting\
   \ \n"
 detail_pcp12_1: '3.0'
+detail_pcp14: "The overarching intent of the DoD Office of Inspector General (OIG)\
+  \ Payment Integrity recommendations is geared towards particular actions to bring\
+  \ the programs in alignment with achieving compliance with the Payment Integrity\
+  \ Information Act of 2019 (PIIA), specifically with requirement #3, the reliability\
+  \ of the estimates, instead of specific recommendations to prevent and or to reduce\
+  \ improper and/or unknown payments. In the FY 2023 DoD OIG PIIA Compliance audit\
+  \ it was stated that while the DoD complied with five of the six PIIA requirements,\
+  \ it did not comply with the requirement to publish reliable improper payment estimates.\
+  \ This was due to DoD personnel not having a sufficient methodology for determining\
+  \ the completeness of the DoD’s universe of payment transactions (UoTs) used to\
+  \ produce its improper and unknown payment estimates. The DoD OIG has issued recommendations\
+  \ for the statistical formula used to calculate the sample size for improper and\
+  \ unknown payment projections, sample population Universe of Transactions, reconciliation\
+  \ to the disbursement systems, payment type exclusions, and internal controls surrounding\
+  \ the current processes. Since the publication of the FY 2023 PIIA Compliance audit\
+  \ report, the Department has taken specific and deliberate steps to implement numerous\
+  \ DoD OIG recommendations to bring the programs in alignment with the PIIA compliance\
+  \ requirements. These steps include creating working groups and additional Senior\
+  \ Executive level meetings to determine the most advantageous route forward in developing\
+  \ UoT’s and substantiating the slight variances between the entitlement and disbursement\
+  \ systems. These ongoing efforts are geared towards achieving PIIA compliance with\
+  \ the last remaining requirement. \n\nBackground: In FY 2023, all eight of the DoD’s\
+  \ Phase 2 programs were found non-compliant with PIIA Requirement #3: Published\
+  \ IP and UP estimates for programs susceptible to significant IPs and UPs in the\
+  \ accompanying materials to the annual financial statement. As stated in the Agency\
+  \ Executive Summary: In FY 2024, the Department restructured its entire Payment\
+  \ Integrity portfolio, integrating the results and recommendations from the DoD\
+  \ OIG’s previous audit findings and interagency lessons learned.\n\nAs a result\
+  \ of this restructuring, the following eight FY 2023 non-compliant programs no longer\
+  \ exist in FY 2024:\n\n•\tCivilian Pay\n•\tCommercial Pay\n•\tDoD Travel Pay\n•\t\
+  Military Pay – Army\n•\tMilitary Pay – Navy\n•\tMilitary Pay – Air Force\n•\tMilitary\
+  \ Pay – Marine Corps\n•\tMilitary Retirement\n"
 detail_raa8: 'No'
 detail_raa9: 'The Department conducts comprehensive risk assessments on unique data
   characteristics and subpopulation groups.  Most of these groups are not expected

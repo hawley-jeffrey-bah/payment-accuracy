@@ -3,8 +3,8 @@ Agency: USDA
 Agency_Name: Department of Agriculture
 Confirmed_Fraud: 200.4
 Eligibility_Themes:
-- Program_Name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and
-    Price Loss Coverage (ARC/PLC)
+- Program_Name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price
+    Loss Coverage (ARC/PLC)
   Themes:
   - Barriers: In order to reduce the improper payments, system enhancements and training
       for staff is required.  Farm Service Agency’s information technology budget
@@ -649,9 +649,9 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage  and Price Loss
+  Name: Commodity Credit Corporation (CCC) Agriculture Risk Coverage and Price Loss
     Coverage (ARC/PLC)
-  Slug: usda-commodity-credit-corporation-ccc-agriculture-risk-cover-e297465e
+  Slug: usda-commodity-credit-corporation-ccc-agriculture-risk-cover-32a1d32e
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -3266,6 +3266,8 @@ detail_CAP5: "The (1) Supplemental Nutrition Assistance Program (SNAP). (2) Farm
   \ scenarios, and improve checklists for conducting internal reviews throughout the\
   \ application, approval and payment process\n\n"
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'Yes'
 detail_ara2_1: As with most receivables, when established, it becomes eligible for
   offset from any future payments and referred to the Department of Treasury for collection
   as required by the Debt Collection Improvement Act of 1996 and the 2022 Financial
@@ -3421,6 +3423,14 @@ detail_exs1: 'For Fiscal Year 2024, eight mission areas (and several staff offic
   The improper payment estimates, and error rates have shown a decrease for several
   USDA programs.'
 detail_pcp12_1: '3.0'
+detail_pcp14: OIG recommended development of a plan of action to bring the FSA ECP-Disasters,
+  LFP, NAP, and FNS SNAP programs into compliance with the Payment Integrity Information
+  Act of 2019. Another, OIG recommendation for the LFP was to develop a program integrity
+  proposal for submission to the OMB Director. Lastly, there were two recommendations
+  related to the quality of USDA's Improper Payment Reporting (1) FNS must ensure
+  proper reporting and classification of its CACFP and (2) the OCFO and responsible
+  program officials must review supporting documentation to verify the accuracy and
+  completeness of reported information prior to publication.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

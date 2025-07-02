@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2021, 2022, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs: []
 PIIA2019_NonCompliant_Programs:
 - Compliant_1A: false
@@ -96,6 +96,8 @@ detail_CAP5: 'Recommendation 1: Assess the resource requirements necessary to en
   CPSC Response: CPSC will revise the PIIA SOP to ensure payment integrity information
   is reviewed and timely submitted to OMB. (In progress October 2024)'
 detail_agy1: null
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'The amount of improper payments related to the agency is immaterial
@@ -142,6 +144,15 @@ detail_exs1: "CPSC has two programs we report over based on our appropriations w
   \ statutory requirements not met. Overall CPSC was compliant with PIIA reporting\
   \ related to FY24."
 detail_pcp12_1: '0.0'
+detail_pcp14: 'Recommendation 1: Assess the resource requirements necessary to ensure
+  the timely submission of the required OMB information by the established deadline
+  (closed June 2024).
+
+  Recommendation 2: Develop policies, procedures, and checklists for the review and
+  timely submission of the payment integrity information to OMB (Open as of October
+  2024).
+
+  '
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0]'
-Overpayment_Years: '[2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -111,6 +111,8 @@ detail_agy1: Based on prior financial statement audits, a determination of stron
   internal controls from CSOSA internal controls testing, and the results of CSOSA
   internal testing of its FY 2023 payment transactions, CSOSA believes that the CSP
   and PSA programs have low inherent risks of improper payment.
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: To employ one GS 12 FTE to perform recapture audits will cost $93K
@@ -183,6 +185,15 @@ detail_exs1: CSOSA was compliant with the Payment Integrity Information Act of 2
   the most recent risk assessment.  Business processes have not changed during this
   cycle and the risk remains low.
 detail_pcp12_1: null
+detail_pcp14: The Office of Investigations, Compliance and Audit (OICA), Quality Improvement
+  Unit (QIU), assessed the Court Services and Offender Supervision Agency’s (CSOSA)
+  compliance with the Payment Integrity Information Act of 2019 (PIIA) for Fiscal
+  Year 2023. OICA-QIU recommends that CSOSA increase its sample size to improve the
+  process. OICA- QIU recommends that CSOSA utilize a sample size with a minimum 95%
+  confidence level and 5% margin error for transaction levels that fall below PIIA
+  established thresholds. If a smaller sample size is utilized, CSOSA should provide
+  a written justification addressing why the smaller sample size was implemented for
+  PIIA testing.
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

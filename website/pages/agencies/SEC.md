@@ -9,9 +9,9 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
-Hide_Recovery_Info: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
+Hide_Recovery_Info: true
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
 Hide_Supplemental_Info: false
@@ -22,9 +22,9 @@ Improper_Payments_Rate_Min: 0
 Improper_Payments_Rates: '[]'
 Is_Placeholder: false
 Overpayment_Amounts: '[]'
-Overpayment_Amounts_Identified: '[0.0, 0.0, 0.0, 0.0]'
-Overpayment_Amounts_Recovered: '[0.0, 0.0, 0.0, 0.0]'
-Overpayment_Years: '[2021, 2022, 2023, 2024]'
+Overpayment_Amounts_Identified: '[]'
+Overpayment_Amounts_Recovered: '[]'
+Overpayment_Years: '[]'
 PIIA2019_Compliant_Programs:
 - Compliant_1A: true
   Compliant_1B: true
@@ -85,7 +85,7 @@ PIIA2019_Compliant_Programs:
   Compliant_5C: true
   Compliant_6: true
   Compliant_Overall: true
-  Name: Student Loan Repayments - Securities  and Exchange Commission
+  Name: Student Loan Repayments - Securities and Exchange Commission
 - Compliant_1A: true
   Compliant_1B: true
   Compliant_2A: true
@@ -184,6 +184,8 @@ detail_agy1: The SEC conducted its latest full improper payments risk assessment
   susceptible to significant improper payments at or above the threshold levels set
   by OMB. These programs have historically had low volumes and risks of improper payments
   given the controls and processes in place.
+detail_ara1: 'No'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: 'The benefits of recaptured amounts associated with implementing and
@@ -266,6 +268,8 @@ detail_exs1: The SEC assesses its payment integrity in a number of ways each fis
   Based on this evaluation, the OIG concluded that the SEC complied with the PIIA
   in FY 2023 and reported efforts to prevent and reduce improper payments
 detail_pcp12_1: null
+detail_pcp14: The OIG's annual evaluation concluded that the SEC was compliant with
+  the Payment Integrity Information Act of 2019 and the report contained no recommendations
 detail_raa8: null
 detail_raa9: null
 layout: agency-specific

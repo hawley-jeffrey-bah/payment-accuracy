@@ -266,6 +266,14 @@ Data_By_Year:
 - Actions_Taken:
   - Action_Taken: Planned
     Completion_Date: FY2024
+    Description_Action_Taken: The IRS will continue to leverage data sharing pursuant
+      to various interagency agreements, e.g., Department of Health and Human Services
+      (HHS) Office of Child Support enforcement (OCSE), and the Social Security Administration
+      (SSA), to more accurately validate refunds entitled to a taxpayer; thus, allowing
+      the IRS to enforce laws passed by Congress more effectively.
+    Mitigation_Strategy: app5_1
+  - Action_Taken: Planned
+    Completion_Date: FY2024
     Description_Action_Taken: The IRS will continue to hold the annual Dependent Database
       (DDb) meetings with stakeholders in the Wage & Investment, Small Business &
       Self Employed, and IT divisions, with the goal of increasing voluntary taxpayer
@@ -277,22 +285,6 @@ Data_By_Year:
       the complex eligibility requirements. The IRS will analyze returns claiming
       the EITC and identify improvement opportunities for next filing season.
     Mitigation_Strategy: app4_1
-  - Action_Taken: Planned
-    Completion_Date: FY2024
-    Description_Action_Taken: The IRS will continue to leverage data sharing pursuant
-      to various interagency agreements, e.g., Department of Health and Human Services
-      (HHS) Office of Child Support enforcement (OCSE), and the Social Security Administration
-      (SSA), to more accurately validate refunds entitled to a taxpayer; thus, allowing
-      the IRS to enforce laws passed by Congress more effectively.
-    Mitigation_Strategy: app5_1
-  - Action_Taken: Completed
-    Completion_Date: FY2022 Q4
-    Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meetings
-      with stakeholders in the Wage & Investment, Small Business & Self Employed,
-      and IT divisions, to adjust the value of prior-year compliance filters for audit
-      selection of returns claiming the Earned Income Tax Credit (EITC) and identify
-      improvement opportunities for the filing season.
-    Mitigation_Strategy: atp4_1
   - Action_Taken: Completed
     Completion_Date: FY2022 Q4
     Description_Action_Taken: The IRS leveraged data sharing pursuant to various interagency
@@ -301,6 +293,14 @@ Data_By_Year:
       more accurately validate refunds entitled to a taxpayer; thus, allowing the
       IRS to enforce laws passed by Congress more effectively.
     Mitigation_Strategy: atp5_1
+  - Action_Taken: Completed
+    Completion_Date: FY2022 Q4
+    Description_Action_Taken: The IRS held its annual Dependent Database (DDb) meetings
+      with stakeholders in the Wage & Investment, Small Business & Self Employed,
+      and IT divisions, to adjust the value of prior-year compliance filters for audit
+      selection of returns claiming the Earned Income Tax Credit (EITC) and identify
+      improvement opportunities for the filing season.
+    Mitigation_Strategy: atp4_1
   Confidence_Level: 95% to <100%
   End_Date: 12/2020
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -368,6 +368,53 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0'
+  overpayments_eligibility:
+  - Key: cyp3_dit2_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '437.622200'
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '656.433300'
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '2406.922100'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '437.622200'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '6126.710800'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '656.433300'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '1750.488800'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '9408.877300'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -608,6 +655,53 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit2_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Affiliation
+    Theme_Description: "Criteria that require the applicant/recipient as being attached\
+      \ or connected to \r\na type of group, organization, or particular attribute"
+    Value: '318.832200'
+  - Key: cyp3_dit4_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Citizenship
+    Theme_Description: "Recognized as a United States citizen through birth or naturalization,\
+      \ or as a \r\nlawfully present non-citizen in the United States"
+    Value: '478.248300'
+  - Key: cyp3_dit7_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Dependency
+    Theme_Description: Describes who the recipient/beneficiary relies on as a primary
+      source of support
+    Value: '1753.577100'
+  - Key: cyp3_dit8_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Education
+    Theme_Description: The education level or enrollment status of the recipient/beneficiary
+    Value: '318.832200'
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '4463.650800'
+  - Key: cyp3_dit9_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Identity
+    Theme_Description: Able to establish that someone is uniquely who they claim to
+      be
+    Value: '478.248300'
+  - Key: cyp3_dit10_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Marital Status
+    Theme_Description: A person's state of being single, married, separated, divorced,
+      or widowed
+    Value: '1275.328800'
+  - Key: cyp3_dit14_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Residency
+    Theme_Description: Status of recipient's living location or arrangement
+    Value: '6854.892300'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0

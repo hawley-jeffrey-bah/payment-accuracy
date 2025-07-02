@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -156,6 +156,8 @@ detail_agy1: The Department is unique to the federal government in that payments
   controls include contracting officers providing final approval for contract compliance,
   annual review and analysis of financial records and supporting documentation by
   financial management personal, and independent audits.
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: "In FY 2024, the Department reported 2023 payment outlays amount of\
@@ -246,6 +248,10 @@ detail_exs1: "DOE’s Inspector General concluded that the agency was compliant 
   \ the effective stewardship of public funds. The next on-cycle risk assessments\
   \ will take place in FY 2027."
 detail_pcp12_1: null
+detail_pcp14: DOE’s Inspector General concluded that the agency was compliant with
+  the Payment Integrity Information Act of 2019 (PIIA) in the most recent FY 2023
+  compliance audit for the reporting of FY 2022 payments. The OIG report did not contain
+  any findings, recommendations, or prescribe required corrective actions.
 detail_raa8: 'No'
 detail_raa9: "DOE evaluates eight of the Office of Management and Budget’s (OMB) suggested\
   \ risk assessment factors per OMB Circular A-123, Appendix C, as applicable to DOE;\

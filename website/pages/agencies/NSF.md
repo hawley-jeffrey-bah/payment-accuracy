@@ -9,8 +9,8 @@ Hide_Do_Not_Pay: false
 Hide_Eligibility_Criteria: true
 Hide_Integrity_Results: true
 Hide_PIIA2019: false
-Hide_Recovery_Audits: true
-Hide_Recovery_Details: false
+Hide_Recovery_Audits: false
+Hide_Recovery_Details: true
 Hide_Recovery_Info: false
 Hide_Risk_Assessment_Results: false
 Hide_Sparklines: true
@@ -118,6 +118,8 @@ Years_Available:
 - 2021
 detail_CAP5: null
 detail_agy1: null
+detail_ara1: 'Yes'
+detail_ara2: 'No'
 detail_ara2_1: null
 detail_ara2_2: null
 detail_ara2_3: NSF does not conduct recovery audits. NSF's analysis determined that
@@ -174,6 +176,9 @@ detail_exs1: NSF has one mission program of Grants and Cooperative Agreements an
   considered Phase I in accordance with the Payment Integrity Information Act of 2019
   (PIIA).
 detail_pcp12_1: null
+detail_pcp14: NSF-OIG did not provide recommendations to further improve prevention
+  nor reduction of improper payments and unknown payments for the program in their
+  most recent PIIA compliance report.
 detail_raa8: 'No'
 detail_raa9: null
 layout: agency-specific

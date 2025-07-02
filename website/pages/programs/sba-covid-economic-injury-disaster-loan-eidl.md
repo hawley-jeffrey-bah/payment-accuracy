@@ -247,6 +247,19 @@ Data_By_Year:
       Authorization and Agreement, SBA regulations, state and federal laws, Standard
       Operating Procedures (SOPs), COVID EIDL program guidelines, and other applicable
       SBA guidance, is within the agency's control.
+  overpayments_eligibility:
+  - Key: cyp2_dit16_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '1268.695000'
+  - Key: cyp2_dit13_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '1268.695000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -295,6 +308,19 @@ Data_By_Year:
     Financial: 317.19
     Inability_to_Access_Data: 0.0
     cyp5: '634.38'
+  underpayments_eligibility:
+  - Key: cyp5_dit16_1
+    Payment_Type: Underpayments
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '317.190000'
+  - Key: cyp5_dit13_1
+    Payment_Type: Underpayments
+    Theme: Receiving Benefits from Other Sources
+    Theme_Description: Beneficiary or recipient is receiving benefits from an additional
+      source
+    Value: '317.190000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false

@@ -1,25 +1,8 @@
 ---
 Agency: DOD
-Agency_Name: Department of Defense Military Programs
+Agency_Name: Department of Defense
 Data_By_Year:
 - Actions_Taken:
-  - Action_Taken: Planned
-    Completion_Date: FY2025
-    Description_Action_Taken: 'The Army Defense Travel System (DTS) statutory improper
-      payments were attributed to Army travelers who failed to provide receipts or
-      provided invalid receipts for authorized expenses (e.g., airfare, rental vehicle
-      and lodging) while on temporary duty. However, the DTS approving officials/certifying
-      officers approved these DTS vouchers as pay-ready for reimbursement when the
-      vouchers lacked proper documentation in accordance with the Department of Defense
-      Financial Management Regulation, Volume 9, "Travel Policy."
-
-
-      In Review Year 2025, the Army will continue to conduct collaborative training
-      sessions every other month with the Army Command''s Lead Defense Travel Administrator
-      and senior travel management leaders to emphasize the objectives and requirements
-      of the Payment Integrity Information Act program, strengthen internal controls
-      and to mitigate submitting, reviewing and approving non-compliant DTS vouchers.'
-    Mitigation_Strategy: app3_1
   - Action_Taken: Completed
     Completion_Date: FY2024 Q4
     Description_Action_Taken: 'In May 2024, the Army, in a joint effort with the Defense
@@ -40,6 +23,23 @@ Data_By_Year:
       Army Command’s LDTAs, G-8s, and GS-15 (or military equivalent grade). These
       more frequent training sessions are new for Review Year 2024.'
     Mitigation_Strategy: atp3_1
+  - Action_Taken: Planned
+    Completion_Date: FY2025
+    Description_Action_Taken: 'The Army Defense Travel System (DTS) statutory improper
+      payments were attributed to Army travelers who failed to provide receipts or
+      provided invalid receipts for authorized expenses (e.g., airfare, rental vehicle
+      and lodging) while on temporary duty. However, the DTS approving officials/certifying
+      officers approved these DTS vouchers as pay-ready for reimbursement when the
+      vouchers lacked proper documentation in accordance with the Department of Defense
+      Financial Management Regulation, Volume 9, "Travel Policy."
+
+
+      In Review Year 2025, the Army will continue to conduct collaborative training
+      sessions every other month with the Army Command''s Lead Defense Travel Administrator
+      and senior travel management leaders to emphasize the objectives and requirements
+      of the Payment Integrity Information Act program, strengthen internal controls
+      and to mitigate submitting, reviewing and approving non-compliant DTS vouchers.'
+    Mitigation_Strategy: app3_1
   Confidence_Level: 90% to <95%
   End_Date: 06/2024
   Hide_Improper_Payment_Estimates_Doughnut_Chart: false
@@ -145,6 +145,7 @@ Data_By_Year:
   cyp6_atp1_8: Training
   cyp7_app1_8: Training
   cyp7_atp1_8: Training
+  cyp7_ucp4: '36.92'
   cyp7_ucp4_1: 'The Department of Defense Financial Management Regulation, Volume
     9, Definitions, Receipts, requires six elements for a valid receipt. Any element
     missing on a receipt renders it invalid. For example, an airfare receipt charged
@@ -213,6 +214,13 @@ Data_By_Year:
       \ the Defense Travel Management Office’s (DTMO) Travel Assistance Center (TAC)\
       \ conducted DTS training sessions to the Department on the 2nd & 4th Tuesday\
       \ of every month, two sessions each day."
+  overpayments_eligibility:
+  - Key: cyp2_dit1_1
+    Payment_Type: Overpayments Within Agency Control
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '48.050000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
@@ -291,6 +299,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp5: '8.33'
+  underpayments_eligibility:
+  - Key: cyp5_dit1_1
+    Payment_Type: Underpayments
+    Theme: Address/Location
+    Theme_Description: "Information regarding where the applicant/recipient lived,\
+      \ owned property, or was \r\nphysically present in a specific location"
+    Value: '8.330000'
 Description: null
 Fiscal_Year: 2024
 Hide_Integrity_Results: false
@@ -303,7 +318,7 @@ Overpayment_Amounts: '[48.05]'
 Payment_Accuracy_Amounts: '[2002.6599999999996]'
 Payment_Accuracy_Rate: 91.41018326220417
 Phase_2_Program: 1
-Program_Name: Travel Pay Army – Defense Travel System (DTS)
+Program_Name: Travel Pay Army – Defense Travel System (DTS)
 Scorecard_Links: []
 Technically_Improper_Amounts: '[94.89]'
 Underpayment_Amounts: '[8.33]'

@@ -397,7 +397,10 @@ function initImproperPayments() {
 
     // chart is not useful with one datapoint
     if (years.length === 1) {
-        containerElement.querySelector('.show-table-button').click();
+        let tableButton = containerElement.querySelector('.show-table-button');
+        let buttonContainer = tableButton.parentElement.parentElement;
+        tableButton.click();
+        buttonContainer.style.display = 'none';
     }
 }
 
@@ -466,7 +469,10 @@ function initIdentificationAndRecovery() {
 
     // chart is not useful with one datapoint
     if (years.length === 1) {
-        containerElement.querySelector('.show-table-button').click();
+        let tableButton = containerElement.querySelector('.show-table-button');
+        let buttonContainer = tableButton.parentElement.parentElement;
+        tableButton.click();
+        buttonContainer.style.display = 'none';
     }
 }
 

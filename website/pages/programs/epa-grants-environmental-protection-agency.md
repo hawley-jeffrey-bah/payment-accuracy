@@ -127,18 +127,18 @@ Data_By_Year:
       staff to discuss specific issues, Those issue along with implemented solutions
       are reviewed to see how broadly they can be applied.
     Mitigation_Strategy: atp4_1
-  - Action_Taken: Completed
-    Completion_Date: FY2024 Q4
-    Description_Action_Taken: Staff reviewing payments meet once per week to discuss
-      potential problems and lessons learned. The agency holds monthly online seminars
-      for grantees that includes question and answer sessions.
-    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2025
     Description_Action_Taken: The Grants program along with the Office of the Controller
       will update its guidance documents. They are also developing more user friendly
       FAQs.
     Mitigation_Strategy: app4_1
+  - Action_Taken: Completed
+    Completion_Date: FY2024 Q4
+    Description_Action_Taken: Staff reviewing payments meet once per week to discuss
+      potential problems and lessons learned. The agency holds monthly online seminars
+      for grantees that includes question and answer sessions.
+    Mitigation_Strategy: atp3_1
   - Action_Taken: Planned
     Completion_Date: FY2027
     Description_Action_Taken: Training held for all staff once per week. Plus online
@@ -203,6 +203,13 @@ Data_By_Year:
     Financial: 0.0
     Inability_to_Access_Data: 0.0
     cyp2: '0.0'
+  overpayments_eligibility:
+  - Key: cyp3_dit16_1
+    Payment_Type: Overpayments Outside Agency Control
+    Theme: Financial
+    Theme_Description: The financial position or status of a beneficiary, recipient,
+      or their family
+    Value: '13.190000'
   overpayments_outside:
     Address_Location: 0.0
     Contractor_Provider_Status: 0.0
