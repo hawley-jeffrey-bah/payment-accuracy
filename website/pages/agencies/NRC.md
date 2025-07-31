@@ -80,31 +80,32 @@ Payment_Accuracy_Rate_Max: 0
 Payment_Accuracy_Rate_Min: 0
 Payment_Accuracy_Rates: '[]'
 Risks:
-- Assessments:
+  AdditionalInformation: The risk assessment was not a comprehensive but assessed
+    whether the programs had more than a 20 percent increase in volume of transactions
+    or amounts. Additionally, if there were any changes to laws and regulations and/or
+    new programs enacted.
+  Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Commercial Payments - Nuclear Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Commercial Payments - Nuclear Regulatory Commission
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Employee Payments - Nuclear Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Employee Payments - Nuclear Regulatory Commission
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2020
+    Program_Name: Government Charge Cards
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Government Charge Cards
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Grants Payments - Nuclear Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Grants Payments - Nuclear Regulatory Commission
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Payroll - Nuclear Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Payroll - Nuclear Regulatory Commission
-  Slug: null
+  SubstantialChangesMade: 'No'
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'
