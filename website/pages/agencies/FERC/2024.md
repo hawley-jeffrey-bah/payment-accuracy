@@ -56,16 +56,17 @@ Payment_Accuracy_Rate_Max: 0
 Payment_Accuracy_Rate_Min: 0
 Payment_Accuracy_Rates: '[]'
 Risks:
-- Assessments:
+  AdditionalInformation: null
+  Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Payroll - Federal Energy Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Payroll - Federal Energy Regulatory Commission
-  Slug: null
-- Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Vendor/Contract - Federal Energy Regulatory Commission
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Vendor/Contract - Federal Energy Regulatory Commission
-  Slug: null
+  SubstantialChangesMade: 'No'
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

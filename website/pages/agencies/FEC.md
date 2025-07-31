@@ -44,11 +44,13 @@ Payment_Accuracy_Rate_Max: 0
 Payment_Accuracy_Rate_Min: 0
 Payment_Accuracy_Rates: '[]'
 Risks:
-- Assessments:
+  AdditionalInformation: null
+  Assessments:
   - Fiscal_Year: 2024
+    Program_Name: Federal Election Campaign Act (FECA)
+    Slug: null
     Susceptible: 'No'
-  Program_Name: Federal Election Campaign Act (FECA)
-  Slug: null
+  SubstantialChangesMade: 'No'
 Technically_Improper_Amounts: '[]'
 Underpayment_Amounts: '[]'
 Unknown_Amounts: '[]'

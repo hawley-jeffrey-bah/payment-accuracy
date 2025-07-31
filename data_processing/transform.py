@@ -34,6 +34,8 @@ EXTRACTED_SURVEY_ROOT_CAUSE = "KPI_ImproperPaymentSurveyRootCause_vw_IP.csv"
 EXTRACTED_IP_ROOT_CAUSES = "MY_OMB_ImproperPayment_Payment_IP_Root_Causes_vw.csv"
 ACTIONS_DATE_MAPPING = "ActionsDateMapping.csv"
 EXTRACTED_MITIGATION_STRATEGIES_CSV_NAME = "MY_OMB_ImproperPayment_Mitigation_Strategies_vw.csv"
+EXTRACTED_CONGRESSIONAL_REPORTS_AGENCY_CSV_NAME = "MY_OMB_ImproperPayment_PaymentAccuracy_AgencyData_raw_vw-Congressional.csv"
+EXTRACTED_CONGRESSIONAL_REPORTS_PROGRAM_CSV_NAME = "MY_OMB_ImproperPayment_PaymentAccuracy_ProgramData_raw_vw-Congressional.csv"
 
 ALL_PROGRAMS_DATA_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_ALL_PROGRAMS_CSV_NAME)
 PROGRAM_DATA_RAW_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_PROGRAM_DATA_RAW_CSV_NAME)
@@ -50,6 +52,8 @@ SURVEY_ROOT_CAUSE_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRA
 IP_ROOT_CAUSES_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_IP_ROOT_CAUSES)
 ACTION_DATE_MAPPING_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, ACTIONS_DATE_MAPPING)
 MITIGATION_STRATEGIES_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_MITIGATION_STRATEGIES_CSV_NAME)
+CONGRESSIONAL_REPORTS_AGENCY_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_CONGRESSIONAL_REPORTS_AGENCY_CSV_NAME)
+CONGRESSIONAL_REPORTS_PROGRAM_PATH = os.path.join(BASE_DIR, EXTRACTED_FILES_DIRECTORY, EXTRACTED_CONGRESSIONAL_REPORTS_PROGRAM_CSV_NAME)
 
 ALL_PROGRAMS_DATA_AGGREGATION_DROP_TABLE_SQL = """
     DROP TABLE IF EXISTS all_programs_data_aggregation;
@@ -377,6 +381,151 @@ QUARTERLY_SCORECARD_LINKS_CREATE_VIEW_SQL = """
     );
 """
 
+CONGRESSIONAL_REPORTS_DROP_VIEW_SQL = [
+    "DROP VIEW IF EXISTS congressional_report_1_2024",
+    "DROP VIEW IF EXISTS congressional_report_1_2025",
+    "DROP VIEW IF EXISTS congressional_report_2_2024",
+    "DROP VIEW IF EXISTS congressional_report_2_2025",
+    "DROP VIEW IF EXISTS congressional_report_3_2024",
+]
+
+# Each query needs an [Agency], [Fiscal_Year], [Key], [Question], [Answer], and [SortOrder]
+CONGRESSIONAL_REPORTS_CREATE_VIEW_SQL = [
+    """
+    CREATE VIEW congressional_report_1_2024 AS
+    SELECT
+        [agency] AS [Agency],
+        [Fiscal_Year],
+        [Key],
+        [Title] AS [Question],
+        [value] AS [Answer],
+        CASE [Key]
+            WHEN 'raa6_1' THEN 0
+            WHEN 'raa6_2' THEN 1
+            WHEN 'raa7_1' THEN 2
+            WHEN 'raa7_2' THEN 3
+            WHEN 'raa8' THEN 4
+            WHEN 'raa8_1' THEN 5
+        END AS [SortOrder]
+    FROM [congressional_reports]
+    WHERE [Key] IN (
+        'raa6_1',
+        'raa6_2',
+        'raa7_1',
+        'raa7_2',
+        'raa8',
+        'raa8_1'
+    )
+    """,
+    """
+    CREATE VIEW congressional_report_1_2025 AS
+    SELECT
+        [agency] AS [Agency],
+        [Fiscal_Year],
+        [Key],
+        [Title] AS [Question],
+        [value] AS [Answer],
+        CASE [Key]
+            WHEN 'raa6_1' THEN 0
+            WHEN 'raa6_2' THEN 1
+            WHEN 'raa7_1' THEN 2
+            WHEN 'raa7_2' THEN 3
+            WHEN 'raa8' THEN 4
+            WHEN 'raa8_1' THEN 5
+        END AS [SortOrder]
+    FROM [congressional_reports]
+    WHERE [Key] IN (
+        'raa6_1',
+        'raa6_2',
+        'raa7_1',
+        'raa7_2',
+        'raa8',
+        'raa8_1'
+    )
+    """,
+    """
+    CREATE VIEW congressional_report_2_2024 AS
+    SELECT
+        [agency] AS [Agency],
+        [Fiscal_Year],
+        [Key],
+        [Title] AS [Question],
+        [value] AS [Answer],
+        CASE [Key]
+            WHEN 'ara2_1' THEN 0
+        END AS [SortOrder]
+    FROM [congressional_reports]
+    WHERE [Key] IN (
+        'ara2_1'
+    )
+    """,
+    """
+    CREATE VIEW congressional_report_2_2025 AS
+    SELECT
+        [agency] AS [Agency],
+        [Fiscal_Year],
+        [Key],
+        [Title] AS [Question],
+        [value] AS [Answer],
+        CASE [Key]
+            WHEN 'arp17_1' THEN 0
+        END AS [SortOrder]
+    FROM [congressional_reports]
+    WHERE [Key] IN (
+        'arp17_1'
+    )
+    """,
+    """
+    CREATE VIEW congressional_report_3_2024 AS
+    SELECT
+        [agency] AS [Agency],
+        [Program Name] AS [Program_Name],
+        [Fiscal_Year],
+        [key] AS [Key],
+        [Title] AS [Question],
+        [value] AS [Answer],
+        CASE [Key]
+            WHEN 'rac3' THEN 0
+            WHEN 'cyp1' THEN 1
+            WHEN 'cyp27' THEN 2
+            WHEN 'cyp28' THEN 3
+            WHEN 'cyp21' THEN 4
+            WHEN 'cyp22' THEN 5
+            WHEN 'cyp2' THEN 6
+            WHEN 'cyp3' THEN 7
+            WHEN 'cyp26' THEN 8
+            WHEN 'cyp5' THEN 9
+            WHEN 'cyp23' THEN 10
+            WHEN 'cyp6' THEN 11
+            WHEN 'cyp25' THEN 12
+            WHEN 'cyp7' THEN 13
+            WHEN 'cyp24' THEN 14
+            WHEN 'cyp30' THEN 15
+            WHEN 'cyp29' THEN 16
+        END AS [SortOrder]
+    FROM [congressional_reports_program]
+    WHERE [Key] IN (
+        'rac3',
+        'cyp1',
+        'cyp27',
+        'cyp28',
+        'cyp21',
+        'cyp22',
+        'cyp2',
+        'cyp3',
+        'cyp26',
+        'cyp5',
+        'cyp23',
+        'cyp6',
+        'cyp25',
+        'cyp7',
+        'cyp24',
+        'cyp30',
+        'cyp29'
+    )
+    """
+]
+
 # establish a database connection to store transformed data that is used
 # in the load / generate stage
 conn = sqlite3.connect(TRANSFORMED_DB_FILE_PATH)
@@ -442,6 +591,12 @@ def load_actions_date_mapping_file(conn):
 
 def load_mitigation_strategies_file(conn):
     load_csv_to_sqlite(MITIGATION_STRATEGIES_PATH, "mitigation_strategies", conn)
+
+def load_congressional_reports_files(conn):
+    load_csv_to_sqlite(CONGRESSIONAL_REPORTS_AGENCY_PATH, "congressional_reports", conn)
+
+def load_congressional_reports_files_program(conn):
+    load_csv_to_sqlite(CONGRESSIONAL_REPORTS_PROGRAM_PATH, "congressional_reports_program", conn)
 
 def transform_and_insert_all_programs_data_aggregation_data():
     """
@@ -517,6 +672,15 @@ def transform_and_insert_quarterly_scorecards():
                 cur.execute(insertQuery)
     conn.commit()
 
+def recreate_congressional_report_views():
+    for drop_query in CONGRESSIONAL_REPORTS_DROP_VIEW_SQL:
+        cur.execute(drop_query)
+
+    for create_query in CONGRESSIONAL_REPORTS_CREATE_VIEW_SQL:
+        cur.execute(create_query)
+
+    conn.commit()
+
 load_all_programs_file(conn)
 load_program_data_raw_file(conn)
 load_agency_data_raw_file(conn)
@@ -532,11 +696,14 @@ load_survey_root_cause_file(conn)
 load_ip_root_causes_file(conn)
 load_actions_date_mapping_file(conn)
 load_mitigation_strategies_file(conn)
+load_congressional_reports_files(conn)
+load_congressional_reports_files_program(conn)
 transform_and_insert_all_programs_data_aggregation_data()
 transform_and_insert_all_agencies_data_aggregation_data()
 transform_and_insert_government_wide_data_aggregation_data()
 transform_and_insert_significant_or_high_priority_programs_data()
 transform_and_insert_all_agencies_years_data()
 transform_and_insert_quarterly_scorecards()
+recreate_congressional_report_views()
 
 conn.close()
