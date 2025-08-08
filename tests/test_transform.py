@@ -182,7 +182,7 @@ def test_transform_and_insert_government_wide_data_aggregation_data_mocks(mock_c
 @patch("data_processing.transform.conn", new_callable=MagicMock)
 @patch("data_processing.transform.cur", new_callable=MagicMock)
 def test_recreate_congressional_report_views_mocks(mock_cur, mock_conn):
-    transform.recreate_congressional_report_views()
+    transform.recreate_year_mapped_views()
 
     expected_sql_calls = []
     for drop_query in transform.CONGRESSIONAL_REPORTS_DROP_VIEW_SQL:

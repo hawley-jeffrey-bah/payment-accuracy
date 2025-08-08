@@ -330,7 +330,7 @@ def program_specific_sample_data():
                 "CY_Margin_of_Error": "+/-4.34"
             }
         ],
-        "program_actions_data_points": [
+        "program_actions_data_points_2023": [
             {
                 "Fiscal_Year": 2023,
                 "Agency": "A1",
@@ -338,8 +338,11 @@ def program_specific_sample_data():
                 "Mitigation_Strategy": "Mitigation Strategy 1",
                 "Description_Action_Taken": "Description Action Taken 1",
                 "Action_Taken": "Action Taken 1",
-                "Completion_Date": "FY2028+"
-            },
+                "Completion_Date": "FY2028+",
+                "Action_Type": "Automation"
+            }
+        ],
+        "program_actions_data_points_2024": [
             {
                 "Fiscal_Year": 2024,
                 "Agency": "A1",
@@ -347,7 +350,8 @@ def program_specific_sample_data():
                 "Mitigation_Strategy": "Mitigation Strategy 2",
                 "Description_Action_Taken": "Description Action Taken 2",
                 "Action_Taken": "Action Taken 2",
-                "Completion_Date": "FY2028+"
+                "Completion_Date": "FY2028+",
+                "Action_Type": "Automation"
             }
         ],
         "visibility_data_points": [{
@@ -837,12 +841,15 @@ def test_generate_agency_specific_pages(mock_cursor, agency_specific_sample_data
             assert not yaml_data["Is_Placeholder"]
 
 def test_generate_program_specific_pages(mock_cursor, program_specific_sample_data):
+    load.PROGRAM_SPECIFIC_FISCAL_YEARS = [2023, 2024]
+
     mock_cursor.fetchall.side_effect = [
         program_specific_sample_data["all_agency_program_names"],
         program_specific_sample_data["program_data_points"],
         program_specific_sample_data["program_chart_data_points_A1"],
         program_specific_sample_data["program_improper_payment_estimates_data_points"],
-        program_specific_sample_data["program_actions_data_points"],
+        program_specific_sample_data["program_actions_data_points_2023"],
+        program_specific_sample_data["program_actions_data_points_2024"],
         program_specific_sample_data["visibility_data_points"],
         program_specific_sample_data["program_overpayments_data_points"],
         program_specific_sample_data["program_overpayments_outside_data_points"],
@@ -938,28 +945,33 @@ def test_generate_congressional_reports_pages(mock_cursor, congressional_reports
     config.CONGRESSIONAL_REPORTS = [
         {
             "Id": 1,
-            "Name": "Agency Risk Assessments Report"
+            "Name": "Agency Risk Assessments Report",
+            "SurveyName": "Survey Responses"
         }
     ]
 
     config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING = {
         "2023": {
-            "key1": {
-                "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
-                "heading": "",
-                "subheading": ""
+            "1": {
+                "key1": {
+                    "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
+                    "heading": "",
+                    "subheading": ""
+                }
             }
         },
         "2024": {
-            "key1": {
-                "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
-                "heading": "",
-                "subheading": ""
-            },
-            "key2": {
-                "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
-                "heading": "",
-                "subheading": ""
+            "1": {
+                "key1": {
+                    "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
+                    "heading": "",
+                    "subheading": ""
+                },
+                "key2": {
+                    "type": config.CONGRESSIONAL_REPORTS_FIELD_TYPES.TEXT,
+                    "heading": "",
+                    "subheading": ""
+                }
             }
         }
     }

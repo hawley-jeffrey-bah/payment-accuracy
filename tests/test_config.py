@@ -61,11 +61,16 @@ class TestConstants:
         """
         assert hasattr(config, 'CONGRESSIONAL_REPORTS')
         assert hasattr(config, 'CONGRESSIONAL_REPORTS_YEAR_TO_VIEW_MAPPING')
+        assert hasattr(config, 'CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING')
+        assert hasattr(config, 'CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS')
+        assert hasattr(config, 'CONGRESSIONAL_REPORTS_REQUIREMENTS_MAPPING')
         ids = list(map(lambda x: str(x['Id']), config.CONGRESSIONAL_REPORTS))
-        yearsMapped = list(map(lambda x: x['Year'], config.CONGRESSIONAL_REPORTS_YEAR_TO_VIEW_MAPPING))
         yearsToMap = list(range(config.FISCAL_YEAR - config.COUNT_CONGRESSIONAL_REPORTS_YEARS_DISPLAYED + 1, config.FISCAL_YEAR + 1))
         for year in yearsToMap:
-            assert year in yearsMapped
+            assert year in list(map(lambda x: x['Year'], config.CONGRESSIONAL_REPORTS_YEAR_TO_VIEW_MAPPING))
+            assert str(year) in list(config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING.keys())
+            assert str(year) in list(config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS.keys())
+            assert str(year) in list(config.CONGRESSIONAL_REPORTS_REQUIREMENTS_MAPPING.keys())
         for mapping in config.CONGRESSIONAL_REPORTS_YEAR_TO_VIEW_MAPPING:
             for id in mapping["AgencyReports"].keys():
                 assert id in ids

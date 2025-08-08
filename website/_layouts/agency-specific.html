@@ -42,7 +42,7 @@ permalink: /
                 {% unless page.Hide_Sparklines == true or page.Is_Placeholder == true %}
                     <ul class="usa-card-group grid-row grid-gap-6 spending-trends-cards">
                         <li class="usa-card mobile:grid-col-12 tablet:grid-col-6 desktop:grid-col-4">
-                            {% assign Chart_Caption = "(Based on federal funding spent by programs susceptible to improper payments within the agency)" %}
+                            {% assign Chart_Caption = "(Based on Federal funding spent by Programs determined by Agencies as susceptible to improper payments)" %}
                             {% include _sparklines-chart.html
                                 rate_min=page.Payment_Accuracy_Rate_Min
                                 rate_max=page.Payment_Accuracy_Rate_Max

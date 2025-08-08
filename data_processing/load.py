@@ -754,11 +754,13 @@ def get_risks(cursor, year, agency):
 def hide_agency_specific_sections(agencyObj):
     hasRecoveryKey = False
     for key in agencyObj.keys():
-        if key.startswith("recovery_"):
+        # 0 check added for cases where survey edits cause answers to be submitted unnecessarily
+        if key.startswith("recovery_") and agencyObj[key] > 0:
             hasRecoveryKey = True
             break
 
     recoveryAuditsSkipped = "detail_ara2" in agencyObj and agencyObj["detail_ara2"].upper() == 'NO'
+    recoveryAuditsNotAnswered = "detail_ara2" not in agencyObj
 
     agencyObj["Hide_Integrity_Results"] = "Improper_Payments_Data_Years" not in agencyObj or \
         agencyObj["Improper_Payments_Data_Years"] is None or \
@@ -767,15 +769,14 @@ def hide_agency_specific_sections(agencyObj):
     agencyObj["Hide_Sparklines"] = agencyObj["Hide_Integrity_Results"] or \
         "," not in agencyObj["Improper_Payments_Data_Years"]
 
-    agencyObj["Hide_Recovery_Details"] = recoveryAuditsSkipped or (not hasRecoveryKey and \
+    agencyObj["Hide_Recovery_Details"] = (recoveryAuditsSkipped or recoveryAuditsNotAnswered) and (not hasRecoveryKey and \
         ("detail_arp18" not in agencyObj or agencyObj["detail_arp18"] is None or agencyObj["detail_arp18"] == ''))
     agencyObj["Hide_Recovery_Audits"] = \
         ("detail_arp17" not in agencyObj or agencyObj["detail_arp17"] is None or agencyObj["detail_arp17"] == '') and \
         ("detail_ara2_1" not in agencyObj or agencyObj["detail_ara2_1"] is None or agencyObj["detail_ara2_1"] == '') and \
         ("detail_ara2_3" not in agencyObj or agencyObj["detail_ara2_3"] is None or agencyObj["detail_ara2_3"] == '') and \
         ("detail_ara2_3_2" not in agencyObj or agencyObj["detail_ara2_3_2"] is None or agencyObj["detail_ara2_3_2"] == '')
-    agencyObj["Hide_Recovery_Info"] = agencyObj["Hide_Recovery_Details"] and \
-        ("detail_ara2_1" not in agencyObj or agencyObj["detail_ara2_1"] is None or agencyObj["detail_ara2_1"] == '') and \
+    agencyObj["Hide_Recovery_Info"] = agencyObj["Hide_Recovery_Details"] and agencyObj["Hide_Recovery_Audits"] and \
         ("Overpayment_Years" not in agencyObj or agencyObj["Overpayment_Years"] is None or agencyObj["Overpayment_Years"] == '[]')
 
     agencyObj["Hide_Disposition_of_Funds"] = recoveryAuditsSkipped or (("recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor" not in agencyObj or agencyObj["recovery_Disposition_of_Funds_through_recovery_audit_Administer_Auditor"] is None) and \
@@ -1041,68 +1042,7 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
                     }.items() if value is not None
                 }
 
-        actionsQuery = f"""
-            SELECT
-                [action_data].[Fiscal_Year],
-                [action_data].[Agency],
-                [action_data].[Program_Name],
-                [action_data].[Column_names] AS [Mitigation_Strategy],
-                [action_data].[Column_values] AS [Description_Action_Taken],
-                CASE
-                    WHEN [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\' AND [date_lookup].[Column_values] NOT LIKE 'The corrective action was not fully completed%' THEN 'Planned'
-                    WHEN ([action_data].Column_names LIKE 'atp%\\_1' ESCAPE '\\' OR [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\') AND [date_lookup].[Column_values] LIKE 'The corrective action was not fully completed%' THEN 'Not Completed'
-                    ELSE 'Completed'
-                END as [Action_Taken],
-                [date_lookup].[Column_values] AS [Completion_Date]
-            FROM [principal_table_columns] [action_data]
-            LEFT JOIN [actions_date_mapping] ON
-                [action_data].[Column_names] = [actions_date_mapping].[Action]
-            LEFT JOIN (
-                SELECT
-                    [Fiscal_Year],
-                    [Agency],
-                    [Program_Name],
-                    [Column_names],
-                    [Column_values]
-                FROM [principal_table_columns]
-            ) [date_lookup] ON
-                [action_data].[Fiscal_Year] = [date_lookup].[Fiscal_Year] AND
-                [action_data].[Agency] = [date_lookup].[Agency] AND
-                [action_data].[Program_Name] = [date_lookup].[Program_Name] AND
-                [actions_date_mapping].[Date] = [date_lookup].[Column_names]
-            WHERE [action_data].Column_values <> ''
-                AND ([action_data].Column_names LIKE 'atp%\\_1' ESCAPE '\\' OR [action_data].Column_names LIKE 'app%\\_1' ESCAPE '\\')
-                -- not showing on old site
-                AND [action_data].Column_names <> 'atp17_1'
-                AND [action_data].Column_names <> 'app17_1'
-                AND [action_data].Program_Name = ?
-                AND [action_data].[Fiscal_Year] IN ({yearsCriteria})
-        """
-
-        cursor.execute(actionsQuery, [program["Program_Name"]] + PROGRAM_SPECIFIC_FISCAL_YEARS)
-
-        actionsTaken = cursor.fetchall()
-
-        for row in actionsTaken:
-            fiscal_year = row["Fiscal_Year"]
-            mitigation_strategy = row["Mitigation_Strategy"]
-            description_action_taken = row["Description_Action_Taken"]
-            action_taken = row["Action_Taken"]
-            completion_date = row["Completion_Date"]
-
-            if fiscal_year not in data_by_year_dict:
-                data_by_year_dict[fiscal_year] = {}
-
-            data_by_year_dict[fiscal_year].setdefault("Actions_Taken", [])
-
-            data_by_year_dict[fiscal_year]["Actions_Taken"].append({
-                key: value for key, value in {
-                    "Mitigation_Strategy": mitigation_strategy,
-                    "Description_Action_Taken": description_action_taken,
-                    "Action_Taken": action_taken,
-                    "Completion_Date": completion_date
-                }.items() if value is not None
-            })
+        add_actions_taken(cursor, PROGRAM_SPECIFIC_FISCAL_YEARS, program["Program_Name"], data_by_year_dict)
 
         # Ideally, visibility would use the same fields as overpayments, underpayments, etc.
         #   queries below.  For now, creating a separate query due to time constraints.
@@ -2176,6 +2116,37 @@ def generate_program_specific_pages(cursor: sqlite3.Cursor):
             file.write('---\n')
     print("Successfully generated program-specific markup files")
 
+def add_actions_taken(cursor, years, program, data_by_year_dict):
+    for fiscal_year in years:
+        actionsView = config.QUERY_MAPPING_BY_YEAR[fiscal_year][config.MAPPED_QUERY_NAME_ACTIONS_TAKEN]
+        actionsQuery = f"""
+            SELECT * FROM {actionsView} WHERE [Program_Name] = ? AND [Fiscal_Year] = ?
+            """
+        cursor.execute(actionsQuery, (program, fiscal_year))
+        actionsTaken = cursor.fetchall()
+
+        for row in actionsTaken:
+            mitigation_strategy = row["Mitigation_Strategy"]
+            description_action_taken = row["Description_Action_Taken"]
+            action_taken = row["Action_Taken"]
+            completion_date = row["Completion_Date"]
+            action_type = row["Action_Type"]
+
+            if fiscal_year not in data_by_year_dict:
+                data_by_year_dict[fiscal_year] = {}
+
+            data_by_year_dict[fiscal_year].setdefault("Actions_Taken", [])
+
+            data_by_year_dict[fiscal_year]["Actions_Taken"].append({
+                    key: value for key, value in {
+                        "Mitigation_Strategy": mitigation_strategy,
+                        "Description_Action_Taken": description_action_taken,
+                        "Action_Taken": action_taken,
+                        "Completion_Date": completion_date,
+                        "Action_Type": action_type
+                    }.items() if value is not None
+                })
+
 def generate_congressional_reports_pages(cursor: sqlite3.Cursor):
     if os.path.exists(CONGRESSIONAL_REPORTS_DIR):
         shutil.rmtree(CONGRESSIONAL_REPORTS_DIR)
@@ -2233,8 +2204,19 @@ def generate_congressional_reports_pages(cursor: sqlite3.Cursor):
                     title = reportLookup[str(id)]["Name"]
                     if year not in yamlLookup:
                         yamlLookup[year] = {}
+
                     if agencyCode not in yamlLookup[year]:
                         yamlLookup[year][agencyCode] = {}
+
+                    # Legal Requirements
+                    requirements = []
+                    if str(id) in config.CONGRESSIONAL_REPORTS_REQUIREMENTS_MAPPING[str(year)]:
+                        requirements = list(map(lambda x: {
+                            "Indent": x["indent"],
+                            "Type": x["type"].name,
+                            "Text": x["text"]
+                        }, config.CONGRESSIONAL_REPORTS_REQUIREMENTS_MAPPING[str(year)][str(id)]))
+
                     yamlLookup[year][agencyCode][str(id)] = {
                         'title': title,
                         'layout': 'congressional-reports',
@@ -2243,24 +2225,32 @@ def generate_congressional_reports_pages(cursor: sqlite3.Cursor):
                         'Agency_Name': agencyName,
                         'Fiscal_Year': year,
                         'Report_Id': str(id),
-                        'Page_Name': pageName
+                        'Page_Name': pageName,
+                        'Requirements': requirements
                     }
 
     # Add agency and program survey data
     for yearConfig in config.CONGRESSIONAL_REPORTS_YEAR_TO_VIEW_MAPPING:
         year = yearConfig["Year"]
+        # Skip future years
+        if year > config.FISCAL_YEAR:
+            continue
+
         for id, view in yearConfig["AgencyReports"].items():
+            reportConfig = next((report for report in config.CONGRESSIONAL_REPORTS if str(report["Id"]) == id), None)
             cursor.execute(f"SELECT * FROM {view} WHERE [Fiscal_Year] = ? AND [Answer] IS NOT NULL ORDER BY [Agency], [SortOrder]", (year,))
             viewResults = cursor.fetchall()
             fieldsByAgency = groupby(viewResults, key=lambda x: x["Agency"])
+
             for agency, fields in fieldsByAgency:
+                yamlLookup[year][agency][id]["SurveyName"] = reportConfig["SurveyName"] if reportConfig is not None and "SurveyName" in reportConfig else config.DEFAULT_SURVEY_NAME
                 yamlLookup[year][agency][id]["SurveyData"] = list(map(lambda row: {
-                    "Heading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][row["Key"]]["heading"],
-                    "Subheading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][row["Key"]]["subheading"],
-                    "Answer": format_answer(row["Answer"], config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][row["Key"]]),
+                    "Heading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][id][row["Key"]]["heading"],
+                    "Subheading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][id][row["Key"]]["subheading"],
+                    "Answer": format_answer(row["Answer"], config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][id][row["Key"]]),
                     "SortOrder": row["SortOrder"],
                     "Key": row["Key"],
-                    "Type": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][row["Key"]]["type"].name
+                    "Type": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING[str(year)][id][row["Key"]]["type"].name
                 }, fields))
 
                 # Additional report sections
@@ -2274,34 +2264,54 @@ def generate_congressional_reports_pages(cursor: sqlite3.Cursor):
         for id, view in yearConfig["ProgramReports"].items():
             cursor.execute(f"SELECT * FROM {view} WHERE [Fiscal_Year] = ? AND [Answer] IS NOT NULL ORDER BY [Agency], [Program_Name], [SortOrder]", (year,))
             viewResults = cursor.fetchall()
-            fieldsByProgram = groupby(viewResults, key=lambda x: x["Program_Name"])
+            fieldsByProgramGroup = groupby(viewResults, key=lambda x: x["Program_Name"])
+            fieldsByProgram = { key: list(group) for key, group in fieldsByProgramGroup}
             programSortOrder = 0
-            for program, fields in fieldsByProgram:
+            cursor.execute(f"SELECT * FROM [significant_or_high_priority_programs]")
+            programs = cursor.fetchall()
+            for programAgency in programs:
+                program = programAgency["Program_Name"]
+                agencyCode = programAgency["Agency"]
+                fields = fieldsByProgram[program] if program in fieldsByProgram.keys() else []
                 answers = list(map(lambda row: {
                     "Agency": row["Agency"],
-                    "Heading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][row["Key"]]["heading"],
-                    "Subheading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][row["Key"]]["subheading"],
-                    "Answer": format_answer(row["Answer"], config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][row["Key"]]),
+                    "Heading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][id][row["Key"]]["heading"],
+                    "Subheading": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][id][row["Key"]]["subheading"],
+                    "Answer": format_answer(row["Answer"], config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][id][row["Key"]]),
                     "SortOrder": row["SortOrder"],
                     "Key": row["Key"],
-                    "Type": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][row["Key"]]["type"].name
+                    "Type": config.CONGRESSIONAL_REPORTS_FIELD_TO_TYPE_MAPPING_PROGRAMS[str(year)][id][row["Key"]]["type"].name
                 }, fields))
 
-                if len(answers) > 0:
-                    agencyCode = answers[0]["Agency"]
-                    if "ProgramSurveyData" not in yamlLookup[year][agencyCode][id]:
-                        yamlLookup[year][agencyCode][id]["ProgramSurveyData"] = []
+                actionsTakenResult = {}
 
-                    yamlLookup[year][agencyCode][id]["ProgramSurveyData"].append({
+                # Additional report sections
+                match id:
+                    case '4':
+                        add_actions_taken(cursor, [year], program, actionsTakenResult)
+
+                if "ProgramSurveyData" not in yamlLookup[year][agencyCode][id]:
+                    yamlLookup[year][agencyCode][id]["ProgramSurveyData"] = []
+
+                actionsTaken = []
+                if (year in actionsTakenResult and "Actions_Taken" in actionsTakenResult[year]):
+                    actionsTaken = actionsTakenResult[year]["Actions_Taken"]
+
+                hideProgram = len(answers) == 0 and len(actionsTaken) == 0
+
+                if not hideProgram:
+                    programYaml = {
                         "Program": program,
                         "Answers": answers,
                         "SortOrder": programSortOrder
-                    })
+                    }
 
-                programSortOrder = programSortOrder + 1
+                    if (len(actionsTaken) > 0):
+                        programYaml["ActionsTaken"] = actionsTaken
 
-                # Additional report sections
-                # match id:
+                    yamlLookup[year][agencyCode][id]["ProgramSurveyData"].append(programYaml)
+
+                    programSortOrder = programSortOrder + 1
 
     # Write the data
     for year, yearData in yamlLookup.items():

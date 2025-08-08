@@ -61,6 +61,39 @@
             @include default-text-styling($color: black, $size: 16px, $weight: 400, $height: 24px);
         }
 
+        .requirement-line {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .requirement-bold {
+            font-weight: 600;
+        }
+
+        .requirement-italicized {
+            font-style: italic;
+        }
+
+        .requirement-indent-1 {
+            margin-left: 10px;
+        }
+
+        .requirement-indent-2 {
+            margin-left: 20px;
+        }
+
+        .requirement-indent-3 {
+            margin-left: 30px;
+        }
+
+        .requirement-indent-4 {
+            margin-left: 40px;
+        }
+
+        .requirement-indent-5 {
+            margin-left: 50px;
+        }
+
         .heading-text {
             @include default-text-styling($color: black, $size: 20px, $weight: 600, $height: 30px);
             margin-bottom: 0;
@@ -69,6 +102,7 @@
         .subheading-text {
             @include default-text-styling($color: black, $size: 16px, $weight: 600, $height: 24px);
             margin-top: 0;
+            margin-bottom: 0;
         }
 
         .answer-text {
@@ -113,6 +147,12 @@
 
         .usa-accordion__content p {
             max-width: unset;
+        }
+
+        .actions-table {
+            .expand-col {
+                display: none;
+            }
         }
     }
 }

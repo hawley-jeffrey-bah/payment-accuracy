@@ -120,35 +120,28 @@ permalink: /
             {% if report_chosen %}
                 <div class="grid-row">
                     <div class="grid-col-12">
+                        <p class="heading-text">{{ page.Agency_Name }}</p>
+                        <p class="subheading-text">Fiscal Reporting Year</p>
+                        <p class="answer-text">{{ page.Fiscal_Year }}</p>
                         <div class="usa-accordion congressional-reports-accordion">
                             <div class="usa-accordion__item">
                                 <h4 class="usa-accordion__heading">
                                     <button class="usa-accordion__button" aria-expanded="true" aria-controls="title-accordion">
-                                        Title and Requirements Summary
+                                        {{ page.title }} and Requirements Summary
                                     </button>
                                 </h4>
                                 <div id="title-accordion" class="usa-accordion__content usa-prose">
-                                    <strong>{{ page.title }}</strong>
-                                    <p>
-                                        {% if page.Report_Id == '1' %}
-                                            <strong>Summary of Report Requirements from 31 U.S.C. § 3352(a)(3)(C)</strong><br />
-                                            <i>(C) ANNUAL REPORT.—Each executive agency shall publish an annual report that includes—</i><br />
-                                            &nbsp;&nbsp;(i) a listing of each program or activity (with annual outlays greater than $10M),  including the date on which the program or activity was most recently assessed for risk<br />
-                                            &nbsp;&nbsp;(ii) a listing of any program or activity for which the executive agency makes any substantial changes to the (risk assessment) methodologies
-                                        {% elsif page.Report_Id == '2' %}
-                                            <strong>Summary of Report Requirements from 31 U.S.C. § 3352(b)(2)</strong><br />
-                                            <i>(2) REPORT ON HIGH-PRIORITY IMPROPER PAYMENTS.—...each executive agency with a (high-priority) program ...shall on an annual basis submit...a report on that (high-priority) program.</i><br />
-                                            &nbsp;&nbsp;<i>(B) CONTENTS.— Each report submitted ...</i><br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;(i) shall describe any action the executive agency—<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(I) has taken or plans to take to recover improper payments (for the High-Priority Program); and<br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(II) intends to take to prevent future improper payments (for the High-Priority Program)
-                                        {% elsif page.Report_Id == '3' %}
-                                            <strong>Summary of Report Requirements from 31 U.S.C. § 31 U.S.C. § 3352(c)</strong><br />
-                                            <i>(c) ESTIMATION OF IMPROPER PAYMENTS.—With respect to each program and activity identified (as susceptible to significant improper payments during the risk assessment) the head of the relevant executive agency shall— ...</i><br />
-                                            &nbsp;&nbsp;(1) (B) include the (improper payment payment) estimates (in a report on paymentaccuracy.gov)…<br />
-                                            &nbsp;&nbsp;(2) (B) include the (unknown payment) estimates (in a report on paymentaccuracy.gov)
-                                        {% endif %}
-                                    </p>
+                                    {% if page.Requirements != nil and page.Requirements.size > 0 %}
+                                        {% for requirement in page.Requirements %}
+                                            {% assign requirement_class = "requirement-regular" %}
+                                            {% if requirement.Type == "BOLD" %}
+                                                {% assign requirement_class = "requirement-bold" %}
+                                            {% elsif requirement.Type == "ITALICIZED" %}
+                                                {% assign requirement_class = "requirement-italicized" %}
+                                            {% endif %}
+                                            <p class="requirement-line {{ requirement_class }} requirement-indent-{{ requirement.Indent }}">{{ requirement.Text }}</p>
+                                        {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -184,7 +177,7 @@ permalink: /
                                 <div class="usa-accordion__item">
                                     <h4 class="usa-accordion__heading">
                                         <button class="usa-accordion__button" aria-expanded="true" aria-controls="survey-data-accordion">
-                                            Survey Responses
+                                            {{ page.SurveyName }}
                                         </button>
                                     </h4>
                                     <div id="survey-data-accordion" class="usa-accordion__content usa-prose">
@@ -283,6 +276,13 @@ permalink: /
 
                                                 {% assign first_answer = false %}
                                             {% endfor %}
+
+                                            {% if program.ActionsTaken != nil and program.ActionsTaken.size > 0 %}
+                                                <p class="heading-text">Actions to Reduce Improper Payments</p>
+                                                {% include _actions-taken-table.html
+                                                    Actions_Taken = program.ActionsTaken
+                                                %}
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@ permalink: /
                                 <div class="usa-accordion__item">
                                     <h4 class="usa-accordion__heading">
                                         <button class="usa-accordion__button" aria-expanded="true" aria-controls="risks-accordion">
-                                            Most Recent Scorecards by Program
+                                            See the Most Recent Quarterly Scorecard for Additional Information About Actions to Recover Improper Payments
                                         </button>
                                     </h4>
                                     <div id="risks-accordion" class="usa-accordion__content usa-prose">
