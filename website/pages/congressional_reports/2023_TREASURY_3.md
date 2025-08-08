@@ -118,7 +118,7 @@ ProgramSurveyData:
     Subheading: ''
     Type: PERCENTAGE
   Program: Internal Revenue Service - Additional Child Tax Credit
-  SortOrder: 54
+  SortOrder: 47
 - Answers:
   - Agency: TREASURY
     Answer: '5220.92'
@@ -233,7 +233,7 @@ ProgramSurveyData:
     Subheading: ''
     Type: PERCENTAGE
   Program: Internal Revenue Service - American Opportunity Tax Credit
-  SortOrder: 55
+  SortOrder: 48
 - Answers:
   - Agency: TREASURY
     Answer: '65375.28'
@@ -348,7 +348,7 @@ ProgramSurveyData:
     Subheading: ''
     Type: PERCENTAGE
   Program: Internal Revenue Service - Earned Income Tax Credit
-  SortOrder: 56
+  SortOrder: 49
 - Answers:
   - Agency: TREASURY
     Answer: '3679.55'
@@ -463,8 +463,23 @@ ProgramSurveyData:
     Subheading: ''
     Type: PERCENTAGE
   Program: Internal Revenue Service - Refundable Premium Assistance Tax Credit
-  SortOrder: 57
+  SortOrder: 50
 Report_Id: '3'
+Requirements:
+- Indent: 0
+  Text: Summary of Report Requirements from 31 U.S.C. § 31 U.S.C. § 3352(c)
+  Type: BOLD
+- Indent: 0
+  Text: (c) ESTIMATION OF IMPROPER PAYMENTS.—With respect to each program and activity
+    identified (as susceptible to significant improper payments during the risk assessment)
+    the head of the relevant executive agency shall— ...
+  Type: ITALICIZED
+- Indent: 1
+  Text: (1) (B) include the (improper payment payment) estimates (in a report on paymentaccuracy.gov)...
+  Type: REGULAR
+- Indent: 1
+  Text: (2) (B) include the (unknown payment) estimates (in a report on paymentaccuracy.gov)
+  Type: REGULAR
 layout: congressional-reports
 permalink: /resources/congressional-reports/2023_TREASURY_3
 title: Improper Payment and Unknown Payment Estimation Report

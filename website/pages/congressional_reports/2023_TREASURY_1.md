@@ -5,6 +5,23 @@ Fiscal_Year: 2023
 Hide_Survey: true
 Page_Name: 2023_TREASURY_1
 Report_Id: '1'
+Requirements:
+- Indent: 0
+  Text: Summary of Report Requirements from 31 U.S.C. § 3352(a)(3)(C)
+  Type: BOLD
+- Indent: 0
+  Text: (C) ANNUAL REPORT.—Each executive agency shall publish an annual report that
+    includes—
+  Type: ITALICIZED
+- Indent: 1
+  Text: (i) a listing of each program or activity (with annual outlays greater than
+    $10M),  including the date on which the program or activity was most recently
+    assessed for risk
+  Type: REGULAR
+- Indent: 1
+  Text: (ii) a listing of any program or activity for which the executive agency makes
+    any substantial changes to the (risk assessment) methodologies
+  Type: REGULAR
 Risks:
   AdditionalInformation: The IRS Child and Dependent Care Tax Credit (CTC) conducted
     a risk assessment in FY 23 and although the risk assessment yielded a non-susceptible
@@ -459,6 +476,17 @@ SurveyData:
   Subheading: ''
   Type: TEXT
 - Answer:
+  - Office of International Assistance - Contribution to African Development Fund
+  - Office of International Assistance - Contribution to European Bank for Reconstruction
+  - Office of International Assistance - Contribution to International Development
+    Association
+  - Office of International Assistance - Contribution to the Asian Development Fund
+  - Office of International Assistance - Global Environment Facility
+  - Office of International Assistance - International Fund for Agriculture Development
+  - Office of the Comptroller of the Currency - Assessment Funds
+  - Office of the Inspector General - Salaries and Expenses
+  - Treasury Franchise Fund - Treasury Franchise Fund
+  - Treasury Inspector General for Tax Administration
   - Alcohol and Tobacco Tax and Trade Bureau - Internal Revenue Collection Puerto
     Rico
   - Community Development Financial Institutions - Minority Lending Program
@@ -475,17 +503,6 @@ SurveyData:
   - Fiscal Service - Federal Reserve Bank Reimbursement Fund
   - Fiscal Service - Reimbursements to Federal Reserve Banks
   - Fiscal Service - Travel Promotion Fund, Corp for Travel Promotion
-  - Office of International Assistance - Contribution to African Development Fund
-  - Office of International Assistance - Contribution to European Bank for Reconstruction
-  - Office of International Assistance - Contribution to International Development
-    Association
-  - Office of International Assistance - Contribution to the Asian Development Fund
-  - Office of International Assistance - Global Environment Facility
-  - Office of International Assistance - International Fund for Agriculture Development
-  - Office of the Comptroller of the Currency - Assessment Funds
-  - Office of the Inspector General - Salaries and Expenses
-  - Treasury Franchise Fund - Treasury Franchise Fund
-  - Treasury Inspector General for Tax Administration
   - Office of International Assistance - Global Food Security
   - Departmental Offices - Contributions of the International Monetary Fund Facilities
     and Trust Funds
@@ -516,6 +533,7 @@ SurveyData:
   SortOrder: 4
   Subheading: ''
   Type: TEXT
+SurveyName: Survey Responses
 layout: congressional-reports
 permalink: /resources/congressional-reports/2023_TREASURY_1
 title: Agency Risk Assessments Report

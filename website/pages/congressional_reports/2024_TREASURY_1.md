@@ -5,6 +5,23 @@ Fiscal_Year: 2024
 Hide_Survey: true
 Page_Name: 2024_TREASURY_1
 Report_Id: '1'
+Requirements:
+- Indent: 0
+  Text: Summary of Report Requirements from 31 U.S.C. § 3352(a)(3)(C)
+  Type: BOLD
+- Indent: 0
+  Text: (C) ANNUAL REPORT.—Each executive agency shall publish an annual report that
+    includes—
+  Type: ITALICIZED
+- Indent: 1
+  Text: (i) a listing of each program or activity (with annual outlays greater than
+    $10M),  including the date on which the program or activity was most recently
+    assessed for risk
+  Type: REGULAR
+- Indent: 1
+  Text: (ii) a listing of any program or activity for which the executive agency makes
+    any substantial changes to the (risk assessment) methodologies
+  Type: REGULAR
 Risks:
   AdditionalInformation: In FY 24, Treasury required federal financial assistance
     programs to complete a risk assessment addendum that focused on controls around
@@ -460,31 +477,31 @@ SurveyData:
   Subheading: ''
   Type: TEXT
 - Answer:
-  - Community Development Financial Institutions - Emergency Support Program
-  - Fiscal Service - American Indian & Alaskan Native
-  - Alcohol and Tobacco Tax and Trade Bureau - Salaries and Expenses
-  - Departmental Offices - Emergency Rental Assistance
-  - Office of International Assistance - Clean Tech Fund Loans Financing Acct
-  - Office of Financial Stability - Home Affordable Modification Program
-  - Internal Revenue Service - US Coronavirus Payments
-  - Fiscal Serivce  Gulf Coast Restoration Trust Fund
-  - Fiscal Service - Interest on Uninvested Funds
-  - Departmental Offices - Coronavirus Capital Projects Fund
-  - Departmental Offices - Cybersecurity Enhancement Account
-  - Office of International Assistance - Contribution to International Bank Reconstruction
-  - Internal Revenue Service - Business Systems Modernization
-  - Internal Revenue Service - Taxpayer Services
-  - Internal Revenue Service - Operations Support
-  - Internal Revenue Service - Special Compliance Personnel Program Account
-  - Internal Revenue Service - US Coronavirus Refundable Credits
-  - The Mint - United States Mint Public Enterprise Fund
-  - Office of International Assistance - Economic Support Fund
   - Fiscal Service - Judgements, Court of Claims
   - Office of Financial Stability - Salaries and Expenses
   - Departmental Offices - Local Assistance and Tribal Consistency Fund
   - Internal Revenue Service - Informant Reimbursement
   - Internal Revenue Service - Payment to Issuer of Qualified Zone Academy Bonds
   - Internal Revenue Service - Refund - Corporations
+  - Internal Revenue Service - Operations Support
+  - Internal Revenue Service - Special Compliance Personnel Program Account
+  - Office of International Assistance - Economic Support Fund
+  - Internal Revenue Service - Business Systems Modernization
+  - Internal Revenue Service - Taxpayer Services
+  - Office of International Assistance - Contribution to International Bank Reconstruction
+  - Internal Revenue Service - US Coronavirus Refundable Credits
+  - The Mint - United States Mint Public Enterprise Fund
+  - Fiscal Serivce  Gulf Coast Restoration Trust Fund
+  - Fiscal Service - Interest on Uninvested Funds
+  - Departmental Offices - Coronavirus Capital Projects Fund
+  - Office of International Assistance - Clean Tech Fund Loans Financing Acct
+  - Office of Financial Stability - Home Affordable Modification Program
+  - Internal Revenue Service - US Coronavirus Payments
+  - Community Development Financial Institutions - Emergency Support Program
+  - Fiscal Service - American Indian & Alaskan Native
+  - Departmental Offices - Emergency Rental Assistance
+  - Alcohol and Tobacco Tax and Trade Bureau - Salaries and Expenses
+  - Departmental Offices - Cybersecurity Enhancement Account
   - Internal Revenue Service - Private Collection Agent Program
   - Internal Revenue Service - Refund Collection - Interest
   - Internal Revenue Service - Tax Law Enforcement
@@ -507,8 +524,8 @@ SurveyData:
   Type: TEXT
 - Answer:
   - Internal Revenue Service - US Coronavirus Refundable Credits
-  - Internal Revenue Service - US Coronavirus Payments
   - Departmental Offices - Emergency Rental Assistance
+  - Internal Revenue Service - US Coronavirus Payments
   Heading: ''
   Key: raa7_2
   SortOrder: 3
@@ -520,6 +537,7 @@ SurveyData:
   SortOrder: 4
   Subheading: ''
   Type: TEXT
+SurveyName: Survey Responses
 layout: congressional-reports
 permalink: /resources/congressional-reports/2024_TREASURY_1
 title: Agency Risk Assessments Report
